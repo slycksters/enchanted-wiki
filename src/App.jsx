@@ -1,16 +1,9 @@
-import './App.css'
+import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import router from './router/router';
 
 function App() {
-  return (
-    <>
-      <div class="grid grid-cols-4 gap-4">
-        <div>Test 1</div>
-        <div>Test 2</div>
-        <div>Test 3</div>
-        <div>Test 4</div>
-      </div>
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

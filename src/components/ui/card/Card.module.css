@@ -1,0 +1,11 @@
+.cardContainer {
+  background-color: var(--enchanted-color-darker);
+  border: 1px solid var(--enchanted-color-charcoal);
+  border-radius: 10px;
+  min-height: 50px;
+  width: 100%;
+}
+
+.cardContainer:hover {
+  background-color: var(--enchanted-color-darkest);
+}
