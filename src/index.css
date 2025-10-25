@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: var(--enchanted-color-dark);
+  background-color: var(--enchanted-color-darkest);
   color: var(--enchanted-color-white);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
