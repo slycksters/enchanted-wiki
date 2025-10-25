@@ -7,6 +7,7 @@
   justify-content: center;
   min-height: 50px;
   width: 100%;
+  transition: box-shadow 0.3s ease;
 }
 
 .cardContainer + .cardContainer {
@@ -14,7 +15,7 @@
 }
 
 .cardContainer:hover {
-  background-color: var(--enchanted-color-darkest);
+  box-shadow: inset 0 0 100px 100px var(--enchanted-color-darkest);
 }
 
 .cardIconContainer {
