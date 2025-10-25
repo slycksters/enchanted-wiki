@@ -1,0 +1,37 @@
+.navigationContainer {
+  background-color: var(--enchanted-color-dark);
+  display: flex;
+  padding: 15px;
+  width: 100vw;
+}
+
+.navigationContainer img {
+  height: 50px;
+  width: auto;
+}
+
+.navList {
+  display: flex;
+  margin-left: 20px;
+}
+
+.navItem {
+  align-items: center;
+  background-color: var(--enchanted-color-transparent);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.navItem + .navItem {
+  margin-left: 10px;
+}
+
+.navItem:hover {
+  background-color: var(--enchanted-color-charcoal);
+}
+
+.activeNavItem {
+  background-color: var(--enchanted-color-darker);
+}
