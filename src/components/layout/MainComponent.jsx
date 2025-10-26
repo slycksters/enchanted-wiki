@@ -10,7 +10,9 @@ export const MainComponent = () => {
   return (
     <div>
       {showNavigation && <NavigationComponent />}
-      <Outlet />
+      <div className={'overflow-y-auto'} style={{ height: 'calc(100vh - 80px)' }}>
+        <Outlet />
+      </div>
     </div>
   );
 };

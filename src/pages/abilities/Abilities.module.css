@@ -1,0 +1,110 @@
+.abilitiesPageContainer {
+  height: 100%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.tabItem,
+.subTabItem {
+  align-items: center;
+  background-color: var(--enchanted-color-darker);
+  border: 1px solid var(--enchanted-color-charcoal);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.tabItem {
+  border-radius: 10px;
+  color: var(--enchanted-color-white-smoke);
+  cursor: pointer;
+}
+
+.tabItem:hover {
+  border-color: var(--enchanted-color-white-smoke);
+}
+
+.tabItem:hover,
+.subTabItem:hover {
+  box-shadow: inset 0 0 100px 100px var(--enchanted-color-darkest);
+  transition: box-shadow 0.3s ease;
+}
+
+.activeTabItem {
+  border-color: var(--enchanted-color-white-smoke);
+  box-shadow: inset 0 0 100px 100px var(--enchanted-color-white-smoke);
+  color: var(--enchanted-color-darkest);
+}
+
+.activeTabItem:hover {
+  color: var(--enchanted-color-white-smoke);
+}
+
+.tabItem span,
+.subTabItem span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subTabItem,
+.subTabItemContent {
+  border: 1px solid var(--enchanted-color-charcoal);
+  border-radius: 10px;
+  height: 100%;
+}
+
+.subTabItem {
+  overflow: hidden;
+  width: 110px;
+}
+
+.subTabItemContent {
+  align-items: center;
+  background-color: var(--enchanted-color-darker);
+  color: var(--enchanted-color-white-smoke);
+  display: flex;
+  flex-wrap: nowrap;
+  height: 105.141px;
+  overflow-x: auto;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.contentCardItem, .contentCardItem img {
+  /* filter: grayscale(100%) brightness(72%); */
+  height: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* smooth glow */
+}
+
+.contentCardItem {
+  align-items: center; /* center the image */
+  background-color: var(--enchanted-color-darkest);
+  border: 1px solid var(--enchanted-color-darkest);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  max-width: 125px;
+  padding: 10px;
+  transition: background-color 0.3s ease,
+    filter 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+.contentCardItem + .contentCardItem {
+  margin-left: 4px;
+}
+
+.contentCardItem:hover {
+  border-color: var(--enchanted-color-white-smoke);
+}
+
+/* Glow effect on img when parent is hovered */
+.contentCardItem:hover img {
+  filter: drop-shadow(0 0 8px var(--enchanted-color-white-smoke));
+  transform: scale(1.05); /* optional zoom */
+}

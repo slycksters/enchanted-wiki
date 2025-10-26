@@ -6,4 +6,13 @@
   --enchanted-color-white: rgb(255, 255, 255);
   --enchanted-color-white-smoke: rgb(185, 185, 185);
   --enchanted-color-transparent: transparent;
+
+  /* Rarity colors */
+  --enchanted-color-common: rgb(146, 146, 146);
+  --enchanted-color-uncommon: rgb(142, 255, 129);
+  --enchanted-color-rare: rgb(108, 181, 255);
+  --enchanted-color-epic: rgb(221, 99, 249);
+  --enchanted-color-legendary: rgb(249, 153, 83);
+  --enchanted-color-mythical: rgb(255, 31, 34);
+  --enchanted-color-exotic: rgb(128, 255, 203);
 }
