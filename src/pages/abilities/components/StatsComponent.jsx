@@ -7,7 +7,9 @@ export const StatsComponent = ({ selectedCard }) => {
         <p className={styles.statsHeaderTitle}>{selectedCard.label}</p>
         <img alt={selectedCard.label} src={selectedCard.image} />
       </div>
+
       <div className={styles.statsContent}>
+        {/* Rate */}
         <section>
           <label>Rate: </label>
           <ul>
@@ -19,14 +21,17 @@ export const StatsComponent = ({ selectedCard }) => {
           </ul>
         </section>
 
-        <section>
-          <label>Description:</label>
-          <ul>
-            {selectedCard.descriptions.map((description) => (
-              <li>{description}</li>
-            ))}
-          </ul>
-        </section>
+        {/* Description */}
+        {selectedCard.descriptions && (
+          <section>
+            <label>Description:</label>
+            <ul>
+              {selectedCard.descriptions.map((description) => (
+                <li>{description}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* <section>
           <label>Obtainable from:</label>
