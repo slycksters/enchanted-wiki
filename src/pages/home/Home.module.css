@@ -6,7 +6,7 @@
 }
 
 .developerName, .description {
-  color: var(--enchanted-color-white-smoke);
+  color: var(--enchanted-text-tertiary);
   text-align: center;
 }
 

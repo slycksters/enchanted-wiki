@@ -37,6 +37,7 @@ export const NavigationComponent = () => {
                 `${styles.navItem} ${isActive ? styles.activeNavItem : ''}`
               }
               key={link.id}
+              style={{ width: !isMobileOrTablet ? '100px' : null }}
               to={link.path}
             >
               {isMobileOrTablet ? <Icon size={22} /> : link.label}

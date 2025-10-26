@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Abilities.module.css';
-import { RaritiesTabComponent } from './components/RaritiesTabComponent';
+import { TabContentComponent } from './components/TabContentComponent';
 import { TABS } from './constants';
 
 export const AbilitiesPage = () => {
@@ -11,11 +11,9 @@ export const AbilitiesPage = () => {
   };
 
   return (
-    <div
-      className={`${styles.abilitiesPageContainer} px-20 flex flex-col h-full`}
-    >
+    <div className={`${styles.abilitiesPageContainer} px-17.5`}>
       {/* Ability Tabs */}
-      <div className={'grid grid-cols-5 gap-[4px]'}>
+      <div className={'grid grid-cols-5 gap-5'}>
         {TABS.map((tab) => {
           const isSelected = selectedAbilityTab === tab.label;
           return (
@@ -32,9 +30,7 @@ export const AbilitiesPage = () => {
         })}
       </div>
 
-      <div className={'flex-1 flex'}>
-        <RaritiesTabComponent selectedAbilityTab={selectedAbilityTab} />
-      </div>
+      <TabContentComponent selectedAbilityTab={selectedAbilityTab} />
     </div>
   );
 };

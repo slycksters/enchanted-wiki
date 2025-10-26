@@ -7,7 +7,11 @@ import { PAGE_LINKS } from '../../../constants';
 
 // --- CONSTANTS
 const CARD_CONTAINER_SETTINGS = { height: '200px', width: '100%' };
-const PAGINATION_ARROW_SETTINGS = { cursor: 'pointer', size: 40 };
+const PAGINATION_ARROW_SETTINGS = {
+  color: 'var(--enchanted-text-tertiary)',
+  cursor: 'pointer',
+  size: 40,
+};
 const PAGE_SIZE = 5;
 
 // --- COMPONENT

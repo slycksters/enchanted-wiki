@@ -1,18 +1,44 @@
 :root {
-  --enchanted-color-charcoal: rgb(58, 58, 58);
+  /* Theme 1 */
+  /* --enchanted-color-charcoal: rgb(58, 58, 58);
   --enchanted-color-dark: rgb(25, 25, 25);
   --enchanted-color-darker: rgb(15, 15, 15);
   --enchanted-color-darkest: rgb(10, 10, 10);
   --enchanted-color-white: rgb(255, 255, 255);
   --enchanted-color-white-smoke: rgb(185, 185, 185);
-  --enchanted-color-transparent: transparent;
+  --enchanted-color-transparent: transparent; */
 
   /* Rarity colors */
-  --enchanted-color-common: rgb(146, 146, 146);
+  /* --enchanted-color-common: rgb(146, 146, 146);
   --enchanted-color-uncommon: rgb(142, 255, 129);
   --enchanted-color-rare: rgb(108, 181, 255);
   --enchanted-color-epic: rgb(221, 99, 249);
   --enchanted-color-legendary: rgb(249, 153, 83);
   --enchanted-color-mythical: rgb(255, 31, 34);
-  --enchanted-color-exotic: rgb(128, 255, 203);
+  --enchanted-color-exotic: rgb(128, 255, 203); */
+
+  /* Theme 2 - Semantic Approach */
+  /* Background colors */
+  --enchanted-bg-primary: #030712;              /* main app background */
+  --enchanted-bg-secondary: #10141E;            /* darker background for cards or sections */
+  --enchanted-bg-accent: #1C2029;               /* accent areas, sidebars, headers */
+
+  /* Text colors */
+  --enchanted-text-primary: #FFFFFF;            /* title, headers */
+  --enchanted-text-secondary: #A6AAB2;          /* main text */
+  --enchanted-text-tertiary: #99A1AF;           /* secondary text, muted info */
+  --enchanted-text-cyan: #74D4FF;
+
+  /* Special colors */
+  --enchanted-border-color: #1D202A;            /* borders, lines */
+  --enchanted-overlay-transparent: transparent;   /* overlays, modals */
+
+  /* Rarity colors*/
+  --enchanted-rarity-common: #99A1AF;
+  --enchanted-rarity-uncommon: #05df72;
+  --enchanted-rarity-rare: #2B7FFF;
+  --enchanted-rarity-epic: #AD46FF;
+  --enchanted-rarity-legendary: #FF6900;
+  --enchanted-rarity-mythical: #FB2C36;
+  --enchanted-rarity-exotic: #5EE9B5;
 }

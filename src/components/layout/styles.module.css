@@ -1,37 +1,35 @@
 .navigationContainer {
-  background-color: var(--enchanted-color-dark);
+  background-color: var(--enchanted-bg-primary);
+  border-bottom: 1px solid var(--enchanted-border-color);
   display: flex;
-  padding: 15px;
   width: 100vw;
 }
 
 .navigationContainer img {
-  height: 50px;
+  border-right: 1px solid var(--enchanted-border-color);
+  height: 75px;
+  padding: 15px;
   width: auto;
 }
 
 .navList {
   display: flex;
-  margin-left: 20px;
 }
 
 .navItem {
   align-items: center;
-  background-color: var(--enchanted-color-transparent);
-  border-radius: 4px;
+  background-color: var(--enchanted-overlay-transparent);
+  border-right: 1px solid var(--enchanted-border-color);
   display: flex;
   justify-content: center;
-  padding: 10px;
-}
-
-.navItem + .navItem {
-  margin-left: 10px;
+  padding: 15px;
 }
 
 .navItem:hover {
-  background-color: var(--enchanted-color-charcoal);
+  background-color: var(--enchanted-rarity-epic);
 }
 
 .activeNavItem {
-  background-color: var(--enchanted-color-darker);
+  padding-top: 18px;
+  border-bottom: 3px solid var(--enchanted-rarity-epic);
 }
