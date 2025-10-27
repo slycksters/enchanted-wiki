@@ -32,7 +32,7 @@ body {
   background-color: var(--enchanted-text-primary);
 }
 
-#root {
+.line-graph-background {
   --bg-color: transparent;
   --line-color: var(--enchanted-border-color);
   --line-spacing: 15px;

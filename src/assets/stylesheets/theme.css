@@ -1,20 +1,21 @@
 :root {
-  /* Theme 1 */
-  --enchanted-bg-primary: #0d0a0b;              /* main app background */
-  --enchanted-bg-secondary: #141414;            /* darker background for cards or sections */
-  --enchanted-bg-accent: #252627;               /* accent areas, sidebars, headers */
+  /* Theme - Black */
+  /* Background colors */
+  --enchanted-bg-primary: #010B13;              /* main app background */
+  --enchanted-bg-secondary: #004241;            /* darker background for cards or sections */
+  --enchanted-bg-006A4F: #1C2029;               /* accent areas, sidebars, headers */
 
   /* Text colors */
-  --enchanted-text-primary: #fff9fb;            /* title, headers */
-  --enchanted-text-secondary: #eef0f2;          /* main text */
+  --enchanted-text-primary: #FFFFFF;            /* title, headers */
+  --enchanted-text-secondary: #A6AAB2;          /* main text */
   --enchanted-text-tertiary: #99A1AF;           /* secondary text, muted info */
   --enchanted-text-cyan: #74D4FF;
 
   /* Special colors */
-  --enchanted-border-color: #5fdd9d;            /* borders, lines */
+  --enchanted-border-color: #333333;            /* borders, lines */
   --enchanted-overlay-transparent: transparent;   /* overlays, modals */
 
-  /* Theme 2 - Semantic Approach */
+  /* Theme - Bluish */
   /* Background colors */
   --enchanted-bg-primary: #030712;              /* main app background */
   --enchanted-bg-secondary: #10141E;            /* darker background for cards or sections */
