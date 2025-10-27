@@ -1,36 +1,25 @@
 import { useState } from 'react';
 import styles from './Abilities.module.css';
-import { TabContentComponent } from './components/TabContentComponent';
-import { TABS } from './constants';
+import { CATEGORIES } from './constants';
+import { CatergoriesComponent, ContentComponent } from './components';
 
 export const AbilitiesPage = () => {
-  const [selectedAbilityTab, setSelectedAbilityTab] = useState(TABS[0].label);
-
-  const handleOnClickTab = (tabLabel) => {
-    setSelectedAbilityTab(tabLabel);
-  };
+  const [selectedAbilityTab, setSelectedAbilityTab] = useState(CATEGORIES[0].label);
 
   return (
-    <div className={`${styles.abilitiesPageContainer} px-17.5`}>
-      {/* Ability Tabs */}
-      <div className={'grid grid-cols-5 gap-5'}>
-        {TABS.map((tab) => {
-          const isSelected = selectedAbilityTab === tab.label;
-          return (
-            <div
-              className={`${styles.tabItem} ${
-                isSelected ? styles.activeTabItem : ''
-              }`}
-              key={`abilities-tab-${tab.id}`}
-              onClick={() => handleOnClickTab(tab.label)}
-            >
-              <span title={tab.label}>{tab.label}</span>
-            </div>
-          );
-        })}
+    <div className={`${styles.abilitiesPageContainer}`}>
+      {/* Ability Categories */}
+      <div className={styles.sidebar}>
+        <section className={styles.sidebarCategories}>
+          <CatergoriesComponent
+            selectedAbilityTab={selectedAbilityTab}
+            setSelectedAbilityTab={setSelectedAbilityTab}
+          />
+        </section>
       </div>
-
-      <TabContentComponent selectedAbilityTab={selectedAbilityTab} />
+      <div className={styles.mainContent}>
+        <ContentComponent />
+      </div>
     </div>
   );
 };

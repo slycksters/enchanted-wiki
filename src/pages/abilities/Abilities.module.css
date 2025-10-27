@@ -1,92 +1,135 @@
-.tabItem {
-  background-color: var(--enchanted-bg-secondary);
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.activeTabItem,
-.tabItem:hover {
-  background-color: var(--enchanted-bg-accent);
-}
-
-.subTabItem {
-  border: 1px solid var(--enchanted-bg-accent);
-  border-radius: 8px;
-  cursor: pointer;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  text-align: center;
-}
-
-.subTabItemContent {
-  background-color: var(--enchanted-bg-secondary);
-  border-radius: 8px;
+.abilitiesPageContainer {
   display: flex;
-  flex-wrap: wrap; /* allow wrapping */
-  padding: 10px;
-  gap: 20px; /* normal spacing */
+  height: calc(100vh - 80px);
+  overflow: hidden; /* prevents page-level scroll */
 }
 
-.contentCardItem {
-  background-color: var(--enchanted-bg-accent);
-  border-radius: 8px;
-  cursor: pointer;
-  height: 100px;
-  padding: 10px;
-  width: 100px;
-}
-
-.contentCardItem img {
-  display: flex;
+/* Sidebar */
+.sidebar {
+  border-right: 1px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-secondary);
+  flex-shrink: 0;
   height: 100%;
-  margin: auto;
+  overflow-y: auto;
+  width: clamp(184px, 25vw, 271px);
 }
 
-.noContentVerbiage {
-  color: var(--enchanted-text-primary);
-  height: 100px;
-  width: 100%;
+/* Parent Categories */
+.categoryItem {
+  align-items: center;
+  border-bottom: 1px solid var(--enchanted-border-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-indent: 20px;
 }
 
-.statsComponentContainer {
-  border: 1px solid var(--enchanted-bg-accent);
-  border-radius: 8px;
+.categoryItemWrapper:last-child .categoryItem {
+  border-bottom: 1px solid var(--enchanted-border-color);
 }
 
-.statsHeader {
+.categoryItem span:last-child {
+  transform: rotate(0deg);
+  transition: transform ease-in-out 0.5s;
+}
+
+.categoryItem {
+  cursor: pointer;
+}
+
+.activeCategoryItemWrapper .categoryItem {
+  border-right: 2px solid var(--enchanted-text-cyan);
+  border-bottom: 1px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-cyan);
+  padding-right: 8px;
+}
+
+.activeCategoryItemWrapper .categoryItem span:last-child {
+  transform: rotate(315deg);
+  transition: transform ease-in-out 0.5s;
+}
+
+/* Child Categories */
+.subCategoryWrapper {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height ease-out 0.5s;
+}
+
+.subCategoryWrapperOpenAnimation {
+  border-bottom: 1px solid var(--enchanted-border-color);
+  max-height: 1000px;
+  transition: max-height ease-in 0.5s;
+}
+
+.subCategoryItem {
+  padding: 5px 0px;
+  text-indent: 30px;
+}
+
+.subCategoryItemChild {
+  margin: 0px 30px;
+  padding-left: 15px;
+}
+
+.subCategoryWrapperOpenAnimation {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.contentComponentContainer {
+  padding: 20px;
+}
+
+.categoryWrapper {
+  flex: 1 1 400px;            /* can grow and shrink, min width 400px */
+  min-width: 350px;           /* ensures readability */
+  padding: 20px 50px;
+}
+
+.categoryHeader {
+  background-color: var(--enchanted-bg-secondary);
+  border-radius: 8px 8px 0px 0px;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.contentWrapper {
+  border: 1px solid var(--enchanted-bg-secondary);
+  border-radius: 0px 0px 8px 8px;
+  padding: 10px;
+}
+
+.contentCard {
+  padding: 10px;
+  text-align: center;
+}
+
+.contentCardImage {
+  height: 50px;
+}
+
+.contentCardImage img {
   align-items: center;
   display: flex;
-  padding: 20px;
-  justify-content: space-between;
+  justify-self: center;
+  height: 100%;
 }
 
-.statsHeader img {
-  height: 92px;
+/* Stat Cards */
+.statsHeader {
+  height: 100px;
 }
 
-.statsHeaderTitle {
-  font-size: 30px;
-}
-
-.statsContent {
-  background-color: var(--enchanted-bg-secondary);
-  padding: 20px;
-}
-
-.statsContent ul {
-  list-style-type: disc; /* adds bullets */
-  padding-left: 20px;    /* ensures bullets have space */
-  margin: 0;             /* optional */
-}
-
-.statsContent section + section {
-  margin-top: 10px;
-}
-
-.statsContent label {
-  color: var(--enchanted-text-cyan);
+.statsHeader img{
+  height: 100%;
+  width: auto;
 }

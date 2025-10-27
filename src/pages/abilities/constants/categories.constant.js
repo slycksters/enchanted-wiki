@@ -1,4 +1,4 @@
-export const TABS = [
+export const CATEGORIES = [
   { id: 1, label: 'Races' },
   { id: 2, label: 'Traits' },
   { id: 3, label: 'Magics' },

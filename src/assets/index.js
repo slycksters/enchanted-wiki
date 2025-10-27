@@ -53,6 +53,8 @@ import soulDevourerPassiveMagicImg from './images/soul-devourer-passive-magic.pn
 // --- Passive Skill Images
 import shadowStepPassiveSkillImg from './images/shadow-step-passive-skill.png';
 import soulStackPassiveSkillImg from './images/soul-stack-passive-skill.png';
+// --- Non Game Related Images
+import lineGraphBackgroundImg from './images/line-graph-background.png';
 
 export {
   enchantedDarkLogo,
@@ -104,4 +106,5 @@ export {
   soulDevourerPassiveMagicImg,
   shadowStepPassiveSkillImg,
   soulStackPassiveSkillImg,
+  lineGraphBackgroundImg,
 };

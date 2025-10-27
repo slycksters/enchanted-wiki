@@ -2,14 +2,15 @@
   background-color: var(--enchanted-bg-primary);
   border-bottom: 1px solid var(--enchanted-border-color);
   display: flex;
+  justify-content: space-between;
   width: 100vw;
 }
 
 .navigationContainer img {
-  border-right: 1px solid var(--enchanted-border-color);
   height: 75px;
   padding: 15px;
   width: auto;
+  margin: auto;
 }
 
 .navList {
@@ -19,17 +20,23 @@
 .navItem {
   align-items: center;
   background-color: var(--enchanted-overlay-transparent);
-  border-right: 1px solid var(--enchanted-border-color);
+  border-left: 1px solid var(--enchanted-border-color);
   display: flex;
   justify-content: center;
   padding: 15px;
 }
 
-.navItem:hover {
-  background-color: var(--enchanted-rarity-epic);
+.activeNavItem {
+  border-bottom: 2px solid var(--enchanted-text-cyan);
+  color: var(--enchanted-text-cyan);
+  padding-top: 18px;
 }
 
-.activeNavItem {
-  padding-top: 18px;
-  border-bottom: 3px solid var(--enchanted-rarity-epic);
+.logoWrapper .navItem {
+  border-right: none !important;
+}
+
+.logoWrapper {
+  border-right: 1px solid var(--enchanted-border-color);
+  width: clamp(184px, 25vw, 271px);
 }

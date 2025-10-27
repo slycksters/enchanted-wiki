@@ -4,7 +4,7 @@
 body {
   background-color: var(--enchanted-bg-primary);
   color: var(--enchanted-text-primary);
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 
@@ -22,7 +22,7 @@ body {
 
 /* Scrollbar thumb (the draggable part) */
 *::-webkit-scrollbar-thumb {
-  background-color: var(--enchanted-bg-accent);
+  background-color: var(--enchanted-text-secondary);
   border-radius: 4px;
   border: 2px solid var(--enchanted-bg-secondary); /* optional padding effect */
 }

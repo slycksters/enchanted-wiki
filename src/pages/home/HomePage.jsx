@@ -12,7 +12,7 @@ export const HomePage = () => {
 
       {/* Developer Name */}
       <section className={styles.developerName}>
-        <small>Developed by: Slyckster AKA Zazel</small>
+        <small>Enchanted Wiki Developed by: Slyckster AKA Zazel</small>
       </section>
 
       {/* Game Description */}

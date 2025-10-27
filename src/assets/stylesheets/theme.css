@@ -1,21 +1,18 @@
 :root {
   /* Theme 1 */
-  /* --enchanted-color-charcoal: rgb(58, 58, 58);
-  --enchanted-color-dark: rgb(25, 25, 25);
-  --enchanted-color-darker: rgb(15, 15, 15);
-  --enchanted-color-darkest: rgb(10, 10, 10);
-  --enchanted-color-white: rgb(255, 255, 255);
-  --enchanted-color-white-smoke: rgb(185, 185, 185);
-  --enchanted-color-transparent: transparent; */
+  --enchanted-bg-primary: #0d0a0b;              /* main app background */
+  --enchanted-bg-secondary: #141414;            /* darker background for cards or sections */
+  --enchanted-bg-accent: #252627;               /* accent areas, sidebars, headers */
 
-  /* Rarity colors */
-  /* --enchanted-color-common: rgb(146, 146, 146);
-  --enchanted-color-uncommon: rgb(142, 255, 129);
-  --enchanted-color-rare: rgb(108, 181, 255);
-  --enchanted-color-epic: rgb(221, 99, 249);
-  --enchanted-color-legendary: rgb(249, 153, 83);
-  --enchanted-color-mythical: rgb(255, 31, 34);
-  --enchanted-color-exotic: rgb(128, 255, 203); */
+  /* Text colors */
+  --enchanted-text-primary: #fff9fb;            /* title, headers */
+  --enchanted-text-secondary: #eef0f2;          /* main text */
+  --enchanted-text-tertiary: #99A1AF;           /* secondary text, muted info */
+  --enchanted-text-cyan: #74D4FF;
+
+  /* Special colors */
+  --enchanted-border-color: #5fdd9d;            /* borders, lines */
+  --enchanted-overlay-transparent: transparent;   /* overlays, modals */
 
   /* Theme 2 - Semantic Approach */
   /* Background colors */

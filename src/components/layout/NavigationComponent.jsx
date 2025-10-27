@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
-import { enchantedSmallLogo } from '../../assets';
+import { enchantedLogo, enchantedSmallLogo } from '../../assets';
 import { BASE_PATH, PAGE_LINKS } from '../../constants';
 
 export const NavigationComponent = () => {
@@ -22,9 +22,11 @@ export const NavigationComponent = () => {
   return (
     <div className={styles.navigationContainer}>
       {/* Logo */}
-      <NavLink to={BASE_PATH}>
-        <img src={enchantedSmallLogo} />
-      </NavLink>
+      <div className={styles.logoWrapper}>
+        <NavLink to={BASE_PATH}>
+          <img src={enchantedLogo} />
+        </NavLink>
+      </div>
 
       {/* Page Links */}
       <div className={styles.navList}>

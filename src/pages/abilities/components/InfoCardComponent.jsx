@@ -1,11 +1,10 @@
 import styles from '../Abilities.module.css';
 
-export const StatsComponent = ({ selectedCard }) => {
+export const InfoCardComponent = ({ data }) => {
   return (
     <div className={styles.statsComponentContainer}>
       <div className={styles.statsHeader}>
-        <p className={styles.statsHeaderTitle}>{selectedCard.label}</p>
-        <img alt={selectedCard.label} src={selectedCard.image} />
+        <img alt={data.label} src={data.image} />
       </div>
 
       <div className={styles.statsContent}>
@@ -15,18 +14,18 @@ export const StatsComponent = ({ selectedCard }) => {
           <ul>
             <li>
               <span>
-                {selectedCard.rarity} ({selectedCard.rate})
+                {data.rarity} ({data.rate})
               </span>
             </li>
           </ul>
         </section>
 
         {/* Description */}
-        {selectedCard.descriptions && (
+        {data.descriptions && (
           <section>
             <label>Description:</label>
             <ul>
-              {selectedCard.descriptions.map((description) => (
+              {data.descriptions.map((description) => (
                 <li>{description}</li>
               ))}
             </ul>
