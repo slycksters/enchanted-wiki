@@ -39,7 +39,7 @@ export const NavigationCardsComponent = () => {
                 containerSettings={CARD_CONTAINER_SETTINGS}
                 iconSettings={{
                   icon: link.icon,
-                  label: link.label,
+                  label: link.name,
                 }}
               />
             </NavLink>

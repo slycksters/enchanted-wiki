@@ -86,12 +86,12 @@
 }
 
 .contentComponentContainer {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .categoryWrapper {
   flex: 1 1 400px;            /* can grow and shrink, min width 400px */
-  min-width: 350px;           /* ensures readability */
   padding: 20px 50px;
 }
 
@@ -99,8 +99,8 @@
   background-color: var(--enchanted-bg-secondary);
   border-radius: 8px 8px 0px 0px;
   font-size: 20px;
-  padding: 10px;
-  text-align: center;
+  padding: 10px 20px;
+  /* text-align: center; */
 }
 
 .contentWrapper {
@@ -111,6 +111,7 @@
 }
 
 .contentCard {
+  cursor: pointer;
   padding: 10px;
   text-align: center;
 }

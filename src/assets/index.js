@@ -3,56 +3,64 @@ import enchantedDarkLogo from './logos/enchanted-dark-logo.png';
 import enchantedLogo from './logos/enchanted-logo.png';
 import enchantedSmallLogo from './logos/enchanted-small-logo.png';
 // --- Race Images
-import humanRaceImg from './images/human-race.png';
-import dwarfRaceImg from './images/dwarf-race.png';
-import reaperRaceImg from './images/reaper-race.png';
-import fishmanRaceImg from './images/fishman-race.png';
-import saiyanRaceImg from './images/saiyan-race.png';
-import hollowRaceImg from './images/hollow-race.png';
-import angelRaceImg from './images/angel-race.png';
-import demonRaceImg from './images/demon-race.png';
-import abaddonRaceImg from './images/abaddon-race.png';
-import cleanerRaceImg from './images/cleaner-race.png';
-import fullbringerRaceImg from './images/fullbringer-race.png';
+import humanRaceImg from './images/races/human.png';
+import dwarfRaceImg from './images/races/dwarf.png';
+import reaperRaceImg from './images/races/reaper.png';
+import fishmanRaceImg from './images/races/fishman.png';
+import saiyanRaceImg from './images/races/saiyan.png';
+import hollowRaceImg from './images/races/hollow.png';
+import angelRaceImg from './images/races/angel.png';
+import demonRaceImg from './images/races/demon.png';
+import abaddonRaceImg from './images/races/abaddon.png';
+import cleanerRaceImg from './images/races/cleaner.png';
+import fullbringerRaceImg from './images/races/fullbringer.png';
 // --- Trait Images
-import toughtTraitImg from './images/tough-trait.png';
-import quickReflexesTraitImg from './images/quick-reflexes-trait.png';
-import hotBloodedTraitImg from './images/hot-blooded-trait.png';
-import winderRunnerTraitImg from './images/wind-runner-trait.png';
-import battleBornTraitImg from './images/battle-born-trait.png';
-import venomousStrikesTraitImg from './images/venomous-strikes-trait.png';
-import adrenalineRushTraitImg from './images/adrenaline-rush-trait.png';
-import berserkerWrathTraitImg from './images/berserkers-wrath-trait.png';
-import unyieldingForceTraitImg from './images/unyielding-force-trait.png';
-import kingsPresenceTraitImg from './images/kings-presence-trait.png';
-import temporalAwarenessTraitImg from './images/temporal-awareness-trait.png';
-import cursedBloodTraitImg from './images/cursed-blood-trait.png';
-import eternalHungerTraitImg from './images/eternal-hunger-trait.png';
-import swordmasterTraitImg from './images/sword-master-trait.png';
-import ultraReflexesTraitImg from './images/ultra-reflexes-trait.png';
+import toughtTraitImg from './images/traits/tough.png';
+import quickReflexesTraitImg from './images/traits/quick-reflexes.png';
+import hotBloodedTraitImg from './images/traits/hot-blooded.png';
+import winderRunnerTraitImg from './images/traits/wind-runner.png';
+import battleBornTraitImg from './images/traits/battle-born.png';
+import venomousStrikesTraitImg from './images/traits/venomous-strikes.png';
+import adrenalineRushTraitImg from './images/traits/adrenaline-rush.png';
+import berserkerWrathTraitImg from './images/traits/berserkers-wrath.png';
+import unyieldingForceTraitImg from './images/traits/unyielding-force.png';
+import kingsPresenceTraitImg from './images/traits/kings-presence.png';
+import temporalAwarenessTraitImg from './images/traits/temporal-awareness.png';
+import cursedBloodTraitImg from './images/traits/cursed-blood.png';
+import eternalHungerTraitImg from './images/traits/eternal-hunger.png';
+import swordmasterTraitImg from './images/traits/sword-master.png';
+import ultraReflexesTraitImg from './images/traits/ultra-reflexes.png';
 // --- Magic Images
-import windMagicImg from './images/wind-magic.png';
-import fireMagicImg from './images/fire-magic.png';
-import poisonMagicImg from './images/poison-magic.png';
-import darkMagicImg from './images/dark-magic.png';
-import iceMagicImg from './images/ice-magic.png';
-import lightningMagicImg from './images/lightning-magic.png';
-import poisonDragonSlayerMagicImg from './images/poison-dragon-slayer-magic.png';
-import shadowDragonSlayerMagicImg from './images/shadow.dragon-slayer-magic.png';
-import lightningDragonSlayerMagicImg from './images/lightning-dragon-slayer-magic.png';
-import fireDragonSlayerMagicImg from './images/fire-dragon-slayer-magic.png';
-import waterDragonSlayerMagicImg from './images/water-dragon-slayer-magic.png';
+import windMagicImg from './images/magics/wind.png';
+import fireMagicImg from './images/magics/fire.png';
+import poisonMagicImg from './images/magics/poison.png';
+import darkMagicImg from './images/magics/dark.png';
+import iceMagicImg from './images/magics/ice.png';
+import lightningMagicImg from './images/magics/lightning.png';
+import poisonDragonSlayerMagicImg from './images/magics/poison-dragon-slayer.png';
+import shadowDragonSlayerMagicImg from './images/magics/shadow.dragon-slayer.png';
+import lightningDragonSlayerMagicImg from './images/magics/lightning-dragon-slayer.png';
+import fireDragonSlayerMagicImg from './images/magics/fire-dragon-slayer.png';
+import waterDragonSlayerMagicImg from './images/magics/water-dragon-slayer.png';
 // --- Passive Magic Images
-import frozenPassiveMagicImg from './images/frozen-passive-magic.png';
-import divineRetributionPassiveMagicImg from './images/divine-retribution-passive-magic.png';
-import lifeStealPassiveMagicImg from './images/life-steal-passive-magic.png';
-import roarOfTheAbyssPassiveMagicImg from './images/roar-of-the-abyss-passive-magic.png';
-import godSpeedPassiveMagicImg from './images/god-speed-passive-magic.png';
-import vortexOfRuinPassiveMagicImg from './images/vortex-of-ruin-passive-magic.png';
-import soulDevourerPassiveMagicImg from './images/soul-devourer-passive-magic.png';
+import frozenPassiveMagicImg from './images/passive-magics/frozen.png';
+import divineRetributionPassiveMagicImg from './images/passive-magics/divine-retribution.png';
+import lifeStealPassiveMagicImg from './images/passive-magics/life-steal.png';
+import roarOfTheAbyssPassiveMagicImg from './images/passive-magics/roar-of-the-abyss.png';
+import godSpeedPassiveMagicImg from './images/passive-magics/god-speed.png';
+import vortexOfRuinPassiveMagicImg from './images/passive-magics/vortex-of-ruin.png';
+import soulDevourerPassiveMagicImg from './images/passive-magics/soul-devourer.png';
 // --- Passive Skill Images
-import shadowStepPassiveSkillImg from './images/shadow-step-passive-skill.png';
-import soulStackPassiveSkillImg from './images/soul-stack-passive-skill.png';
+import shadowStepPassiveSkillImg from './images/passive-skills/shadow-step.png';
+import soulStackPassiveSkillImg from './images/passive-skills/soul-stack.png';
+// --- Item Images
+import raceRerollImg from './images/items/race-reroll.png';
+import passiveMagicRerollImg from './images/items/passive-magic-reroll.png';
+// --- NPC Images
+import shamImg from './images/npcs/sham.png';
+import reaperImg from './images/npcs/reaper.png';
+import adamImg from './images/npcs/adam.png';
+import monkeyDevelopsImg from './images/npcs/monkey-develops.png';
 // --- Non Game Related Images
 import lineGraphBackgroundImg from './images/line-graph-background.png';
 
@@ -107,4 +115,10 @@ export {
   shadowStepPassiveSkillImg,
   soulStackPassiveSkillImg,
   lineGraphBackgroundImg,
+  raceRerollImg,
+  passiveMagicRerollImg,
+  shamImg,
+  reaperImg,
+  adamImg,
+  monkeyDevelopsImg,
 };

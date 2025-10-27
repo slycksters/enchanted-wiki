@@ -16,15 +16,15 @@ body {
 
 /* Scrollbar track (background) */
 *::-webkit-scrollbar-track {
-  background: var(--enchanted-bg-secondary);
-  border-radius: 4px;
+  background: var(--enchanted-bg-accent);
+  /* border-radius: 4px; */
 }
 
 /* Scrollbar thumb (the draggable part) */
 *::-webkit-scrollbar-thumb {
   background-color: var(--enchanted-text-secondary);
   border-radius: 4px;
-  border: 2px solid var(--enchanted-bg-secondary); /* optional padding effect */
+  border: 2px solid var(--enchanted-bg-accent); /* optional padding effect */
 }
 
 /* Scrollbar thumb on hover */

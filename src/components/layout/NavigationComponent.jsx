@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
-import { enchantedLogo, enchantedSmallLogo } from '../../assets';
+import { enchantedLogo } from '../../assets';
 import { BASE_PATH, PAGE_LINKS } from '../../constants';
 
 export const NavigationComponent = () => {
@@ -42,7 +42,7 @@ export const NavigationComponent = () => {
               style={{ width: !isMobileOrTablet ? '100px' : null }}
               to={link.path}
             >
-              {isMobileOrTablet ? <Icon size={22} /> : link.label}
+              {isMobileOrTablet ? <Icon size={22} /> : link.name}
             </NavLink>
           );
         })}

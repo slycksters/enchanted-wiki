@@ -14,8 +14,8 @@ export const CatergoriesComponent = ({
   };
 
   return CATEGORIES.map((category) => {
-    const isSelected = selectedAbilityTab === category.label;
-    const subCategoresData = DATA_MAP[category.label];
+    const isSelected = selectedAbilityTab === category.name;
+    const subCategoresData = DATA_MAP[category.name];
 
     return (
       <div
@@ -24,11 +24,11 @@ export const CatergoriesComponent = ({
           isSelected ? styles.activeCategoryItemWrapper : ''
         }`}
       >
-        <div  
+        <div
           className={`${styles.categoryItem} `}
-          onClick={() => handleOnClickTab(category.label)}
+          onClick={() => handleOnClickTab(category.name)}
         >
-          <span title={category.label}>{category.label}</span>
+          <span title={category.name}>{category.name}</span>
           <span>
             <FaPlus />
           </span>

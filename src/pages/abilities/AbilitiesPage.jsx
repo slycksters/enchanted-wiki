@@ -2,9 +2,11 @@ import { useState } from 'react';
 import styles from './Abilities.module.css';
 import { CATEGORIES } from './constants';
 import { CatergoriesComponent, ContentComponent } from './components';
+import { DetailsComponent } from '../../components';
 
 export const AbilitiesPage = () => {
-  const [selectedAbilityTab, setSelectedAbilityTab] = useState(CATEGORIES[0].label);
+  const [selectedAbilityTab, setSelectedAbilityTab] = useState(CATEGORIES[0].name);
+  const [selectedCard, setSelectedCard] = useState();
 
   return (
     <div className={`${styles.abilitiesPageContainer}`}>
@@ -18,8 +20,9 @@ export const AbilitiesPage = () => {
         </section>
       </div>
       <div className={styles.mainContent}>
-        <ContentComponent />
+        <ContentComponent setSelectedCard={setSelectedCard} />
       </div>
+      <DetailsComponent info={selectedCard} />
     </div>
   );
 };
