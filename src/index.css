@@ -31,3 +31,24 @@ body {
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--enchanted-text-primary);
 }
+
+#root {
+  --bg-color: transparent;
+  --line-color: var(--enchanted-border-color);
+  --line-spacing: 15px;
+  --line-thickness: 0.7px;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
+  background-color: var(--bg-color);
+  background-image:
+    repeating-linear-gradient(
+      -45deg, /* Change angle here: 45deg, 135deg, etc. */
+      transparent,
+      transparent calc(var(--line-spacing) - var(--line-thickness)),
+      var(--line-color) calc(var(--line-spacing) - var(--line-thickness)),
+      var(--line-color) var(--line-spacing)
+    );
+}
