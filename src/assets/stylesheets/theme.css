@@ -28,8 +28,8 @@
   --enchanted-text-cyan: #74D4FF;
 
   /* Special colors */
-  /* --enchanted-border-color: #333333;            borders, lines */
-  --enchanted-border-color: #1D202A;            /* borders, lines */
+  --enchanted-border-color: #333333;
+  /* --enchanted-border-color: #4E5158; */
   --enchanted-overlay-transparent: transparent;   /* overlays, modals */
 
   /* Rarity colors*/

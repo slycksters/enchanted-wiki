@@ -63,6 +63,8 @@ import adamImg from './images/npcs/adam.png';
 import monkeyDevelopsImg from './images/npcs/monkey-develops.png';
 // --- Roblox Avatar Images
 import zazelAvatarImg from './images/roblox-avatar/zazel.png';
+// --- Videos
+import zazelAvatarVid from './videos/zazel-floating.mp4';
 
 export {
   enchantedDarkLogo,
@@ -121,4 +123,5 @@ export {
   adamImg,
   monkeyDevelopsImg,
   zazelAvatarImg,
+  zazelAvatarVid,
 };

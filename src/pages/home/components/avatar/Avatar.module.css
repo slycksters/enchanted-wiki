@@ -1,0 +1,70 @@
+.avatarDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 30vh;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.avatarDisplay video {
+  height: 100%;
+  width: auto;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: floatAvatar 2s ease-in-out infinite;
+}
+
+/* Shadow perfectly synced with avatar float */
+.avatarShadow {
+  position: absolute;
+  bottom: 0;
+  width: 10vw;
+  height: 2vh;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3) 70%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  animation: shadowSync 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes floatAvatar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4vh);
+  }
+}
+
+@keyframes shadowSync {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 0.3;
+  }
+}
+
+/* Jumping avatar scales smoothly for png avatar */
+/* .avatarDisplay img {
+  height: 100%;
+  width: auto;
+  animation: jump 1.5s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4vh);
+  }
+} */

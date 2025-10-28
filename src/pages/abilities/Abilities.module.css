@@ -16,6 +16,11 @@
   padding-bottom: 20px;
 }
 
+.categoryBorders {
+  border-radius: 8px;
+  box-shadow:  0 0 10px var(--enchanted-bg-accent);
+}
+
 .categoryWrapper {
   flex: 1 1 400px;            /* can grow and shrink, min width 400px */
   padding: 20px 50px;

@@ -27,7 +27,7 @@ export const SubListComponent = ({ list }) => {
           <div
             className={styles.subListItemChild}
             key={`sub-list-child-${item.name}-${item.id}`}
-            style={{ borderLeft: `1px solid ${rarity.color}` }}
+            style={{ borderLeft: `1px solid ${rarity.color ?? 'var(--enchanted-text-secondary)'}` }}
           >
             <small title={item.name}>{item.name}</small>
           </div>

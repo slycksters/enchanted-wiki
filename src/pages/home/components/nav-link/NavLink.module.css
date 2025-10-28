@@ -1,0 +1,54 @@
+/* Wrapper */
+.linkList {
+  display: flex;
+  gap: clamp(1px, 2vw, 20px);
+  height: auto;
+  padding-top: clamp(20px, 7vw, 50px);
+  justify-content: center;
+  width: 100%;
+}
+
+/* Border hover interaction */
+.linkListItem {
+  align-items: center;
+  border-bottom: none;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  padding: 1px clamp(5px, 1vw, 40px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.linkListItem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-bottom: 2px solid var(--enchanted-rarity-exotic);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.linkListItem:hover::before {
+  transform: scaleX(1);
+}
+
+/* Link icon and text */
+.linkListItemIcon {
+  font-size: clamp(12px, 5vw, 30px);
+}
+
+.linkListItem p {
+  font-size: clamp(9px, 2vw, 16px);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  /* Hide link icons */
+  .linkListItemIcon {
+    display: none;
+  }
+}
