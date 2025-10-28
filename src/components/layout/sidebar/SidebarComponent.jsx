@@ -3,44 +3,48 @@ import { FaPlus } from 'react-icons/fa6';
 import { SubListComponent } from './SubListComponent';
 import styles from './Sidebar.module.css';
 
-export const SidebarComponent = ({ list, onSelectCategory }) => {
-  const [selectedCategory, setSelectedCategory] = useState(list[0].name);
+export const SidebarComponent = ({ list, onSelectItem }) => {
+  const [selectedItem, setSelectedItem] = useState(list[0].name);
 
-  const handleOnClickTab = (tabLabel) => {
-    const newSelected = tabLabel === selectedCategory ? '' : tabLabel;
-    setSelectedCategory(newSelected);
-    onSelectCategory(newSelected);
+  const handleOnClickItem = (item) => {
+    const newSelected = item === selectedItem ? '' : item;
+    setSelectedItem(newSelected);
+    onSelectItem(newSelected);
   };
 
-  return list.map((item) => {
-    const isSelected = selectedCategory === item.name;
+  return (
+    <div className={styles.sidebar}>
+      <div>
+        {list.map((item) => {
+        const isSelected = selectedItem === item.name;
 
-    return (
-      <div className={styles.sidebar}>
-        <div
-          key={`list-item-${item.id}`}
-          className={`${styles.categoryItemWrapper} ${
-            isSelected ? styles.activeCategoryItemWrapper : ''
-          }`}
-        >
+        return (
           <div
-            className={`${styles.categoryItem} `}
-            onClick={() => handleOnClickTab(item.name)}
-          >
-            <span title={item.name}>{item.name}</span>
-            <span>
-              <FaPlus />
-            </span>
-          </div>
-          <div
-            className={`${styles.subCategoryWrapper} ${
-              isSelected ? styles.subCategoryWrapperOpenAnimation : ''
+            key={`list-item-${item.id}`}
+            className={`${styles.listItemWrapper} ${
+              isSelected ? styles.activeListItemWrapper : ''
             }`}
           >
-            <SubListComponent list={item.subList} />
+            <div
+              className={`${styles.listItem} `}
+              onClick={() => handleOnClickItem(item.name)}
+            >
+              <span title={item.name}>{item.name}</span>
+              <span>
+                <FaPlus />
+              </span>
+            </div>
+            <div
+              className={`${styles.subListWrapper} ${
+                isSelected ? styles.subListWrapperOpenAnimation : ''
+              }`}
+            >
+              <SubListComponent list={item.subList} />
+            </div>
           </div>
-        </div>
+        );
+      })}
       </div>
-    );
-  });
+    </div>
+  );
 };

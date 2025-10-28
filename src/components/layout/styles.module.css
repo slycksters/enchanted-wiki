@@ -28,8 +28,8 @@
 }
 
 .activeNavItem {
-  border-bottom: 2px solid var(--enchanted-text-cyan);
-  color: var(--enchanted-text-cyan);
+  border-bottom: 2px solid var(--enchanted-rarity-exotic);
+  color: var(--enchanted-rarity-exotic);
   padding-top: 18px;
 }
 

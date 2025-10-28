@@ -1,24 +1,18 @@
 import { useState } from 'react';
 import styles from './Abilities.module.css';
 import { CATEGORIES } from './constants';
-import { CatergoriesComponent, ContentComponent } from './components';
-import { DetailsComponent } from '../../components';
+import { ContentComponent } from './components';
+import { DetailsComponent, SidebarComponent } from '../../components';
 
 export const AbilitiesPage = () => {
-  const [selectedAbilityTab, setSelectedAbilityTab] = useState(CATEGORIES[0].name);
+  const [selectedAbilityTab, setSelectedAbilityTab] = useState(
+    CATEGORIES[0].name
+  );
   const [selectedCard, setSelectedCard] = useState();
 
   return (
     <div className={`${styles.abilitiesPageContainer}`}>
-      {/* Ability Categories */}
-      <div className={styles.sidebar}>
-        <section className={styles.sidebarCategories}>
-          <CatergoriesComponent
-            selectedAbilityTab={selectedAbilityTab}
-            setSelectedAbilityTab={setSelectedAbilityTab}
-          />
-        </section>
-      </div>
+      <SidebarComponent list={CATEGORIES} onSelectItem={setSelectedAbilityTab} />
       <div className={styles.mainContent}>
         <ContentComponent setSelectedCard={setSelectedCard} />
       </div>

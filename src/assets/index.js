@@ -61,8 +61,8 @@ import shamImg from './images/npcs/sham.png';
 import reaperImg from './images/npcs/reaper.png';
 import adamImg from './images/npcs/adam.png';
 import monkeyDevelopsImg from './images/npcs/monkey-develops.png';
-// --- Non Game Related Images
-import lineGraphBackgroundImg from './images/line-graph-background.png';
+// --- Roblox Avatar Images
+import zazelAvatarImg from './images/roblox-avatar/zazel.png';
 
 export {
   enchantedDarkLogo,
@@ -114,11 +114,11 @@ export {
   soulDevourerPassiveMagicImg,
   shadowStepPassiveSkillImg,
   soulStackPassiveSkillImg,
-  lineGraphBackgroundImg,
   raceRerollImg,
   passiveMagicRerollImg,
   shamImg,
   reaperImg,
   adamImg,
   monkeyDevelopsImg,
+  zazelAvatarImg,
 };

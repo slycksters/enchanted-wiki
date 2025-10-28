@@ -4,13 +4,13 @@
   border-right: 1px solid var(--enchanted-border-color);
   color: var(--enchanted-text-secondary);
   flex-shrink: 0;
-  height: calc(100vh - 80px);
+  height: 100%;
   overflow-y: auto;
   width: clamp(184px, 25vw, 271px);
 }
 
 /* Parent Categories */
-.categoryItem {
+.listItem {
   align-items: center;
   border-bottom: 1px solid var(--enchanted-border-color);
   display: flex;
@@ -19,55 +19,56 @@
   text-indent: 20px;
 }
 
-.categoryItemWrapper:last-child .categoryItem {
+.listItemWrapper:last-child .listItem {
   border-bottom: 1px solid var(--enchanted-border-color);
 }
 
-.categoryItem span:last-child {
+.listItem span:last-child {
   transform: rotate(0deg);
   transition: transform ease-in-out 0.5s;
 }
 
-.categoryItem {
+.listItem {
   cursor: pointer;
 }
 
-.activeCategoryItemWrapper .categoryItem {
-  border-right: 2px solid var(--enchanted-text-cyan);
+.activeListItemWrapper .listItem {
+  border-right: 2px solid var(--enchanted-rarity-exotic);
   border-bottom: 1px solid var(--enchanted-border-color);
-  color: var(--enchanted-text-cyan);
+  color: var(--enchanted-rarity-exotic);
   padding-right: 8px;
 }
 
-.activeCategoryItemWrapper .categoryItem span:last-child {
+.activeListItemWrapper .listItem span:last-child {
   transform: rotate(315deg);
   transition: transform ease-in-out 0.5s;
 }
 
 /* Child Categories */
-.subCategoryWrapper {
+.subListWrapper {
   max-height: 0;
   overflow-y: hidden;
   transition: max-height ease-out 0.5s;
 }
 
-.subCategoryWrapperOpenAnimation {
+.subListWrapperOpenAnimation {
   border-bottom: 1px solid var(--enchanted-border-color);
   max-height: 1000px;
   transition: max-height ease-in 0.5s;
 }
 
-.subCategoryItem {
+.subListItem {
   padding: 5px 0px;
   text-indent: 30px;
 }
 
-.subCategoryItemChild {
+.subListItemChild {
+  cursor: pointer;
   margin: 0px 30px;
   padding-left: 15px;
 }
 
-.subCategoryWrapperOpenAnimation {
+.subListWrapperOpenAnimation {
   padding-top: 5px;
   padding-bottom: 20px;
 }
