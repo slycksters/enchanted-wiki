@@ -77,7 +77,7 @@ export const PASSIVE_MAGICS = {
     type: TYPES.passiveMagic,
   },
   soulDevourer: {
-    id: 6,
+    id: 7,
     descriptions: [
       'Gain the ability to stack soul on kill, each stacks increases your DMG multiplier by 0.01.',
       'Default max stacks is 25, increase max souls by speaking to Reaper',

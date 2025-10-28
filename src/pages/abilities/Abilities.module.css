@@ -1,24 +1,14 @@
-.abilitiesPageContainer {
-  display: flex;
-  height: calc(100vh - 80px);
-  overflow: hidden; /* prevents page-level scroll */
-}
-
-/* Main Content */
-.mainContent {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%;
-}
-
 .contentComponentContainer {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .categoryBorders {
+  background-color: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
   border-radius: 8px;
-  box-shadow:  0 0 10px var(--enchanted-bg-accent);
+  box-shadow: 0px 0px 15px var(--enchanted-box-shadow-color);
+  padding: 10px;
 }
 
 .categoryWrapper {
@@ -27,28 +17,40 @@
 }
 
 .categoryHeader {
-  background-color: var(--enchanted-bg-secondary);
-  border-radius: 8px 8px 0px 0px;
-  font-size: 20px;
-  padding: 10px 20px;
-  /* text-align: center; */
+  font-size: 20px;  
 }
 
 .contentWrapper {
-  background-color: var(--enchanted-bg-primary);
-  border: 1px solid var(--enchanted-bg-secondary);
-  border-radius: 0px 0px 8px 8px;
+  background-color: var(--enchanted-bg-accent);
+  border: 1px solid var(--enchanted-border-color);
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px var(--enchanted-box-shadow-color);
+  margin-top: 10px;
   padding: 10px;
 }
 
 .contentCard {
+  border: 2px solid var(--enchanted-border-color);
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 14px;
   padding: 10px;
   text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--enchanted-bg-accent),
+    var(--enchanted-bg-secondary),
+    var(--enchanted-bg-primary)
+  );
+}
+
+.contentCard:hover {
+  box-shadow: 0px 0px 15px var(--enchanted-box-shadow-color);
 }
 
 .contentCardImage {
   height: 50px;
+  margin-bottom: 15px;
 }
 
 .contentCardImage img {
@@ -56,14 +58,4 @@
   display: flex;
   justify-self: center;
   height: 100%;
-}
-
-/* Stat Cards */
-.statsHeader {
-  height: 100px;
-}
-
-.statsHeader img{
-  height: 100%;
-  width: auto;
 }

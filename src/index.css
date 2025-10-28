@@ -5,6 +5,7 @@ body {
   background-color: var(--enchanted-bg-primary);
   color: var(--enchanted-text-primary);
   font-family: "Montserrat", sans-serif;
+  /* font-family: var(--font-sans); */
   margin: 0;
 }
 
@@ -22,21 +23,21 @@ body {
 
 /* Scrollbar thumb (the draggable part) */
 *::-webkit-scrollbar-thumb {
-  background-color: var(--enchanted-text-secondary);
+  background-color: var(--enchanted-text-tertiary);
   border-radius: 4px;
   border: 2px solid var(--enchanted-bg-accent); /* optional padding effect */
 }
 
 /* Scrollbar thumb on hover */
 *::-webkit-scrollbar-thumb:hover {
-  background-color: var(--enchanted-text-primary);
+  background-color: var(--enchanted-text-secondary);
 }
 
 .line-graph-background {
   --bg-color: transparent;
-  --line-color: var(--enchanted-border-color);
-  --line-spacing: 15px;
-  --line-thickness: 0.7px;
+  --line-color: #222222;
+  --line-spacing: 7px;
+  --line-thickness: 1.4px;
 
   width: 100vw;
   height: 100vh;

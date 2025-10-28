@@ -1,5 +1,7 @@
 .utilityPageContainer {
-
+  background-color: var(--enchanted-bg-primary);
+  border-top: 1px solid transparent;
+  height: 100%;
 }
 
 .imageWrapper {

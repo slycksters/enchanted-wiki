@@ -21,8 +21,8 @@
 .navItem {
   align-items: center;
   background-color: var(--enchanted-overlay-transparent);
-  border-left: 1px solid var(--enchanted-border-color);
   display: flex;
+  font-size: 14px;
   justify-content: center;
   padding: 15px;
 }
@@ -38,91 +38,24 @@
 }
 
 .logoWrapper {
+  padding-left: 15px;
+  /* width: clamp(184px, 25vw, 271px); */
+}
+
+/* Layout Component */
+.layoutWrapper {
+  display: flex;
+  height: calc(100vh - 80px);
+  overflow: hidden; /* prevents page-level scroll */
+}
+
+.layoutContent {
+  background-color: var(--enchanted-bg-primary);
+  border-left: 1px solid var(--enchanted-border-color);
   border-right: 1px solid var(--enchanted-border-color);
-  width: clamp(184px, 25vw, 271px);
-}
-
-/* Details css */
-.detailWrapper {
-  background-color: var(--enchanted-bg-primary);
+  flex: 1;
   height: 100%;
-  width: clamp(184px, 25vw, 271px);
-}
-
-.detailWrapper p {
-  font-size: 14px;
-}
-
-.detailImageWrapper {
-  align-items: center;
-  background-color: var(--enchanted-bg-primary);
-  display: flex;
-  height: 150px;
-  justify-content: center;
-}
-
-.detailImageWrapper img {
-  height: 80%;
-}
-
-.detailInfo {
-  padding: 15px;
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* left:label right:value */
-  row-gap: 5px;
-  column-gap: 10px;
-  align-items: start; /* ensures multi-line texts line up at top */
-}
-
-.infoRow {
-  display: contents; /* let each label-value pair occupy grid cells */
-}
-
-.label,
-.detailDescription p:first-child {
-  font-weight: bold;
-}
-
-.detailInfo p {
-  font-size: 14px;
-  margin: 0;
-}
-
-.detailDescription {
-  margin-top: -10px;
-  padding: 0px 15px;
-}
-
-.infoRow p:last-child,
-.detailDescription p:last-child {
-  margin-top: 2px;
-  font-size: 12px;
-}
-
-.detailSource {
-  margin-top: 15px;
-}
-
-.detailInfoHeader {
-  background-color: var(--enchanted-bg-secondary);
-  padding: 15px;
-}
-
-.detailSourceItem {
-  padding: 15px;
-  text-align: center;
-}
-
-.detailSourceItemImg {
-  align-content: center;
-  display: flex;
-  justify-content: center;
-}
-
-.detailSourceItemImg img {
-  height: 60px;
-}
-
-.detailSourceItem p {
-  font-size: 12px;
+  margin-left: 40px;
+  margin-right: 40px;
+  overflow-y: auto;
 }

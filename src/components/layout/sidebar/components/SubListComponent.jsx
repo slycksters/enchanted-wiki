@@ -1,5 +1,5 @@
-import { RARITIES } from '../../../data';
-import styles from './Sidebar.module.css';
+import { RARITIES } from '../../../../data';
+import styles from '../Sidebar.module.css';
 
 const RARITIES_ARRAY = Object.values(RARITIES);
 const RARITY_FALLBACK_DATA = [{ id: 1, name: 'None' }];

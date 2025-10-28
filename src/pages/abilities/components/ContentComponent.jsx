@@ -1,8 +1,23 @@
 import styles from '../Abilities.module.css';
 import { CATEGORIES } from '../constants';
 import { DATA_MAP } from '../../../constants/dataMap.constant';
+import { useState } from 'react';
 
-export const ContentComponent = ({ setSelectedCard }) => {
+const getHoveredBackgroundStyle = (color) => {
+  return `linear-gradient(
+    135deg,
+    ${color},
+    var(--enchanted-bg-accent),
+    var(--enchanted-bg-accent),
+    var(--enchanted-bg-secondary),
+    var(--enchanted-bg-secondary),
+    var(--enchanted-bg-primary)
+  )`;
+};
+
+export const ContentComponent = ({ setSelectedInfo }) => {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   return (
     <div className={styles.contentComponentContainer}>
       {/* Category Headers */}
@@ -18,14 +33,19 @@ export const ContentComponent = ({ setSelectedCard }) => {
               <div className={styles.categoryHeader}>{category.name}</div>
 
               <div
-                className={`${styles.contentWrapper} grid sm:grid-cols-2 md:grid-cols-6 gap-5`}
+                className={`${styles.contentWrapper} grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 2x1:grid-cols-8 gap-5`}
               >
                 {data.map((item) => {
+                  const uniqueName = `${item.type.name}-${item.id}`;
+                  const isHovered = hoveredCard === uniqueName;
                   return (
                     <div
                       key={`ability-content-category-data-${item.name}-${item.id}`}
                       className={styles.contentCard}
-                      onClick={() => setSelectedCard(item)}
+                      onMouseEnter={() => setHoveredCard(uniqueName)}
+                      onMouseLeave={() => setHoveredCard(null)}
+                      onClick={() => setSelectedInfo(item)}
+                      style={{ background: isHovered ? getHoveredBackgroundStyle(item.rarity.color) : null }}
                     >
                       <div className={styles.contentCardImage}>
                         <img alt={item.name} src={item.image} />

@@ -1,0 +1,87 @@
+/* Parent */
+.infoPanelWrapper {
+  background-color: var(--enchanted-bg-primary);
+  border-left: 1px solid var(--enchanted-border-color);
+  font-size: 13px;
+  height: 100%;
+  overflow-y: auto;
+  width: clamp(184px, 25vw, 271px);
+}
+
+/* Shared classes */
+.headerText {
+  background-color: var(--enchanted-bg-secondary);
+  border-top: 1px solid var(--enchanted-border-color);
+  border-bottom: 1px solid var(--enchanted-border-color);
+  padding: 15px;
+}
+
+.headerText:first-child {
+  border-top: none;
+}
+
+/* Image Component */
+.imageWrapper {
+  padding: 15px;
+}
+
+.imageWrapper img {
+  height: 120px;
+  justify-self: center;
+}
+
+/* Information Component */
+.infoWrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 15px;
+  row-gap: 15px;
+}
+
+.infoRow {
+  display: contents;
+}
+
+.infoRow p:first-child {
+  font-weight: bold;
+}
+
+.descriptionRow {
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.descriptionRow p:first-child {
+  font-weight: bold;
+}
+
+.descriptionRow p:last-child {
+  margin-top: 10px;
+}
+
+/* Source Component */
+.sourceItem {
+  padding: 15px;
+  text-align: center;
+}
+
+.sourceItem p {
+  font-size: 12px;
+}
+
+.sourceItemImageWrapper {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sourceItemImageWrapper img {
+  height: 60px;
+}
+
+/* Small screen */
+@media (max-width: 1024px) {
+  .infoPanelWrapper {
+    display: none;
+  }
+}

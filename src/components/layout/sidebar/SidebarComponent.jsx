@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
-import { SubListComponent } from './SubListComponent';
+import { SubListComponent } from './components/SubListComponent';
 import styles from './Sidebar.module.css';
 
 export const SidebarComponent = ({ list, onSelectItem }) => {

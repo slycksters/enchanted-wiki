@@ -17,7 +17,7 @@
 }
 
 /* Responsive Behavior */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .rightPanel {
     align-items: center;
     display: flex;

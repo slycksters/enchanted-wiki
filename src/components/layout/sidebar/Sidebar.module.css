@@ -30,10 +30,10 @@
 
 .listItem {
   cursor: pointer;
+  font-size: 16px;
 }
 
 .activeListItemWrapper .listItem {
-  border-right: 2px solid var(--enchanted-rarity-exotic);
   border-bottom: 1px solid var(--enchanted-border-color);
   color: var(--enchanted-rarity-exotic);
   padding-right: 8px;
@@ -58,12 +58,14 @@
 }
 
 .subListItem {
+  font-size: 16px;
   padding: 5px 0px;
   text-indent: 30px;
 }
 
 .subListItemChild {
   cursor: pointer;
+  font-size: 16px;
   margin: 0px 30px;
   padding-left: 15px;
 }
@@ -71,4 +73,11 @@
 .subListWrapperOpenAnimation {
   padding-top: 5px;
   padding-bottom: 20px;
+}
+
+/* Small screen */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
 }

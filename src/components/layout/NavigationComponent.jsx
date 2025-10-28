@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
-import { enchantedLogo } from '../../assets';
+import { enchantedLogo, enchantedSmallLogo } from '../../assets';
 import { BASE_PATH, PAGE_LINKS } from '../../constants';
 
 export const NavigationComponent = () => {
@@ -10,7 +10,7 @@ export const NavigationComponent = () => {
   // --- Handle screen width detection
   useEffect(() => {
     const checkWidth = () => {
-      setIsMobileOrTablet(window.innerWidth < 1024);
+      setIsMobileOrTablet(window.innerWidth <= 1024);
     };
 
     checkWidth(); // Initial check
@@ -24,7 +24,7 @@ export const NavigationComponent = () => {
       {/* Logo */}
       <div className={styles.logoWrapper}>
         <NavLink to={BASE_PATH}>
-          <img src={enchantedLogo} />
+          <img src={isMobileOrTablet ? enchantedSmallLogo : enchantedLogo} />
         </NavLink>
       </div>
 
