@@ -65,4 +65,8 @@
   .categoryWrapper {
     padding: 0px 10px;
   }
+
+  .categoryBorders {
+    margin-bottom: 15px;
+  }
 }
