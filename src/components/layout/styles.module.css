@@ -53,6 +53,12 @@
   padding-top: 17px;
 }
 
+/* Cancel hover effect for active item */
+.activeNavItem:hover::before {
+  transform: scaleX(0);
+}
+
+
 .logoWrapper .navItem {
   border-right: none !important;
 }
