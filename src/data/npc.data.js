@@ -1,4 +1,4 @@
-import { adamImg, monkeyDevelopsImg, reaperImg, shamImg } from '../assets';
+import { adamImg, monkeyDevelopsImg, reaperImg, shamImg, steveImg } from '../assets';
 import { NPC_TYPES } from './npcType.data';
 import { TYPES } from './types.data';
 
@@ -32,6 +32,14 @@ export const NPCS = {
     image: monkeyDevelopsImg,
     locations: [],
     name: 'Monkey Develops',
+    npcType: NPC_TYPES.friendly,
+    type: TYPES.npc,
+  },
+  steve: {
+    id: 5,
+    image: steveImg,
+    locations: [],
+    name: 'Steve',
     npcType: NPC_TYPES.friendly,
     type: TYPES.npc,
   },

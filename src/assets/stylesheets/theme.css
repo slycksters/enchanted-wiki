@@ -30,9 +30,7 @@
   /* Special colors */
   --enchanted-border-color: #282C35;
   /* --enchanted-border-color: #4E5158; */
-  --enchanted-overlay-transparent: transparent;   /* overlays, modals */
-  --enchanted-box-shadow-color: rgba(0,0,0, 0.3);
-  --enchanted-box-shadow: 0px 0px 5px var(--enchanted-box-shadow-color);
+  --enchanted-overlay-transparent: transparent;   /* overlays, modals */  
 
   /* Rarity colors*/
   --enchanted-rarity-common: #99A1AF;
@@ -42,4 +40,21 @@
   --enchanted-rarity-legendary: #FF6900;
   --enchanted-rarity-mythical: #FB2C36;
   --enchanted-rarity-exotic: #5EE9B5;
+
+  /* Global stylings*/
+  --enchanted-box-shadow-color: rgba(0,0,0, 0.3);
+  --enchanted-box-shadow: 0px 0px 5px var(--enchanted-box-shadow-color);
+  --enchanted-drop-shadow: drop-shadow(5px 10px 6px rgba(0, 0, 0, 0.5));
+  --enchanted-background-gradient-primary: linear-gradient(
+    135deg,
+    var(--enchanted-bg-accent),
+    var(--enchanted-bg-secondary),
+    var(--enchanted-bg-primary)
+  );
+  --enchanted-background-gradient-primary-reverse: linear-gradient(
+    135deg,
+    var(--enchanted-bg-primary),
+    var(--enchanted-bg-secondary),
+    var(--enchanted-bg-accent)
+  );
 }

@@ -1,0 +1,38 @@
+.controllerWrapper {
+  align-items: center;
+  background-color: var(--enchanted-bg-primary);
+  border-bottom: 1px solid var(--enchanted-border-color);
+  display: flex;
+  height: 57px;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.controllerWrapper a img {
+  cursor: pointer;
+  height: 37px;
+  width: auto;
+}
+
+.controllerWrapper a img:hover {
+  filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
+}
+
+.hamburgerIcon {
+  border: 1px dashed var(--enchanted-border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburgerIcon:hover {
+  background-color: var(--enchanted-border-color);
+  border-color: var(--enchanted-border-color);
+}
+
+@media (min-width: 1024px) {
+  .controllerWrapper {
+    display: none;
+  }
+}

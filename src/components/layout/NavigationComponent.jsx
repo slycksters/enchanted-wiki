@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
 import { enchantedLogo, enchantedSmallLogo } from '../../assets';
 import { BASE_PATH, PAGE_LINKS } from '../../constants';
+import { getBackgroundGradient } from '../../helpers';
 
 export const NavigationComponent = () => {
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
@@ -39,7 +40,15 @@ export const NavigationComponent = () => {
                 `${styles.navItem} ${isActive ? styles.activeNavItem : ''}`
               }
               key={link.id}
-              style={{ width: !isMobileOrTablet ? '100px' : null }}
+              style={({ isActive }) => ({
+                width: !isMobileOrTablet ? '100px' : null,
+                background: isActive
+                  ? getBackgroundGradient(
+                      `var(--enchanted-rarity-exotic)`,
+                      'Up'
+                    )
+                  : null,
+              })}
               to={link.path}
             >
               {isMobileOrTablet ? <Icon size={22} /> : link.name}

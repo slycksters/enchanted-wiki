@@ -1,11 +1,11 @@
 /* Make the logo responsive to viewport */
 .imageWrapper img {
   display: block;
-  margin: 8vh auto 0 auto;
+  margin: 7vh auto 0 auto;
   width: auto;
   height: auto;
-  max-height: 30vh;
-  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5))
+  max-height: 25vh;
+  filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.5))
     drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
 }
 

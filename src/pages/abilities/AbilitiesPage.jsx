@@ -1,6 +1,6 @@
 import { ContentComponent } from './components';
 import { CATEGORIES } from './constants';
-import { LayoutComponent } from '../../components/layout/LayoutComponent';
+import { LayoutComponent } from '../../components/layout';
 import { RACES } from '../../data';
 
 export const AbilitiesPage = () => {

@@ -1,0 +1,29 @@
+.layoutWrapper {
+  display: flex;
+  height: calc(100vh - 80px);
+  overflow: hidden; /* prevents page-level scroll */
+}
+
+.layoutContent {
+  background-color: var(--enchanted-bg-primary);
+  border-left: 1px solid var(--enchanted-border-color);
+  border-right: 1px solid var(--enchanted-border-color);
+  flex: 1;
+  height: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .layoutWrapper {
+    display: block;
+  }
+
+  .layoutContent {
+    border-left: none;
+    border-right: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

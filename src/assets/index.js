@@ -61,6 +61,7 @@ import shamImg from './images/npcs/sham.png';
 import reaperImg from './images/npcs/reaper.png';
 import adamImg from './images/npcs/adam.png';
 import monkeyDevelopsImg from './images/npcs/monkey-develops.png';
+import steveImg from './images/npcs/steve.png';
 // --- Roblox Avatar Images
 import zazelAvatarImg from './images/roblox-avatar/zazel.png';
 // --- Videos
@@ -122,6 +123,7 @@ export {
   reaperImg,
   adamImg,
   monkeyDevelopsImg,
+  steveImg,
   zazelAvatarImg,
   zazelAvatarVid,
 };

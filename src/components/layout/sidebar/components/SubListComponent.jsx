@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { RARITIES } from '../../../../data';
 import styles from '../Sidebar.module.css';
+import { getBackgroundGradient } from '../../../../helpers';
 
 const RARITIES_ARRAY = Object.values(RARITIES);
 const RARITY_FALLBACK_DATA = [{ id: 1, name: 'None' }];
 
 export const SubListComponent = ({ list }) => {
+  const [hoveredId, setHoveredId] = useState(null);
+
   const listItems = Object.values(list);
   return RARITIES_ARRAY.map((rarity) => {
     // Filter the list for this rarity
@@ -23,15 +27,26 @@ export const SubListComponent = ({ list }) => {
           </small>
         </div>
 
-        {itemsToRender.map((item) => (
-          <div
-            className={styles.subListItemChild}
-            key={`sub-list-child-${item.name}-${item.id}`}
-            style={{ borderLeft: `1px solid ${rarity.color ?? 'var(--enchanted-text-secondary)'}` }}
-          >
-            <small title={item.name}>{item.name}</small>
-          </div>
-        ))}
+        {itemsToRender.map((item) => {
+          const isHovered = hoveredId === item.id;
+
+          return (
+            <div
+              className={styles.subListItemChild}
+              key={`sub-list-child-${item.name}-${item.id}`}
+              onMouseEnter={() => setHoveredId(item.id)}
+              onMouseLeave={() => setHoveredId(null)}
+              style={{
+                borderLeft: `1px solid ${
+                  rarity.color ?? 'var(--enchanted-text-secondary)'
+                }`,
+                background: isHovered ? getBackgroundGradient(rarity.color, 'Right') : null,
+              }}
+            >
+              <small title={item.name}>{item.name}</small>
+            </div>
+          );
+        })}
       </div>
     );
   });

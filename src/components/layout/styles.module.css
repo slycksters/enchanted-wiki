@@ -14,6 +14,11 @@
   margin: auto;
 }
 
+.navigationContainer img:hover {
+  filter: drop-shadow(0 0px 5px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
+}
+
 .navList {
   display: flex;
 }
@@ -25,12 +30,27 @@
   font-size: 14px;
   justify-content: center;
   padding: 15px;
+  position: relative;
+}
+
+.navItem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-bottom: 2px solid var(--enchanted-rarity-exotic);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.navItem:hover::before {
+  transform: scaleX(1);
 }
 
 .activeNavItem {
   border-bottom: 2px solid var(--enchanted-rarity-exotic);
   color: var(--enchanted-rarity-exotic);
-  padding-top: 18px;
+  padding-top: 17px;
 }
 
 .logoWrapper .navItem {
@@ -42,20 +62,16 @@
   /* width: clamp(184px, 25vw, 271px); */
 }
 
-/* Layout Component */
-.layoutWrapper {
-  display: flex;
-  height: calc(100vh - 80px);
-  overflow: hidden; /* prevents page-level scroll */
-}
+@media (max-width: 1024px) {
+  .navigationContainer {
+    border-style: dashed;
+  }
 
-.layoutContent {
-  background-color: var(--enchanted-bg-primary);
-  border-left: 1px solid var(--enchanted-border-color);
-  border-right: 1px solid var(--enchanted-border-color);
-  flex: 1;
-  height: 100%;
-  margin-left: 40px;
-  margin-right: 40px;
-  overflow-y: auto;
+  .navigationContainer img {
+    display: none;
+  }
+
+  .navItem {
+    padding: 15px 10px;
+  }
 }

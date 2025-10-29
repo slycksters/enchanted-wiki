@@ -33,7 +33,7 @@ export const ContentComponent = ({ setSelectedInfo }) => {
               <div className={styles.categoryHeader}>{category.name}</div>
 
               <div
-                className={`${styles.contentWrapper} grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 2x1:grid-cols-8 gap-5`}
+                className={`${styles.contentWrapper} grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 2xl:grid-cols-8 gap-2`}
               >
                 {data.map((item) => {
                   const uniqueName = `${item.type.name}-${item.id}`;
@@ -45,7 +45,11 @@ export const ContentComponent = ({ setSelectedInfo }) => {
                       onMouseEnter={() => setHoveredCard(uniqueName)}
                       onMouseLeave={() => setHoveredCard(null)}
                       onClick={() => setSelectedInfo(item)}
-                      style={{ background: isHovered ? getHoveredBackgroundStyle(item.rarity.color) : null }}
+                      style={{
+                        background: isHovered
+                          ? getHoveredBackgroundStyle(item.rarity.color)
+                          : null,
+                      }}
                     >
                       <div className={styles.contentCardImage}>
                         <img alt={item.name} src={item.image} />

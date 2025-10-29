@@ -22,7 +22,7 @@ export const MAGICS = {
     image: windMagicImg,
     name: 'Wind',
     rarity: RARITIES.common,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   fire: {
@@ -35,7 +35,7 @@ export const MAGICS = {
     image: fireMagicImg,
     name: 'Fire',
     rarity: RARITIES.uncommon,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   poison: {
@@ -48,7 +48,7 @@ export const MAGICS = {
     image: poisonMagicImg,
     name: 'Poison',
     rarity: RARITIES.rare,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   dark: {
@@ -61,7 +61,7 @@ export const MAGICS = {
     image: darkMagicImg,
     name: 'Dark',
     rarity: RARITIES.rare,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   ice: {
@@ -75,7 +75,7 @@ export const MAGICS = {
     image: iceMagicImg,
     name: 'Ice',
     rarity: RARITIES.epic,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   lightning: {
@@ -90,7 +90,7 @@ export const MAGICS = {
     image: lightningMagicImg,
     name: 'Lightning',
     rarity: RARITIES.epic,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   poisonDragonSlayer: {
@@ -105,7 +105,7 @@ export const MAGICS = {
     image: poisonDragonSlayerMagicImg,
     name: 'Poison Dragon Slayer',
     rarity: RARITIES.legendary,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   shadowDragonSlayer: {
@@ -121,7 +121,7 @@ export const MAGICS = {
     image: shadowDragonSlayerMagicImg,
     name: 'Shadow Dragon Slayer',
     rarity: RARITIES.legendary,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   lightningDragonSlayer: {
@@ -137,7 +137,7 @@ export const MAGICS = {
     image: lightningDragonSlayerMagicImg,
     name: 'Lightning Dragon Slayer',
     rarity: RARITIES.mythical,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   fireDragonSlayer: {
@@ -153,7 +153,7 @@ export const MAGICS = {
     image: fireDragonSlayerMagicImg,
     name: 'Fire Dragon Slayer',
     rarity: RARITIES.mythical,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
   waterDragonSlayer: {
@@ -168,7 +168,7 @@ export const MAGICS = {
     image: waterDragonSlayerMagicImg,
     name: 'Water Dragon Slayer',
     rarity: RARITIES.exotic,
-    sources: [NPCS.monkeyDevelops],
+    sources: [NPCS.monkeyDevelops, NPCS.steve],
     type: TYPES.magic,
   },
 };
