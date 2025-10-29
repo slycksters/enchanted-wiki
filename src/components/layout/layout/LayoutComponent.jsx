@@ -1,7 +1,7 @@
 import { cloneElement, useState } from 'react';
-import { InfoPanelComponent, SidebarComponent } from '../..';
 import styles from './Layout.module.css';
 import { ControllerComponent } from '../controller/ControllerComponent';
+import { InfoPanelComponent, SidebarComponent } from '../..';
 
 const ChildComponent = ({ children, selectedCategory, setSelectedInfo }) => {
   return (
@@ -16,13 +16,19 @@ const ChildComponent = ({ children, selectedCategory, setSelectedInfo }) => {
 };
 
 export const LayoutComponent = ({ categories, children, defaultInfo }) => {
-  const [selectedCategory, setSelectedCategory] = useState(
-    categories[0]?.name || ''
-  );
   const [selectedInfo, setSelectedInfo] = useState(defaultInfo);
   const [showSidebar, setShowSidebar] = useState(false);
   const [showInfoPanel, setShowInfoPanel] = useState(false);
 
+  // --- handle click on sidebar's items
+  const handleScrollToSection = (item) => {
+    const section = document.getElementById(`${item.type.name}-${item.id}-${item.name}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  // --- handle click on child component's cards
   const handleSelectInfo = (info) => {
     setSelectedInfo(info);
     if (window.innerWidth <= 1024) {
@@ -38,7 +44,7 @@ export const LayoutComponent = ({ categories, children, defaultInfo }) => {
       {/* Sidebar */}
       <SidebarComponent
         list={categories}
-        onSelectItem={setSelectedCategory}
+        onSelectItem={handleScrollToSection}
         setShowSidebar={setShowSidebar}
         showSidebar={showSidebar}
       />
@@ -46,7 +52,6 @@ export const LayoutComponent = ({ categories, children, defaultInfo }) => {
       {/* Content */}
       <ChildComponent
         children={children}
-        selectedCategory={selectedCategory}
         setSelectedInfo={handleSelectInfo}
       />
 

@@ -51,7 +51,10 @@ export const ContentComponent = ({ setSelectedInfo }) => {
                           : null,
                       }}
                     >
-                      <div className={styles.contentCardImage}>
+                      <div
+                        className={styles.contentCardImage}
+                        id={`${item.type.name}-${item.id}-${item.name}`}
+                      >
                         <img alt={item.name} src={item.image} />
                       </div>
                       <div className={styles.contentCardLabel}>{item.name}</div>

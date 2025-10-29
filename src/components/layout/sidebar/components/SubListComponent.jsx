@@ -6,7 +6,7 @@ import { getBackgroundGradient } from '../../../../helpers';
 const RARITIES_ARRAY = Object.values(RARITIES);
 const RARITY_FALLBACK_DATA = [{ id: 1, name: 'None' }];
 
-export const SubListComponent = ({ list }) => {
+export const SubListComponent = ({ list, onSelectSubChildCategory }) => {
   const [hoveredId, setHoveredId] = useState(null);
 
   const listItems = Object.values(list);
@@ -28,19 +28,23 @@ export const SubListComponent = ({ list }) => {
         </div>
 
         {itemsToRender.map((item) => {
-          const isHovered = hoveredId === item.id;
+          const uniqueId = `${item.id}-${item.name}`;
+          const isHovered = hoveredId === uniqueId;
 
           return (
             <div
               className={styles.subListItemChild}
               key={`sub-list-child-${item.name}-${item.id}`}
-              onMouseEnter={() => setHoveredId(item.id)}
+              onClick={() => onSelectSubChildCategory(item)}
+              onMouseEnter={() => setHoveredId(uniqueId)}
               onMouseLeave={() => setHoveredId(null)}
               style={{
                 borderLeft: `1px solid ${
                   rarity.color ?? 'var(--enchanted-text-secondary)'
                 }`,
-                background: isHovered ? getBackgroundGradient(rarity.color, 'Right') : null,
+                background: isHovered && item.type
+                  ? getBackgroundGradient(rarity.color, 'Right')
+                  : null,
               }}
             >
               <small title={item.name}>{item.name}</small>

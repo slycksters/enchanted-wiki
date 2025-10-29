@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
 import { SubListComponent } from './components/SubListComponent';
 import styles from './Sidebar.module.css';
@@ -11,10 +11,10 @@ export const SidebarComponent = ({
 }) => {
   const [selectedItem, setSelectedItem] = useState(list[0].name);
 
+  // --- Handle on click category
   const handleOnClickItem = (item) => {
     const newSelected = item === selectedItem ? '' : item;
     setSelectedItem(newSelected);
-    onSelectItem(newSelected);
   };
 
   return (
@@ -54,7 +54,7 @@ export const SidebarComponent = ({
                     isSelected ? styles.subListWrapperOpenAnimation : ''
                   }`}
                 >
-                  <SubListComponent list={item.subList} />
+                  <SubListComponent list={item.subList} onSelectSubChildCategory={onSelectItem} />
                 </div>
               </div>
             );
