@@ -1,27 +1,23 @@
 .avatarDisplay {
-  display: flex;
-  justify-content: center;
   align-items: flex-end;
+  display: flex;
   height: 30vh;
-  width: 100%;
-  margin-top: 50px;
+  justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 .avatarDisplay video {
-  height: 100%;
-  width: auto;
-  pointer-events: none;
-  mix-blend-mode: screen;
   animation: floatAvatar 2s ease-in-out infinite;
+  height: 100%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  width: auto;
 }
 
 /* Shadow perfectly synced with avatar float */
 .avatarShadow {
-  position: absolute;
-  bottom: 0;
-  width: 10vw;
-  height: 2vh;
+  animation: shadowSync 2s ease-in-out infinite;
   background: radial-gradient(
     ellipse at center,
     rgba(0, 0, 0, 0.8),
@@ -29,7 +25,11 @@
     transparent 100%
   );
   border-radius: 50%;
-  animation: shadowSync 2s ease-in-out infinite;
+  bottom: 0;
+  height: 2vh;
+  margin-bottom: 20px;
+  position: absolute;
+  width: 10vw;
   transform-origin: center;
 }
 

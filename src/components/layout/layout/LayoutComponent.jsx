@@ -1,4 +1,4 @@
-import { cloneElement, useState } from 'react';
+import { cloneElement, useEffect, useState } from 'react';
 import styles from './Layout.module.css';
 import { ControllerComponent } from '../controller/ControllerComponent';
 import { InfoPanelComponent, SidebarComponent } from '../..';
@@ -16,7 +16,9 @@ const ChildComponent = ({ children, selectedCategory, setSelectedInfo }) => {
 };
 
 export const LayoutComponent = ({ categories, children, defaultInfo }) => {
-  const isMobileOrTablet = window.innerWidth <= 1024;
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(
+    window.innerWidth <= 1024
+  );
   const [selectedInfo, setSelectedInfo] = useState(defaultInfo);
   const [showSidebar, setShowSidebar] = useState(false);
   const [showInfoPanel, setShowInfoPanel] = useState(false);
@@ -40,6 +42,17 @@ export const LayoutComponent = ({ categories, children, defaultInfo }) => {
       setShowInfoPanel(true);
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isScreenSmall = window.innerWidth <= 1024;
+      setIsMobileOrTablet(isScreenSmall);
+      if (!isScreenSmall) setShowInfoPanel(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className={styles.layoutWrapper}>

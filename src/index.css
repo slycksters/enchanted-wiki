@@ -4,9 +4,9 @@
 body {
   background-color: var(--enchanted-bg-primary);
   color: var(--enchanted-text-primary);
-  font-family: "Montserrat", sans-serif;
-  /* font-family: var(--font-sans); */
+  font-family: "Poppins", sans-serif;
   margin: 0;
+  overflow: hidden;
 }
 
 /* Entire scrollbar */
@@ -18,7 +18,6 @@ body {
 /* Scrollbar track (background) */
 *::-webkit-scrollbar-track {
   background: var(--enchanted-bg-accent);
-  /* border-radius: 4px; */
 }
 
 /* Scrollbar thumb (the draggable part) */

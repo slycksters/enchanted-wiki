@@ -1,10 +1,11 @@
 /* Wrapper */
 .linkList {
-  display: flex;
+  align-items: flex-end;
+  display: flex;  
   gap: clamp(1px, 2vw, 20px);
-  height: auto;
-  padding-top: clamp(1px, 1vw, 50px);
+  height: 10vh;
   justify-content: center;
+  position: relative;
   width: 100%;
 }
 
@@ -15,18 +16,16 @@
   cursor: pointer;
   display: flex;
   gap: 10px;
-  padding: 1px clamp(5px, 1vw, 40px);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px clamp(5px, 1vw, 40px);
   position: relative;
   transition: color 0.3s ease;
 }
 
 .linkListItem::before {
-  content: '';
-  position: absolute;
-  inset: 0;
   border-bottom: 2px solid var(--enchanted-rarity-exotic);
+  content: '';  
+  inset: 0;
+  position: absolute;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
