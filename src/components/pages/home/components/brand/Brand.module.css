@@ -7,7 +7,7 @@
 }
 
 .imageWrapper {
-  height: clamp(100px, 20vw, 600px);
+  height: clamp(100px, 15vw, 600px);
 }
 
 .imageWrapper img {
