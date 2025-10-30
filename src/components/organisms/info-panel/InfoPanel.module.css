@@ -1,0 +1,64 @@
+/* Parent */
+.infoPanelWrapper {
+  background-color: var(--enchanted-bg-primary);
+  border-left: 1px solid var(--enchanted-border-color);
+  font-size: 13px;
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  width: 271px;
+}
+
+/* Desktop: always visible */
+@media (min-width: 1025px) {
+  .infoPanelWrapper {
+    position: relative;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Mobile behavior */
+@media (max-width: 1024px) {
+  .infoPanelWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1001;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .infoPanelOpen {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .infoPanelClosed {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

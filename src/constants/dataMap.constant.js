@@ -1,5 +1,5 @@
 import { MAGICS, PASSIVE_MAGICS, PASSIVE_SKILLS, RACES, TRAITS } from '../data';
-import { CATEGORIES } from '../pages/abilities/constants';
+import { CATEGORIES } from '../components/pages/abilities/constants';
 
 export const DATA_MAP = {
   [CATEGORIES[0].name]: Object.values(RACES),

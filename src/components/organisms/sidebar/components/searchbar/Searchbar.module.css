@@ -1,0 +1,24 @@
+.searchbar {
+  display: flex;
+}
+
+.searchInput {
+  background-color: var(--enchanted-bg-primary);
+  border: none;
+  border-bottom: 1px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-primary);
+  flex: 1;
+  font-size: 12px;
+  text-indent: 25px;
+  width: 100%;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchIcon {
+  border-bottom: 1px solid var(--enchanted-border-color);
+  flex: 0;
+  padding: 8px;
+}

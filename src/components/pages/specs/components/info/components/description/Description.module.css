@@ -1,0 +1,19 @@
+.description {
+  border-top: 1px dashed var(--enchanted-border-color);
+}
+
+.description > div > div > h4  {
+  padding-top: 30px;
+}
+
+.description > div > div > div {
+  padding-top: 20px;
+}
+
+.description div {
+  color: var(--enchanted-text-secondary);
+}
+
+.description span {
+  color: var(--enchanted-text-primary);
+}

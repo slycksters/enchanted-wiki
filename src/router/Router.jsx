@@ -1,10 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { MainComponent } from '../components';
 import { BASE_PATH, PAGE_LINKS } from '../constants';
-import {
-  HomePage,
-  NotFoundPage,
-} from '../pages';
+import { HomePage, NotFoundPage } from '../components/pages';
 
 const router = createBrowserRouter([
   {
@@ -15,10 +12,13 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
-      ...PAGE_LINKS.map((link) => ({
-        path: link.path,
-        element: link.element,
-      })),
+      ...PAGE_LINKS.map((link) => {
+        const Component = link.element;
+        return {
+          path: link.path,
+          element: <Component />,
+        };
+      }),
     ],
   },
   {

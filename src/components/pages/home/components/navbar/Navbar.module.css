@@ -1,0 +1,57 @@
+/* Wrapper */
+.linkList {
+  align-items: flex-end;
+  display: flex;  
+  gap: clamp(1px, 2vw, 20px);
+  height: 10vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Border hover interaction */
+.linkListItem {
+  align-items: center;
+  border-bottom: none;
+  color: var(--enchanted-text-primary);
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  margin-bottom: -30px;
+  padding: 10px clamp(5px, 1vw, 40px);
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkListItem::before {
+  border-bottom: 2px solid var(--enchanted-rarity-exotic);
+  content: '';  
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.linkListItem:hover::before {
+  transform: scaleX(1);
+}
+
+/* Link icon and text */
+.linkListItemIcon {
+  font-size: clamp(12px, 5vw, 30px);
+}
+
+.linkListItem p {
+  margin-top: 17px;
+  font-size: clamp(9px, 2vw, 16px);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  /* Hide link icons */
+  .linkListItemIcon {
+    display: none;
+  }
+}

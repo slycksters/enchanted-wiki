@@ -1,3 +1,4 @@
+export * from './damageTypes.data.js';
 export * from './items.data.js';
 export * from './magics.data.js';
 export * from './npc.data.js';
@@ -6,5 +7,6 @@ export * from './passiveMagics.data.js';
 export * from './passiveSkills.data.js';
 export * from './races.data.js';
 export * from './rarities.data.js';
+export * from './specs.data.js';
 export * from './traits.data.js';
 export * from './types.data.js';

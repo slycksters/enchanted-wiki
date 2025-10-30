@@ -1,0 +1,14 @@
+.list {
+  margin-top: 10px;
+}
+
+.item, .verbiage {
+  color: var(--enchanted-text-secondary);
+  font-size: 14px;
+  padding: 5px;
+  text-indent: 20px;
+}
+
+.activeItem > span {
+  color: var(--enchanted-text-primary);
+}

@@ -1,0 +1,29 @@
+.table {
+  border: 1px solid var(--enchanted-border-color);
+  box-shadow: 0px 0px 15px var(--enchanted-box-shadow-color);
+  text-align: center;
+  width: 100%;
+}
+
+.tableHeader > th {
+  background-color: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
+  padding: 10px 20px;
+}
+
+.tableRow > td:first-child {
+  width: 100px;
+}
+
+.tableRow > td {
+  background-color: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
+  height: 100px;
+  padding: 20px;
+  text-align: center;
+}
+
+.tableRow > td > img {
+  filter: var(--enchanted-drop-shadow);
+  height: 100%;
+}

@@ -1,0 +1,65 @@
+/* Navigation css */
+.navigationContainer {
+  background-color: var(--enchanted-bg-primary);
+  border-bottom: 1px solid var(--enchanted-border-color);
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.navigationContainer img {
+  height: 75px;
+  padding: 15px;
+  width: auto;
+  margin: auto;
+}
+
+.navigationContainer img:hover {
+  filter: drop-shadow(0 0px 5px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
+}
+
+.navList {
+  display: flex;
+}
+
+.navItem {
+  align-items: center;
+  background-color: var(--enchanted-overlay-transparent);
+  color: var(--enchanted-text-primary);
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+  text-decoration: none;
+}
+
+.activeNavItem {
+  border-bottom: 2px solid var(--enchanted-rarity-exotic);
+  color: var(--enchanted-rarity-exotic);
+  padding-top: 17px;
+}
+
+.logoWrapper .navItem {
+  border-right: none !important;
+}
+
+.logoWrapper {
+  padding-left: 15px;
+  /* width: clamp(184px, 25vw, 271px); */
+}
+
+@media (max-width: 1024px) {
+  .navigationContainer {
+    border-bottom-style: dashed;
+  }
+
+  .navigationContainer img {
+    display: none;
+  }
+
+  .navItem {
+    padding: 15px 10px;
+  }
+}

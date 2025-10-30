@@ -5,7 +5,7 @@ import { TYPES } from './types.data';
 export const ITEMS = {
   raceReroll: {
     id: 1,
-    image: raceRerollImg,
+    attachment: raceRerollImg,
     name: 'Race Reroll',
     rarity: RARITIES.legendary,
     sources: [],
@@ -13,7 +13,7 @@ export const ITEMS = {
   },
   passiveMagicReroll: {
     id: 2,
-    image: passiveMagicRerollImg,
+    attachment: passiveMagicRerollImg,
     name: 'Passive Magic Reroll',
     rarity: RARITIES.mythical,
     sources: [],

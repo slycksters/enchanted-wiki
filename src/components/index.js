@@ -1,2 +1,2 @@
-export * from './layout';
-export * from './ui';
+export * from './templates';
+export * from './atoms';

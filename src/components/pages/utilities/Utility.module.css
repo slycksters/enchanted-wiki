@@ -1,0 +1,37 @@
+.utilityPageContainer {
+  background-color: var(--enchanted-bg-primary);
+  border-top: 1px solid transparent;
+
+  /* Center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center; /* horizontal center */
+
+  /* Ensure full viewport height */
+  min-height: 100vh;
+  text-align: center;
+}
+
+.imageWrapper {
+  width: clamp(250px, 50vw, 1000px);
+  height: auto;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.verbiage {
+  width: clamp(300px, 60vw, 600px);
+}
+
+.verbiage p {
+  font-size: clamp(14px, 3vw, 28px);
+  margin: 10px 0;
+}
+
+.verbiage {
+  margin-top: 50px;
+}

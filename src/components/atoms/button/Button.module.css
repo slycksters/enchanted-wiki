@@ -1,0 +1,12 @@
+.button {
+  background-color: var(--enchanted-bg-accent);
+  border: 1px solid var(--enchanted-bg-secondary);
+  border-radius: 4px;
+  color: var(--enchanted-text-primary);
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+.button:hover {
+  background-color: var(--enchanted-bg-secondary);
+}

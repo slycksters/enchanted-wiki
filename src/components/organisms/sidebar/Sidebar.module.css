@@ -1,0 +1,62 @@
+/* Sidebar */
+.sidebar {
+  background-color: var(--enchanted-bg-primary);
+  border-right: 1px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-secondary);
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  width: 271px;
+}
+
+/* Desktop: always visible */
+@media (min-width: 1025px) {
+  .sidebar {
+    position: relative;
+    transform: none !important;
+    opacity: 1;
+  }
+}
+
+/* Mobile behavior */
+@media (max-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1001;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebarClosed {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Overlay background */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

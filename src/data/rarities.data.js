@@ -41,4 +41,9 @@ export const RARITIES = {
     name: 'Exotic',
     rate: '0.1%',
   },
+  v2: {
+    id: 8,
+    color: 'var(--enchanted-rarity-v2)',
+    name: 'V2',
+  }
 };

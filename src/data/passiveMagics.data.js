@@ -14,8 +14,9 @@ import { TYPES } from './types.data';
 export const PASSIVE_MAGICS = {
   frozen: {
     id: 1,
-    descriptions: ['Gain freeze effect on hit, slowing the opponent'],
-    image: frozenPassiveMagicImg,
+    attachment: frozenPassiveMagicImg,
+    description: 'Gain a freeze effect on hit, slowing enemies and chilling their movements with icy precision.',
+    isGatcha: true,
     name: 'Frozen',
     rarity: RARITIES.epic,
     sources: [ITEMS.passiveMagicReroll],
@@ -23,10 +24,9 @@ export const PASSIVE_MAGICS = {
   },
   divineRetribution: {
     id: 2,
-    descriptions: [
-      'Gain divine effect on hit, causing to deal the same amount of damage as your M1',
-    ],
-    image: divineRetributionPassiveMagicImg,
+    attachment: divineRetributionPassiveMagicImg,
+    description: 'Gain a divine effect on hit, smiting enemies with holy retribution that mirrors the power of your attacks.',
+    isGatcha: true,
     name: 'Divine Retribution',
     rarity: RARITIES.legendary,
     sources: [ITEMS.passiveMagicReroll],
@@ -34,10 +34,9 @@ export const PASSIVE_MAGICS = {
   },
   lifeSteal: {
     id: 3,
-    descriptions: [
-      'Gain life steal effect on hit, regenerates your HP when attacking',
-    ],
-    image: lifeStealPassiveMagicImg,
+    attachment: lifeStealPassiveMagicImg,
+    description: `Gain a life steal effect on hit, draining your enemy's vitality to restore your own health with every strike.`,
+    isGatcha: true,
     name: 'Lifesteal',
     rarity: RARITIES.mythical,
     sources: [ITEMS.passiveMagicReroll],
@@ -45,10 +44,9 @@ export const PASSIVE_MAGICS = {
   },
   roarOfTheAbyss: {
     id: 4,
-    descriptions: [
-      'Gain DMG boost effect on hit, increasing your DMG multiplier',
-    ],
-    image: roarOfTheAbyssPassiveMagicImg,
+    attachment: roarOfTheAbyssPassiveMagicImg,
+    description: 'Channel the wrath of the abyss itself, amplifying your power with each strike as dark energy surges to multiply your damage beyond mortal limits.',
+    isGatcha: true,
     name: 'Roar of The Abyss',
     rarity: RARITIES.mythical,
     sources: [ITEMS.passiveMagicReroll],
@@ -56,10 +54,9 @@ export const PASSIVE_MAGICS = {
   },
   godSpeed: {
     id: 5,
-    descriptions: [
-      'Gain shock effect on hit, dealing more damage to an opponent',
-    ],
-    image: godSpeedPassiveMagicImg,
+    attachment: godSpeedPassiveMagicImg,
+    description: 'Channel divine lightning with every strike, inflicting a shock that amplifies your attacks and leaves enemies trembling in your wake.',
+    isGatcha: true,
     name: 'Godspeed',
     rarity: RARITIES.exotic,
     sources: [ITEMS.passiveMagicReroll],
@@ -67,10 +64,9 @@ export const PASSIVE_MAGICS = {
   },
   vortexOfRuin: {
     id: 6,
-    descriptions: [
-      'Gain black hole effect on hit, dealing more damage to an opponent',
-    ],
-    image: vortexOfRuinPassiveMagicImg,
+    attachment: vortexOfRuinPassiveMagicImg,
+    description: 'Unleash a swirling black hole upon impact, dragging enemies into the abyss and tearing them apart with unstoppable force.',
+    isGatcha: true,
     name: 'Vortex of Ruin',
     rarity: RARITIES.exotic,
     sources: [ITEMS.passiveMagicReroll],
@@ -78,11 +74,9 @@ export const PASSIVE_MAGICS = {
   },
   soulDevourer: {
     id: 7,
-    descriptions: [
-      'Gain the ability to stack soul on kill, each stacks increases your DMG multiplier by 0.01.',
-      'Default max stacks is 25, increase max souls by speaking to Reaper',
-    ],
-    image: soulDevourerPassiveMagicImg,
+    attachment: soulDevourerPassiveMagicImg,
+    description: 'Consume the souls of the fallen — each kill strengthens your power, <span>increasing your DMG multiplier by 0.01</span> per soul devoured.',
+    isGatcha: true,
     name: 'Soul Devourer',
     rarity: RARITIES.exotic,
     sources: [ITEMS.passiveMagicReroll],

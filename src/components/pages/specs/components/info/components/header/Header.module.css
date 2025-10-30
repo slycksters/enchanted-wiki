@@ -1,0 +1,40 @@
+.header {
+  /* border-bottom: 1px dashed var(--enchanted-border-color); */
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 30px 0px;
+}
+
+.imageWrapper {
+  align-items: center;
+  background: var(--enchanted-background-gradient-primary);
+  border: 1px solid var(--enchanted-border-color);
+  display: flex;
+  filter: var(--enchanted-drop-shadow);
+  flex-shrink: 0;
+  height: 200px;
+  justify-content: center;
+  width: 200px;
+}
+
+.imageWrapper > img {
+  filter: var(--enchanted-drop-shadow);
+  height: 65%;
+  width: auto;
+}
+
+.title {
+  font-size: clamp(34px, 5vw, 50px);
+}
+
+.infoWrapper {
+  margin-top: 30px;
+}
+
+.infoRow td:first-child {
+  width: clamp(60px, 10vw, 100px);
+}
+
+.infoRow td:last-child {
+  color: var(--enchanted-text-secondary);
+}

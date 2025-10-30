@@ -1,0 +1,16 @@
+.list {
+  margin-left: 21px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.item {
+  border-left: 1px solid var(--enchanted-border-color);
+  padding: 5px 0px;
+}
+
+.activeItem, .item:hover {
+  border-color: var(--enchanted-text-primary);
+  color: var(--enchanted-text-primary);
+  cursor: pointer;
+}

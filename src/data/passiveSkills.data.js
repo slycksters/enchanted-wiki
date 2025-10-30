@@ -6,8 +6,8 @@ import { TYPES } from './types.data';
 export const PASSIVE_SKILLS = {
   shadowStep: {
     id: 1,
-    descriptions: ['Dash through like a shadow'],
-    image: shadowStepPassiveSkillImg,
+    attachment: shadowStepPassiveSkillImg,
+    description: 'Move through the battlefield like a phantom — dash through enemies cloaked in shadows, leaving no trace behind.',
     name: 'Shadow Step',
     rarity: RARITIES.exotic,
     sources: [NPCS.sham],
@@ -15,10 +15,8 @@ export const PASSIVE_SKILLS = {
   },
   soulStack: {
     id: 2,
-    descriptions: [
-      'Each soul stacks increases your DMG multiplier by 0.01.', 'Default max stacks is 25, increase max souls by speaking to Reaper'
-    ],
-    image: soulStackPassiveSkillImg,
+    attachment: soulStackPassiveSkillImg,
+    description: 'Master the art of soul accumulation — each soul you gather amplifies your DMG multiplier by 0.01. Default max stacks: 25. Seek out the Reaper to transcend your current limit.',
     name: 'Soul Stack',
     rarity: RARITIES.exotic,
     sources: [NPCS.reaper],
