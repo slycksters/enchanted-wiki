@@ -111,7 +111,7 @@ export const SPECS = {
       {
         id: 2,
         attachment: yunoZVid,
-        name: 'Fairy Execution [X]',
+        name: 'Fairy Execution [Z]',
         description: 'Summons a compressed gust of wind and launches it forward, cutting through enemies with blinding speed.',
       },
       {
@@ -499,7 +499,7 @@ export const SPECS = {
       {
         id: 6,
         attachment: ichigoV2FVid,
-        name: 'Vasto Lorde [V]',
+        name: 'Vasto Lorde [F]',
         description: 'Transforms into his Vasto Lorde form, tapping into his Hollow instincts to release terrifying power while <span>gaining increased speed</span>.',
       },
     ],
