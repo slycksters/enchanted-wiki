@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <script>
-      // Get the current URL path
-      const { pathname, search, hash } = window.location;
-
-      // Detect the repo base dynamically (first part of the path)
-      const pathParts = pathname.split('/').filter(Boolean); // removes empty strings
-      const repoBase = pathParts.length > 0 ? `/${pathParts[0]}` : '';
-
-      // Redirect to the SPA root + original path
-      window.location.href = repoBase + pathname + search + hash;
-    </script>
+    <meta http-equiv="refresh" content="0; url=/enchanted-wiki" />
   </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
 </html>
