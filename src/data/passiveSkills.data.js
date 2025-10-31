@@ -1,13 +1,15 @@
-import { shadowStepPassiveSkillImg, soulStackPassiveSkillImg } from '@assets';
+import { assets } from '@assets';
+import { RARITIES, TYPES } from './enums';
 import { NPCS } from './npc.data';
-import { RARITIES } from './enums/rarities';
-import { TYPES } from './enums/types';
+
+const passiveSkillAssets = assets.images.passiveSkills;
 
 export const PASSIVE_SKILLS = {
   shadowStep: {
     id: 1,
-    attachment: shadowStepPassiveSkillImg,
-    description: 'Move through the battlefield like a phantom — dash through enemies cloaked in shadows, leaving no trace behind.',
+    attachment: passiveSkillAssets.shadowStep,
+    description:
+      'Move through the battlefield like a phantom — dash through enemies cloaked in shadows, leaving no trace behind.',
     name: 'Shadow Step',
     rarity: RARITIES.exotic,
     sources: [NPCS.sham],
@@ -15,8 +17,9 @@ export const PASSIVE_SKILLS = {
   },
   soulStack: {
     id: 2,
-    attachment: soulStackPassiveSkillImg,
-    description: 'Master the art of soul accumulation — each soul you gather amplifies your DMG multiplier by 0.01. Default max stacks: 25. Seek out the Reaper to transcend your current limit.',
+    attachment: passiveSkillAssets.soulStack,
+    description:
+      'Master the art of soul accumulation — each soul you gather amplifies your DMG multiplier by 0.01. Default max stacks: 25. Seek out the Reaper to transcend your current limit.',
     name: 'Soul Stack',
     rarity: RARITIES.exotic,
     sources: [NPCS.reaper],

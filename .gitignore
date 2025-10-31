@@ -1,3 +1,17 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build output
+/dist
+/dist-ssr
+
+# Vite cache
+.vite/
+
 # Logs
 logs
 *.log
@@ -7,18 +21,27 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Local environment variables
+.env.local
+.env.*.local
 *.local
+
+# Generated asset manifest
+src/assets/asset-manifest.js
+src/assets/asset-manifest.d.ts
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
+.vs/ # <-- Added for Visual Studio
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS generated files
+.DS_Store
+._*
+Thumbs.db

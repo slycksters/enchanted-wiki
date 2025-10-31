@@ -1,25 +1,15 @@
-import {
-  abaddonRaceImg,
-  angelRaceImg,
-  cleanerRaceImg,
-  demonRaceImg,
-  dwarfRaceImg,
-  fishmanRaceImg,
-  fullbringerRaceImg,
-  hollowRaceImg,
-  humanRaceImg,
-  reaperRaceImg,
-  saiyanRaceImg,
-} from '@assets';
+import { assets } from '@assets';
+import { RARITIES, TYPES } from './enums';
 import { ITEMS } from './items.data';
-import { RARITIES } from './enums/rarities';
-import { TYPES } from './enums/types';
+
+const raceAssets = assets.images.races;
 
 export const RACES = {
   human: {
     id: 1,
-    attachment: humanRaceImg,
-    description: 'A race without any innate abilities or bonus stats. Humans rely solely on skill and determination to grow stronger.',
+    attachment: raceAssets.human,
+    description:
+      'A race without any innate abilities or bonus stats. Humans rely solely on skill and determination to grow stronger.',
     isGatcha: true,
     name: 'Human',
     rarity: RARITIES.common,
@@ -28,8 +18,9 @@ export const RACES = {
   },
   dwarf: {
     id: 2,
-    attachment: dwarfRaceImg,
-    description: 'Sturdy and resilient. Dwarves possess a <span>1.50x HP multiplier</span>, granting them exceptional durability in battle.',
+    attachment: raceAssets.dwarf,
+    description:
+      'Sturdy and resilient. Dwarves possess a <span>1.50x HP multiplier</span>, granting them exceptional durability in battle.',
     isGatcha: true,
     name: 'Dwarf',
     rarity: RARITIES.uncommon,
@@ -38,8 +29,9 @@ export const RACES = {
   },
   reaper: {
     id: 3,
-    attachment: reaperRaceImg,
-    description: 'Masters of death and experience. Reapers gain a <span>1.50x EXP multiplier</span>, allowing them to grow stronger faster than other races.',
+    attachment: raceAssets.reaper,
+    description:
+      'Masters of death and experience. Reapers gain a <span>1.50x EXP multiplier</span>, allowing them to grow stronger faster than other races.',
     isGatcha: true,
     name: 'Reaper',
     rarity: RARITIES.rare,
@@ -48,8 +40,9 @@ export const RACES = {
   },
   fishman: {
     id: 4,
-    attachment: fishmanRaceImg,
-    description: 'Born of the sea, Fishmen possess exceptional agility and strength. Gain a <span>1.20x DMG multiplier and 1.6x sprint speed bonus</span>.',
+    attachment: raceAssets.fishman,
+    description:
+      'Born of the sea, Fishmen possess exceptional agility and strength. Gain a <span>1.20x DMG multiplier and 1.6x sprint speed bonus</span>.',
     isGatcha: true,
     name: 'Fishman',
     rarity: RARITIES.epic,
@@ -58,8 +51,9 @@ export const RACES = {
   },
   saiyan: {
     id: 5,
-    attachment: saiyanRaceImg,
-    description: 'A warrior race born for battle. Saiyans possess a <span>1.60x DMG multiplier</span>, granting them exceptional offensive strength.',
+    attachment: raceAssets.saiyan,
+    description:
+      'A warrior race born for battle. Saiyans possess a <span>1.60x DMG multiplier</span>, granting them exceptional offensive strength.',
     isGatcha: true,
     name: 'Saiyan',
     rarity: RARITIES.legendary,
@@ -68,8 +62,9 @@ export const RACES = {
   },
   hollow: {
     id: 6,
-    attachment: hollowRaceImg,
-    description: 'Corrupted souls consumed by darkness. Hollows gain a <span>1.40x DMG and 1.40x HP multiplier</span>, making them both powerful and resilient in battle.',
+    attachment: raceAssets.hollow,
+    description:
+      'Corrupted souls consumed by darkness. Hollows gain a <span>1.40x DMG and 1.40x HP multiplier</span>, making them both powerful and resilient in battle.',
     isGatcha: true,
     name: 'Hollow',
     rarity: RARITIES.mythical,
@@ -78,8 +73,9 @@ export const RACES = {
   },
   angel: {
     id: 7,
-    attachment: angelRaceImg,
-    description: 'Beings of light and purity. Angels gain a <span>2.25x DMG multiplier during daytime</span>, channeling divine power under the sun.',
+    attachment: raceAssets.angel,
+    description:
+      'Beings of light and purity. Angels gain a <span>2.25x DMG multiplier during daytime</span>, channeling divine power under the sun.',
     isGatcha: true,
     name: 'Angel',
     rarity: RARITIES.exotic,
@@ -88,8 +84,9 @@ export const RACES = {
   },
   demon: {
     id: 8,
-    attachment: demonRaceImg,
-    description: 'Creatures born of darkness and chaos. Demons gain a <span>2.25x DMG multiplier during nighttime</span>, drawing strength from the shadows.',
+    attachment: raceAssets.demon,
+    description:
+      'Creatures born of darkness and chaos. Demons gain a <span>2.25x DMG multiplier during nighttime</span>, drawing strength from the shadows.',
     isGatcha: true,
     name: 'Demon',
     rarity: RARITIES.exotic,
@@ -98,8 +95,9 @@ export const RACES = {
   },
   abaddon: {
     id: 9,
-    attachment: abaddonRaceImg,
-    description: 'Harbingers of ruin and despair. Abaddons gain a <span>1.85x DMG multiplier and 1.25x sprint speed bonus</span>, overwhelming foes with relentless ferocity.',
+    attachment: raceAssets.abaddon,
+    description:
+      'Harbingers of ruin and despair. Abaddons gain a <span>1.85x DMG multiplier and 1.25x sprint speed bonus</span>, overwhelming foes with relentless ferocity.',
     isGatcha: true,
     name: 'Abaddon',
     rarity: RARITIES.exotic,
@@ -108,8 +106,9 @@ export const RACES = {
   },
   cleaner: {
     id: 10,
-    attachment: cleanerRaceImg,
-    description: 'Silent enforcers of order. Cleaners gain a <span>2.00x DMG multiplier and a 1.25x EXP multiplier</span>, excelling in both power and progression.',
+    attachment: raceAssets.cleaner,
+    description:
+      'Silent enforcers of order. Cleaners gain a <span>2.00x DMG multiplier and a 1.25x EXP multiplier</span>, excelling in both power and progression.',
     isGatcha: true,
     name: 'Cleaner',
     rarity: RARITIES.exotic,
@@ -118,8 +117,9 @@ export const RACES = {
   },
   fullbringer: {
     id: 11,
-    attachment: fullbringerRaceImg,
-    description: 'Masters of spiritual resonance. Fullbringers gain a <span>2.50x DMG multiplier and a 1.50x EXP multiplier</span>, thriving on strength born from within.',
+    attachment: raceAssets.fullbringer,
+    description:
+      'Masters of spiritual resonance. Fullbringers gain a <span>2.50x DMG multiplier and a 1.50x EXP multiplier</span>, thriving on strength born from within.',
     isGatcha: true,
     name: 'Fullbringer',
     rarity: RARITIES.exotic,

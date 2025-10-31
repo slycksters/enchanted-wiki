@@ -1,3 +1,4 @@
+import { Image } from '@components';
 import styles from './Skill.module.css';
 
 export const Skill = ({ info }) => {
@@ -15,7 +16,7 @@ export const Skill = ({ info }) => {
             >
               <p>{ability.name}</p>
               <p dangerouslySetInnerHTML={{ __html: ability.description}} />
-              <img alt={ability.name} src={ability.attachment} />
+              <Image alt={ability.name} src={ability.attachment} />
             </div>
           );
         })}

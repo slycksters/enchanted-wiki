@@ -1,11 +1,12 @@
-import { enchantedLogo } from '@assets';
+import { assets } from '@assets';
+import { Image } from '@components';
 import styles from './Brand.module.css';
 
 export const Brand = () => {
   return (
     <div className={styles.brand}>
       <section className={styles.imageWrapper}>
-        <img alt={'enchanted-logo'} src={enchantedLogo} />
+        <Image alt={'enchanted-logo'} src={assets.logos.enchantedLogo} />
       </section>
 
       <section className={styles.developerName}>

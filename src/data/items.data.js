@@ -1,11 +1,12 @@
-import { passiveMagicRerollImg, raceRerollImg } from '@assets';
-import { RARITIES } from './enums/rarities';
-import { TYPES } from './enums/types';
+import { assets } from '@assets';
+import { RARITIES, TYPES } from './enums';
+
+const itemAssets = assets.images.items;
 
 export const ITEMS = {
   raceReroll: {
     id: 1,
-    attachment: raceRerollImg,
+    attachment: itemAssets.raceReroll,
     name: 'Race Reroll',
     rarity: RARITIES.legendary,
     sources: [],
@@ -13,7 +14,7 @@ export const ITEMS = {
   },
   passiveMagicReroll: {
     id: 2,
-    attachment: passiveMagicRerollImg,
+    attachment: itemAssets.passiveMagicReroll,
     name: 'Passive Magic Reroll',
     rarity: RARITIES.mythical,
     sources: [],

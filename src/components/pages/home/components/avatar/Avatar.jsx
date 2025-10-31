@@ -1,13 +1,14 @@
-import { zazelAvatarImg, zazelAvatarVid } from '@assets';
+import { assets } from '@assets';
+import { Image } from '@components';
 import styles from './Avatar.module.css';
 
 export const Avatar = () => {
   return (
     <section className={styles.avatarDisplay}>
-      {/* <img alt="roblox-avatar" src={zazelAvatarImg} /> */}
+      {/* <Image alt="roblox-avatar" src={assets.images.robloxAvatar.zazel} /> */}
         <video
         className={styles.avatarVideo}
-        src={zazelAvatarVid}
+        src={assets.videos.zazelFloating()}
         autoPlay
         loop
         muted

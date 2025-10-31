@@ -1,24 +1,13 @@
-import {
-  darkMagicImg,
-  fireDragonSlayerMagicImg,
-  fireMagicImg,
-  iceMagicImg,
-  lightningDragonSlayerMagicImg,
-  lightningMagicImg,
-  poisonDragonSlayerMagicImg,
-  poisonMagicImg,
-  shadowDragonSlayerMagicImg,
-  waterDragonSlayerMagicImg,
-  windMagicImg,
-} from '@assets';
+import { assets } from '@assets';
+import { RARITIES, TYPES } from './enums';
 import { NPCS } from './npc.data';
-import { RARITIES } from './enums/rarities';
-import { TYPES } from './enums/types';
+
+const magicAssets = assets.images.magics;
 
 export const MAGICS = {
   wind: {
     id: 1,
-    attachment: windMagicImg,
+    attachment: magicAssets.wind,
     description: 'Harness the elemental power of wind, allowing you to manipulate air currents and unleash gusts in combat.',
     isGatcha: true,
     name: 'Wind',
@@ -28,7 +17,7 @@ export const MAGICS = {
   },
   fire: {
     id: 2,
-    attachment: fireMagicImg,
+    attachment: magicAssets.fire,
     description: 'Wield the destructive power of fire, igniting flames to scorch enemies and control the battlefield with searing intensity.',
     isGatcha: true,
     name: 'Fire',
@@ -38,7 +27,7 @@ export const MAGICS = {
   },
   poison: {
     id: 3,
-    attachment: poisonMagicImg,
+    attachment: magicAssets.poison,
     description: 'Harness the toxic essence of poison, inflicting lingering damage and weakening enemies over time with your venomous powers.',
     isGatcha: true,
     name: 'Poison',
@@ -48,7 +37,7 @@ export const MAGICS = {
   },
   dark: {
     id: 4,
-    attachment: darkMagicImg,
+    attachment: magicAssets.dark,
     description: 'Tap into the forbidden energies of darkness, manipulating shadows and cursed power to weaken and strike fear into your foes.',
     isGatcha: true,
     name: 'Dark',
@@ -58,7 +47,7 @@ export const MAGICS = {
   },
   ice: {
     id: 5,
-    attachment: iceMagicImg,
+    attachment: magicAssets.ice,
     description: 'Command the chilling power of ice, freezing enemies and controlling the battlefield with frost and sharp, icy strikes.',
     isGatcha: true,
     name: 'Ice',
@@ -68,7 +57,7 @@ export const MAGICS = {
   },
   lightning: {
     id: 6,
-    attachment: lightningMagicImg,
+    attachment: magicAssets.lightning,
     description: 'Harness the raw energy of lightning, striking enemies with electrifying speed and devastating bursts of electric power.',
     isGatcha: true,
     name: 'Lightning',
@@ -78,7 +67,7 @@ export const MAGICS = {
   },
   poisonDragonSlayer: {
     id: 7,
-    attachment: poisonDragonSlayerMagicImg,
+    attachment: magicAssets.poisonDragonSlayer,
     description: 'Wield the deadly venom of dragons, inflicting potent poison on foes and mastering toxins with legendary precision.',
     isGatcha: true,
     name: 'Poison Dragon Slayer',
@@ -88,7 +77,7 @@ export const MAGICS = {
   },
   shadowDragonSlayer: {
     id: 8,
-    attachment: shadowDragonSlayerMagicImg,
+    attachment: magicAssets.shadowDragonSlayer,
     description: 'Channel the dark essence of dragons, wielding shadow powers to strike fear into enemies and dominate the battlefield with legendary skill.',
     isGatcha: true,
     name: 'Shadow Dragon Slayer',
@@ -98,7 +87,7 @@ export const MAGICS = {
   },
   lightningDragonSlayer: {
     id: 9,
-    attachment: lightningDragonSlayerMagicImg,
+    attachment: magicAssets.lightningDragonSlayer,
     description: 'Harness the electrifying power of dragons, unleashing lightning to strike with mythical speed and overwhelming force.',
     isGatcha: true,
     name: 'Lightning Dragon Slayer',
@@ -108,7 +97,7 @@ export const MAGICS = {
   },
   fireDragonSlayer: {
     id: 10,
-    attachment: fireDragonSlayerMagicImg,
+    attachment: magicAssets.fireDragonSlayer,
     description: 'Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield.',
     isGatcha: true,
     name: 'Fire Dragon Slayer',
@@ -118,7 +107,7 @@ export const MAGICS = {
   },
   waterDragonSlayer: {
     id: 11,
-    attachment: waterDragonSlayerMagicImg,
+    attachment: magicAssets.waterDragonSlayer,
     description: 'Harness the tidal might of dragons, wielding water to control the battlefield and crush foes with exotic precision.',
     isGatcha: true,
     name: 'Water Dragon Slayer',
@@ -128,7 +117,7 @@ export const MAGICS = {
   },
   shadowDragonSlayerV2: {
     id: 12,
-    attachment: shadowDragonSlayerMagicImg,
+    attachment: magicAssets.shadowDragonSlayer,
     description: 'Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend.',
     name: 'Shadow Dragon Slayer V2',
     rarity: RARITIES.v2,
@@ -137,7 +126,7 @@ export const MAGICS = {
   },
   fireDragonSlayerV2: {
     id: 13,
-    attachment: fireDragonSlayerMagicImg,
+    attachment: magicAssets.fireDragonSlayer,
     description: 'Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor.',
     name: 'Fire Dragon Slayer V2',
     rarity: RARITIES.v2,
@@ -146,7 +135,7 @@ export const MAGICS = {
   },
   lightningDragonSlayerV2: {
     id: 14,
-    attachment: lightningDragonSlayerMagicImg,
+    attachment: magicAssets.lightningDragonSlayer,
     description: 'Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.',
     name: 'Lightning Dragon Slayer V2',
     rarity: RARITIES.v2,

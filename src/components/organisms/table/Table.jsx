@@ -1,3 +1,4 @@
+import { Image } from '@components';
 import styles from './Table.module.css';
 
 export const Table = ({ list }) => {
@@ -18,7 +19,7 @@ export const Table = ({ list }) => {
               className={styles.tableRow}
             >
               <td>
-                <img alt={item.name} src={item.attachment} />
+                <Image alt={item.name} src={item.attachment} />
               </td>
               <td>{item.name}</td>
               <td>N/A</td>

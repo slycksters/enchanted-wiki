@@ -1,3 +1,4 @@
+import { Image } from '@components';
 import styles from './Header.module.css';
 
 export const Header = ({ info }) => {
@@ -19,7 +20,7 @@ export const Header = ({ info }) => {
         </div>
       </section>
       <section className={styles.imageWrapper}>
-        <img alt={info.name} src={info.attachment} />
+        <Image alt={info.name} src={info.attachment} />
       </section>
     </div>
   );

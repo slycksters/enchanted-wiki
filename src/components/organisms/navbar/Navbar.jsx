@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import { enchantedLogo, enchantedSmallLogo } from '@assets';
+import { assets } from '@assets';
+import { Image } from '@components';
 import { BASE_PATH, PAGE_LINKS } from '@constants';
 import { getBackgroundGradient } from '@helpers';
 import { useWindowWidth } from '@hooks';
@@ -15,7 +16,7 @@ export const Navbar = () => {
       {/* Logo */}
       <div className={styles.logoWrapper}>
         <NavLink to={BASE_PATH}>
-          <img src={isMobileOrTablet ? enchantedSmallLogo : enchantedLogo} />
+          <Image src={isMobileOrTablet ? assets.logos.enchantedSmallLogo : assets.logos.enchantedLogo} />
         </NavLink>
       </div>
 

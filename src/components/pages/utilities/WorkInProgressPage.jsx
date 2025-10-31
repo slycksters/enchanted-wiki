@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { enchantedLogo } from '@assets';
-import { Button } from '@components';
+import { assets } from '@assets';
+import { Button, Image } from '@components';
 import { BASE_PATH } from '@constants';
 import styles from './Utility.module.css';
 
@@ -12,7 +12,7 @@ export const WorkInProgressPage = () => {
     >
       {/* Logo */}
       <section className={styles.imageWrapper}>
-        <img alt={'enchanted-logo'} src={enchantedLogo} />
+        <Image alt={'enchanted-logo'} src={assets.logos.enchantedLogo} />
       </section>
 
       <section className={styles.verbiage}>
