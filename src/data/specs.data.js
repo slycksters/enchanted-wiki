@@ -3,7 +3,7 @@ import { DAMAGE_TYPES, RARITIES, TYPES } from './enums';
 import { NPCS } from './npc.data';
 
 const specAssets = assets.images.specs;
-const abilityPreviewAssets = assets.videos.abilityPreviews;
+const abilityPreviewAssets = assets.videos.specs;
 
 export const SPECS = {
   ichigo: {

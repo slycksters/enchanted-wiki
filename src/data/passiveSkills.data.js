@@ -7,6 +7,12 @@ const passiveSkillAssets = assets.images.passiveSkills;
 export const PASSIVE_SKILLS = {
   shadowStep: {
     id: 1,
+    // abilities: [
+    //   {
+    //     id: 1,
+    //     attachment: '',
+    //   },
+    // ],
     attachment: passiveSkillAssets.shadowStep,
     description:
       'Move through the battlefield like a phantom — dash through enemies cloaked in shadows, leaving no trace behind.',
