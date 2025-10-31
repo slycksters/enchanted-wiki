@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { BASE_PATH } from '../../constants';
-import { Navbar } from '../organisms';
-import { useWindowWidth } from '../../hooks';
+import { Navbar } from '@components';
+import { BASE_PATH } from '@constants';
+import { useWindowWidth } from '@hooks';
 
 export const MainComponent = () => {
   const location = useLocation();

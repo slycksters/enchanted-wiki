@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
+import { PAGE_LINKS } from '@constants';
 import styles from './Navbar.module.css';
-import { PAGE_LINKS } from '../../../../../constants';
 
 export const Navbar = () => {
   return (

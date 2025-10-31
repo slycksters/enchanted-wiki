@@ -1,5 +1,5 @@
 import styles from './Source.module.css';
-import { Table } from '../../../../../../organisms';
+import { Table } from '@components';
 
 export const Source = ({ info }) => {
   return (

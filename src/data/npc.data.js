@@ -1,6 +1,6 @@
-import { adamImg, aizenNpcImg, amoEmpoolNpcImg, ichigoNpcImg, ichigoV2NpcImg, kiritoNpcImg, kokushiboNpcImg, monkeyDevelopsImg, reaperImg, rudoNpcImg, shamImg, steveImg, yamiNpcImg, yoriichiNpcImg, yunoNpcImg, yunoV2NpcImg } from '../assets';
-import { NPC_TYPES } from './npcType.data';
-import { TYPES } from './types.data';
+import { adamImg, aizenNpcImg, amoEmpoolNpcImg, ichigoNpcImg, ichigoV2NpcImg, kiritoNpcImg, kokushiboNpcImg, monkeyDevelopsImg, reaperImg, rudoNpcImg, shamImg, steveImg, yamiNpcImg, yoriichiNpcImg, yunoNpcImg, yunoV2NpcImg } from '@assets';
+import { NPC_TYPES } from './enums/npcTypes';
+import { TYPES } from './enums/types';
 
 export const NPCS = {
   sham: {

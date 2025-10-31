@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
+import { enchantedLogo } from '@assets';
+import { Button } from '@components';
+import { BASE_PATH } from '@constants';
 import styles from './Utility.module.css';
-import { Button } from '../../atoms';
-import { enchantedLogo } from '../../../assets';
-import { BASE_PATH } from '../../../constants';
 
 export const NotFoundPage = () => {
   return (

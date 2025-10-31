@@ -1,12 +1,10 @@
+import { Info, Layout } from '@components';
+import { MAGICS } from '@data';
 import { CATEGORIES } from './constants';
-import { RACES } from '../../../data';
-import { Layout } from '../../templates';
-import { Info } from '../specs/components';
 
 export const AbilitiesPage = () => {
-
   return (
-    <Layout categories={CATEGORIES} info={RACES.human}>
+    <Layout categories={CATEGORIES} defaultInfo={MAGICS.wind}>
       <Info />
     </Layout>
   );

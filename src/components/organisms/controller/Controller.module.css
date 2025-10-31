@@ -20,10 +20,14 @@
 }
 
 .hamburgerIcon {
+  align-items: center;
   border: 1px dashed var(--enchanted-border-color);
   border-radius: 4px;
   cursor: pointer;
-  padding: 5px;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  width: 35px;
 }
 
 .hamburgerIcon:hover {

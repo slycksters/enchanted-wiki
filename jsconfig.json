@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@assets": ["assets"],
+      "@components/*": ["components/*"],
+      "@constants": ["constants"],
+      "@data": ["data"],
+      "@helpers": ["helpers"],
+      "@hooks": ["hooks"],
+      "@mappers": ["mappers"],
+      "@router": ["router"],
+    }
+  },
+  "include": ["src"]
+}

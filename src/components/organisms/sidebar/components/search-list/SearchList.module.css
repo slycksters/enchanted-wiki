@@ -2,13 +2,29 @@
   margin-top: 10px;
 }
 
-.item, .verbiage {
+.item, .parentItem, .verbiage {
   color: var(--enchanted-text-secondary);
   font-size: 14px;
   padding: 5px;
   text-indent: 20px;
 }
 
-.activeItem > span {
+.activeItem > span,
+.activeParentItem > span {
   color: var(--enchanted-text-primary);
+}
+
+.item {
+  border-left: 1px solid var(--enchanted-border-color);
+  margin-left: 25px;
+  padding: 5px 0px;
+  text-indent: 20;
+  transition: padding-left 0.1s ease-in-out, border-width 0.1s ease-in-out;
+}
+
+.activeItem, .item:hover {
+  border-width: 3px;
+  padding-left: 4px;
+  color: var(--enchanted-text-primary);
+  cursor: pointer;
 }

@@ -1,8 +1,8 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import { enchantedSmallLogo } from '@assets';
+import { BASE_PATH } from '@constants';
 import styles from './Controller.module.css';
-import { enchantedSmallLogo } from '../../../assets';
-import { BASE_PATH } from '../../../constants';
 
 export const Controller = ({ onClickHamburger }) => {
   return (

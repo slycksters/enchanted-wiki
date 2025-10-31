@@ -10,10 +10,10 @@ import {
   humanRaceImg,
   reaperRaceImg,
   saiyanRaceImg,
-} from '../assets';
+} from '@assets';
 import { ITEMS } from './items.data';
-import { RARITIES } from './rarities.data';
-import { TYPES } from './types.data';
+import { RARITIES } from './enums/rarities';
+import { TYPES } from './enums/types';
 
 export const RACES = {
   human: {

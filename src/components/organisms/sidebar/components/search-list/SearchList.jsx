@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import clsx from 'clsx';
 import styles from './SearchList.module.css';
 import { SubList } from './sub-list';
 
@@ -8,11 +9,6 @@ export const SearchList = ({
   onClickItem,
   onClickSubItem,
 }) => {
-  const hoveredStyle = {
-    color: 'var(--enchanted-text-primary)',
-    cursor: 'pointer',
-  };
-  const [hoveredName, setHoveredName] = useState(null);
   const [selectedItem, setSelectedItem] = useState(list[0]);
   const [selectedSubItem, setSelectedSubItem] = useState(
     list?.[0]?.list?.[0] || null
@@ -27,8 +23,8 @@ export const SearchList = ({
 
   const handleOnClickSubItem = (item) => {
     if (selectedSubItem.name !== item.name) {
-      onClickSubItem(item);
       setSelectedSubItem(item);
+      onClickSubItem(item);
     }
   };
 
@@ -37,39 +33,38 @@ export const SearchList = ({
       {list?.length === 0 ? (
         <div className={styles.verbiage}>No Data Found</div>
       ) : (
-        <>
-          {list.map((item) => {
-            const uniqueName = `${item.name}-${item.id}`;
-            const isHovered = hoveredName === uniqueName;
-            const isSelected = selectedItem.name === item.name;
-            const subList = item.list;
-            const haveSubList = subList?.length;
+        list.map((item) => {
+          const { name, id, list: subList, type } = item;
+          const isSelected = selectedItem.name === name;
+          const haveSubList = subList?.length > 0;
 
-            return (
-              <div
-                key={`sidebar-item-${item.type?.name}-${item.name}-${item.id}`}
-                className={`${styles.item} ${
-                  isSelected || haveSubList ? styles.activeItem : ''
-                }`}
-                onClick={!haveSubList ? () => handleOnClickItem(item) : null}
-                onMouseEnter={() => setHoveredName(uniqueName)}
-                onMouseLeave={() => setHoveredName(null)}
-                style={!haveSubList && isHovered ? hoveredStyle : null}
-              >
-                <span hidden={isMultiList && !haveSubList} title={item.name}>
-                  {item.name}
-                </span>
-                {subList && (
-                  <SubList
-                    list={subList}
-                    onClickSubItem={handleOnClickSubItem}
-                    selectedSubItem={selectedSubItem}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </>
+          return (
+            <div
+              key={`sidebar-item-${type?.name}-${name}-${id}`}
+              className={clsx(
+                isMultiList ? styles.parentItem : styles.item,
+                isSelected
+                  ? isMultiList
+                    ? styles.activeParentItem
+                    : styles.activeItem
+                  : null
+              )}
+              onClick={!haveSubList ? () => handleOnClickItem(item) : undefined}
+              style={{ borderColor: !isMultiList ? item.rarity.color : null }}
+            >
+              <span hidden={isMultiList && !haveSubList} title={name}>
+                {name}
+              </span>
+              {subList && (
+                <SubList
+                  list={subList}
+                  onClickSubItem={handleOnClickSubItem}
+                  selectedSubItem={selectedSubItem}
+                />
+              )}
+            </div>
+          );
+        })
       )}
     </div>
   );

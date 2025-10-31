@@ -1,15 +1,19 @@
 .searchbar {
+  background-color: var(--enchanted-bg-primary);
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .searchInput {
-  background-color: var(--enchanted-bg-primary);
+  background-color: var(--enchanted-overlay-transparent);
   border: none;
   border-bottom: 1px solid var(--enchanted-border-color);
   color: var(--enchanted-text-primary);
   flex: 1;
   font-size: 12px;
-  text-indent: 25px;
+  padding-left: 25px;
   width: 100%;
 }
 

@@ -1,19 +1,23 @@
 import {
+  ITEMS,
   MAGICS,
+  NPCS,
   PASSIVE_MAGICS,
   PASSIVE_SKILLS,
   RACES,
   SPECS,
   TRAITS,
   TYPES,
-} from '../data';
+} from '@data';
+import { extractValues } from '@helpers';
 
 export const DATA = {
-  [TYPES.race.name]: Object.values(RACES),
-  [TYPES.trait.name]: Object.values(TRAITS),
-  [TYPES.magic.name]: Object.values(MAGICS),
-  [TYPES.passiveMagic.name]: Object.values(PASSIVE_MAGICS),
-  [TYPES.passiveSkill.name]: Object.values(PASSIVE_SKILLS),
-  [TYPES.spec.name]: Object.values(SPECS),
-  // [CATEGORIES[5].name]: Object.values(TITLES),
+  [TYPES.item.name]: extractValues(ITEMS),
+  [TYPES.magic.name]: extractValues(MAGICS),
+  [TYPES.npc.name]: extractValues(NPCS),
+  [TYPES.passiveMagic.name]: extractValues(PASSIVE_MAGICS),
+  [TYPES.passiveSkill.name]: extractValues(PASSIVE_SKILLS),
+  [TYPES.race.name]: extractValues(RACES),
+  [TYPES.spec.name]: extractValues(SPECS),
+  [TYPES.trait.name]: extractValues(TRAITS),
 };

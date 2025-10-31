@@ -1,5 +1,5 @@
+import { zazelAvatarImg, zazelAvatarVid } from '@assets';
 import styles from './Avatar.module.css';
-import { zazelAvatarImg, zazelAvatarVid } from '../../../../../assets';
 
 export const Avatar = () => {
   return (

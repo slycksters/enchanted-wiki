@@ -1,2 +1,2 @@
-export * from './categorizeArray.helper';
+export * from './extractValues.helper';
 export * from './getBackgroundGradient.helper';

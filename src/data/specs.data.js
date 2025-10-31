@@ -1,8 +1,8 @@
-import { ichigoCVid, ichigoFVid, ichigoM1Vid, ichigoSpecImg, ichigoTransformedM1Vid, ichigoVVid, ichigoXVid, ichigoZVid, yamiCVid, yamiSpecImg, yunoSpecImg, yamiM1Vid, yamiVVid, yamiXVid, yamiZVid, yunoCVid, yunoNpcImg, yunoM1Vid, yunoVVid, yunoXVid, yunoZVid, rudoZVid, rudoXVid, rudoCVid, rudoVVid, rudoM1Vid, rudoSpecImg, kiritoZVid, kiritoXVid, kiritoCVid, kiritoVVid, kiritoSpecImg, amoEmpoolZVid, amoEmpoolCVid, amoEmpoolXVid, amoEmpoolVVid, kiritoM1Vid, amoEmpoolM1Vid, amoEmpoolSpecImg, amoEmpoolFVid, aizenZVid, aizenXVid, aizenCVid, aizenVVid, aizenM1Vid, aizenSpecImg, yunoV2M1Vid, yunoV2ZVid, yunoV2XVid, yunoV2CVid, yunoV2VVid, yunoV2FVid, yunoV2SpecImg, yoriichiZVid, yoriichiXVid, yoriichiM1Vid, yoriichiCVid, yoriichiVVid, yoriichiSpecImg, kokushiboM1Vid, kokushiboZVid, kokushiboXVid, kokushiboCVid, kokushiboVVid, kokushiboSpecImg, ichigoV2ZVid, ichigoV2M1Vid, ichigoV2XVid, ichigoV2CVid, ichigoV2VVid, ichigoV2FVid, ichigoV2SpecImg } from '../assets';
-import { DAMAGE_TYPES } from './damageTypes.data';
+import { ichigoCVid, ichigoFVid, ichigoM1Vid, ichigoSpecImg, ichigoTransformedM1Vid, ichigoVVid, ichigoXVid, ichigoZVid, yamiCVid, yamiSpecImg, yunoSpecImg, yamiM1Vid, yamiVVid, yamiXVid, yamiZVid, yunoCVid, yunoNpcImg, yunoM1Vid, yunoVVid, yunoXVid, yunoZVid, rudoZVid, rudoXVid, rudoCVid, rudoVVid, rudoM1Vid, rudoSpecImg, kiritoZVid, kiritoXVid, kiritoCVid, kiritoVVid, kiritoSpecImg, amoEmpoolZVid, amoEmpoolCVid, amoEmpoolXVid, amoEmpoolVVid, kiritoM1Vid, amoEmpoolM1Vid, amoEmpoolSpecImg, amoEmpoolFVid, aizenZVid, aizenXVid, aizenCVid, aizenVVid, aizenM1Vid, aizenSpecImg, yunoV2M1Vid, yunoV2ZVid, yunoV2XVid, yunoV2CVid, yunoV2VVid, yunoV2FVid, yunoV2SpecImg, yoriichiZVid, yoriichiXVid, yoriichiM1Vid, yoriichiCVid, yoriichiVVid, yoriichiSpecImg, kokushiboM1Vid, kokushiboZVid, kokushiboXVid, kokushiboCVid, kokushiboVVid, kokushiboSpecImg, ichigoV2ZVid, ichigoV2M1Vid, ichigoV2XVid, ichigoV2CVid, ichigoV2VVid, ichigoV2FVid, ichigoV2SpecImg } from '@assets';
+import { DAMAGE_TYPES } from './enums/damageTypes';
 import { NPCS } from './npc.data';
-import { RARITIES } from './rarities.data';
-import { TYPES } from './types.data';
+import { RARITIES } from './enums/rarities';
+import { TYPES } from './enums/types';
 
 export const SPECS = {
   ichigo: {

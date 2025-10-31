@@ -1,8 +1,6 @@
 import styles from './Description.module.css';
 
 export const Description = ({ info }) => {
-  if (!info.description) return;
-
   return (
     <section className={styles.description}>
       <div className={'row'}>

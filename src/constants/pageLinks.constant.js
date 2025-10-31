@@ -6,8 +6,6 @@ import {
   GiTreasureMap,
   GiTrophy,
 } from 'react-icons/gi';
-
-import { BASE_PATH } from './basePath.constant';
 import {
   AbilitiesPage,
   BossesPage,
@@ -15,7 +13,8 @@ import {
   ItemsPage,
   SpecsPage,
   TrialsPage,
-} from '../components/pages';
+} from '@components/pages';
+import { BASE_PATH } from './basePath.constant';
 
 export const PAGE_LINKS = [
   {

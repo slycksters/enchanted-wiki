@@ -13,13 +13,13 @@
   --enchanted-overlay-transparent: transparent;
 
   /* Rarity colors*/
-  --enchanted-rarity-common: #99A1AF;
-  --enchanted-rarity-uncommon: #05df72;
-  --enchanted-rarity-rare: #2B7FFF;
-  --enchanted-rarity-epic: #AD46FF;
-  --enchanted-rarity-legendary: #FF6900;
-  --enchanted-rarity-mythical: #FB2C36;
-  --enchanted-rarity-exotic: #5EE9B5;
+  --enchanted-rarity-common: #96999E;
+  --enchanted-rarity-uncommon: #216E4E;
+  --enchanted-rarity-rare: #669DF1;
+  --enchanted-rarity-epic: #803FA5;
+  --enchanted-rarity-legendary: #FCA700;
+  --enchanted-rarity-mythical: #AE2E24;
+  --enchanted-rarity-exotic: #4BCE97;
   --enchanted-rarity-v2: #520E13;
 
   /* Global stylings*/

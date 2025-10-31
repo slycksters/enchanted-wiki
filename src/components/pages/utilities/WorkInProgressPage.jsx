@@ -1,12 +1,15 @@
 import { NavLink } from 'react-router-dom';
+import { enchantedLogo } from '@assets';
+import { Button } from '@components';
+import { BASE_PATH } from '@constants';
 import styles from './Utility.module.css';
-import { Button } from '../../atoms';
-import { enchantedLogo } from '../../../assets';
-import { BASE_PATH } from '../../../constants';
 
 export const WorkInProgressPage = () => {
   return (
-    <div className={styles.utilityPageContainer}>
+    <div
+      className={styles.utilityPageContainer}
+      style={{ minHeight: 'calc(100vh - 76px)' }}
+    >
       {/* Logo */}
       <section className={styles.imageWrapper}>
         <img alt={'enchanted-logo'} src={enchantedLogo} />

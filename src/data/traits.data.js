@@ -14,10 +14,10 @@ import {
   unyieldingForceTraitImg,
   venomousStrikesTraitImg,
   winderRunnerTraitImg,
-} from '../assets';
+} from '@assets';
 import { NPCS } from './npc.data';
-import { RARITIES } from './rarities.data';
-import { TYPES } from './types.data';
+import { RARITIES } from './enums/rarities';
+import { TYPES } from './enums/types';
 
 export const TRAITS = {
   tough: {

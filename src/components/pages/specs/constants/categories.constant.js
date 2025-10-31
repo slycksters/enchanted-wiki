@@ -1,7 +1,4 @@
-import { SPECS, TYPES } from '../../../../data';
+import { SPECS } from '@data';
+import { extractValues } from '@helpers';
 
-export const CATEGORIES = Object.values(SPECS).map((spec) => ({
-  id: spec.id,
-  name: spec.name,
-  type: TYPES.spec,
-}));
+export const CATEGORIES = extractValues(SPECS);

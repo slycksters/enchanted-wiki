@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import clsx from 'clsx';
 import { Searchbar, SearchList } from './components';
 import styles from './Sidebar.module.css';
+import { filterItems } from './helpers';
+import { RarityList } from './components/rarity-list/RarityList';
 
 export const Sidebar = ({
   list,
@@ -16,28 +19,8 @@ export const Sidebar = ({
     const searchTerm = e.target.value.toLowerCase();
 
     const newList = list
-      .map((item) => {
-        if (item.list) {
-          // --- Filter sublist
-          const filteredSubList = item.list.filter((sub) =>
-            sub.name.toLowerCase().includes(searchTerm)
-          );
-
-          // --- Only include the parent if it has matching sublist items
-          if (filteredSubList.length > 0) {
-            return { ...item, list: filteredSubList };
-          }
-
-          return null; // no match in sublist
-        } else {
-          // --- Parent without sublist
-          if (item.name.toLowerCase().includes(searchTerm)) {
-            return item;
-          }
-          return null;
-        }
-      })
-      .filter(Boolean); // remove nulls
+      .map((item) => filterItems(item, searchTerm))
+      .filter(Boolean);
 
     setFilteredData(newList);
   };
@@ -53,11 +36,13 @@ export const Sidebar = ({
       )}
 
       <div
-        className={`${styles.sidebar} ${
-          showSidebar ? styles.sidebarOpen : styles.sidebarClosed
-        }`}
+        className={clsx(styles.sidebar, {
+          [styles.sidebarOpen]: showSidebar,
+          [styles.sidebarClosed]: !showSidebar,
+        })}
       >
         <Searchbar onSearch={handleOnSearch} />
+        <RarityList />
         <SearchList
           isMultiList={isMultiList}
           list={filteredData}

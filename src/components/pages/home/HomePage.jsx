@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import styles from './Home.module.css';
 import { Avatar, Brand, Navbar, Timer } from './components';
+import styles from './Home.module.css';
 
 export const HomePage = () => {
   // Scroll to top on component mount

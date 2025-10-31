@@ -1,4 +1,4 @@
-import { WorkInProgressPage } from '../utilities';
+import { WorkInProgressPage } from '@components';
 import styles from './Islands.module.css';
 
 export const IslandsPage = () => {

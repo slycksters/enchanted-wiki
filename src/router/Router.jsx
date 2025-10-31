@@ -1,7 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { MainComponent } from '../components';
-import { BASE_PATH, PAGE_LINKS } from '../constants';
-import { HomePage, NotFoundPage } from '../components/pages';
+import { HomePage, MainComponent, NotFoundPage } from '@components';
+import { BASE_PATH, PAGE_LINKS } from '@constants';
 
 const router = createBrowserRouter([
   {

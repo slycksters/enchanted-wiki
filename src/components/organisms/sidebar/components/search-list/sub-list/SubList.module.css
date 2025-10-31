@@ -7,10 +7,12 @@
 .item {
   border-left: 1px solid var(--enchanted-border-color);
   padding: 5px 0px;
+  transition: padding-left 0.1s ease-in-out, border-width 0.1s ease-in-out;
 }
 
 .activeItem, .item:hover {
-  border-color: var(--enchanted-text-primary);
+  border-width: 3px;
+  padding-left: 4px;
   color: var(--enchanted-text-primary);
   cursor: pointer;
 }

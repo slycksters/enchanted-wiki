@@ -1,0 +1,49 @@
+.viewRarityButton {
+  background-color: var(--enchanted-overlay-transparent);
+  border: none;
+  border-bottom: 1px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-secondary);
+  font-size: 12px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.viewRarityButton:focus {
+  outline: none;
+}
+
+.rarityList {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+  border-bottom: 0 solid var(--enchanted-border-color);
+  padding: 0 20px;
+  text-align: center;
+  transition:  all 0.3s ease-in-out;
+}
+
+.rarityList.open {
+  max-height: 500px;
+  padding: 10px 20px;
+  border-bottom-width: 1px;
+}
+
+
+.rarityItem {
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  margin-left: 10px;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+}

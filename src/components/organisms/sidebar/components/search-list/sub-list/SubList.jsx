@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import styles from './SubList.module.css';
 
 export const SubList = ({ list, onClickSubItem, selectedSubItem }) => {
@@ -9,8 +10,9 @@ export const SubList = ({ list, onClickSubItem, selectedSubItem }) => {
         return (
           <div
             key={`sidebar-sub-item-${subItem.type.name}-${subItem.name}-${subItem.id}}`}
-            className={`${styles.item} ${isSelected ? styles.activeItem : ''}`}
+            className={clsx(styles.item, { [styles.activeItem]: isSelected })}
             onClick={() => onClickSubItem(subItem)}
+            style={{ borderColor: subItem.rarity.color }}
           >
             <span title={subItem.name}>{subItem.name}</span>
           </div>

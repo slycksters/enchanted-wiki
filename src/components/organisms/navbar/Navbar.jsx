@@ -1,24 +1,14 @@
-import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import clsx from 'clsx';
+import { enchantedLogo, enchantedSmallLogo } from '@assets';
+import { BASE_PATH, PAGE_LINKS } from '@constants';
+import { getBackgroundGradient } from '@helpers';
+import { useWindowWidth } from '@hooks';
 import styles from './Navbar.module.css';
-import { enchantedLogo, enchantedSmallLogo } from '../../../assets';
-import { BASE_PATH, PAGE_LINKS } from '../../../constants';
-import { getBackgroundGradient } from '../../../helpers';
 
 export const Navbar = () => {
-  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
-
-  // --- Handle screen width detection
-  useEffect(() => {
-    const checkWidth = () => {
-      setIsMobileOrTablet(window.innerWidth <= 1024);
-    };
-
-    checkWidth(); // Initial check
-    window.addEventListener('resize', checkWidth);
-
-    return () => window.removeEventListener('resize', checkWidth);
-  }, []);
+  const windowWidth = useWindowWidth();
+  const isMobileOrTablet = windowWidth <= 1024;
 
   return (
     <div className={styles.navigationContainer}>
@@ -37,7 +27,7 @@ export const Navbar = () => {
           return (
             <NavLink
               className={({ isActive }) =>
-                `${styles.navItem} ${isActive ? styles.activeNavItem : ''}`
+                clsx(styles.navItem, { [styles.activeNavItem]: isActive })
               }
               key={link.id}
               style={({ isActive }) => ({

@@ -1,4 +1,4 @@
-import { enchantedLogo } from '../../../../../assets';
+import { enchantedLogo } from '@assets';
 import styles from './Brand.module.css';
 
 export const Brand = () => {

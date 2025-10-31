@@ -1,8 +1,8 @@
 import { cloneElement, useState } from 'react';
 import styles from './Layout.module.css';
-import { Controller, InfoPanel, Sidebar } from '../../organisms';
-import { useWindowWidth } from '../../../hooks';
-import { DATA } from '../../../mappers';
+import { Controller, InfoPanel, Sidebar } from '@components';
+import { useWindowWidth } from '@hooks';
+import { DATA } from '@mappers';
 
 const Child = ({ children, info }) => {
   return (
@@ -15,11 +15,11 @@ const Child = ({ children, info }) => {
   );
 };
 
-export const Layout = ({ categories, children, info }) => {
+export const Layout = ({ categories, children, defaultInfo }) => {
   const windowWidth = useWindowWidth();
   const isMobileOrTablet = windowWidth <= 1024;
 
-  const [selectedInfo, setSelectedInfo] = useState(info);
+  const [selectedInfo, setSelectedInfo] = useState(defaultInfo);
   const [showSidebar, setShowSidebar] = useState(false);
   const [showInfoPanel, setShowInfoPanel] = useState(false);
 
