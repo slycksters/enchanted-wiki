@@ -21,12 +21,19 @@
 }
 
 .label {
-  width: 60px;
+  width: 80px;
 }
 
 .value {
   border-radius: 4px;
   color: var(--enchanted-text-secondary);
+  text-align: center;
+}
+
+.rarity {
+  border-radius: 4px;
+  min-width: 50px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -44,6 +51,7 @@
 
 .imageWrapper > img {
   filter: var(--enchanted-drop-shadow);
-  height: 65%;
-  width: auto;
+  max-height: 65%;
+  max-width: 65%;
+  object-fit: contain;
 }
