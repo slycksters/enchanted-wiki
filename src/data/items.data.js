@@ -1,12 +1,16 @@
 import { assets } from '@assets';
-import { RARITIES, TYPES } from './enums';
+import { ITEM_TYPES, RARITIES, TYPES } from './enums';
 
-const itemAssets = assets.images.items;
+const itemImages = assets.images.items;
 
 export const ITEMS = {
   raceReroll: {
     id: 1,
-    attachment: itemAssets.raceReroll,
+    attachment: itemImages.raceReroll,
+    description:
+      'A mystical artifact humming with the essence of creation. It allows the wielder to reshape their very being, granting them a new lineage and a fresh start in the world.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.materials,
     name: 'Race Reroll',
     rarity: RARITIES.legendary,
     sources: [],
@@ -14,10 +18,248 @@ export const ITEMS = {
   },
   passiveMagicReroll: {
     id: 2,
-    attachment: itemAssets.passiveMagicReroll,
+    attachment: itemImages.passiveMagicReroll,
+    description:
+      "A swirling vortex of raw magical energy contained within a fragile orb. Shattering it will unravel the user's innate magical pathways, allowing them to discover a new, hidden power from within.",
+    isGatcha: false,
+    itemType: ITEM_TYPES.materials,
     name: 'Passive Magic Reroll',
     rarity: RARITIES.mythical,
     sources: [],
+    type: TYPES.item,
+  },
+  facePlaster: {
+    id: 3,
+    attachment: itemImages.facePlaster,
+    description:
+      "A crudely applied plaster, stripped from the Bandit Leader of Crescent Isle. It's a testament to his brawling past, offering surprising resilience to a warrior tough enough to wear their scars with pride.",
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: 'Face Plaster',
+    rarity: RARITIES.rare,
+    sources: ['banditLeader'],
+    stats: {
+      blade: 0,
+      defense: 40,
+      magic: 0,
+      meelee: 0,
+    },
+    type: TYPES.item,
+  },
+  nerdGlasses: {
+    id: 4,
+    attachment: itemImages.nerdGlasses,
+    description:
+      "An odd trophy from the reclusive titan of Frostveil Hollow. Despite his brutish nature, these glasses seem to hold a sliver of his forgotten intellect, sharpening the wearer's combat focus to a razor's edge.",
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: 'Nerd Glasses',
+    rarity: RARITIES.rare,
+    sources: ['zeus'],
+    stats: {
+      blade: 125,
+      defense: 0,
+      magic: 0,
+      meelee: 250,
+    },
+    type: TYPES.item,
+  },
+  headband: {
+    id: 5,
+    attachment: itemImages.headband,
+    description:
+      'A sweat-stained headband worn by the Mirage Warden to keep the desert sun from his eyes. It is imbued with his cunning, helping the wearer see through deceptions and maintain focus in the heat of battle.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: 'Headband',
+    rarity: RARITIES.rare,
+    sources: ['mirageWarden'],
+    stats: {
+      blade: 120,
+      defense: 0,
+      magic: 0,
+      meelee: 95,
+    },
+    type: TYPES.item,
+  },
+  yunoCloak: {
+    id: 6,
+    attachment: itemImages.yunoCloak,
+    description:
+      'The prestigious cloak of a prodigy chosen by the four-leaf clover grimoire. It is imbued with the immense wind magic of its original owner, flowing with the favor of mana itself.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Yuno's Cloak`,
+    rarity: RARITIES.epic,
+    sources: ['yunoV2Boss'],
+    stats: {
+      blade: 0,
+      defense: 0,
+      magic: 750,
+      meelee: 250,
+    },
+    type: TYPES.item,
+  },
+  grayNecklace: {
+    id: 7,
+    attachment: itemImages.grayNecklace,
+    description:
+      "A cross-shaped necklace once worn by a powerful Ice-Make Mage. It carries a cold aura, channeling its owner's resolve to protect their friends at any cost.",
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Gray's Necklace`,
+    rarity: RARITIES.epic,
+    sources: ['grayBoss'],
+    stats: {
+      blade: 550,
+      defense: 0,
+      magic: 0,
+      meelee: 450,
+    },
+    type: TYPES.item,
+  },
+  erzaEarrings: {
+    id: 8,
+    attachment: itemImages.erzaEarrings,
+    description:
+      'The elegant earrings worn by Titania, the Queen of the Fairies. They are a symbol of her unyielding strength and mastery of Requip magic, resonating with the heart of a true swordswoman.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Erza's Earrings`,
+    rarity: RARITIES.epic,
+    sources: ['erzaBoss'],
+    stats: {
+      blade: 750,
+      defense: 0,
+      magic: 0,
+      meelee: 0,
+    },
+    type: TYPES.item,
+  },
+  yamiCloak: {
+    id: 9,
+    attachment: itemImages.yamiCloak,
+    description:
+      "The tattered, signature cloak of the Black Bulls' captain. It's infused with powerful Dark Magic, a testament to its owner's ability to surpass his limits and cut through any dimension.",
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Yami's Cloak`,
+    rarity: RARITIES.legendary,
+    sources: ['yamiBoss'],
+    stats: {
+      blade: 950,
+      defense: 150,
+      magic: 0,
+      meelee: 0,
+    },
+    type: TYPES.item,
+  },
+  rudoChains: {
+    id: 10,
+    attachment: itemImages.rudoChains,
+    description:
+      'Heavy, rugged chains forged from salvaged junk in the abyss. They belonged to a man who could give value to the valueless, imbued with the raw, untamed power to shackle and crush his foes.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Rudo's Chains`,
+    rarity: RARITIES.legendary,
+    sources: ['rudoBoss'],
+    stats: {
+      blade: 0,
+      defense: 1250,
+      magic: 0,
+      meelee: 3500,
+    },
+    type: TYPES.item,
+  },
+  natsuScarf: {
+    id: 11,
+    attachment: itemImages.natsuScarf,
+    description:
+      'A white, scale-patterned scarf woven from the scales of the Fire Dragon King, Igneel. It is a precious gift that protects its wearer and carries the unwavering spirit of a Dragon Slayer.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Natsu's Scarf`,
+    rarity: RARITIES.legendary,
+    sources: ['natsuDragneelBoss'],
+    stats: {
+      blade: 0,
+      defense: 0,
+      magic: 1400,
+      meelee: 0,
+    },
+    type: TYPES.item,
+  },
+  laxusHeadphones: {
+    id: 12,
+    attachment: itemImages.laxusHeadphones,
+    description:
+      'A pair of magic-infused Sound Pods, a favorite of the Lightning Dragon Slayer. They crackle with latent electrical energy, helping the wearer focus their thoughts into devastating bolts of thunder.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Laxus's Headphones`,
+    rarity: RARITIES.legendary,
+    sources: ['laxusDreyarBoss'],
+    stats: {
+      blade: 0,
+      defense: 2500,
+      magic: 3000,
+      meelee: 0,
+    },
+    type: TYPES.item,
+  },
+  inumakiScarf: {
+    id: 13,
+    attachment: itemImages.inumakiScarf,
+    description:
+      "The high-collared scarf used by a sorcerer of the Inumaki clan to conceal his Cursed Speech seal. It's enchanted to muffle stray words, focusing the user's power into a single, potent command.",
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Inumaki's Scarf`,
+    rarity: RARITIES.legendary,
+    sources: ['inumakiBoss'],
+    stats: {
+      blade: 0,
+      defense: 0,
+      magic: 3700,
+      meelee: 0,
+    },
+    type: TYPES.item,
+  },
+  yoriichiEarrings: {
+    id: 14,
+    attachment: itemImages.yoriichiEarrings,
+    description:
+      'A pair of Hanafuda earrings passed down from the legendary first user of Breathing Styles. They carry the legacy of the Sun Breathing technique, a symbol of immense power and a gentle but resolute heart.',
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Yoriichi's Earrings`,
+    rarity: RARITIES.mythical,
+    sources: ['yoriichiBoss'],
+    stats: {
+      blade: 4500,
+      defense: 1500,
+      magic: 0,
+      meelee: 0,
+    },
+    type: TYPES.item,
+  },
+  ceroStar: {
+    id: 15,
+    attachment: itemImages.ceroStar,
+    description:
+      "A crystallized artifact born from the Hōgyoku's power, once embedded in the chest of a transcendent being. It radiates an overwhelming spiritual pressure, granting its wielder the power to shatter fate.",
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Cero's Star`,
+    rarity: RARITIES.mythical,
+    sources: ['sousukeAizenBoss'],
+    stats: {
+      blade: 4500,
+      defense: 1500,
+      magic: 0,
+      meelee: 0,
+    },
     type: TYPES.item,
   },
 };

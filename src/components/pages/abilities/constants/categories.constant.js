@@ -1,18 +1,11 @@
-import {
-  MAGICS,
-  PASSIVE_MAGICS,
-  PASSIVE_SKILLS,
-  RACES,
-  TRAITS,
-} from '@data';
-import { extractValues } from '@helpers';
+import { TYPES } from '@data';
+import { DATA } from '@mappers';
 
-const races = extractValues(RACES);
-const traits = extractValues(TRAITS);
-const magics = extractValues(MAGICS);
-const passiveMagics = extractValues(PASSIVE_MAGICS);
-const passiveSkills = extractValues(PASSIVE_SKILLS);
-// const titles = extractValues();
+const races = DATA[TYPES.race.name];
+const traits = DATA[TYPES.trait.name];
+const magics = DATA[TYPES.magic.name];
+const passiveMagics = DATA[TYPES.passiveMagic.name];
+const passiveSkills = DATA[TYPES.passiveSkill.name];
 
 export const CATEGORIES = [
   { id: 1, name: 'Magics', list: magics },
@@ -20,5 +13,4 @@ export const CATEGORIES = [
   { id: 3, name: 'Traits', list: traits },
   { id: 4, name: 'Passive Magics', list: passiveMagics },
   { id: 5, name: 'Passive Skills', list: passiveSkills },
-  // { id: 6, name: 'Titles', list: [{ id: 1, name: 'N/A', type: {}}] },
 ];

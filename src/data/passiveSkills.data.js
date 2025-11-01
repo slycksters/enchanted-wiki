@@ -1,6 +1,5 @@
 import { assets } from '@assets';
 import { RARITIES, TYPES } from './enums';
-import { NPCS } from './npc.data';
 
 const passiveSkillImages = assets.images.passiveSkills;
 const passiveSkillVideos = assets.videos.passiveSkills;
@@ -19,7 +18,7 @@ export const PASSIVE_SKILLS = {
       'Move through the battlefield like a phantom — dash through enemies cloaked in shadows, leaving no trace behind.',
     name: 'Shadow Step',
     rarity: RARITIES.exotic,
-    sources: [NPCS.sham],
+    sources: ['shamSpec'],
     type: TYPES.passiveSkill,
   },
   soulStack: {
@@ -35,7 +34,7 @@ export const PASSIVE_SKILLS = {
       'Master the art of soul accumulation — each soul you gather amplifies your DMG multiplier by 0.01. Default max stacks: 25. Seek out the Reaper to transcend your current limit. <span>Activates only with Soul Devourer</span>.',
     name: 'Soul Stack',
     rarity: RARITIES.exotic,
-    sources: [NPCS.reaper],
+    sources: ['reaperSpec'],
     type: TYPES.passiveSkill,
   },
 };

@@ -6,7 +6,7 @@ export const Table = ({ list }) => {
     <table className={styles.table}>
       <thead>
         <tr className={styles.tableHeader}>
-          <th>Attachment</th>
+          <th></th>
           <th>Name</th>
           <th>Location</th>
         </tr>
@@ -15,7 +15,7 @@ export const Table = ({ list }) => {
         {list.map((item) => {
           return (
             <tr
-              key={`table-row-${item.type.name}-${item.name}-${item.id}`}
+              key={`table-row-${item.type?.name}-${item.name}-${item.id}`}
               className={styles.tableRow}
             >
               <td>

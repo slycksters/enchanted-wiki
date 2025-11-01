@@ -1,5 +1,6 @@
 import { Image } from '@components';
 import styles from './Header.module.css';
+import { getContrastingTextColor } from '@helpers';
 
 export const Header = ({ info }) => {
 
@@ -14,7 +15,7 @@ export const Header = ({ info }) => {
             </span>
             <span
               className={styles.rarity}
-              style={{ backgroundColor: info.rarity.color }}
+              style={{ backgroundColor: info.rarity.color, color: getContrastingTextColor(info.rarity.color) }}
             >
               {info.rarity.name} {info.isGatcha ? `(${info.rarity.rate})` : ''}
             </span>

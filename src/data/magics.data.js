@@ -1,6 +1,5 @@
 import { assets } from '@assets';
 import { RARITIES, TYPES } from './enums';
-import { NPCS } from './npc.data';
 
 const magicImages = assets.images.magics;
 const magicVideos = assets.videos.magics;
@@ -22,7 +21,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Wind',
     rarity: RARITIES.common,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   fire: {
@@ -47,7 +46,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Fire',
     rarity: RARITIES.uncommon,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   poison: {
@@ -72,7 +71,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Poison',
     rarity: RARITIES.rare,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   dark: {
@@ -97,7 +96,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Dark',
     rarity: RARITIES.rare,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   ice: {
@@ -128,7 +127,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Ice',
     rarity: RARITIES.epic,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   lightning: {
@@ -165,7 +164,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Lightning',
     rarity: RARITIES.epic,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   poisonDragonSlayer: {
@@ -202,7 +201,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Poison Dragon Slayer',
     rarity: RARITIES.legendary,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   shadowDragonSlayer: {
@@ -235,11 +234,11 @@ export const MAGICS = {
     ],
     attachment: magicImages.shadowDragonSlayer,
     description:
-      `Channel the dark essence of dragons, wielding shadow powers to strike fear into enemies and dominate the battlefield with legendary skill. <span>Complete Sting Eucliffe's quest to unlock Shadow Dragon Slayer V2</span>`,
+      `Channel the dark essence of dragons, wielding shadow powers to strike fear into enemies and dominate the battlefield with legendary skill. <p><span>Complete Sting Eucliffe's quest to unlock Shadow Dragon Slayer V2</span></p>`,
     isGatcha: true,
     name: 'Shadow Dragon Slayer',
     rarity: RARITIES.legendary,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   lightningDragonSlayer: {
@@ -278,22 +277,22 @@ export const MAGICS = {
     ],
     attachment: magicImages.lightningDragonSlayer,
     description:
-      `Harness the electrifying power of dragons, unleashing lightning to strike with mythical speed and overwhelming force. <span>Complete Laxus Dreyar's quest to unlock Lightning Dragon Slayer V2</span>`,
+      `Harness the electrifying power of dragons, unleashing lightning to strike with mythical speed and overwhelming force. <p><span>Complete Laxus Dreyar's quest to unlock Lightning Dragon Slayer V2</span></p>`,
     isGatcha: true,
     name: 'Lightning Dragon Slayer',
     rarity: RARITIES.mythical,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   fireDragonSlayer: {
     id: 10,
     attachment: magicImages.fireDragonSlayer,
     description:
-      `Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield. <span>Complete Natsu Dragneel's quest to unlock Fire Dragon Slayer V2</span>`,
+      `Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield.<p><span>Complete Natsu Dragneel's quest to unlock Fire Dragon Slayer V2</span></p>`,
     isGatcha: true,
     name: 'Fire Dragon Slayer',
     rarity: RARITIES.mythical,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   waterDragonSlayer: {
@@ -330,7 +329,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Water Dragon Slayer',
     rarity: RARITIES.exotic,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['monkeyDevelopsSpec', 'steveSpec'],
     type: TYPES.magic,
   },
   shadowDragonSlayerV2: {
@@ -369,10 +368,10 @@ export const MAGICS = {
     ],
     attachment: magicImages.shadowDragonSlayerV2,
     description:
-      `Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend.`,
+      `Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend. <p><span>Defeat Sting Eucliffe 10 times as a Shadow Dragon Slayer to unlock<span>.</p>`,
     name: 'Shadow Dragon Slayer V2',
     rarity: RARITIES.v2,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['stingEucliffeSpec'],
     type: TYPES.magic,
   },
   fireDragonSlayerV2: {
@@ -411,10 +410,10 @@ export const MAGICS = {
     ],
     attachment: magicImages.fireDragonSlayerV2,
     description:
-      `Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor.`,
+      `Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor. <p><span>Defeat Natsu Dragneel 15 times as a Fire Dragon Slayer to unlock</span>.</p>`,
     name: 'Fire Dragon Slayer V2',
     rarity: RARITIES.v2,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['natsuDragneelSpec'],
     type: TYPES.magic,
   },
   lightningDragonSlayerV2: {
@@ -459,10 +458,10 @@ export const MAGICS = {
     ],
     attachment: magicImages.lightningDragonSlayerV2,
     description:
-      `Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.`,
+      `Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.<p><span>Defeat Laxus Dreyar 10 times as a Lightning Dragon Slayer to unlock</span>.</p>`,
     name: 'Lightning Dragon Slayer V2',
     rarity: RARITIES.v2,
-    sources: [NPCS.monkeyDevelops, NPCS.steve],
+    sources: ['laxusDreyarSpec'],
     type: TYPES.magic,
   },
 };

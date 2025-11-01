@@ -1,9 +1,8 @@
 import { assets } from '@assets';
 import { DAMAGE_TYPES, RARITIES, TYPES } from './enums';
-import { NPCS } from './npc.data';
 
-const specAssets = assets.images.specs;
-const abilityPreviewAssets = assets.videos.specs;
+const specImages = assets.images.specs;
+const specSkillVideos = assets.videos.specs;
 
 export const SPECS = {
   ichigo: {
@@ -11,48 +10,48 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.ichigoM1,
+        attachment: specSkillVideos.ichigoM1,
         name: 'Basic Attack [M1]',
         description:
           'A swift, focused strike imbued with spiritual pressure that cuts clean and true.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.ichigoZ,
+        attachment: specSkillVideos.ichigoZ,
         name: 'Getsuga Tensho [Z]',
         description:
           'Channels immense spiritual energy into his blade, unleashing a crescent wave that tears through everything in its path — a single strike that carries the wrath of a Shinigami.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.ichigoX,
+        attachment: specSkillVideos.ichigoX,
         name: 'Flash Strikes [X]',
         description:
           'Moves with lightning speed, appearing and vanishing in bursts of reiryoku — cutting down foes before they can even blink.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.ichigoC,
+        attachment: specSkillVideos.ichigoC,
         name: `Reaper's Cut [C]`,
         description:
           'Executes a flurry of rapid slashes charged with spiritual force, sweeping through enemies with precise, deadly rhythm.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.ichigoV,
+        attachment: specSkillVideos.ichigoV,
         name: 'Getsuga Barrage [V]',
         description:
           'Channels a surge of unrestrained power into his strikes before releasing a catastrophic energy blast that shatters the ground and engulfs all in front of him.',
       },
       {
         id: 6,
-        attachment: abilityPreviewAssets.ichigoF,
+        attachment: specSkillVideos.ichigoF,
         name: 'Hollow Form [F]',
         description:
           'Succumbs to his inner hollow — donning the mask of the void and wielding a darker, more feral blade. <span>Gain sprint speed bonus</span> when active.',
       },
     ],
-    attachment: specAssets.ichigo,
+    attachment: specImages.ichigo,
     baseDMG: 8.75,
     damageType: DAMAGE_TYPES.blade,
     description:
@@ -62,7 +61,7 @@ export const SPECS = {
     perStat: 0.1162,
     rarity: RARITIES.epic,
     requirements: [],
-    sources: [NPCS.ichigo],
+    sources: ['ichigoSpec'],
     type: TYPES.spec,
   },
   yami: {
@@ -70,40 +69,40 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.yamiM1,
+        attachment: specSkillVideos.yamiM1,
         name: 'Basic Attack [M1]',
         description:
           'A controlled yet deadly sword strike imbued with condensed dark mana.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.yamiZ,
+        attachment: specSkillVideos.yamiZ,
         name: 'Dark Blitz [Z]',
         description: `Channels darkness into his blade and rushes forward with terrifying speed, cutting through foes before they even realize he's moved.`,
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.yamiX,
+        attachment: specSkillVideos.yamiX,
         name: 'Dimensional Slash [X]',
         description:
           'Focuses immense mana into a single strike, unleashing a dark slash that cuts through space itself, erasing anything caught in its path.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.yamiC,
+        attachment: specSkillVideos.yamiC,
         name: `Death Thrust [C]`,
         description:
           'Concentrates darkness into a single point and releases it in a precise, destructive thrust capable of piercing even the toughest defenses.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.yamiV,
+        attachment: specSkillVideos.yamiV,
         name: 'Black Tornado [V]',
         description:
           'Combines physical might with dark magic, forming a raging vortex of shadows that tears apart everything within its reach.',
       },
     ],
-    attachment: specAssets.yami,
+    attachment: specImages.yami,
     baseDMG: 8.75,
     damageType: DAMAGE_TYPES.blade,
     description:
@@ -113,7 +112,7 @@ export const SPECS = {
     perStat: 0.1162,
     rarity: RARITIES.epic,
     requirements: [],
-    sources: [NPCS.yami],
+    sources: ['yamiSpec'],
     type: TYPES.spec,
   },
   yuno: {
@@ -121,40 +120,40 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.yunoM1,
+        attachment: specSkillVideos.yunoM1,
         name: 'Basic Attack [M1]',
         description:
           'A swift magical punch infused with the power of the wind.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.yunoZ,
+        attachment: specSkillVideos.yunoZ,
         name: 'Fairy Execution [Z]',
         description:
           'Summons a compressed gust of wind and launches it forward, cutting through enemies with blinding speed.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.yunoX,
+        attachment: specSkillVideos.yunoX,
         name: 'Wind Spiral [X]',
         description: `Channels Sylph's power into a sweeping strike of concentrated air, slicing anything caught within its graceful arc.`,
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.yunoC,
+        attachment: specSkillVideos.yunoC,
         name: `Comet Breaker [C]`,
         description:
           'Launches a series of wind-forged comets that crash down with immense force, tearing through enemies caught in their descent.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.yunoV,
+        attachment: specSkillVideos.yunoV,
         name: 'Zephyr Tempest [V]',
         description:
           'Unleashes a massive tornado imbued with Spirit magic, erasing everything in its radius with divine precision.',
       },
     ],
-    attachment: specAssets.yuno,
+    attachment: specImages.yuno,
     baseDMG: 8.75,
     damageType: DAMAGE_TYPES.magic,
     description: `Yuno excels in <span>high-speed combat</span>, overwhelming enemies with precision and control over wind magic. His playstyle focuses on spacing, timing, and relentless aerial dominance. <span>Fairy Execution</span> and <span>Wind Spiral</span> serve as his core offense — fast, slicing attacks ideal for both ranged pressure and close engagements. <span>Comet Breaker</span> delivers devastating impact from above, perfect for punishing grouped enemies, while <span>Zephyr Tempest</span> acts as a large-scale finisher that clears everything caught in its vortex. Mastering Yuno means mastering movement — use wind’s agility to reposition, evade, and strike before your opponent can react. The battlefield bends to those who move faster than the storm.`,
@@ -163,7 +162,7 @@ export const SPECS = {
     perStat: 0.1162,
     rarity: RARITIES.epic,
     requirements: [],
-    sources: [NPCS.yuno],
+    sources: ['yunoSpec'],
     type: TYPES.spec,
   },
   rudo: {
@@ -171,41 +170,41 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.rudoM1,
+        attachment: specSkillVideos.rudoM1,
         name: 'Basic Attack [M1]',
         description:
           'Delivers a series of relentless mechanical punches, each hit powered by the fury of forged steel.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.rudoZ,
+        attachment: specSkillVideos.rudoZ,
         name: 'Recycle Rampage [Z]',
         description:
           'Channels raw industrial power into a devastating punch, sending a concussive shockwave forward that crushes anything in its path.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.rudoX,
+        attachment: specSkillVideos.rudoX,
         name: 'Junk Buster [X]',
         description:
           'Unleashes a furious storm of mechanical strikes in every direction, pulverizing enemies caught within the metallic frenzy.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.rudoC,
+        attachment: specSkillVideos.rudoC,
         name: `Dumpster Dive [C]`,
         description:
           'Launches skyward before slamming down with machine-like precision, causing a brutal impact that tears through the ground and enemies alike.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.rudoV,
+        attachment: specSkillVideos.rudoV,
         name: 'Rubble Reaper [V]',
         description:
           'Activates the core reactor and releases a whirlwind of metallic slashes, shredding everything within range under a torrent of recycled ruin.',
       },
     ],
-    attachment: specAssets.rudo,
+    attachment: specImages.rudo,
     baseDMG: 12.5,
     damageType: DAMAGE_TYPES.meelee,
     description: `Rudo is a <span>close-range powerhouse</span> built for relentless aggression and high-impact combos. Every strike carries the weight of metal and momentum — <span>Recycle Rampage</span> smashes through defenses with raw force, while <span>Junk Buster</span> dominates in tight spaces, perfect for crowd control and sustained pressure. Use <span>Dumpster Dive</span> to engage or punish from above, slamming enemies into the ground for massive AoE damage. <span>Rubble Reaper</span> serves as his ultimate burst — a devastating finisher that clears everything within reach. To master Rudo, control your rhythm: chain heavy hits, time your ground slams, and never let your reactor cool. The scrap-born brawler thrives where chaos reigns — turn the battlefield into your junkyard.`,
@@ -214,7 +213,7 @@ export const SPECS = {
     perStat: 0.1504,
     rarity: RARITIES.legendary,
     requirements: [],
-    sources: [NPCS.rudo],
+    sources: ['rudoSpec'],
     type: TYPES.spec,
   },
   kirito: {
@@ -222,41 +221,41 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.kiritoM1,
+        attachment: specSkillVideos.kiritoM1,
         name: 'Basic Attack [M1]',
         description:
           'Dual sword strikes executed with perfect synchronization, each blade infused with the trace energy of light and shadow.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.kiritoZ,
+        attachment: specSkillVideos.kiritoZ,
         name: 'Lunar Divide [Z]',
         description:
           'Draws both blades — each swing tracing a glowing arc beneath the moonlit edge of his will.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.kiritoX,
+        attachment: specSkillVideos.kiritoX,
         name: 'Starburst Stream [X]',
         description:
           'Unleashes his legendary dual-wield technique — a relentless storm of strikes that rain down faster than the eye can follow, each blow powered by unyielding resolve.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.kiritoC,
+        attachment: specSkillVideos.kiritoC,
         name: `Abyssal Eclipse [C]`,
         description:
           'Channels both blades into a surge of pure energy, creating a spiraling vortex of slashes that engulfs all within its darkened radius.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.kiritoV,
+        attachment: specSkillVideos.kiritoV,
         name: 'Afterimage Strikes [V]',
         description:
           'Moves with transcendent speed, leaving behind flickering afterimages — each one cutting with precision and force strong enough to rend the very ground apart.',
       },
     ],
-    attachment: specAssets.kirito,
+    attachment: specImages.kirito,
     baseDMG: 11.25,
     damageType: DAMAGE_TYPES.blade,
     description: `Kirito excels in rapid, <span>high-pressure combat</span> — a true dual-wield specialist who overwhelms opponents through speed and precision. <span>Lunar Divide</span> serves as a clean, sweeping opener to close gaps or start combos, while <span>Starburst Stream</span> delivers a devastating barrage of multi-hit slashes, shredding through defenses in seconds. <span>Abyssal Eclipse</span> controls space with wide-area damage, ideal for punishing groups or locking down evasive foes. <span>Afterimage Strikes</span> enhances mobility — a burst technique that lets Kirito reposition or finish enemies caught off-guard. Mastering him means perfecting rhythm and timing: chain fluid attacks, cancel between skills, and let no enemy escape the edge of your blades. When the dual swords ignite, Kirito becomes more than a fighter — he’s a storm that never stops swinging.`,
@@ -265,7 +264,7 @@ export const SPECS = {
     name: 'Kirito',
     rarity: RARITIES.legendary,
     requirements: [],
-    sources: [NPCS.kirito],
+    sources: ['kiritoSpec'],
     type: TYPES.spec,
   },
   amoEmpool: {
@@ -273,48 +272,48 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.amoEmpoolM1,
+        attachment: specSkillVideos.amoEmpoolM1,
         name: 'Basic Attack [M1]',
         description:
           'A swift, electrified kick empowered by precision and voltage.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.amoEmpoolZ,
+        attachment: specSkillVideos.amoEmpoolZ,
         name: 'Lightning Jambe [Z]',
         description:
           'Channels raw electricity through her legs, unleashing a rapid flurry of kicks that crackle with lightning and scorch everything ahead.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.amoEmpoolX,
+        attachment: specSkillVideos.amoEmpoolX,
         name: 'Sparky Orb [X]',
         description:
           'Summons a surge of electrical energy that explodes outward, sending arcs of lightning to electrify all nearby foes.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.amoEmpoolC,
+        attachment: specSkillVideos.amoEmpoolC,
         name: `Speed Kicks [C]`,
         description:
           'Moves at speed of light — vanishing in a flash before reappearing to strike with a devastating lightning-charged kick.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.amoEmpoolV,
+        attachment: specSkillVideos.amoEmpoolV,
         name: 'Speed Strikes [V]',
         description:
           'Unleashes a storm of lightning-infused kicks, each blow erupting in a brilliant burst that pierces the sky with raw voltage.',
       },
       {
         id: 6,
-        attachment: abilityPreviewAssets.amoEmpoolF,
+        attachment: specSkillVideos.amoEmpoolF,
         name: 'Speedster [F]',
         description:
           'Surrounds herself with crackling lightning, her movements surging with explosive energy that <span>grants immense speed</span> and agility.',
       },
     ],
-    attachment: specAssets.amoEmpool,
+    attachment: specImages.amoEmpool,
     baseDMG: 11.25,
     damageType: DAMAGE_TYPES.meelee,
     description: `Amo Empool thrives on speed and relentless pressure — a <span>lightning-born fighter</span> who turns movement into a weapon. <span>Lightning Jambe</span> delivers rapid, high-voltage kicks ideal for melting through close-range defenses, while <span>Sparky Orb</span> shocks entire groups, chaining damage across multiple enemies. <span>Speed Kicks</span> grants unmatched burst mobility, letting her dart across the field and strike with blinding precision. “Speed Strikes” serves as her finisher — an explosive combo that engulfs everything ahead in arcs of thunderous energy. Activate <span>Speedster</span> to enter a state of pure current, <span>amplifying sprint speed</span> and attack flow. To master Amo is to embrace momentum itself — keep moving, strike fast, and let no enemy survive the storm.`,
@@ -323,7 +322,7 @@ export const SPECS = {
     perStat: 0.1434,
     rarity: RARITIES.legendary,
     requirements: [],
-    sources: [NPCS.amoEmpool],
+    sources: ['amoEmpoolSpec'],
     type: TYPES.spec,
   },
   aizen: {
@@ -331,41 +330,41 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.aizenM1,
+        attachment: specSkillVideos.aizenM1,
         name: 'Basic Attack [M1]',
         description:
           'Executes refined sword slashes imbued with spiritual pressure, cutting down foes with effortless precision.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.aizenZ,
+        attachment: specSkillVideos.aizenZ,
         name: 'Eternal Fracture [Z]',
         description:
           'Unleashes a downward slash that creates a spiraling vortex of energy, consuming all enemies caught within its gravitational pull.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.aizenX,
+        attachment: specSkillVideos.aizenX,
         name: 'Invincibility [X]',
         description:
           'Projects an ethereal shield of immense spiritual force, <span>nullifying all attacks</span> that dare approach his presence.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.aizenC,
+        attachment: specSkillVideos.aizenC,
         name: `Cero [C]`,
         description:
           'Fires a concentrated beam of devastating energy, tearing through the battlefield with overwhelming might.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.aizenV,
+        attachment: specSkillVideos.aizenV,
         name: 'Kurohitsugi [V]',
         description:
           'Summons a massive black coffin of spiritual darkness, sealing his target before impaling them with countless blades of shadow.',
       },
     ],
-    attachment: specAssets.aizen,
+    attachment: specImages.aizen,
     baseDMG: 10,
     damageType: DAMAGE_TYPES.blade,
     description: `Aizen transcends the battlefield with absolute composure — a strategist whose every motion defines perfection. His <span>Eternal Fracture</span> channels raw reiryoku into a crushing vortex, dragging all within its gravity before obliterating them. With <span>Invincibility</span>, Aizen manifests an <span>impenetrable spiritual barrier</span>, rendering incoming assaults meaningless. <span>Cero</span> releases a blinding surge of condensed energy, cleaving through space and defying resistance. His ultimate, <span>Kurohitsugi</span>, encases his prey in a void of darkness, impaling them through the sheer weight of his will. To face Aizen is to confront inevitability itself — the calm before annihilation, the supremacy of one who stands above all creation.`,
@@ -374,7 +373,7 @@ export const SPECS = {
     perStat: 0.1328,
     rarity: RARITIES.legendary,
     requirements: [],
-    sources: [NPCS.aizen],
+    sources: ['aizenSpec'],
     type: TYPES.spec,
   },
   yunoV2: {
@@ -382,46 +381,46 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.yunoV2M1,
+        attachment: specSkillVideos.yunoV2M1,
         name: 'Basic Attack [M1]',
         description: 'A swift attack, refined by wind magic.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.yunoV2Z,
+        attachment: specSkillVideos.yunoV2Z,
         name: 'Astral Drive [Z]',
         description:
           'Launches forward propelled by divine wind currents, striking enemies with overwhelming force and celestial precision.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.yunoV2X,
+        attachment: specSkillVideos.yunoV2X,
         name: 'Celestial Ward [X]',
         description:
           'Summons a radiant <span>shield of wind magic</span>, nullifying incoming attacks as the very air bends to his command.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.yunoV2C,
+        attachment: specSkillVideos.yunoV2C,
         name: `Wind Blades [C]`,
         description:
           'Unleashes triple cutting waves of compressed wind, slicing in multiple directions and devastating all caught within their path.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.yunoV2V,
+        attachment: specSkillVideos.yunoV2V,
         name: 'Boreas Catalysm [V]',
         description:
           'Calls upon the wrath of the heavens, summoning a storm of wind-forged meteors that crash upon the battlefield with unstoppable might.',
       },
       {
         id: 6,
-        attachment: abilityPreviewAssets.yunoV2F,
+        attachment: specSkillVideos.yunoV2F,
         name: 'Spirit Crown Ascension [F]',
         description: `Ascends into his Spirit Dive state, donning the radiant Spirit Crown and wings of Boreas — embodying the wind's divine will while gaining sprint speed.`,
       },
     ],
-    attachment: specAssets.yunoV2,
+    attachment: specImages.yunoV2,
     baseDMG: 8.75,
     damageType: DAMAGE_TYPES.magic,
     description: `Yuno excels as a <span>high-mobility magic fighter</span> who dominates both <span>mid and close-range combat</span> through relentless pressure and positioning. Use <span>Astral Drive</span> to quickly close the gap or reposition, then follow up with <span>Wind Blades</span> for wide coverage. When overwhelmed, activate <span>Celestial Ward</span> to block projectiles and create breathing room. His <span>Boreas Cataclysm</span> serves as a powerful finisher or zone control tool — ideal for catching grouped enemies. Once you trigger <span>Spirit Crown Ascension</span>, your mobility and attack power surge dramatically — use this state to maintain constant aerial advantage and overwhelm opponents before it fades. To master Yuno is to command the skies themselves — swift, untouchable, and absolute.`,
@@ -430,7 +429,7 @@ export const SPECS = {
     name: 'Yuno V2',
     rarity: RARITIES.mythical,
     requirements: [],
-    sources: [NPCS.yunoV2],
+    sources: ['yunoV2Spec'],
     type: TYPES.spec,
   },
   yoriichi: {
@@ -438,41 +437,41 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.yoriichiM1,
+        attachment: specSkillVideos.yoriichiM1,
         name: 'Basic Attack [M1]',
         description:
           'Unleashes swift, precise sword strikes infused with blazing sunfire, cutting down foes with divine grace.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.yoriichiZ,
+        attachment: specSkillVideos.yoriichiZ,
         name: 'Sun Counter [Z]',
         description:
           'Channels solar energy into a fiery counterattack, releasing a searing wave that scorches all who cross its path.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.yoriichiX,
+        attachment: specSkillVideos.yoriichiX,
         name: 'Clear Blue Sky [X]',
         description:
           'Focuses immense heat into the blade, cleaving the ground in a blazing arc that engulfs nearby enemies in fire.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.yoriichiC,
+        attachment: specSkillVideos.yoriichiC,
         name: `Flash Dance [C]`,
         description:
           'Performs the Hinokami Kagura with godlike speed — a flurry of flaming slashes that incinerates everything in his wake.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.yoriichiV,
+        attachment: specSkillVideos.yoriichiV,
         name: 'Flaming Dance [V]',
         description:
           'Dashes forward in a flash of fire, striking the enemy with a blazing sword slash that leaves trails of searing light.',
       },
     ],
-    attachment: specAssets.yoriichi,
+    attachment: specImages.yoriichi,
     baseDMG: 16,
     damageType: DAMAGE_TYPES.blade,
     description: `Yoriichi is a <span>precision-based melee fighter</span> who thrives on timing, flow, and relentless offense. Use <span>Sun Counter</span> to punish aggressive enemies — its fiery retaliation can completely turn the tide of battle. Follow up with <span>Flaming Dance</span> to close the gap and strike with blinding speed. <span>Clear Blue Sky</span> excels at area control, ideal for catching multiple opponents or breaking defenses. When momentum builds, unleash <span>Flash Dance</span> for a devastating flurry that burns everything in range. Between attacks, maintain consistent pressure with your <span>Basic Attacks</span> — fast, fluid, and deadly when chained properly. To master Yoriichi is to embody the sun itself — calm, precise, and unstoppable in its burning rhythm.`,
@@ -481,7 +480,7 @@ export const SPECS = {
     perStat: 0.1906,
     rarity: RARITIES.mythical,
     requirements: [],
-    sources: [NPCS.yoriichi],
+    sources: ['yoriichiSpec'],
     type: TYPES.spec,
   },
   kokushibo: {
@@ -489,41 +488,41 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.kokushiboM1,
+        attachment: specSkillVideos.kokushiboM1,
         name: 'Basic Attack [M1]',
         description:
           'Performs swift, elegant sword strikes imbued with crescent moon energy, cutting through enemies with cold precision.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.kokushiboZ,
+        attachment: specSkillVideos.kokushiboZ,
         name: 'First-Form [Z]',
         description:
           'Swirls his blade in a circular motion, generating spiraling moon blades that slice through all foes nearby.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.kokushiboX,
+        attachment: specSkillVideos.kokushiboX,
         name: 'Sixteenth-Form [X]',
         description:
           'Focuses demonic power into a single point, unleashing a condensed crescent slash toward the cursor with destructive force.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.kokushiboC,
+        attachment: specSkillVideos.kokushiboC,
         name: `Fifth-Form [C]`,
         description:
           'Channels spinning arcs of moonlight, projecting a flurry of slashes that devastate enemies in front of him.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.kokushiboV,
+        attachment: specSkillVideos.kokushiboV,
         name: 'Seventh-Form [V]',
         description:
           'Unleashes a deadly three-step assault, each strike empowered by demonic moonlight, finishing with a massive crescent slash that rends the battlefield.',
       },
     ],
-    attachment: specAssets.kokushibo,
+    attachment: specImages.kokushibo,
     baseDMG: 16,
     damageType: DAMAGE_TYPES.blade,
     description: `Kokushibo is a <span>precision and spacing-based fighter</span> who thrives on punishing mistakes with overwhelming power. Open combat with <span>First-Form</span> to pressure multiple enemies around you, then follow with <span>Fifth-Form</span> to unleash a storm of moonlit slashes that clear your path forward. Use <span>Sixteenth-Form</span> to strike distant targets — its crescent burst excels at zoning and finishing weakened foes. When facing close engagements, chain <span>Seventh-Form</span> after a stun or counter to deal maximum damage in a devastating three-hit sequence. Maintain consistent offense with your <span>Basic Attacks</span>, weaving them between abilities for seamless combos. To master Kokushibo is to balance grace and brutality — striking with beauty, precision, and the cold perfection of the moon itself.`,
@@ -532,7 +531,7 @@ export const SPECS = {
     perStat: 0.1906,
     rarity: RARITIES.mythical,
     requirements: [],
-    sources: [NPCS.kokushibo],
+    sources: ['kokushiboSpec'],
     type: TYPES.spec,
   },
   ichigoV2: {
@@ -540,48 +539,48 @@ export const SPECS = {
     abilities: [
       {
         id: 1,
-        attachment: abilityPreviewAssets.ichigoV2M1,
+        attachment: specSkillVideos.ichigoV2M1,
         name: 'Basic Attack [M1]',
         description:
           'Delivers rapid sword strikes infused with Fullbring energy, cutting through enemies with explosive impact.',
       },
       {
         id: 2,
-        attachment: abilityPreviewAssets.ichigoV2Z,
+        attachment: specSkillVideos.ichigoV2Z,
         name: 'Getsuga Tensho [Z]',
         description:
           'Channels condensed Fullbring power into his blade and unleashes a crescent-shaped energy wave that tears through everything in its path.',
       },
       {
         id: 3,
-        attachment: abilityPreviewAssets.ichigoV2X,
+        attachment: specSkillVideos.ichigoV2X,
         name: 'Flashstrikes [X]',
         description:
           'Dashes forward in a burst of speed, slashing all enemies in his path before performing a devastating follow-up strike upon landing.',
       },
       {
         id: 4,
-        attachment: abilityPreviewAssets.ichigoV2C,
+        attachment: specSkillVideos.ichigoV2C,
         name: `Reaper's Cut [C]`,
         description:
           'Executes a three-stage combo of powerful Fullbring-infused slashes, each swing radiating with explosive force.',
       },
       {
         id: 5,
-        attachment: abilityPreviewAssets.ichigoV2V,
+        attachment: specSkillVideos.ichigoV2V,
         name: 'Vasto Roar [V]',
         description:
           'Unleashes an eruption of spiritual energy from within, devastating all enemies caught in the area with sheer overwhelming pressure.',
       },
       {
         id: 6,
-        attachment: abilityPreviewAssets.ichigoV2F,
+        attachment: specSkillVideos.ichigoV2F,
         name: 'Vasto Lorde [F]',
         description:
           'Transforms into his Vasto Lorde form, tapping into his Hollow instincts to release terrifying power while <span>gaining increased speed</span>.',
       },
     ],
-    attachment: specAssets.ichigoV2,
+    attachment: specImages.ichigoV2,
     baseDMG: 18.5,
     damageType: DAMAGE_TYPES.blade,
     description: `As a Fullbringer, Ichigo fights with raw instinct and explosive momentum. His abilities combine <span>speed, burst power, and aggressive close-range pressure</span>. Use <span>Flashstrikes</span> to engage quickly, follow with <span>Reaper’s Cut</span> or <span>Getsuga Tensho</span> for lethal combos, and finish with <span>Vasto Roar</span> to clear the battlefield. When danger peaks, transform with <span>Vasto Lorde</span> to dominate with overwhelming speed and energy.`,
@@ -590,7 +589,7 @@ export const SPECS = {
     perStat: 0.2107,
     rarity: RARITIES.exotic,
     requirements: [],
-    sources: [NPCS.ichigoV2],
+    sources: ['ichigoV2Spec'],
     type: TYPES.spec,
   },
 };

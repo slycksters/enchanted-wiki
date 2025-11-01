@@ -1,10 +1,22 @@
 export const NPC_TYPES = {
-  hostile: {
+  worldBoss: {
     id: 1,
-    name: 'Hostile',
+    name: 'World Boss',
   },
-  friendly: {
+  miniBoss: {
     id: 2,
-    name: 'Friendly',
+    name: 'Mini Boss',
+  },
+  mobs: {
+    id: 3,
+    name: 'Mobs',
+  },
+  questGiver: {
+    id: 4,
+    name: 'Quest Giver',
+  },
+  specialist: {
+    id: 5,
+    name: 'Specialist',
   },
 };

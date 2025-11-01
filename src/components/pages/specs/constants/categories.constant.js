@@ -1,4 +1,4 @@
-import { SPECS } from '@data';
-import { extractValues } from '@helpers';
+import { TYPES } from '@data';
+import { DATA } from '@mappers';
 
-export const CATEGORIES = extractValues(SPECS);
+export const CATEGORIES = DATA[TYPES.spec.name];

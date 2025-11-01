@@ -1,23 +1,23 @@
-import {
-  ITEMS,
-  MAGICS,
-  NPCS,
-  PASSIVE_MAGICS,
-  PASSIVE_SKILLS,
-  RACES,
-  SPECS,
-  TRAITS,
-  TYPES,
-} from '@data';
+import { TYPES } from '@data';
 import { extractValues } from '@helpers';
+import {
+  itemArray,
+  magicArray,
+  npcArray,
+  passiveMagicArray,
+  passiveSkillArray,
+  raceSkillArray,
+  specArray,
+  traitArray,
+} from './linkers';
 
 export const DATA = {
-  [TYPES.item.name]: extractValues(ITEMS),
-  [TYPES.magic.name]: extractValues(MAGICS),
-  [TYPES.npc.name]: extractValues(NPCS),
-  [TYPES.passiveMagic.name]: extractValues(PASSIVE_MAGICS),
-  [TYPES.passiveSkill.name]: extractValues(PASSIVE_SKILLS),
-  [TYPES.race.name]: extractValues(RACES),
-  [TYPES.spec.name]: extractValues(SPECS),
-  [TYPES.trait.name]: extractValues(TRAITS),
+  [TYPES.item.name]: extractValues(itemArray),
+  [TYPES.magic.name]: extractValues(magicArray),
+  [TYPES.npc.name]: extractValues(npcArray),
+  [TYPES.passiveMagic.name]: extractValues(passiveMagicArray),
+  [TYPES.passiveSkill.name]: extractValues(passiveSkillArray),
+  [TYPES.race.name]: extractValues(raceSkillArray),
+  [TYPES.spec.name]: extractValues(specArray),
+  [TYPES.trait.name]: extractValues(traitArray),
 };

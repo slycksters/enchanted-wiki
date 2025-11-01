@@ -1,6 +1,5 @@
 import { assets } from '@assets';
 import { RARITIES, TYPES } from './enums';
-import { ITEMS } from './items.data';
 
 const passiveMagicImages = assets.images.passiveMagics;
 const passiveMagicVideos = assets.videos.passiveMagics;
@@ -16,11 +15,11 @@ export const PASSIVE_MAGICS = {
     ],
     attachment: passiveMagicImages.frozen,
     description:
-      'Gain a freeze effect on hit, slowing enemies and chilling their movements with icy precision.',
+      'Applay a freeze effect with your attacks, slowing enemies and chilling their movements with icy precision.',
     isGatcha: true,
     name: 'Frozen',
     rarity: RARITIES.epic,
-    sources: [ITEMS.passiveMagicReroll],
+    sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },
   divineRetribution: {
@@ -33,11 +32,11 @@ export const PASSIVE_MAGICS = {
     ],
     attachment: passiveMagicImages.divineRetribution,
     description:
-      'Gain a divine effect on hit, smiting enemies with holy retribution that mirrors the power of your attacks.',
+      'Apply a divine effect with your attacks, smiting enemies with holy retribution that mirrors the power of your attacks.',
     isGatcha: true,
     name: 'Divine Retribution',
     rarity: RARITIES.legendary,
-    sources: [ITEMS.passiveMagicReroll],
+    sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },
   lifeSteal: {
@@ -49,22 +48,22 @@ export const PASSIVE_MAGICS = {
       },
     ],
     attachment: passiveMagicImages.lifeSteal,
-    description: `Gain a life steal effect on hit, draining your enemy's vitality to restore your own health with every strike.`,
+    description: `Gain a life steal effect with your attacks, draining your enemy's vitality to restore your own health with every strike.`,
     isGatcha: true,
     name: 'Lifesteal',
     rarity: RARITIES.mythical,
-    sources: [ITEMS.passiveMagicReroll],
+    sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },
   roarOfTheAbyss: {
     id: 4,
     attachment: passiveMagicImages.roarOfTheAbyss,
     description:
-      'Channel the wrath of the abyss itself, amplifying your power with each strike as dark energy surges to multiply your damage beyond mortal limits.',
+      'Apply the wrath of the abyss when attacking, amplifying your power with each strike as dark energy surges to multiply your damage beyond mortal limits.',
     isGatcha: true,
     name: 'Roar of The Abyss',
     rarity: RARITIES.mythical,
-    sources: [ITEMS.passiveMagicReroll],
+    sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },
   godSpeed: {
@@ -77,11 +76,11 @@ export const PASSIVE_MAGICS = {
     ],
     attachment: passiveMagicImages.godSpeed,
     description:
-      'Channel divine lightning on hit, inflicting a shock that amplifies your attacks and leaves enemies trembling in your wake.',
+      'Apply divine lightning with your attacks, inflicting a shock that amplifies your attacks and leaves enemies trembling in your wake.',
     isGatcha: true,
     name: 'Godspeed',
     rarity: RARITIES.exotic,
-    sources: [ITEMS.passiveMagicReroll],
+    sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },
   vortexOfRuin: {
@@ -94,11 +93,11 @@ export const PASSIVE_MAGICS = {
     ],
     attachment: passiveMagicImages.vortexOfRuin,
     description:
-      'Unleash a swirling black hole upon impact, dragging enemies into the abyss and tearing them apart with unstoppable force.',
+      'Apply a swirling black hole with your attacks, dragging enemies into the abyss and tearing them apart with unstoppable force.',
     isGatcha: true,
     name: 'Vortex of Ruin',
     rarity: RARITIES.exotic,
-    sources: [ITEMS.passiveMagicReroll],
+    sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },
   soulDevourer: {
@@ -115,7 +114,7 @@ export const PASSIVE_MAGICS = {
     isGatcha: true,
     name: 'Soul Devourer',
     rarity: RARITIES.exotic,
-    sources: [ITEMS.passiveMagicReroll],
+    sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },
 };
