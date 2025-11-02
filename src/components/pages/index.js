@@ -1,5 +1,5 @@
 export * from './abilities/AbilitiesPage';
-export * from './bosses/BossesComponent';
+export * from './npcs/NpcsPage';
 export * from './home/HomePage';
 export * from './islands/IslandsComponent';
 export * from './items/ItemsPage';

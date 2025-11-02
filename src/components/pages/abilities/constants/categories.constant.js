@@ -1,11 +1,12 @@
 import { TYPES } from '@data';
+import { sortByRarity } from '@helpers';
 import { DATA } from '@mappers';
 
-const races = DATA[TYPES.race.name];
-const traits = DATA[TYPES.trait.name];
-const magics = DATA[TYPES.magic.name];
-const passiveMagics = DATA[TYPES.passiveMagic.name];
-const passiveSkills = DATA[TYPES.passiveSkill.name];
+const races = sortByRarity(DATA[TYPES.race.name], 'asc');
+const traits = sortByRarity(DATA[TYPES.trait.name], 'asc');
+const magics = sortByRarity(DATA[TYPES.magic.name], 'asc');
+const passiveMagics = sortByRarity(DATA[TYPES.passiveMagic.name], 'asc');
+const passiveSkills = sortByRarity(DATA[TYPES.passiveSkill.name], 'asc');
 
 export const CATEGORIES = [
   { id: 1, name: 'Magics', list: magics },

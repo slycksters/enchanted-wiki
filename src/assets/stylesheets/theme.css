@@ -21,6 +21,8 @@
   --enchanted-rarity-mythical: #AE2E24;
   --enchanted-rarity-exotic: #4BCE97;
   --enchanted-rarity-v2: #520E13;
+  --enchanted-rarity-secret: #261434;
+  --enchanted-rarity-exclusive: #FFBE3D;
 
   /* Global stylings*/
   --enchanted-box-shadow: 0px 0px 5px var(--enchanted-box-shadow-color);

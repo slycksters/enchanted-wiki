@@ -6,6 +6,7 @@ export const Searchbar = ({ onSearch }) => {
     <div className={styles.searchbar}>
       <input
         className={styles.searchInput}
+        name={'search-bar-input'}
         onChange={onSearch}
         placeholder={'Search'}
         type={'text'}

@@ -22,7 +22,7 @@ export const SearchList = ({
   };
 
   const handleOnClickSubItem = (item) => {
-    if (selectedSubItem.name !== item.name) {
+    if (`${selectedSubItem.name}-${selectedSubItem.id}` !== `${item.name}-${item.id}`) {
       setSelectedSubItem(item);
       onClickSubItem(item);
     }

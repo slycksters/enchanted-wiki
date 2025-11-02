@@ -17,9 +17,12 @@
 .item {
   border-left: 1px solid var(--enchanted-border-color);
   margin-left: 25px;
+  overflow: hidden;
   padding: 5px 0px;
   text-indent: 20;
+  text-overflow: ellipsis;
   transition: padding-left 0.1s ease-in-out, border-width 0.1s ease-in-out;
+  white-space: nowrap;
 }
 
 .activeItem, .item:hover {

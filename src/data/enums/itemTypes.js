@@ -3,8 +3,12 @@ export const ITEM_TYPES = {
     id: 1,
     name: 'Accessories',
   },
-  materials: {
+  artifacts: {
     id: 2,
+    name: 'Artifacts',
+  },
+  materials: {
+    id: 3,
     name: 'Materials',
   },
 };

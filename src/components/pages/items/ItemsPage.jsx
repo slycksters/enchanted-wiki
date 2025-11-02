@@ -1,5 +1,5 @@
-import { ITEMS } from '@data';
 import { Info, Layout } from '@components';
+import { ITEMS } from '@data';
 import { CATEGORIES } from './constants';
 
 export const ItemsPage = () => {
@@ -7,5 +7,5 @@ export const ItemsPage = () => {
     <Layout categories={CATEGORIES} defaultInfo={ITEMS.facePlaster}>
       <Info />
     </Layout>
-  )
+  );
 };

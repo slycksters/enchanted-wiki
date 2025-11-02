@@ -592,4 +592,106 @@ export const SPECS = {
     sources: ['ichigoV2Spec'],
     type: TYPES.spec,
   },
+  inumaki: {
+    id: 12,
+    abilities: [
+      // {
+      //   id: 1,
+      //   attachment: specSkillVideos.inumakiM1,
+      //   name: 'Basic Attack [M1]',
+      //   description:
+      //     'Delivers rapid sword strikes infused with Fullbring energy, cutting through enemies with explosive impact.',
+      // },
+      {
+        id: 2,
+        attachment: specSkillVideos.inumakiZ,
+        name: `Stop [Z]`,
+        description:
+          ' Imbues the word <span>Stop</span> with Cursed Energy, unleashing a concussive vocal shockwave in a cone. Foes caught in the command are halted, knocked back, and sustain moderate damage, creating crucial distance.',
+      },
+      {
+        id: 3,
+        attachment: specSkillVideos.inumakiX,
+        name: 'Explode [X]',
+        description:
+          ' Unleashes the powerful command <span>Explode</span>, causing a violent eruption of Cursed Energy to burst from the user.',
+      },
+      {
+        id: 4,
+        attachment: specSkillVideos.inumakiC,
+        name: `Blast [C]`,
+        description:
+          'Focuses Cursed Energy into a piercing command, <span>Blast Away</span>, firing a focused beam of pure sonic force. Enemies caught in its path are stunned and hit with rapid, successive waves of damage.',
+      },
+      {
+        id: 5,
+        attachment: specSkillVideos.inumakiV,
+        name: 'Crumble [V]',
+        description:
+          'Shouts the command <span>Crumble Down</span>, projecting immense Cursed Energy from above. The overwhelming vocal pressure slams foes in a target area to the ground, crushing them under the weight of the command and leaving them vulnerable.',
+      },
+    ],
+    attachment: specImages.inumaki,
+    baseDMG: '?',
+    damageType: DAMAGE_TYPES.magic,
+    description: `A master of the Cursed Speech technique, this spec is a unique Command-Based Caster who controls the battlefield with their voice. By infusing words with Cursed Energy, the Inumaki Spec (Vaulted) turns simple commands into devastating attacks that can stop, shatter, and blast opponents from a distance. To master this spec is to understand the weight of your words, knowing the perfect command for every situation and when to unleash your full power without paying the ultimate price.`,
+    isGatcha: false,
+    name: 'Inumaki (Vaulted)',
+    perStat: '?',
+    rarity: RARITIES.legendary,
+    requirements: [],
+    sources: ['inumakiSpec'],
+    type: TYPES.spec,
+  },
+  toji: {
+    id: 13,
+    abilities: [
+      // {
+      //   id: 1,
+      //   attachment: specSkillVideos.inumakiM1,
+      //   name: 'Basic Attack [M1]',
+      //   description:
+      //     'Delivers rapid sword strikes infused with Fullbring energy, cutting through enemies with explosive impact.',
+      // },
+      {
+        id: 2,
+        attachment: specSkillVideos.tojiZ,
+        name: `Butcher's Edge [Z]`,
+        description:
+          'Explodes forward with inhuman speed, delivering a single, devastating thrust with your Cursed Tool. This piercing strike travels through multiple enemies in a line, closing the distance instantly and setting up your next assault.',
+      },
+      {
+        id: 3,
+        attachment: specSkillVideos.tojiX,
+        name: 'Chain Fang [X]',
+        description:
+          'Unleashes the Chain of a Thousand Miles, whirling your Cursed Tool in a wide, defensive arc. The unpredictable spin carves through all surrounding enemies, creating a deadly safe zone and punishing anyone who gets too close.',
+      },
+      {
+        id: 4,
+        attachment: specSkillVideos.tojiC,
+        name: `Predator Dash [C]`,
+        description:
+          'Executes a powerful, forward-dashing cleave with such force that it launches a sharp blade of pure kinetic energy. This projectile tears across the battlefield, slicing through all enemies in its path from a distance.',
+      },
+      {
+        id: 5,
+        attachment: specSkillVideos.inumakiV,
+        name: 'Crimson Dissection [V]',
+        description:
+          'Becomes a vortex of steel, unleashing a blindingly fast flurry of slashes from every conceivable angle. Enemies caught within this storm of blades are dissected in an instant, taking massive and repeated damage from the relentless assault.',
+      },
+    ],
+    attachment: specImages.toji,
+    baseDMG: '?',
+    damageType: DAMAGE_TYPES.blade,
+    description: `Embody the <span>Sorcerer Killer</span>, a warrior perfected by a Heavenly Restriction. This spec forsakes all magic for the absolute peak of physical prowess, making you a <span>Relentless Melee Rusher</span>. The Toji spec uses superhuman speed and an arsenal of Cursed Tools to overwhelm and execute opponents with a barrage of unpredictable attacks. Your skills are a flurry of precise, lightning-fast strikes that close gaps, break guards, and chain together into devastating combinations. To master this spec is to master movement and aggression; to become an unstoppable predator who gives opponents no room to breathe and ends fights with brutal, unparalleled efficiency.`,
+    isGatcha: false,
+    name: 'Toji (Vaulted)',
+    perStat: '?',
+    rarity: RARITIES.mythical,
+    requirements: [],
+    sources: ['tojiSpec'],
+    type: TYPES.spec,
+  },
 };

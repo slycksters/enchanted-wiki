@@ -1,4 +1,4 @@
-import { Description, Header, Skill, Source } from './components';
+import { Description, Drops, Header, Skill, Source } from './components';
 import styles from './Info.module.css';
 
 export const Info = ({ info }) => {
@@ -8,7 +8,10 @@ export const Info = ({ info }) => {
     <div className={styles.info}>
       <Header info={info} />
       <Description info={info} />
-      <Source info={info} />
+      <div className={'row row-cols-1 row-cols-lg-2'}>
+        <Drops info={info} />
+        <Source info={info} />
+      </div>
       <Skill info={info} />
     </div>
   );

@@ -1,7 +1,20 @@
-import { NPCS, ITEMS } from '@data';
+import { ITEMS, MAGICS, NPCS, PASSIVE_SKILLS, SPECS, TRAITS } from '@data';
 
 // --- Main Data ---
 const npcMap = new Map(Object.entries(NPCS));
 // --- Related Data
+const itemMap = new Map(Object.entries(ITEMS));
+const magicMap = new Map(Object.entries(MAGICS));
+const passiveSkillMap = new Map(Object.entries(PASSIVE_SKILLS));
+const specMap = new Map(Object.entries(SPECS));
+const traitMap = new Map(Object.entries(TRAITS));
+
+// --- Combine All Related Data ---
+const unifiedMap = new Map([...itemMap, ...magicMap, ...npcMap, ...passiveSkillMap, ...specMap, ...traitMap]);
+
+// --- Link to related data ---
+npcMap.forEach((item) => {
+  item.drops = item.drops?.map((key) => unifiedMap.get(key)).filter(Boolean);
+});
 
 export const npcArray = Array.from(npcMap.values());

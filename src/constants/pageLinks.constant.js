@@ -8,9 +8,9 @@ import {
 } from 'react-icons/gi';
 import {
   AbilitiesPage,
-  BossesPage,
   IslandsPage,
   ItemsPage,
+  NpcsPage,
   SpecsPage,
   TrialsPage,
 } from '@components/pages';
@@ -47,10 +47,10 @@ export const PAGE_LINKS = [
   },
   {
     id: 5,
-    element: BossesPage,
+    element: NpcsPage,
     icon: GiDwarfHelmet,
-    name: 'Bosses',
-    path: `${BASE_PATH}/bosses`,
+    name: 'Npcs',
+    path: `${BASE_PATH}/npcs`,
   },
   {
     id: 6,

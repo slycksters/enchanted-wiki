@@ -45,5 +45,15 @@ export const RARITIES = {
     id: 8,
     color: 'var(--enchanted-rarity-v2)',
     name: 'V2',
-  }
+  },
+  secret: {
+    id: 9,
+    color: 'var(--enchanted-rarity-secret)',
+    name: 'Secret',
+  },
+  exclusive: {
+    id: 10,
+    color: 'var(--enchanted-rarity-exclusive)',
+    name: 'Exclusive',
+  },
 };

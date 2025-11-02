@@ -31,9 +31,13 @@
 }
 
 .rarity {
+  align-items: center;
   border-radius: 4px;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
   min-width: 50px;
-  padding: 5px 15px;
+  padding: 8px;
   text-align: center;
 }
 
