@@ -233,8 +233,8 @@ export const ITEMS = {
     rarity: RARITIES.mythical,
     sources: ['sousukeAizenBoss'],
     stats: {
-      blade: 4500,
-      defense: 1500,
+      blade: 3000,
+      defense: 1200,
     },
     type: TYPES.item,
   },

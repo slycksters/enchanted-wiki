@@ -384,7 +384,7 @@ export const NPCS = {
     attachment: npcImages.kirito,
     description:
       'The legendary Black Swordsman, a hero trapped within a digital world. His unparalleled reaction speed and mastery of the Dual Blades skill make him a terrifying foe. Spawns in Shattergrove or can be summoned in the Trial Grounds.',
-    drops: ['swordGuard', 'exoticChest'],
+    drops: ['exoticChest', 'darkRepulser', 'swordGuard', 'elucidator'],
     locations: [],
     name: 'Kirito',
     npcType: NPC_TYPES.worldBoss,
