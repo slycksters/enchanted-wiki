@@ -1,3 +1,4 @@
+export * from './islands.linker';
 export * from './items.linker';
 export * from './magics.linker';
 export * from './npcs.linker';

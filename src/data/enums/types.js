@@ -25,10 +25,14 @@ export const TYPES = {
   },
   npc: {
     id: 7,
-    name: 'Npc'
+    name: 'NPC'
   },
   spec: {
     id: 8,
     name: 'Spec',
+  },
+  island: {
+    id: 9,
+    name: 'Island',
   },
 };

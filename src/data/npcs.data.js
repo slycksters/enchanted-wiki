@@ -9,7 +9,7 @@ export const NPCS = {
     id: 1,
     attachment: npcImages.sham,
     description:
-      'A shadowy person who teaches the art of translocation. Offers the <span>Shadow Step</span> ability. Found lurking in Frostveil Hollow.',
+      'A shadowy man who teaches the art of translocation. Offers the <span>Shadow Step</span> ability. Found lurking in Frostveil Hollow.',
     drops: ['shadowStep'],
     locations: ['frostveilHollow'],
     name: 'Sham',

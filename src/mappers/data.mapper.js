@@ -1,6 +1,7 @@
 import { TYPES } from '@data';
 import { extractValues } from '@helpers';
 import {
+  islandArray,
   itemArray,
   magicArray,
   npcArray,
@@ -12,6 +13,7 @@ import {
 } from './linkers';
 
 export const DATA = {
+  [TYPES.island.name]: extractValues(islandArray),
   [TYPES.item.name]: extractValues(itemArray),
   [TYPES.magic.name]: extractValues(magicArray),
   [TYPES.npc.name]: extractValues(npcArray),

@@ -35,6 +35,10 @@
   text-decoration: none;
 }
 
+.navItem:hover {
+  color: var(--enchanted-rarity-exotic);
+}
+
 .activeNavItem {
   border-bottom: 2px solid var(--enchanted-rarity-exotic);
   color: var(--enchanted-rarity-exotic);

@@ -1,0 +1,22 @@
+.gallery {
+  border-top: 1px dashed var(--enchanted-border-color);
+  padding-top: 30px;
+}
+
+.galleryItem p:nth-child(2),
+.description p {
+  color: var(--enchanted-text-secondary);
+}
+
+.galleryItem p:nth-child(1) {
+  margin-top: 30px;
+}
+
+.galleryItem img {
+  filter: var(--enchanted-drop-shadow);
+  width: 100%;
+}
+
+.galleryItem > p > span {
+  color: var(--enchanted-text-primary);
+}

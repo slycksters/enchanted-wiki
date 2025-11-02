@@ -14,6 +14,7 @@
 }
 
 .activeItem, .item:hover {
+  border-color: var(--enchanted-text-primary);
   border-width: 3px;
   padding-left: 4px;
   color: var(--enchanted-text-primary);

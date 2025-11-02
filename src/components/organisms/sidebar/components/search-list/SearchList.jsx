@@ -50,7 +50,7 @@ export const SearchList = ({
                   : null
               )}
               onClick={!haveSubList ? () => handleOnClickItem(item) : undefined}
-              style={{ borderColor: !isMultiList ? item.rarity.color : null }}
+              style={{ borderColor: !isMultiList ? item.rarity?.color : null }}
             >
               <span hidden={isMultiList && !haveSubList} title={name}>
                 {name}

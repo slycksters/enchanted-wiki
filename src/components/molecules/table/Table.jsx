@@ -8,7 +8,7 @@ export const Table = ({ list }) => {
         <tr className={styles.tableHeader}>
           <th></th>
           <th>Name</th>
-          <th>Location</th>
+          <th>Type</th>
         </tr>
       </thead>
       <tbody>
@@ -22,7 +22,7 @@ export const Table = ({ list }) => {
                 <Image alt={item.name} src={item.attachment} />
               </td>
               <td>{item.name}</td>
-              <td>N/A</td>
+              <td>{item.type.name}</td>
             </tr>
           );
         })}

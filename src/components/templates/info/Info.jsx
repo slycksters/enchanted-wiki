@@ -1,4 +1,5 @@
 import { Description, Drops, Header, Skill, Source } from './components';
+import { Gallery } from './components/gallery';
 import styles from './Info.module.css';
 
 export const Info = ({ info }) => {
@@ -8,10 +9,11 @@ export const Info = ({ info }) => {
     <div className={styles.info}>
       <Header info={info} />
       <Description info={info} />
-      <div className={'row row-cols-1 row-cols-lg-2'}>
+      <div className={'row'}>
         <Drops info={info} />
         <Source info={info} />
       </div>
+      <Gallery info={info} />
       <Skill info={info} />
     </div>
   );

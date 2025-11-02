@@ -1,11 +1,11 @@
-import { WorkInProgressPage } from '@components';
-import styles from './Islands.module.css';
+import { Info, Layout } from '@components';
+import { ISLANDS } from '@data';
+import { CATEGORIES } from './constants';
 
 export const IslandsPage = () => {
   return (
-    // <div className={styles.abilitiesPageContainer}>
-    //   <h1>Islands</h1>
-    // </div>
-    <WorkInProgressPage />
-  )
+    <Layout categories={CATEGORIES} defaultInfo={ISLANDS.crescentIsle}>
+      <Info />
+    </Layout>
+  );
 };

@@ -45,10 +45,7 @@ export const ITEMS = {
     rarity: RARITIES.rare,
     sources: ['banditLeader'],
     stats: {
-      blade: 0,
       defense: 40,
-      magic: 0,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -64,8 +61,6 @@ export const ITEMS = {
     sources: ['zeus'],
     stats: {
       blade: 125,
-      defense: 0,
-      magic: 0,
       meelee: 250,
     },
     type: TYPES.item,
@@ -82,8 +77,6 @@ export const ITEMS = {
     sources: ['mirageWarden'],
     stats: {
       blade: 120,
-      defense: 0,
-      magic: 0,
       meelee: 95,
     },
     type: TYPES.item,
@@ -99,8 +92,6 @@ export const ITEMS = {
     rarity: RARITIES.epic,
     sources: ['yunoBoss', 'yunoV2Boss'],
     stats: {
-      blade: 0,
-      defense: 0,
       magic: 750,
       meelee: 250,
     },
@@ -118,8 +109,6 @@ export const ITEMS = {
     sources: ['grayBoss'],
     stats: {
       blade: 550,
-      defense: 0,
-      magic: 0,
       meelee: 450,
     },
     type: TYPES.item,
@@ -136,9 +125,6 @@ export const ITEMS = {
     sources: ['erzaBoss'],
     stats: {
       blade: 750,
-      defense: 0,
-      magic: 0,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -155,8 +141,6 @@ export const ITEMS = {
     stats: {
       blade: 950,
       defense: 150,
-      magic: 0,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -171,9 +155,7 @@ export const ITEMS = {
     rarity: RARITIES.legendary,
     sources: ['rudoBoss'],
     stats: {
-      blade: 0,
       defense: 1250,
-      magic: 0,
       meelee: 3500,
     },
     type: TYPES.item,
@@ -189,10 +171,7 @@ export const ITEMS = {
     rarity: RARITIES.legendary,
     sources: ['natsuBoss'],
     stats: {
-      blade: 0,
-      defense: 0,
       magic: 1400,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -207,10 +186,8 @@ export const ITEMS = {
     rarity: RARITIES.legendary,
     sources: ['laxusDreyarBoss'],
     stats: {
-      blade: 0,
       defense: 2500,
       magic: 3000,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -225,10 +202,7 @@ export const ITEMS = {
     rarity: RARITIES.legendary,
     sources: ['inumakiBoss'],
     stats: {
-      blade: 0,
-      defense: 0,
       magic: 3700,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -245,8 +219,6 @@ export const ITEMS = {
     stats: {
       blade: 4500,
       defense: 1500,
-      magic: 0,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -263,8 +235,6 @@ export const ITEMS = {
     stats: {
       blade: 4500,
       defense: 1500,
-      magic: 0,
-      meelee: 0,
     },
     type: TYPES.item,
   },
@@ -667,7 +637,7 @@ export const ITEMS = {
   missingKey: {
     id: 45,
     attachment: itemImages.missingKey,
-    description: `Long ago, the keys to the Lost Cave's deepest chambers were scattered across the realm to prevent the escape of the mythical beasts imprisoned within. These keys are now hoarded by fearsome guardians in the <span>Coral Abyss</span>, <span>Harvest Grove</span>, and <span>Zenith Skylands</span>. Find just one of these missing keys to bypass the ancient seal and challenge the powerful creatures that lie in wait.`,
+    description: `Long ago, the keys to the <span>Lost Cave's</span> deepest chambers were scattered across the realm to prevent the escape of the mythical beasts imprisoned within. These keys are now hoarded by fearsome guardians in the <span>Coral Abyss</span>, <span>Harvest Grove</span>, and <span>Zenith Skylands</span>. Find just one of these missing keys to bypass the ancient seal and challenge the powerful creatures that lie in wait.`,
     isGatcha: false,
     itemType: ITEM_TYPES.artifacts,
     name: `Missing Key`,
@@ -860,7 +830,6 @@ export const ITEMS = {
     stats: {
       blade: 5000,
       defense: 3000,
-      magic: 0,
       meelee: 4500,
     },
     type: TYPES.item,
@@ -875,7 +844,6 @@ export const ITEMS = {
     rarity: RARITIES.exotic,
     sources: ['developerProduct'],
     stats: {
-      blade: 0,
       defense: 3750,
       magic: 5000,
       meelee: 4750,
