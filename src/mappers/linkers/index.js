@@ -6,5 +6,6 @@ export * from './passiveMagics.linker';
 export * from './passiveSkills.linker';
 export * from './races.linker';
 export * from './specs.linker';
+export * from './titles.linker';
 export * from './traits.linker';
 export * from './weapons.linker';

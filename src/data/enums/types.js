@@ -39,4 +39,8 @@ export const TYPES = {
     id: 10,
     name: 'Weapon',
   },
+  title: {
+    id: 11,
+    name: 'Title',
+  },
 };

@@ -7,5 +7,6 @@ export * from './passiveMagics.data';
 export * from './passiveSkills.data';
 export * from './races.data';
 export * from './specs.data';
+export * from './titles.data';
 export * from './traits.data';
 export * from './weapons.data';

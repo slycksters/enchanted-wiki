@@ -8,7 +8,7 @@ export const RACES = {
     id: 1,
     attachment: raceImages.human,
     description:
-      'A race without any innate abilities or bonus stats. Humans rely solely on skill and determination to grow stronger.',
+      'A versatile race defined by adaptability and determination. Humans grow through perseverance rather than innate talent.',
     isGatcha: true,
     name: 'Human',
     rarity: RARITIES.common,
@@ -19,110 +19,158 @@ export const RACES = {
     id: 2,
     attachment: raceImages.dwarf,
     description:
-      'Sturdy and resilient. Dwarves possess a 1.50x HP multiplier, granting them exceptional durability in battle.',
+      'Stout warriors known for their endurance and craftsmanship. Dwarves thrive in the heat of battle and the depths of the forge.',
     isGatcha: true,
     name: 'Dwarf',
     rarity: RARITIES.uncommon,
     sources: ['raceReroll'],
+    stats: {
+      HP: '1.5x Multiplier',
+    },
     type: TYPES.race,
   },
   reaper: {
     id: 3,
     attachment: raceImages.reaper,
     description:
-      'Masters of death and experience. Reapers gain a 1.50x EXP multiplier, allowing them to grow stronger faster than other races.',
+      'Enigmatic beings who walk the line between life and death. Reapers are driven by an insatiable hunger for experience and mastery.',
     isGatcha: true,
     name: 'Reaper',
     rarity: RARITIES.rare,
     sources: ['raceReroll'],
+    stats: {
+      EXP: '1.5x Multiplier',
+    },
     type: TYPES.race,
   },
   fishman: {
     id: 4,
     attachment: raceImages.fishman,
     description:
-      'Born of the sea, Fishmen possess exceptional agility and strength. Gain a 1.20x DMG multiplier and 1.6x sprint speed bonus.',
+      'Children of the ocean with unmatched agility and strength. Fishmen move fluidly between land and sea, born for combat and speed.',
     isGatcha: true,
     name: 'Fishman',
     rarity: RARITIES.epic,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '1.2x Multiplier',
+      sprintSpeed: '1.6x Multiplier',
+    },
     type: TYPES.race,
   },
   saiyan: {
     id: 5,
     attachment: raceImages.saiyan,
     description:
-      'A warrior race born for battle. Saiyans possess a 1.60x DMG multiplier, granting them exceptional offensive strength.',
+      'A proud warrior race born to fight. Saiyans thrive in battle, pushing past their limits to achieve unparalleled might.',
     isGatcha: true,
     name: 'Saiyan',
     rarity: RARITIES.legendary,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '1.6x Multiplier',
+    },
     type: TYPES.race,
   },
   hollow: {
     id: 6,
     attachment: raceImages.hollow,
     description:
-      'Corrupted souls consumed by darkness. Hollows gain a 1.40x DMG and 1.40x HP multiplier, making them both powerful and resilient in battle.',
+      'Twisted souls consumed by darkness. Hollows embody destruction and chaos, feeding on the essence of the fallen.',
     isGatcha: true,
     name: 'Hollow',
     rarity: RARITIES.mythical,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '1.4x Multiplier',
+      sprintSpeed: '1.4x Multiplier',
+    },
     type: TYPES.race,
   },
   angel: {
     id: 7,
     attachment: raceImages.angel,
-    description:
-      'Beings of light and purity. Angels gain a 2.25x DMG multiplier during daytime, channeling divine power under the sun.',
+    description: `Celestial beings of light and virtue. Angels channel divine energy that grows radiant under the sun's embrace.`,
     isGatcha: true,
     name: 'Angel',
     rarity: RARITIES.exotic,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '2.25x Multiplier during daytime',
+    },
     type: TYPES.race,
   },
   demon: {
     id: 8,
     attachment: raceImages.demon,
     description:
-      'Creatures born of darkness and chaos. Demons gain a 2.25x DMG multiplier during nighttime, drawing strength from the shadows.',
+      'Embodiments of chaos and shadow. Demons draw strength from darkness, thriving when night descends upon the world.',
     isGatcha: true,
     name: 'Demon',
     rarity: RARITIES.exotic,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '2.25x Multiplier during nighttime',
+    },
     type: TYPES.race,
   },
   abaddon: {
     id: 9,
     attachment: raceImages.abaddon,
     description:
-      'Harbingers of ruin and despair. Abaddons gain a 1.85x DMG multiplier and 1.25x sprint speed bonus, overwhelming foes with relentless ferocity.',
+      'Harbingers of destruction and despair. Abaddons embody relentless aggression, crushing everything in their path.',
     isGatcha: true,
     name: 'Abaddon',
     rarity: RARITIES.exotic,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '1.85x Multiplier',
+      sprintSpeed: '1.25x Multiplier',
+    },
     type: TYPES.race,
   },
   cleaner: {
     id: 10,
     attachment: raceImages.cleaner,
     description:
-      'Silent enforcers of order. Cleaners gain a 2.00x DMG multiplier and a 1.25x EXP multiplier, excelling in both power and progression.',
+      'Silent executors who maintain balance through precision and discipline. Cleaners strike efficiently, leaving no trace behind.',
     isGatcha: true,
     name: 'Cleaner',
     rarity: RARITIES.exotic,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '2x Multiplier',
+      EXP: '1.25x Multiplier',
+    },
     type: TYPES.race,
   },
   fullbringer: {
     id: 11,
     attachment: raceImages.fullbringer,
     description:
-      'Masters of spiritual resonance. Fullbringers gain a 2.50x DMG multiplier and a 1.50x EXP multiplier, thriving on strength born from within.',
+      'Spiritual warriors who draw power from their very essence. Fullbringers manipulate their surroundings with refined control and instinct.',
     isGatcha: true,
     name: 'Fullbringer',
     rarity: RARITIES.exotic,
     sources: ['raceReroll'],
+    stats: {
+      DMG: '2.5x Multiplier',
+      EXP: '1.5x Multiplier',
+    },
+    type: TYPES.race,
+  },
+  werewolf: {
+    id: 12,
+    attachment: raceImages.werewolf,
+    description: `Beasts bound by the moon's curse. Werewolves embody primal rage and hunger, transforming into unstoppable hunters under its glow.`,
+    isGatcha: true,
+    name: 'Werewolf',
+    rarity: RARITIES.exotic,
+    sources: ['raceReroll'],
+    stats: {
+      DMG: '3x Multiplier',
+      EXP: '3x Multiplier',
+    },
     type: TYPES.race,
   },
 };

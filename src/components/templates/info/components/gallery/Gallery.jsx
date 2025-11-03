@@ -6,7 +6,7 @@ export const Gallery = ({ info }) => {
 
   return (
     <section className={styles.gallery}>
-      <h4>Tour Guide:</h4>
+      <h4>Gallery:</h4>
       <div className={'row row-cols-1 row-cols-md-2'}>
         {info.gallery.map((item) => {
           return (

@@ -9,6 +9,7 @@ import {
   passiveSkillArray,
   raceSkillArray,
   specArray,
+  titleArray,
   traitArray,
   weaponArray,
 } from './linkers';
@@ -22,6 +23,7 @@ export const DATA = {
   [TYPES.passiveSkill.name]: extractValues(passiveSkillArray),
   [TYPES.race.name]: extractValues(raceSkillArray),
   [TYPES.spec.name]: extractValues(specArray),
+  [TYPES.title.name]: extractValues(titleArray),
   [TYPES.trait.name]: extractValues(traitArray),
   [TYPES.weapon.name]: extractValues(weaponArray),
 };
