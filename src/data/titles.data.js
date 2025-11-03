@@ -8,7 +8,7 @@ export const TITLES = {
     id: 1,
     attachment: titleImages.beginner,
     description:
-      'After finishing 7 side quests you will bestowed of the title Beginner.',
+      'Granted to those who have completed 7 side quests — the first step on a long and perilous journey.',
     name: 'Beginner',
     stats: {
       EXP: '1.2x Multiplier',
@@ -19,7 +19,7 @@ export const TITLES = {
   novice: {
     id: 2,
     attachment: titleImages.novice,
-    description: 'Obtain by completing 10 side quests.',
+    description: 'Earned by completing 10 side quests. A mark of growing experience and newfound confidence.',
     name: 'Novice',
     stats: {
       EXP: '1.5x Multiplier',
@@ -30,7 +30,7 @@ export const TITLES = {
   master: {
     id: 3,
     attachment: titleImages.master,
-    description: 'Kill your first world boss and reach level 1100.',
+    description: 'Awarded to those who have slain their first world boss and reached level 1100 — proof of mastery and strength.',
     name: 'Master',
     stats: {
       EXP: '1.8x Multiplier',
@@ -41,7 +41,7 @@ export const TITLES = {
   windLord: {
     id: 4,
     attachment: titleImages.windLord,
-    description: 'Obtain by killing Yuno [World Boss] 25 times.',
+    description: 'Bestowed upon the one who has defeated Yuno [World Boss] 25 times — a title carried by those who command the skies.',
     name: 'Wind Lord',
     stats: {
       EXP: '2.05x Multiplier',
@@ -52,7 +52,7 @@ export const TITLES = {
   betrayer: {
     id: 5,
     attachment: titleImages.betrayer,
-    description: 'Obtain by killing Aizen [World Boss] 25 times.',
+    description: 'Earned by slaying Aizen [World Boss] 25 times. This title is whispered among those who turn against fate itself.',
     name: 'Betrayer',
     stats: {
       EXP: '2.25x Multiplier',
@@ -63,7 +63,7 @@ export const TITLES = {
   dragonSlayer: {
     id: 6,
     attachment: titleImages.dragonSlayer,
-    description: 'Obtain by killing Natsu [World Boss] 50 times.',
+    description: 'Awarded to those who have slain Natsu [World Boss] 50 times — proof of dominion over fire and fury.',
     name: 'Dragon Slayer',
     stats: {
       EXP: '2.5x Multiplier',
@@ -75,7 +75,7 @@ export const TITLES = {
     id: 7,
     attachment: titleImages.bloodHound,
     description:
-      'Obtain by killing Toji [Dungeon Boss] 50 times and reaching 100 stacks with Soul Devourer.',
+      'Granted to those who have defeated Toji [Dungeon Boss] 50 times and reached 100 stacks of Soul Devourer. A relentless hunter with an unyielding thirst.',
     name: 'Blood Hound',
     stats: {
       EXP: '3x Multiplier',
@@ -86,7 +86,7 @@ export const TITLES = {
   sunAndMoon: {
     id: 8,
     attachment: titleImages.sunAndMoon,
-    description: 'Obtain by killing Yoriichi and Kokushibo 12 each.',
+    description: 'Earned by defeating both Yoriichi [Dungeon Boss] and Kokushibo [Dungeon Boss] 12 times each — a balance of radiant light and eternal shadow.',
     name: 'Sun & Moon',
     stats: {
       EXP: '3.3x Multiplier',
@@ -97,7 +97,7 @@ export const TITLES = {
   fullMoon: {
     id: 9,
     attachment: titleImages.fullMoon,
-    description: 'Obtain by killing Death 20 times.',
+    description: 'Granted to the one who has slain Death [World Boss] 20 times — a being who has faced mortality and returned triumphant.',
     name: 'Full Moon',
     stats: {
       EXP: '4.2x Multiplier',
