@@ -1,34 +1,75 @@
+/* ─── List Container ─────────────────────────────────────────────── */
 .list {
-  margin-top: 10px;
+  padding-bottom: 20px;
 }
 
-.item, .parentItem, .verbiage {
+/* ─── Shared Styles ──────────────────────────────────────────────── */
+.item,
+.parentItem,
+.verbiage {
   color: var(--enchanted-text-secondary);
   font-size: 14px;
   padding: 5px;
-  text-indent: 20px;
 }
 
-.activeItem > span,
-.activeParentItem > span {
-  color: var(--enchanted-text-primary);
-}
-
+/* ─── List Items ─────────────────────────────────────────────────── */
 .item {
-  border-left: 1px solid var(--enchanted-border-color);
   margin-left: 25px;
+  border-left: 3px solid var(--enchanted-border-color);
+  padding: 5px 0;
   overflow: hidden;
-  padding: 5px 0px;
-  text-indent: 20;
   text-overflow: ellipsis;
-  transition: padding-left 0.1s ease-in-out, border-width 0.1s ease-in-out;
   white-space: nowrap;
+  text-indent: 20;
+  transition:
+    padding-left 0.1s ease-in-out,
+    border-width 0.1s ease-in-out;
 }
 
-.activeItem, .item:hover {
-  border-color: var(--enchanted-text-primary);
-  border-width: 3px;
-  padding-left: 4px;
+/* Hover + Active State */
+.item:hover,
+.activeItem {
   color: var(--enchanted-text-primary);
+  border-color: var(--enchanted-text-primary);
+  padding-left: 4px;
+}
+
+/* ─── Parent Items ───────────────────────────────────────────────── */
+.parentItem {
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 5px;
+}
+
+.parentItem:hover {
+  color: var(--enchanted-text-primary);
+}
+
+.activeParentItem > span,
+.activeItem > span {
+  color: var(--enchanted-text-primary);
+}
+
+/* Rotate arrow or icon for active parent */
+.parentItem > span:last-child {
+  transform: rotate(0deg);
+  transition: transform ease-out 0.3s;
+}
+
+.activeParentItem > span:last-child {
+  transform: rotate(315deg);
+  transition: transform ease-in 0.3s;
+}
+
+/* ─── Verbiage Text ──────────────────────────────────────────────── */
+.verbiage {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ─── Sub List ───────────────────────────────────────────────────── */
+.subList {
+  overflow: hidden;
+  transition: max-height ease-out 0.3s;
 }

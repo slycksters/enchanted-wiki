@@ -35,4 +35,8 @@ export const TYPES = {
     id: 9,
     name: 'Island',
   },
+  weapon: {
+    id: 10,
+    name: 'Weapon',
+  },
 };

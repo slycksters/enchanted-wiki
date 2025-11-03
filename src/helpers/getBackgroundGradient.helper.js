@@ -1,41 +1,43 @@
 /**
- * getBackgroundGradient
- * ----------------------
- * Returns a themed gradient with a *soft, subtle* C-shaped fading effect.
- *
+ * The gradient uses lighter color blending to make the primary color only slightly visible.
  * @param {string} color - The main starting color.
  * @param {"Up" | "Down" | "Left" | "Right"} [to="Down"] - Direction of the main gradient flow.
  * @returns {string} CSS gradient string.
  *
- * The gradient uses lighter color blending to make the primary color only slightly visible.
+ * * Returns a themed gradient with a *soft, subtle* C-shaped fading effect.
  */
 
-export const getBackgroundGradient = (color, to = "Down") => {
+export const getBackgroundGradient = (color, to = 'Down') => {
   let degree;
+  let baseOpacity = 25;
+  let midOpacity = 10;
 
   switch (to) {
-    case "Up":
-      degree = "0deg";
+    case 'Up':
+      degree = '0deg';
       break;
-    case "Right":
-      degree = "90deg";
+    case 'Right':
+      degree = '90deg';
       break;
-    case "Left":
-      degree = "270deg";
+    case 'Left':
+      degree = '270deg';
       break;
-    case "Down":
+    case 'Down':
     default:
-      degree = "180deg";
+      degree = '180deg';
       break;
+  }
+
+  if (color === 'var(--enchanted-rarity-v2)') {
+    baseOpacity = 100;
+    midOpacity = 50;
   }
 
   // Softer gradient — color influence reduced
   return `linear-gradient(
     ${degree},
-    color-mix(in srgb, ${color} 25%, transparent) 0%,
-    color-mix(in srgb, ${color} 10%, var(--enchanted-bg-accent)) 20%,
-    var(--enchanted-bg-accent) 40%,
-    var(--enchanted-bg-secondary) 70%,
-    var(--enchanted-bg-primary) 100%
+    color-mix(in srgb, ${color} ${baseOpacity}%, var(--enchanted-overlay-transparent)) 0%,
+    color-mix(in srgb, ${color} ${midOpacity}%, var(--enchanted-overlay-transparent)) 20%,
+    var(--enchanted-overlay-transparent) 100%
   )`;
 };

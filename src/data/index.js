@@ -8,3 +8,4 @@ export * from './passiveSkills.data';
 export * from './races.data';
 export * from './specs.data';
 export * from './traits.data';
+export * from './weapons.data';

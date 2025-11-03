@@ -10,6 +10,7 @@ import {
   raceSkillArray,
   specArray,
   traitArray,
+  weaponArray,
 } from './linkers';
 
 export const DATA = {
@@ -22,4 +23,5 @@ export const DATA = {
   [TYPES.race.name]: extractValues(raceSkillArray),
   [TYPES.spec.name]: extractValues(specArray),
   [TYPES.trait.name]: extractValues(traitArray),
+  [TYPES.weapon.name]: extractValues(weaponArray),
 };

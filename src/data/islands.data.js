@@ -417,4 +417,32 @@ export const ISLANDS = {
     name: 'Hueco Mundo',
     type: TYPES.island,
   },
+  hallowsEve: {
+    id: 15,
+    attachment: islandImages.hallowsEve,
+    description: `A land where Halloween never ends. A chilling fog clings to the ground, and the silence is broken only by the rustling of dead leaves and the faint, haunting sound of a distant whistle.`,
+    gallery: [
+      {
+        id: 1,
+        attachment: islandImages.hallowsEve1,
+        description: `Starting point of Hallow's Eve.`,
+        name: 'Spawn Crystal',
+      },
+      {
+        id: 2,
+        attachment: islandImages.hallowsEve2,
+        description: `Lurking in a shadowy corner of this island is a mysterious figure who deals in impossible artifacts. He alone knows the secret to channeling Death's power. Find him and present your offerings to have him craft the Death Spec.`,
+        name: 'Craft Death Spec',
+      },
+      {
+        id: 3,
+        attachment: islandImages.hallowsEve3,
+        description: `The final hunt awaits. Here you will face the source of the island's fear: Death incarnate. Do you have what it takes to stare into his crimson eyes and walk away?`,
+        name: 'Death [World Boss]',
+      },
+    ],
+    level: '13100 - 15500',
+    name: `Hallow's Eve`,
+    type: TYPES.island,
+  },
 };

@@ -4,12 +4,12 @@ import { RARITIES } from '@data';
 import { extractValues } from '@helpers';
 import styles from './Rarity.module.css';
 
-export const RarityList = () => {
+export const RarityList = ({ hidden }) => {
   const [showList, setShowList] = useState(false);
 
   const rarities = extractValues(RARITIES);
   return (
-    <>
+    <div hidden={hidden}>
       <button
         className={styles.viewRarityButton}
         onClick={() => setShowList(!showList)}
@@ -38,6 +38,6 @@ export const RarityList = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };

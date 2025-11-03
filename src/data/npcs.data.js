@@ -9,7 +9,7 @@ export const NPCS = {
     id: 1,
     attachment: npcImages.sham,
     description:
-      'A shadowy man who teaches the art of translocation. Offers the <span>Shadow Step</span> ability. Found lurking in Frostveil Hollow.',
+      'A shadowy man who teaches the art of translocation. Offers the Shadow Step ability. Found lurking in Frostveil Hollow.',
     drops: ['shadowStep'],
     locations: ['frostveilHollow'],
     name: 'Sham',
@@ -20,7 +20,7 @@ export const NPCS = {
     id: 2,
     attachment: npcImages.reaper,
     description:
-      'A grim being that trades power for souls. Offers increase of <span>Soul Stack</span>. Located deep within the Lost Cave.',
+      'A grim being that trades power for souls. Offers increase of Soul Stack. Located deep within the Lost Cave.',
     drops: ['soulStack'],
     locations: ['lostCave'],
     name: 'Reaper',
@@ -31,8 +31,24 @@ export const NPCS = {
     id: 3,
     attachment: npcImages.adam,
     description:
-      'A master of fate who can reshape your core attributes. Offers <span>Trait Reroll</span> services. Stationed on Sunblaze Isle.',
-    drops: ['tought', 'quickReflexes', 'hotBlooded', 'windRunner', 'battleBorn', 'venomousStrikes', 'adrenalineRush', 'berserkerWrath', 'unyieldingForce', 'kingPresence', 'temporalAwareness', 'cursedBlood', 'eternalHunger', 'swordsmaster', 'ultraReflexes'],
+      'A master of fate who can reshape your core attributes. Offers Trait Reroll services. Stationed on Sunblaze Isle.',
+    drops: [
+      'tought',
+      'quickReflexes',
+      'hotBlooded',
+      'windRunner',
+      'battleBorn',
+      'venomousStrikes',
+      'adrenalineRush',
+      'berserkerWrath',
+      'unyieldingForce',
+      'kingPresence',
+      'temporalAwareness',
+      'cursedBlood',
+      'eternalHunger',
+      'swordsmaster',
+      'ultraReflexes',
+    ],
     locations: ['sunblazeIsle'],
     name: 'Adam',
     npcType: NPC_TYPES.specialist,
@@ -42,8 +58,20 @@ export const NPCS = {
     id: 4,
     attachment: npcImages.monkeyDevelops,
     description:
-      'A whimsical primate with a strange mastery over magical energies. Offers <span>Magic Rerolls</span> services. Can be found on Crescent Isle.',
-    drops: ['wind', 'fire', 'poison', 'dark', 'ice', 'lightning', 'poisonDragonSlayer', 'shadowDragonSlayer', 'lightningDragonSlayer', 'fireDragonSlayer', 'waterDragonSlayer'],
+      'A whimsical primate with a strange mastery over magical energies. Offers Magic Rerolls services. Can be found on Crescent Isle.',
+    drops: [
+      'wind',
+      'fire',
+      'poison',
+      'dark',
+      'ice',
+      'lightning',
+      'poisonDragonSlayer',
+      'shadowDragonSlayer',
+      'lightningDragonSlayer',
+      'fireDragonSlayer',
+      'waterDragonSlayer',
+    ],
     locations: ['crescentIsle'],
     name: 'Monkey Develops',
     npcType: NPC_TYPES.specialist,
@@ -53,8 +81,20 @@ export const NPCS = {
     id: 5,
     attachment: npcImages.steve,
     description:
-      'A mysterious man dealing in rare and potent magical alterations. Offers <span>Premium Magic Rerolls</span> services. Located on Sunblaze Isle.',
-    drops: ['wind', 'fire', 'poison', 'dark', 'ice', 'lightning', 'poisonDragonSlayer', 'shadowDragonSlayer', 'lightningDragonSlayer', 'fireDragonSlayer', 'waterDragonSlayer'],
+      'A mysterious man dealing in rare and potent magical alterations. Offers Premium Magic Rerolls services. Located on Sunblaze Isle.',
+    drops: [
+      'wind',
+      'fire',
+      'poison',
+      'dark',
+      'ice',
+      'lightning',
+      'poisonDragonSlayer',
+      'shadowDragonSlayer',
+      'lightningDragonSlayer',
+      'fireDragonSlayer',
+      'waterDragonSlayer',
+    ],
     locations: ['sunblazeIsle'],
     name: 'Steve',
     npcType: NPC_TYPES.specialist,
@@ -64,7 +104,7 @@ export const NPCS = {
     id: 6,
     attachment: npcImages.ichigo,
     description:
-      'Unlocks the <span>Ichigo</span> specialization, granting the powers of a Substitute Soul Reaper. Find him on Sunblaze Isle.',
+      'Unlocks the Ichigo specialization, granting the powers of a Substitute Soul Reaper. Find him on Sunblaze Isle.',
     drops: ['ichigo'],
     locations: ['sunblazeIsle'],
     name: 'Ichigo',
@@ -75,7 +115,7 @@ export const NPCS = {
     id: 7,
     attachment: npcImages.yami,
     description:
-      'Unlocks the <span>Yami</span> specialization, teaching you to wield powerful Dark Magic. Located at the Trial Grounds.',
+      'Unlocks the Yami specialization, teaching you to wield powerful Dark Magic. Located at the Trial Grounds.',
     drops: ['yami'],
     locations: ['trialGrounds'],
     name: 'Yami',
@@ -86,7 +126,7 @@ export const NPCS = {
     id: 8,
     attachment: npcImages.yuno,
     description:
-      'Unlocks the <span>Yuno</span> specialization, granting you the favor of the Wind Spirit. Can be found on Crescent Isle.',
+      'Unlocks the Yuno specialization, granting you the favor of the Wind Spirit. Can be found on Crescent Isle.',
     drops: ['yuno'],
     locations: ['crescentIsle'],
     name: 'Yuno',
@@ -97,7 +137,7 @@ export const NPCS = {
     id: 9,
     attachment: npcImages.rudo,
     description:
-      'Unlocks the <span>Rudo Surebrec</span> specialization, allowing you to manipulate refuse with Jinki. Located at Runic Rock.',
+      'Unlocks the Rudo Surebrec specialization, allowing you to manipulate refuse with Jinki. Located at Runic Rock.',
     drops: ['rudo'],
     locations: ['runicRock'],
     name: 'Rudo Surebrec',
@@ -108,7 +148,7 @@ export const NPCS = {
     id: 10,
     attachment: npcImages.kirito,
     description:
-      'Unlocks the <span>Kirito</span> specialization, bestowing the legendary Dual Blades skill. Found within the Coral Abyss.',
+      'Unlocks the Kirito specialization, bestowing the legendary Dual Blades skill. Found within the Coral Abyss.',
     drops: ['kirito'],
     locations: ['coralAbyss'],
     name: 'Kirito',
@@ -119,7 +159,7 @@ export const NPCS = {
     id: 11,
     attachment: npcImages.amoEmpool,
     description:
-      'Unlocks the <span>Amo Empool</span> specialization, teaching the intoxicating arts of Fragrance Manipulation. Found in the Lost Cave.',
+      'Unlocks the Amo Empool specialization, teaching the intoxicating arts of Fragrance Manipulation. Found in the Lost Cave.',
     drops: ['amoEmpool'],
     locations: ['lostCave'],
     name: 'Amo Empool',
@@ -130,7 +170,7 @@ export const NPCS = {
     id: 12,
     attachment: npcImages.aizen,
     description:
-      "Unlocks the <span>Aizen</span> specialization, revealing the secrets of Kyoka Suigetsu's complete hypnosis. Resides in Shattergrove.",
+      "Unlocks the Aizen specialization, revealing the secrets of Kyoka Suigetsu's complete hypnosis. Resides in Shattergrove.",
     drops: ['aizen'],
     locations: ['shatterGrove'],
     name: 'Aizen',
@@ -141,7 +181,7 @@ export const NPCS = {
     id: 13,
     attachment: npcImages.yunoV2,
     description:
-      'Unlocks the advanced <span>Yuno V2</span> specialization, elevating your wind magic to the Star level. Found high in the Zenith Skylands.',
+      'Unlocks the advanced Yuno V2 specialization, elevating your wind magic to the Star level. Found high in the Zenith Skylands.',
     drops: ['yunoV2'],
     locations: ['zenithSkylands'],
     name: 'Yuno Grinberryall',
@@ -152,7 +192,7 @@ export const NPCS = {
     id: 14,
     attachment: npcImages.yoriichi,
     description:
-      'Unlocks the original <span>Yoriichi</span> specialization, teaching the legendary Sun Breathing forms. Located in the Zenith Skylands.',
+      'Unlocks the original Yoriichi specialization, teaching the legendary Sun Breathing forms. Located in the Zenith Skylands.',
     drops: ['yoriichi'],
     locations: ['zenithSkylands'],
     name: 'Yoriichi',
@@ -163,7 +203,7 @@ export const NPCS = {
     id: 15,
     attachment: npcImages.kokushibo,
     description:
-      'Unlocks the <span>Kokushibo</span> specialization, granting mastery of the elegant and deadly Moon Breathing. Found in Zenith Skylands.',
+      'Unlocks the Kokushibo specialization, granting mastery of the elegant and deadly Moon Breathing. Found in Zenith Skylands.',
     drops: ['kokushibo'],
     locations: ['zenithSkylands'],
     name: 'Kokushibo',
@@ -174,7 +214,7 @@ export const NPCS = {
     id: 16,
     attachment: npcImages.fullbringIchigo,
     description:
-      'Unlocks the <span>Ichigo V2</span> specialization, awakening the power of Fullbring. Can be found in the desolate realm of Hueco Mundo.',
+      'Unlocks the Ichigo V2 specialization, awakening the power of Fullbring. Can be found in the desolate realm of Hueco Mundo.',
     drops: ['ichigoV2'],
     locations: ['huecoMundo'],
     name: 'Fullbring Ichigo',
@@ -185,7 +225,7 @@ export const NPCS = {
     id: 17,
     attachment: npcImages.natsuDragneel,
     description:
-      'Unlocks the <span>Fire Dragon Slayer V2</span> magic, enhancing your flames with Draconic power. Found in the Coral Abyss.',
+      'Unlocks the Fire Dragon Slayer V2 magic, enhancing your flames with Draconic power. Found in the Coral Abyss.',
     drops: ['fireDragonSlayerV2'],
     locations: ['coralAbyss'],
     name: 'Natsu Dragneel',
@@ -196,7 +236,7 @@ export const NPCS = {
     id: 18,
     attachment: npcImages.laxusDreyar,
     description:
-      'Unlocks the <span>Lightning Dragon Slayer V2</span> magic, infusing your attacks with immense voltage. Located in Harvest Grove.',
+      'Unlocks the Lightning Dragon Slayer V2 magic, infusing your attacks with immense voltage. Located in Harvest Grove.',
     drops: ['lightningDragonSlayerV2'],
     locations: ['harvestGrove'],
     name: 'Laxus Dreyar',
@@ -207,7 +247,7 @@ export const NPCS = {
     id: 19,
     attachment: npcImages.stingEucliffe,
     description:
-      'Unlocks the <span>Shadow Dragon Slayer V2</span> magic, allowing you to consume and command shadows. Found in the Zenith Skylands.',
+      'Unlocks the Shadow Dragon Slayer V2 magic, allowing you to consume and command shadows. Found in the Zenith Skylands.',
     drops: ['shadowDragonSlayerV2'],
     locations: ['zenithSkylands'],
     name: 'Sting Eucliffe',
@@ -218,7 +258,7 @@ export const NPCS = {
     id: 20,
     attachment: npcImages.erza,
     description:
-      'Offers the legendary <span>Empress Sword</span>, a weapon worthy of a queen. Speak with her on Sunblaze Isle to prove your worth.',
+      'Offers the legendary Empress Sword, a weapon worthy of a queen. Speak with her on Sunblaze Isle to prove your worth.',
     drops: ['empressSword'],
     locations: ['sunblazeIsle'],
     name: 'Erza',
@@ -351,7 +391,7 @@ export const NPCS = {
     attachment: npcImages.yami,
     description:
       'A grim captain whose very presence seems to devour the light. He channels immense Dark Magic through his katana, capable of slicing through dimensions. Found in Shattergrove or can be summoned in the Trial Grounds.',
-    drops: ['cloverShard', 'darkSoul', 'legendaryChest','yamiCloak'],
+    drops: ['cloverShard', 'darkSoul', 'legendaryChest', 'yamiCloak'],
     locations: [],
     name: 'Yami',
     npcType: NPC_TYPES.worldBoss,
@@ -373,7 +413,13 @@ export const NPCS = {
     attachment: npcImages.rudo,
     description:
       "A member of the Cleaners, he sees the life and soul within discarded objects. He wields the Jinki '3R', allowing him to manipulate refuse as deadly weapons. Located in a dungeon deep within the Lost Cave.",
-    drops: ['gauntletPiece', 'trash', 'candyBar', 'rudoChains', 'gachiakutaToken'],
+    drops: [
+      'gauntletPiece',
+      'trash',
+      'candyBar',
+      'rudoChains',
+      'gachiakutaToken',
+    ],
     locations: [],
     name: 'Rudo Surebrec',
     npcType: NPC_TYPES.worldBoss,
@@ -477,8 +523,7 @@ export const NPCS = {
   tojiBoss: {
     id: 43,
     attachment: npcImages.toji,
-    description:
-      `The infamous 'Sorcerer Killer.' A man who traded cursed energy for a body honed to the pinnacle of superhuman ability, making him an invisible predator to those who rely on sensing magic. He stalks the shadowy depths of the <span>Lost Cave </span>, wielding a deadly arsenal of cursed tools with terrifying speed and precision. To challenge him is to face a force of nature that defies the very laws of sorcery.`,
+    description: `The infamous 'Sorcerer Killer.' A man who traded cursed energy for a body honed to the pinnacle of superhuman ability, making him an invisible predator to those who rely on sensing magic. He stalks the shadowy depths of the Lost Cave , wielding a deadly arsenal of cursed tools with terrifying speed and precision. To challenge him is to face a force of nature that defies the very laws of sorcery.`,
     drops: ['bloodEssence', 'cursedOrb', 'invertedSpear', 'jujutsuKaisenToken'],
     locations: ['lostCave'],
     name: 'Toji (Vaulted)',
@@ -488,8 +533,7 @@ export const NPCS = {
   tojiSpec: {
     id: 44,
     attachment: npcImages.toji,
-    description:
-      `Having perfected the art of combat without cursed energy, Toji Fushiguro now offers to impart his brutal wisdom. He teaches a philosophy of pure physical supremacy, showing students how to push their bodies beyond mortal limits and become the ultimate hunter of sorcerers. Seek him atop the windswept <span>Runic Rock</span> to begin your training and learn what it truly means to be a 'Sorcerer Killer'.`,
+    description: `Having perfected the art of combat without cursed energy, Toji Fushiguro now offers to impart his brutal wisdom. He teaches a philosophy of pure physical supremacy, showing students how to push their bodies beyond mortal limits and become the ultimate hunter of sorcerers. Seek him atop the windswept Runic Rock to begin your training and learn what it truly means to be a 'Sorcerer Killer'.`,
     drops: ['toji'],
     locations: ['runicRock'],
     name: 'Toji (Vaulted)',
@@ -500,11 +544,39 @@ export const NPCS = {
     id: 45,
     attachment: npcImages.inumaki,
     description:
-      'A master of the rare and dangerous Cursed Speech technique. He teaches students how to imbue their words with cursed energy, turning simple commands into powerful, reality-bending edicts that can stop an opponent in their tracks or shatter them with a single word. He can be found in the echoing chambers of the <span>Lost Cave</span>, a place where he can practice his art without unintentionally harming others.',
+      'A master of the rare and dangerous Cursed Speech technique. He teaches students how to imbue their words with cursed energy, turning simple commands into powerful, reality-bending edicts that can stop an opponent in their tracks or shatter them with a single word. He can be found in the echoing chambers of the Lost Cave, a place where he can practice his art without unintentionally harming others.',
     drops: ['inumaki'],
     locations: ['lostCave'],
     name: 'Inumaki (Vaulted)',
     npcType: NPC_TYPES.specialist,
+    type: TYPES.npc,
+  },
+  deathSpec: {
+    id: 46,
+    attachment: npcImages.death,
+    description:
+      'A silent figure draped in shadow, known only as Death. Though feared by many, he offers his techniques to those who dare approach him with resolve. Within the Hollow Eve, he teaches the art of balance between life and demise — a dance of precision, patience, and inevitability. To learn from him is to walk the fine line between mercy and destruction.',
+    drops: ['death'],
+    locations: ['hollowEve'],
+    name: 'Death',
+    npcType: NPC_TYPES.specialist,
+    type: TYPES.npc,
+  },
+  deathBoss: {
+    id: 47,
+    attachment: npcImages.death,
+    description:
+      'An ancient entity that personifies the end of all things. When the veil between worlds thins during Hollow Eve, Death manifests — his presence turning the air cold and the ground lifeless. With his engraved sickle in hand, he reaps souls without remorse, punishing arrogance and greed alike. Only those who defy inevitability itself dare face him, for defeating Death is to challenge fate itself.',
+    drops: [
+      'engravedSickle',
+      'mythicalChest',
+      'exoticChest',
+      'halloweenCandy',
+      'deathCowl',
+    ],
+    locations: ['hollowEve'],
+    name: 'Death',
+    npcType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
 };

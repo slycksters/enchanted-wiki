@@ -1,13 +1,12 @@
 .list {
-  margin-left: 21px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  background-color: var(--enchanted-bg-secondary);
 }
 
 .item {
-  border-left: 1px solid var(--enchanted-border-color);
+  border-left: 3px solid var(--enchanted-border-color);
+  font-size: 13px;
   overflow: hidden;
-  padding: 5px 0px;
+  padding: 8px 20px;
   text-overflow: ellipsis;
   transition: padding-left 0.1s ease-in-out, border-width 0.1s ease-in-out;
   white-space: nowrap;
@@ -15,8 +14,7 @@
 
 .activeItem, .item:hover {
   border-color: var(--enchanted-text-primary);
-  border-width: 3px;
-  padding-left: 4px;
+  padding-left: 30px;
   color: var(--enchanted-text-primary);
   cursor: pointer;
 }

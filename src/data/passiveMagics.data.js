@@ -110,7 +110,7 @@ export const PASSIVE_MAGICS = {
     ],
     attachment: passiveMagicImages.soulDevourer,
     description:
-      'Consume the souls of the fallen — each kill strengthens your power, <span>increasing your DMG multiplier by 0.01</span> per soul devoured.',
+      'Consume the souls of the fallen — each kill strengthens your power, increasing your DMG multiplier by 0.01 per soul devoured.',
     isGatcha: true,
     name: 'Soul Devourer',
     rarity: RARITIES.exotic,

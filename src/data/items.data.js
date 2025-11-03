@@ -271,7 +271,16 @@ export const ITEMS = {
     itemType: ITEM_TYPES.artifacts,
     name: `Legendary Chest`,
     rarity: RARITIES.legendary,
-    sources: ['grayBoss', 'natsuBoss', 'ichigoBoss', 'yamiBoss', 'yunoBoss', 'erzaBoss','node', 'specialNode'],
+    sources: [
+      'grayBoss',
+      'natsuBoss',
+      'ichigoBoss',
+      'yamiBoss',
+      'yunoBoss',
+      'erzaBoss',
+      'node',
+      'specialNode',
+    ],
     type: TYPES.item,
   },
   wood: {
@@ -298,7 +307,7 @@ export const ITEMS = {
     id: 19,
     attachment: itemImages.iron,
     description:
-      'A heavy ingot of refined iron, cool to the touch. While merchants will pay a fair price for the raw metal, its true value lies in <span>reinforcing your mining tools</span> to break through harder rock.',
+      'A heavy ingot of refined iron, cool to the touch. While merchants will pay a fair price for the raw metal, its true value lies in reinforcing your mining tools to break through harder rock.',
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Iron`,
@@ -357,7 +366,7 @@ export const ITEMS = {
   trash: {
     id: 22,
     attachment: itemImages.trash,
-    description: `A tightly bound bag of discarded objects that pulses with a strange, latent power. To the untrained eye it's worthless, but to one who understands, it contains the 'soul' of things once cherished—the very material needed for <span>Gatchiakuta Specs</span>.`,
+    description: `A tightly bound bag of discarded objects that pulses with a strange, latent power. To the untrained eye it's worthless, but to one who understands, it contains the 'soul' of things once cherished—the very material needed for Gatchiakuta Specs.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Trash`,
@@ -369,7 +378,7 @@ export const ITEMS = {
     id: 23,
     attachment: itemImages.swordGuard,
     description:
-      'The battle-scarred guard of a legendary black sword, still humming with the echo of countless high-speed clashes. It carries the indomitable will of a swordsman who stood against impossible odds, and is the catalyst for forging the <span>Kirito Spec</span>.',
+      'The battle-scarred guard of a legendary black sword, still humming with the echo of countless high-speed clashes. It carries the indomitable will of a swordsman who stood against impossible odds, and is the catalyst for forging the Kirito Spec.',
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Sword Guard`,
@@ -381,7 +390,7 @@ export const ITEMS = {
     id: 24,
     attachment: itemImages.icicle,
     description:
-      'A shard of eternally frozen, magical ice that radiates a bitter cold. It will never melt by normal means, as it contains the very essence of creation magic. <span>Gray</span> can use this core to shape the formidable <span>Frosted Spear</span>.',
+      'A shard of eternally frozen, magical ice that radiates a bitter cold. It will never melt by normal means, as it contains the very essence of creation magic. Gray can use this core to shape the formidable Frosted Spear.',
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Icicle`,
@@ -393,7 +402,7 @@ export const ITEMS = {
     id: 25,
     attachment: itemImages.hollowMask,
     description:
-      'A chilling, bone-white fragment of a mask that seems to stare into your soul. It pulses with a desperate, hungry power—the tangible echo of an inner demon. A necessary offering to unlock the <span>Bleach Specs</span>.',
+      'A chilling, bone-white fragment of a mask that seems to stare into your soul. It pulses with a desperate, hungry power—the tangible echo of an inner demon. A necessary offering to unlock the Bleach Specs.',
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Hollow Mask`,
@@ -404,7 +413,7 @@ export const ITEMS = {
   hollowSoul: {
     id: 26,
     attachment: itemImages.hollowSoul,
-    description: `A swirling vortex of condensed spiritual energy, the very essence of a Hollow's tormented existence. It is cold, empty, and seethes with a raw, predatory instinct. This unstable power is a catalyst for unlocking the <span>Bleach Specs</span>.`,
+    description: `A swirling vortex of condensed spiritual energy, the very essence of a Hollow's tormented existence. It is cold, empty, and seethes with a raw, predatory instinct. This unstable power is a catalyst for unlocking the Bleach Specs.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Hollow Soul`,
@@ -449,17 +458,13 @@ export const ITEMS = {
     itemType: ITEM_TYPES.artifacts,
     name: `Epic Chest`,
     rarity: RARITIES.epic,
-    sources: [
-      'grayBoss',
-      'node',
-      'specialNode',
-    ],
+    sources: ['grayBoss', 'node', 'specialNode'],
     type: TYPES.item,
   },
   diamond: {
     id: 29,
     attachment: itemImages.diamond,
-    description: `A flawless, multi-faceted gemstone that glitters with captured starlight. Its nigh-unbreakable structure is perfect for pinnacle <span>mining upgrades</span> and crafting <span>Epic Equipments</span>, though its sheer beauty alone commands a king's ransom.`,
+    description: `A flawless, multi-faceted gemstone that glitters with captured starlight. Its nigh-unbreakable structure is perfect for pinnacle mining upgrades and crafting Epic Equipments, though its sheer beauty alone commands a king's ransom.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Diamond`,
@@ -516,7 +521,7 @@ export const ITEMS = {
   aizenEyePatch: {
     id: 34,
     attachment: itemImages.aizenEyePatch,
-    description: `The very eyepatch used to seal the immense spiritual pressure of Sōsuke Aizen. It struggles to contain the residual power within, which can be harnessed to unlock the formidable <span>Aizen Spec</span>. A chilling testament to power constrained.`,
+    description: `The very eyepatch used to seal the immense spiritual pressure of Sōsuke Aizen. It struggles to contain the residual power within, which can be harnessed to unlock the formidable Aizen Spec. A chilling testament to power constrained.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Aizen Eye Patch`,
@@ -527,7 +532,7 @@ export const ITEMS = {
   windOrb: {
     id: 35,
     attachment: itemImages.windOrb,
-    description: `A swirling sphere of pure, condensed wind magic, crackling with untamed power. It holds the essence of a Spirit-chosen mage at the peak of his strength and is the only catalyst capable of creating the <span>Yuno V2 Spec</span>.`,
+    description: `A swirling sphere of pure, condensed wind magic, crackling with untamed power. It holds the essence of a Spirit-chosen mage at the peak of his strength and is the only catalyst capable of creating the Yuno V2 Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Wind Orb`,
@@ -538,7 +543,7 @@ export const ITEMS = {
   windGem: {
     id: 36,
     attachment: itemImages.windGem,
-    description: `A beautifully cut gemstone with a miniature tempest swirling within its core. It resonates with the favor of the wind and is sought by those who wish to craft the <span>Yuno Spec</span>. Its natural beauty also makes it quite valuable.`,
+    description: `A beautifully cut gemstone with a miniature tempest swirling within its core. It resonates with the favor of the wind and is sought by those who wish to craft the Yuno Spec. Its natural beauty also makes it quite valuable.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Wind Gem`,
@@ -549,7 +554,7 @@ export const ITEMS = {
   hollowOrb: {
     id: 37,
     attachment: itemImages.hollowOrb,
-    description: `An orb of volatile spiritual energy, so dense it feels like a miniature black sun. It thrums with the raw, untamed power of <span>Hueco Mundo</span> and is the final catalyst needed to unleash the overwhelming potential of the <span>Ichigo V2 Spec</span>.`,
+    description: `An orb of volatile spiritual energy, so dense it feels like a miniature black sun. It thrums with the raw, untamed power of Hueco Mundo and is the final catalyst needed to unleash the overwhelming potential of the Ichigo V2 Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Hollow Orb`,
@@ -560,7 +565,7 @@ export const ITEMS = {
   goldCoin: {
     id: 38,
     attachment: itemImages.goldCoin,
-    description: `An ancient gold coin stamped with the insignia of a forgotten kingdom, found only within the treacherous depths of the <span>Lost Cave</span>. This unique currency is highly sought after by special vendors who will trade <span>rare Spec materials</span> for it.`,
+    description: `An ancient gold coin stamped with the insignia of a forgotten kingdom, found only within the treacherous depths of the Lost Cave. This unique currency is highly sought after by special vendors who will trade rare Spec materials for it.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Gold Coin`,
@@ -571,7 +576,7 @@ export const ITEMS = {
   flamingSoul: {
     id: 39,
     attachment: itemImages.flamingSoul,
-    description: `The crystallized essence of a Fairy Tail mage's soul, blazing with the combined fire of a Dragon Slayer and the unwavering will of an armored queen. Its power can forge both the legendary <span>Empress Sword</span> and the devastating <span>Dragon Slayer Gauntlet</span>.`,
+    description: `The crystallized essence of a Fairy Tail mage's soul, blazing with the combined fire of a Dragon Slayer and the unwavering will of an armored queen. Its power can forge both the legendary Empress Sword and the devastating Dragon Slayer Gauntlet.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Flaming Soul`,
@@ -582,7 +587,7 @@ export const ITEMS = {
   darkSoul: {
     id: 40,
     attachment: itemImages.darkSoul,
-    description: `A fragment of a soul steeped in the abyssal Dark Magic of the Clover Kingdom's strongest Magic Knight Captain. It radiates an intimidating pressure and is the core material for forging the <span>Hellforge Gauntlets</span> and mastering the <span>Yami Spec</span>.`,
+    description: `A fragment of a soul steeped in the abyssal Dark Magic of the Clover Kingdom's strongest Magic Knight Captain. It radiates an intimidating pressure and is the core material for forging the Hellforge Gauntlets and mastering the Yami Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Dark Soul`,
@@ -593,7 +598,7 @@ export const ITEMS = {
   dragonShard: {
     id: 41,
     attachment: itemImages.dragonShard,
-    description: `A scale that has flaked off a true Fire Dragon, still radiating a searing heat. It contains the very essence of Dragon Slayer magic and is the final component needed to construct the mighty <span>Dragon Slayer Gauntlet</span>.`,
+    description: `A scale that has flaked off a true Fire Dragon, still radiating a searing heat. It contains the very essence of Dragon Slayer magic and is the final component needed to construct the mighty Dragon Slayer Gauntlet.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Dragon Shard`,
@@ -604,7 +609,7 @@ export const ITEMS = {
   cursedOrb: {
     id: 42,
     attachment: itemImages.cursedOrb,
-    description: `A malevolent orb seething with condensed Cursed Energy, born from the negative emotions of humanity. Only a true Jujutsu Sorcerer can handle its immense power to unlock the secrets of the <span>Jujutsu Kaisen Specs (Vaulted)</span>.`,
+    description: `A malevolent orb seething with condensed Cursed Energy, born from the negative emotions of humanity. Only a true Jujutsu Sorcerer can handle its immense power to unlock the secrets of the Jujutsu Kaisen Specs (Vaulted).`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Cursed Orb`,
@@ -615,7 +620,7 @@ export const ITEMS = {
   slayerSoul: {
     id: 43,
     attachment: itemImages.slayerSoul,
-    description: `The very embodiment of a swordsman's soul, so pure and powerful it feels like touching the sun. It is the legacy of the first Breathing Style user, and the only way to awaken the legendary <span>Yoriichi Spec</span>.`,
+    description: `The very embodiment of a swordsman's soul, so pure and powerful it feels like touching the sun. It is the legacy of the first Breathing Style user, and the only way to awaken the legendary Yoriichi Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Slayer Soul`,
@@ -626,7 +631,7 @@ export const ITEMS = {
   sparringSword: {
     id: 44,
     attachment: itemImages.sparringSword,
-    description: `A simple wooden training sword, worn smooth by centuries of relentless practice. It contains the echoes of every form, every breath, and every battle of the greatest swordsmen in history, making it the key to mastering all <span>Demon Slayer Specs</span>.`,
+    description: `A simple wooden training sword, worn smooth by centuries of relentless practice. It contains the echoes of every form, every breath, and every battle of the greatest swordsmen in history, making it the key to mastering all Demon Slayer Specs.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Sparring Sword`,
@@ -637,7 +642,7 @@ export const ITEMS = {
   missingKey: {
     id: 45,
     attachment: itemImages.missingKey,
-    description: `Long ago, the keys to the <span>Lost Cave's</span> deepest chambers were scattered across the realm to prevent the escape of the mythical beasts imprisoned within. These keys are now hoarded by fearsome guardians in the <span>Coral Abyss</span>, <span>Harvest Grove</span>, and <span>Zenith Skylands</span>. Find just one of these missing keys to bypass the ancient seal and challenge the powerful creatures that lie in wait.`,
+    description: `Long ago, the keys to the Lost Cave's deepest chambers were scattered across the realm to prevent the escape of the mythical beasts imprisoned within. These keys are now hoarded by fearsome guardians in the Coral Abyss, Harvest Grove, and Zenith Skylands. Find just one of these missing keys to bypass the ancient seal and challenge the powerful creatures that lie in wait.`,
     isGatcha: false,
     itemType: ITEM_TYPES.artifacts,
     name: `Missing Key`,
@@ -659,7 +664,7 @@ export const ITEMS = {
   dior: {
     id: 47,
     attachment: itemImages.dior,
-    description: `A bottle of enchanted perfume that emanates a dangerously alluring scent. It contains the very essence of Amo Empool's Fragrance Manipulation, a power capable of twisting reality itself. Harnessing this essence is the only way to master the <span>Amo Empool Spec</span>.`,
+    description: `A bottle of enchanted perfume that emanates a dangerously alluring scent. It contains the very essence of Amo Empool's Fragrance Manipulation, a power capable of twisting reality itself. Harnessing this essence is the only way to master the Amo Empool Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Dior`,
@@ -670,7 +675,7 @@ export const ITEMS = {
   demonSoul: {
     id: 48,
     attachment: itemImages.demonSoul,
-    description: `The crystallized soul of the Upper Rank One demon, Kokushibo. It seethes with centuries of regret and the chilling perfection of Moon Breathing. To absorb it is to walk the razor's edge between humanity and monstrosity—the final step to unlocking the <span>Kokushibo Spec</span>.`,
+    description: `The crystallized soul of the Upper Rank One demon, Kokushibo. It seethes with centuries of regret and the chilling perfection of Moon Breathing. To absorb it is to walk the razor's edge between humanity and monstrosity—the final step to unlocking the Kokushibo Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Demon Soul`,
@@ -681,7 +686,7 @@ export const ITEMS = {
   candyBar: {
     id: 49,
     attachment: itemImages.candyBar,
-    description: `It may look like a simple candy bar, but to Rudo, it's a taste of a life he fought to protect. This small comfort holds a profound significance, granting him the focus and will to push his Jinki to its absolute limit and unlock the <span>Rudo Surebrec Spec</span>.`,
+    description: `It may look like a simple candy bar, but to Rudo, it's a taste of a life he fought to protect. This small comfort holds a profound significance, granting him the focus and will to push his Jinki to its absolute limit and unlock the Rudo Surebrec Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Candy`,
@@ -692,7 +697,7 @@ export const ITEMS = {
   coughMedicine: {
     id: 50,
     attachment: itemImages.coughMedicine,
-    description: `A specially formulated throat syrup, far more potent than any common remedy. It's designed to soothe a throat strained by the constant use of the Cursed Speech technique, allowing the user to wield their devastating power without self-destructing. The key to mastering the <span>Inumaki Spec (Vaulted)</span>.`,
+    description: `A specially formulated throat syrup, far more potent than any common remedy. It's designed to soothe a throat strained by the constant use of the Cursed Speech technique, allowing the user to wield their devastating power without self-destructing. The key to mastering the Inumaki Spec (Vaulted).`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Cough Medicine`,
@@ -703,7 +708,7 @@ export const ITEMS = {
   slayerSword: {
     id: 51,
     attachment: itemImages.slayerSword,
-    description: `The crimson Nichirin blade wielded by the legendary Yoriichi Tsugikuni, the first and most powerful Demon Slayer. Its edge is flawless, having slain countless demons, and it still resonates with the pure, searing heat of Sun Breathing. This sacred blade is the key to awakening the peerless <span>Yoriichi Spec</span>.`,
+    description: `The crimson Nichirin blade wielded by the legendary Yoriichi Tsugikuni, the first and most powerful Demon Slayer. Its edge is flawless, having slain countless demons, and it still resonates with the pure, searing heat of Sun Breathing. This sacred blade is the key to awakening the peerless Yoriichi Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Slayer Sword`,
@@ -714,7 +719,7 @@ export const ITEMS = {
   gauntletPiece: {
     id: 52,
     attachment: itemImages.gauntletPiece,
-    description: `One half of Rudo's powerful Jinki, humming with contained life-force. On its own, its power is incomplete, but when combined with its missing half, it forms a symbiotic weapon of immense destructive potential, unlocking the <span>Rudo Surebrec Spec</span>.`,
+    description: `One half of Rudo's powerful Jinki, humming with contained life-force. On its own, its power is incomplete, but when combined with its missing half, it forms a symbiotic weapon of immense destructive potential, unlocking the Rudo Surebrec Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Gauntlet Piece`,
@@ -725,7 +730,7 @@ export const ITEMS = {
   elucidator: {
     id: 53,
     attachment: itemImages.elucidator,
-    description: `A pitch-black, demonic sword dropped from a high-level monster. Wielded by the Black Swordsman, it forms one half of a legendary dual-blade set. Re-unite it with the Dark Repulser to unleash the ultimate skill and unlock the <span>Kirito Spec</span>.`,
+    description: `A pitch-black, demonic sword dropped from a high-level monster. Wielded by the Black Swordsman, it forms one half of a legendary dual-blade set. Re-unite it with the Dark Repulser to unleash the ultimate skill and unlock the Kirito Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Elucidator`,
@@ -766,7 +771,7 @@ export const ITEMS = {
   darkRepulser: {
     id: 55,
     attachment: itemImages.darkRepulser,
-    description: `An elegant, crystalline blade forged by a master artisan from a dragon's hoard. It serves as the swift, aquamarine counterpart to the Elucidator. Only by wielding both can one truly master the art of dual blades and unlock the <span>Kirito Spec</span>.`,
+    description: `An elegant, crystalline blade forged by a master artisan from a dragon's hoard. It serves as the swift, aquamarine counterpart to the Elucidator. Only by wielding both can one truly master the art of dual blades and unlock the Kirito Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Dark Repulser`,
@@ -777,7 +782,7 @@ export const ITEMS = {
   demonSword: {
     id: 56,
     attachment: itemImages.demonSword,
-    description: `A grotesque blade forged from the very flesh and bone of the Upper Rank One demon. It writhes as if alive, its numerous eyes scanning for prey. The sword itself carries the chilling techniques of Moon Breathing and is the key to embracing the demonic power of the <span>Kokushibo Spec</span>.`,
+    description: `A grotesque blade forged from the very flesh and bone of the Upper Rank One demon. It writhes as if alive, its numerous eyes scanning for prey. The sword itself carries the chilling techniques of Moon Breathing and is the key to embracing the demonic power of the Kokushibo Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Demon Sword`,
@@ -788,7 +793,7 @@ export const ITEMS = {
   bootPiece: {
     id: 57,
     attachment: itemImages.bootPiece,
-    description: `One half of a set of enchanted footwear, infused with the essence of Fragrance Manipulation. Alone, it is a curious artifact, but when paired with its other half, it grants the wearer unparalleled speed and illusionary power, unlocking the <span>Amo Empool Spec</span>.`,
+    description: `One half of a set of enchanted footwear, infused with the essence of Fragrance Manipulation. Alone, it is a curious artifact, but when paired with its other half, it grants the wearer unparalleled speed and illusionary power, unlocking the Amo Empool Spec.`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Boot Piece`,
@@ -821,7 +826,7 @@ export const ITEMS = {
   stainScarf: {
     id: 60,
     attachment: itemImages.stainScarf,
-    description: `The tattered, blood-red scarf of the infamous Hero Killer, Stain. It's imbued with his terrifying conviction and grants a significant boost in power to anyone who dares wear it. <span>Can be purchased for 550 Robux (Limited)</span>.`,
+    description: `The tattered, blood-red scarf of the infamous Hero Killer, Stain. It's imbued with his terrifying conviction and grants a significant boost in power to anyone who dares wear it. Can be purchased for 550 Robux (Limited).`,
     isGatcha: false,
     itemType: ITEM_TYPES.accessories,
     name: `Stain's Scarf (Vaulted)`,
@@ -837,7 +842,7 @@ export const ITEMS = {
   mlgGlasses: {
     id: 61,
     attachment: itemImages.mlgGlasses,
-    description: `Pixelated shades that radiate pure, unfiltered 'pro gamer' energy. Wearing these not only makes you look cooler but grants a mysterious and surprisingly potent boost to your power. <span>Can be purchased for 299 Robux (Limited)</span>.`,
+    description: `Pixelated shades that radiate pure, unfiltered 'pro gamer' energy. Wearing these not only makes you look cooler but grants a mysterious and surprisingly potent boost to your power. Can be purchased for 299 Robux (Limited).`,
     isGatcha: false,
     itemType: ITEM_TYPES.accessories,
     name: `MLG Glasses`,
@@ -853,7 +858,7 @@ export const ITEMS = {
   invertedSpear: {
     id: 62,
     attachment: itemImages.invertedSpear,
-    description: `A Special Grade Cursed Tool with a fearsome reputation. Its unique property allows it to forcibly nullify any Cursed Technique or energy it touches, making it the ultimate weapon against sorcerers. A lost relic required to unlock the <span>Toji Spec (Vaulted)</span>.`,
+    description: `A Special Grade Cursed Tool with a fearsome reputation. Its unique property allows it to forcibly nullify any Cursed Technique or energy it touches, making it the ultimate weapon against sorcerers. A lost relic required to unlock the Toji Spec (Vaulted).`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Inverted Spear (Vaulted)`,
@@ -864,7 +869,7 @@ export const ITEMS = {
   speechMegaphone: {
     id: 63,
     attachment: itemImages.speechMegaphone,
-    description: `A Cursed Tool designed to amplify the user's voice and Cursed Energy to terrifying levels. It focuses the power of the Cursed Speech technique, allowing for commands of immense scale and potency. The key to mastering the <span>Inumaki Spec (Vaulted)</span>.`,
+    description: `A Cursed Tool designed to amplify the user's voice and Cursed Energy to terrifying levels. It focuses the power of the Cursed Speech technique, allowing for commands of immense scale and potency. The key to mastering the Inumaki Spec (Vaulted).`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Speech Megaphone (Vaulted)`,
@@ -908,7 +913,7 @@ export const ITEMS = {
   bloodEssence: {
     id: 67,
     attachment: itemImages.bloodEssence,
-    description: `The crystallized essence of Toji Fushiguro's unique bloodline. It contains no Cursed Energy, only the blueprint for a body honed to the pinnacle of physical perfection. This is the catalyst needed to forsake sorcery and unlock the devastating power of the <span>Toji Spec (Vaulted)</span>.`,
+    description: `The crystallized essence of Toji Fushiguro's unique bloodline. It contains no Cursed Energy, only the blueprint for a body honed to the pinnacle of physical perfection. This is the catalyst needed to forsake sorcery and unlock the devastating power of the Toji Spec (Vaulted).`,
     isGatcha: false,
     itemType: ITEM_TYPES.materials,
     name: `Blood Essence`,
@@ -917,7 +922,7 @@ export const ITEMS = {
     type: TYPES.item,
   },
   raidToken: {
-    id: 67,
+    id: 68,
     attachment: itemImages.raidToken,
     description: `A hard-earned token awarded for successfully clearing the Lost Cave dungeon. Use it to purchase powerful, exclusive rewards from dungeon shop.`,
     isGatcha: false,
@@ -925,6 +930,43 @@ export const ITEMS = {
     name: `Raid Token`,
     rarity: RARITIES.v2,
     sources: ['lostCave'],
+    type: TYPES.item,
+  },
+  engravedSickle: {
+    id: 69,
+    attachment: itemImages.engravedSickle,
+    description: `One of a matched pair of sickles wielded by Death itself. The cold, dark steel hums with a profound chill, a whisper of the inevitable end. This material is essential for crafting the Death Spec, allowing one to channel the grim wolf's relentless power.`,
+    isGatcha: false,
+    itemType: ITEM_TYPES.materials,
+    name: `Engraved Sickle`,
+    rarity: RARITIES.exotic,
+    sources: ['deathBoss'],
+    type: TYPES.item,
+  },
+  deathCowl: {
+    id: 70,
+    attachment: itemImages.deathCowl,
+    description: `The simple, dark cowl worn by the grim wolf himself. It is woven from shadow and cold silence, seeming to absorb all light and sound around it. Those who wear it can almost hear the faint, chilling whistle on the wind, a constant reminder of the hunt.`,
+    isGatcha: false,
+    itemType: ITEM_TYPES.accessories,
+    name: `Death's Cowl`,
+    rarity: RARITIES.exotic,
+    sources: ['deathBoss'],
+    stats: {
+      blade: 5500,
+      defense: 2500,
+    },
+    type: TYPES.item,
+  },
+  halloweenCandy: {
+    id: 71,
+    attachment: itemImages.halloweenCandy,
+    description: `Trick or treat? This candy offers both. A moment of sweetness followed by an eternity of dread. The chilling sensation it imparts is a key component for forging the Death Spec.`,
+    isGatcha: false,
+    itemType: ITEM_TYPES.materials,
+    name: `Halloween Candy`,
+    rarity: RARITIES.legendary,
+    sources: ['deathBoss'],
     type: TYPES.item,
   },
 };

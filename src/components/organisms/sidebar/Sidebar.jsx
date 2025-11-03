@@ -42,7 +42,7 @@ export const Sidebar = ({
         })}
       >
         <Searchbar onSearch={handleOnSearch} />
-        <RarityList />
+        <RarityList hidden={filteredData.length === 0} />
         <SearchList
           isMultiList={isMultiList}
           list={filteredData}

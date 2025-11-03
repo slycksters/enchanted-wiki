@@ -8,7 +8,7 @@ export const TRAITS = {
     id: 1,
     attachment: traitImages.tough,
     description:
-      'Hardened by countless battles, the Tough trait grants <span>1.05x DMG and 1.12x HP multiplier</span>, reflecting endurance built through adversity.',
+      'Hardened by countless battles, the Tough trait grants 1.05x DMG and 1.12x HP multiplier, reflecting endurance built through adversity.',
     isGatcha: true,
     name: 'Tough',
     rarity: RARITIES.common,
@@ -19,7 +19,7 @@ export const TRAITS = {
     id: 2,
     attachment: traitImages.quickReflexes,
     description:
-      'Sharpened instincts and swift movements define those with the Quick Reflexes trait. Gain <span>1.12x DMG and 1.05x HP multiplier</span>, striking faster and surviving longer in battle.',
+      'Sharpened instincts and swift movements define those with the Quick Reflexes trait. Gain 1.12x DMG and 1.05x HP multiplier, striking faster and surviving longer in battle.',
     isGatcha: true,
     name: 'Quick Reflexes',
     rarity: RARITIES.common,
@@ -30,7 +30,7 @@ export const TRAITS = {
     id: 3,
     attachment: traitImages.hotBlooded,
     description:
-      'Fueled by fiery determination, Hotblooded individuals thrive in the heat of combat. Gain <span>1.35x DMG and 1.30x HP multiplier</span>, channeling their passion into raw power and resilience.',
+      'Fueled by fiery determination, Hotblooded individuals thrive in the heat of combat. Gain 1.35x DMG and 1.30x HP multiplier, channeling their passion into raw power and resilience.',
     isGatcha: true,
     name: 'Hotblooded',
     rarity: RARITIES.uncommon,
@@ -41,7 +41,7 @@ export const TRAITS = {
     id: 4,
     attachment: traitImages.windRunner,
     description:
-      'Swift as a storm and untouchable as the wind, Wind Runners embody speed and strength in harmony. Gain <span>1.30x DMG, 1.35x HP multiplier, and 1.50x Sprint Speed</span>, mastering agility and endurance alike.',
+      'Swift as a storm and untouchable as the wind, Wind Runners embody speed and strength in harmony. Gain 1.30x DMG, 1.35x HP multiplier, and 1.50x Sprint Speed, mastering agility and endurance alike.',
     isGatcha: true,
     name: 'Wind Runner',
     rarity: RARITIES.uncommon,
@@ -52,7 +52,7 @@ export const TRAITS = {
     id: 5,
     attachment: traitImages.battleBorn,
     description:
-      'Forged in the chaos of countless battles, the Battle Born thrive where others fall. Gain <span>1.55x DMG and 1.50x HP multiplier</span>, embodying the strength and endurance of a true warrior.',
+      'Forged in the chaos of countless battles, the Battle Born thrive where others fall. Gain 1.55x DMG and 1.50x HP multiplier, embodying the strength and endurance of a true warrior.',
     isGatcha: true,
     name: 'Battle Born',
     rarity: RARITIES.rare,
@@ -63,7 +63,7 @@ export const TRAITS = {
     id: 6,
     attachment: traitImages.venomousStrikes,
     description:
-      'Those who wield Venomous Strikes fight with deadly precision, each blow laced with lingering toxicity. Gain <span>1.05x DMG and 1.75x HP multiplier</span>, favoring endurance while striking with calculated lethality.',
+      'Those who wield Venomous Strikes fight with deadly precision, each blow laced with lingering toxicity. Gain 1.05x DMG and 1.75x HP multiplier, favoring endurance while striking with calculated lethality.',
     isGatcha: true,
     name: 'Venomous Strikes',
     rarity: RARITIES.epic,
@@ -74,7 +74,7 @@ export const TRAITS = {
     id: 7,
     attachment: traitImages.adrenalineRush,
     description:
-      'Fueled by the thrill of battle, those with Adrenaline Rush unleash explosive bursts of power when danger looms. Gain <span>1.75x DMG and 1.05x HP multiplier</span>, trading endurance for sheer offensive might.',
+      'Fueled by the thrill of battle, those with Adrenaline Rush unleash explosive bursts of power when danger looms. Gain 1.75x DMG and 1.05x HP multiplier, trading endurance for sheer offensive might.',
     isGatcha: true,
     name: 'Adrenaline Rush',
     rarity: RARITIES.epic,
@@ -84,7 +84,7 @@ export const TRAITS = {
   berserkerWrath: {
     id: 8,
     attachment: traitImages.berserkersWrath,
-    description: `Consumed by unrelenting fury, those with Berserker's Wrath become unstoppable forces on the battlefield. Gain <span>2.10x DMG and 2.00x HP multiplier</span>, embodying pure rage and resilience.`,
+    description: `Consumed by unrelenting fury, those with Berserker's Wrath become unstoppable forces on the battlefield. Gain 2.10x DMG and 2.00x HP multiplier, embodying pure rage and resilience.`,
     isGatcha: true,
     name: `Berserker's Wrath`,
     rarity: RARITIES.legendary,
@@ -95,7 +95,7 @@ export const TRAITS = {
     id: 9,
     attachment: traitImages.unyieldingForce,
     description:
-      'An embodiment of sheer endurance and might. Those with Unyielding Force stand unbroken even in the fiercest battles. Gain <span>2.00x DMG and 2.10x HP multiplier</span>, overwhelming foes through unwavering strength.',
+      'An embodiment of sheer endurance and might. Those with Unyielding Force stand unbroken even in the fiercest battles. Gain 2.00x DMG and 2.10x HP multiplier, overwhelming foes through unwavering strength.',
     isGatcha: true,
     name: 'Unyielding Force',
     rarity: RARITIES.legendary,
@@ -105,7 +105,7 @@ export const TRAITS = {
   kingsPresence: {
     id: 10,
     attachment: traitImages.kingsPresence,
-    description: `Radiating authority and dominance, those with King's Presence command the battlefield with unmatched power. Gain <span>2.40x DMG and 2.40x HP multiplier</span>, embodying the strength and resolve of a true ruler.`,
+    description: `Radiating authority and dominance, those with King's Presence command the battlefield with unmatched power. Gain 2.40x DMG and 2.40x HP multiplier, embodying the strength and resolve of a true ruler.`,
     isGatcha: true,
     name: `King's Presence`,
     rarity: RARITIES.mythical,
@@ -116,7 +116,7 @@ export const TRAITS = {
     id: 11,
     attachment: traitImages.temporalAwareness,
     description:
-      'Masters of time itself, those with Temporal Awareness perceive every moment in perfect clarity. Gain <span>2.90x DMG and 3.00x HP multiplier</span>, bending time to strike and endure beyond mortal limits.',
+      'Masters of time itself, those with Temporal Awareness perceive every moment in perfect clarity. Gain 2.90x DMG and 3.00x HP multiplier, bending time to strike and endure beyond mortal limits.',
     isGatcha: true,
     name: 'Temporal Awareness',
     rarity: RARITIES.mythical,
@@ -127,7 +127,7 @@ export const TRAITS = {
     id: 12,
     attachment: traitImages.cursedBlood,
     description:
-      'Born from forbidden power, those with Cursed Blood channel dark energy that fuels both strength and endurance. Gain <span>3.00x DMG and 2.90x HP multiplier</span>, at the cost of a soul forever tainted by corruption.',
+      'Born from forbidden power, those with Cursed Blood channel dark energy that fuels both strength and endurance. Gain 3.00x DMG and 2.90x HP multiplier, at the cost of a soul forever tainted by corruption.',
     isGatcha: true,
     name: 'Cursed Blood',
     rarity: RARITIES.mythical,
@@ -138,7 +138,7 @@ export const TRAITS = {
     id: 13,
     attachment: traitImages.eternalHunger,
     description:
-      'Driven by an insatiable thirst for power, those with Eternal Hunger never cease to grow stronger. Gain <span>3.35x DMG and 3.35x HP multiplier</span>, embodying the endless pursuit of domination.',
+      'Driven by an insatiable thirst for power, those with Eternal Hunger never cease to grow stronger. Gain 3.35x DMG and 3.35x HP multiplier, embodying the endless pursuit of domination.',
     isGatcha: true,
     name: 'Eternal Hunger',
     rarity: RARITIES.exotic,
@@ -149,7 +149,7 @@ export const TRAITS = {
     id: 14,
     attachment: traitImages.swordMaster,
     description:
-      'Legends of the blade, Swordmasters embody perfect harmony between strength and precision. Gain <span>3.95x DMG and 3.95x HP multiplier</span>, mastering every strike with unmatched finesse.',
+      'Legends of the blade, Swordmasters embody perfect harmony between strength and precision. Gain 3.95x DMG and 3.95x HP multiplier, mastering every strike with unmatched finesse.',
     isGatcha: true,
     name: 'Swordmaster',
     rarity: RARITIES.exotic,
@@ -160,7 +160,7 @@ export const TRAITS = {
     id: 15,
     attachment: traitImages.ultraReflexes,
     description:
-      'With senses honed beyond mortal limits, those with Ultra Reflexes move faster than thought itself. Gain <span>4.25x DMG and 4.25x HP multiplier</span>, reacting with impossible precision in every battle.',
+      'With senses honed beyond mortal limits, those with Ultra Reflexes move faster than thought itself. Gain 4.25x DMG and 4.25x HP multiplier, reacting with impossible precision in every battle.',
     isGatcha: true,
     name: 'Ultra Reflexes',
     rarity: RARITIES.exotic,

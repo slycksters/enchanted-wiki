@@ -234,7 +234,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.shadowDragonSlayer,
     description:
-      `Channel the dark essence of dragons, wielding shadow powers to strike fear into enemies and dominate the battlefield with legendary skill. <p><span>Complete Sting Eucliffe's quest to unlock Shadow Dragon Slayer V2</span></p>`,
+      `Channel the dark essence of dragons, wielding shadow powers to strike fear into enemies and dominate the battlefield with legendary skill. <p>Complete Sting Eucliffe's quest to unlock Shadow Dragon Slayer V2</p>`,
     isGatcha: true,
     name: 'Shadow Dragon Slayer',
     rarity: RARITIES.legendary,
@@ -277,7 +277,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.lightningDragonSlayer,
     description:
-      `Harness the electrifying power of dragons, unleashing lightning to strike with mythical speed and overwhelming force. <p><span>Complete Laxus Dreyar's quest to unlock Lightning Dragon Slayer V2</span></p>`,
+      `Harness the electrifying power of dragons, unleashing lightning to strike with mythical speed and overwhelming force. <p>Complete Laxus Dreyar's quest to unlock Lightning Dragon Slayer V2</p>`,
     isGatcha: true,
     name: 'Lightning Dragon Slayer',
     rarity: RARITIES.mythical,
@@ -288,7 +288,7 @@ export const MAGICS = {
     id: 10,
     attachment: magicImages.fireDragonSlayer,
     description:
-      `Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield.<p><span>Complete Natsu Dragneel's quest to unlock Fire Dragon Slayer V2</span></p>`,
+      `Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield.<p>Complete Natsu Dragneel's quest to unlock Fire Dragon Slayer V2</p>`,
     isGatcha: true,
     name: 'Fire Dragon Slayer',
     rarity: RARITIES.mythical,
@@ -339,7 +339,7 @@ export const MAGICS = {
         id: 1,
         attachment: magicVideos.shadowDragonSlayerV2M1,
         name: 'Basic Attack [M1]',
-        description: `Strike your foe with a fierce blow infused with celestial shadow energy, burning through their defenses. <span>Damage scales with Magic stat</span>.`,
+        description: `Strike your foe with a fierce blow infused with celestial shadow energy, burning through their defenses. Damage scales with Magic stat.`,
       },
       {
         id: 2,
@@ -368,7 +368,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.shadowDragonSlayerV2,
     description:
-      `Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend. <p><span>Defeat Sting Eucliffe 10 times as a Shadow Dragon Slayer to unlock<span>.</p>`,
+      `Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend. <p>Defeat Sting Eucliffe 10 times as a Shadow Dragon Slayer to unlock.</p>`,
     name: 'Shadow Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['stingEucliffeSpec'],
@@ -381,7 +381,7 @@ export const MAGICS = {
         id: 1,
         attachment: magicVideos.fireDragonSlayerV2M1,
         name: 'Basic Attack [M1]',
-        description: `Deliver a fiery punch infused with dragon flame, scorching your target upon impact. <span>Damage scales with Magic stat</span>.`,
+        description: `Deliver a fiery punch infused with dragon flame, scorching your target upon impact. Damage scales with Magic stat.`,
       },
       {
         id: 2,
@@ -410,7 +410,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.fireDragonSlayerV2,
     description:
-      `Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor. <p><span>Defeat Natsu Dragneel 15 times as a Fire Dragon Slayer to unlock</span>.</p>`,
+      `Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor. <p>Defeat Natsu Dragneel 15 times as a Fire Dragon Slayer to unlock.</p>`,
     name: 'Fire Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['natsuDragneelSpec'],
@@ -422,7 +422,7 @@ export const MAGICS = {
       {
         id: 1,
         attachment: magicVideos.lightningDragonSlayerV2M1,
-        description: `Deliver a fierce punch infused with dark lightning, searing enemies with unstable energy. <span>Damage scales with Magic stat.</span>`,
+        description: `Deliver a fierce punch infused with dark lightning, searing enemies with unstable energy. Damage scales with Magic stat.`,
         name: `Basic Attack [M1]`,
       },
       {
@@ -458,7 +458,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.lightningDragonSlayerV2,
     description:
-      `Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.<p><span>Defeat Laxus Dreyar 10 times as a Lightning Dragon Slayer to unlock</span>.</p>`,
+      `Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.<p>Defeat Laxus Dreyar 10 times as a Lightning Dragon Slayer to unlock.</p>`,
     name: 'Lightning Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['laxusDreyarSpec'],
