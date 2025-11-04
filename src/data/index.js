@@ -10,3 +10,4 @@ export * from './specs.data';
 export * from './titles.data';
 export * from './traits.data';
 export * from './weapons.data';
+export * from './worldFeatures.data';

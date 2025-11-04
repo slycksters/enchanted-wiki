@@ -1,5 +1,10 @@
 /* ─── List Container ─────────────────────────────────────────────── */
 .list {
+  background-color: var(--enchanted-bg-secondary);
+  margin-top: 20px;
+}
+
+.parentList {
   padding-bottom: 20px;
 }
 
@@ -14,16 +19,16 @@
 
 /* ─── List Items ─────────────────────────────────────────────────── */
 .item {
-  margin-left: 25px;
   border-left: 3px solid var(--enchanted-border-color);
-  padding: 5px 0;
+  cursor: pointer;
   overflow: hidden;
+  padding: 5px 0;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  text-indent: 20;
+  text-indent: 20px;
   transition:
     padding-left 0.1s ease-in-out,
     border-width 0.1s ease-in-out;
+  white-space: nowrap;
 }
 
 /* Hover + Active State */
@@ -31,7 +36,7 @@
 .activeItem {
   color: var(--enchanted-text-primary);
   border-color: var(--enchanted-text-primary);
-  padding-left: 4px;
+  padding-left: 10px;
 }
 
 /* ─── Parent Items ───────────────────────────────────────────────── */

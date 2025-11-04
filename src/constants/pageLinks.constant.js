@@ -12,7 +12,7 @@ import {
   ItemsPage,
   NpcsPage,
   SpecsPage,
-  TrialsPage,
+  WorldFeaturesPage,
 } from '@components/pages';
 import { BASE_PATH } from './basePath.constant';
 
@@ -54,9 +54,9 @@ export const PAGE_LINKS = [
   },
   {
     id: 6,
-    element: TrialsPage,
+    element: WorldFeaturesPage,
     icon: GiObelisk,
-    name: 'Structures',
-    path: `${BASE_PATH}/trials`,
+    name: 'World Features',
+    path: `${BASE_PATH}/world-features`,
   },
 ];

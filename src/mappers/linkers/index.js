@@ -9,3 +9,4 @@ export * from './specs.linker';
 export * from './titles.linker';
 export * from './traits.linker';
 export * from './weapons.linker';
+export * from './worldFeatures.linker';

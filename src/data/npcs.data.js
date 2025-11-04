@@ -13,7 +13,7 @@ export const NPCS = {
     drops: ['shadowStep'],
     locations: ['frostveilHollow'],
     name: 'Sham',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   reaperSpec: {
@@ -24,7 +24,7 @@ export const NPCS = {
     drops: ['soulStack'],
     locations: ['lostCave'],
     name: 'Reaper',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   adamSpec: {
@@ -51,7 +51,7 @@ export const NPCS = {
     ],
     locations: ['sunblazeIsle'],
     name: 'Adam',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   monkeyDevelopsSpec: {
@@ -74,7 +74,7 @@ export const NPCS = {
     ],
     locations: ['crescentIsle'],
     name: 'Monkey Develops',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   steveSpec: {
@@ -97,7 +97,7 @@ export const NPCS = {
     ],
     locations: ['sunblazeIsle'],
     name: 'Steve',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   ichigoSpec: {
@@ -108,7 +108,7 @@ export const NPCS = {
     drops: ['ichigo'],
     locations: ['sunblazeIsle'],
     name: 'Ichigo',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   yamiSpec: {
@@ -119,7 +119,7 @@ export const NPCS = {
     drops: ['yami'],
     locations: ['trialGrounds'],
     name: 'Yami',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   yunoSpec: {
@@ -130,7 +130,7 @@ export const NPCS = {
     drops: ['yuno'],
     locations: ['crescentIsle'],
     name: 'Yuno',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   rudoSpec: {
@@ -141,7 +141,7 @@ export const NPCS = {
     drops: ['rudo'],
     locations: ['runicRock'],
     name: 'Rudo Surebrec',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   kiritoSpec: {
@@ -152,7 +152,7 @@ export const NPCS = {
     drops: ['kirito'],
     locations: ['coralAbyss'],
     name: 'Kirito',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   amoEmpoolSpec: {
@@ -163,7 +163,7 @@ export const NPCS = {
     drops: ['amoEmpool'],
     locations: ['lostCave'],
     name: 'Amo Empool',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   aizenSpec: {
@@ -174,7 +174,7 @@ export const NPCS = {
     drops: ['aizen'],
     locations: ['shatterGrove'],
     name: 'Aizen',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   yunoV2Spec: {
@@ -185,7 +185,7 @@ export const NPCS = {
     drops: ['yunoV2'],
     locations: ['zenithSkylands'],
     name: 'Yuno Grinberryall',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   yoriichiSpec: {
@@ -196,7 +196,7 @@ export const NPCS = {
     drops: ['yoriichi'],
     locations: ['zenithSkylands'],
     name: 'Yoriichi',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   kokushiboSpec: {
@@ -207,7 +207,7 @@ export const NPCS = {
     drops: ['kokushibo'],
     locations: ['zenithSkylands'],
     name: 'Kokushibo',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   ichigoV2Spec: {
@@ -218,7 +218,7 @@ export const NPCS = {
     drops: ['ichigoV2'],
     locations: ['huecoMundo'],
     name: 'Fullbring Ichigo',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   natsuDragneelSpec: {
@@ -229,7 +229,7 @@ export const NPCS = {
     drops: ['fireDragonSlayerV2'],
     locations: ['coralAbyss'],
     name: 'Natsu Dragneel',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   laxusDreyarSpec: {
@@ -240,7 +240,7 @@ export const NPCS = {
     drops: ['lightningDragonSlayerV2'],
     locations: ['harvestGrove'],
     name: 'Laxus Dreyar',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   stingEucliffeSpec: {
@@ -251,7 +251,7 @@ export const NPCS = {
     drops: ['shadowDragonSlayerV2'],
     locations: ['zenithSkylands'],
     name: 'Sting Eucliffe',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   erzaSpec: {
@@ -262,7 +262,7 @@ export const NPCS = {
     drops: ['empressSword'],
     locations: ['sunblazeIsle'],
     name: 'Erza',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   banditLeader: {
@@ -273,7 +273,7 @@ export const NPCS = {
     drops: ['facePlaster'],
     locations: ['crescentIsle'],
     name: 'Bandit Leader',
-    npcType: NPC_TYPES.miniBoss,
+    subType: NPC_TYPES.miniBoss,
     type: TYPES.npc,
   },
   mirageWarden: {
@@ -284,7 +284,7 @@ export const NPCS = {
     drops: ['headband'],
     locations: ['sunblazeIsle'],
     name: 'Mirage Warden',
-    npcType: NPC_TYPES.miniBoss,
+    subType: NPC_TYPES.miniBoss,
     type: TYPES.npc,
   },
   zeus: {
@@ -295,7 +295,7 @@ export const NPCS = {
     drops: ['nerdGlasses'],
     locations: ['frostveilHollow'],
     name: 'Zeus',
-    npcType: NPC_TYPES.miniBoss,
+    subType: NPC_TYPES.miniBoss,
     type: TYPES.npc,
   },
   inumakiBoss: {
@@ -306,7 +306,7 @@ export const NPCS = {
     drops: ['cursedOrb', 'coughMedicine', 'inumakiScarf'],
     locations: ['shatterGrove', 'trialGrounds'],
     name: 'Inumaki (Vaulted)',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   laxusDreyarBoss: {
@@ -317,7 +317,7 @@ export const NPCS = {
     drops: ['missingKey', , 'mythicalChest', 'exoticChest', 'laxusHeadphones'],
     locations: ['harvestGrove'],
     name: 'Laxus Dreyar',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   stingEucliffeBoss: {
@@ -328,7 +328,7 @@ export const NPCS = {
     drops: ['missingKey', 'mythicalChest', 'exoticChest'],
     locations: ['zenithSkylands'],
     name: 'Sting Eucliffe',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   natsuDragneelBoss: {
@@ -339,7 +339,7 @@ export const NPCS = {
     drops: ['missingKey', 'mythicalChest', 'exoticChest'],
     locations: ['coralAbyss'],
     name: 'Natsu Dragneel',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   ichigoV2Boss: {
@@ -350,7 +350,7 @@ export const NPCS = {
     drops: ['hollowOrb', 'garganta', 'hollowSoul', 'hollowMask', 'exoticChest'],
     locations: [],
     name: 'Fullbring Ichigo',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   kokushiboBoss: {
@@ -361,7 +361,7 @@ export const NPCS = {
     drops: ['demonSword', 'sparringSword', 'demonSoul'],
     locations: [],
     name: 'Kokushibo',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   yoriichiBoss: {
@@ -372,7 +372,7 @@ export const NPCS = {
     drops: ['slayerSword', 'sparringSword', 'slayerSoul', 'yoriichiEarrings'],
     locations: [],
     name: 'Yoriichi',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   ichigoBoss: {
@@ -383,7 +383,7 @@ export const NPCS = {
     drops: ['hollowSoul', 'hollowMask', 'legendaryChest'],
     locations: [],
     name: 'Ichigo',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   yamiBoss: {
@@ -394,7 +394,7 @@ export const NPCS = {
     drops: ['cloverShard', 'darkSoul', 'legendaryChest', 'yamiCloak'],
     locations: [],
     name: 'Yami',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   yunoBoss: {
@@ -405,7 +405,7 @@ export const NPCS = {
     drops: ['windGem', 'cloverShard', 'legendaryChest', 'yunoCloak'],
     locations: [],
     name: 'Yuno',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   rudoBoss: {
@@ -422,7 +422,7 @@ export const NPCS = {
     ],
     locations: [],
     name: 'Rudo Surebrec',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   kiritoBoss: {
@@ -433,7 +433,7 @@ export const NPCS = {
     drops: ['exoticChest', 'darkRepulser', 'swordGuard', 'elucidator'],
     locations: [],
     name: 'Kirito',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   amoEmpoolBoss: {
@@ -444,7 +444,7 @@ export const NPCS = {
     drops: ['dior', 'trash', 'bootPiece'],
     locations: [],
     name: 'Amo Empool',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   aizenBoss: {
@@ -455,7 +455,7 @@ export const NPCS = {
     drops: ['hollowMask', 'mythicalChest', 'aizenEyePatch', 'soulGate'],
     locations: [],
     name: 'Aizen',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   yunoV2Boss: {
@@ -466,7 +466,7 @@ export const NPCS = {
     drops: ['windGem', 'windOrb', 'cloverShard', 'exoticChest', 'yunoCloak'],
     locations: [],
     name: 'Yuno Grinberryall',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   erzaBoss: {
@@ -477,7 +477,7 @@ export const NPCS = {
     drops: ['driedShard', 'flamingSoul', 'legendaryChest', 'erzaEarrings'],
     locations: [],
     name: 'Erza',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   sousukeAizenBoss: {
@@ -495,7 +495,7 @@ export const NPCS = {
     ],
     locations: [],
     name: 'Sosouke Aizen',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   grayBoss: {
@@ -506,7 +506,7 @@ export const NPCS = {
     drops: ['epicChest', 'icicle', 'legendaryChest', 'grayNecklace'],
     locations: [],
     name: 'Gray Fullbuster',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   natsuBoss: {
@@ -517,7 +517,7 @@ export const NPCS = {
     drops: ['flamingSoul', 'dragonShard', 'legendaryChest', 'natsuScarf'],
     locations: [],
     name: 'Natsu',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   tojiBoss: {
@@ -527,7 +527,7 @@ export const NPCS = {
     drops: ['bloodEssence', 'cursedOrb', 'invertedSpear', 'jujutsuKaisenToken'],
     locations: ['lostCave'],
     name: 'Toji (Vaulted)',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
   tojiSpec: {
@@ -537,7 +537,7 @@ export const NPCS = {
     drops: ['toji'],
     locations: ['runicRock'],
     name: 'Toji (Vaulted)',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   inumakiSpec: {
@@ -548,7 +548,7 @@ export const NPCS = {
     drops: ['inumaki'],
     locations: ['lostCave'],
     name: 'Inumaki (Vaulted)',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   deathSpec: {
@@ -559,7 +559,7 @@ export const NPCS = {
     drops: ['death'],
     locations: ['hollowEve'],
     name: 'Death',
-    npcType: NPC_TYPES.specialist,
+    subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
   deathBoss: {
@@ -576,7 +576,7 @@ export const NPCS = {
     ],
     locations: ['hollowEve'],
     name: 'Death',
-    npcType: NPC_TYPES.worldBoss,
+    subType: NPC_TYPES.worldBoss,
     type: TYPES.npc,
   },
 };

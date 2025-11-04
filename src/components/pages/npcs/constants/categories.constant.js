@@ -3,13 +3,13 @@ import { DATA } from '@mappers';
 
 const items = DATA[TYPES.npc.name];
 const specialists = items.filter(
-  (item) => item.npcType.name === NPC_TYPES.specialist.name
+  (item) => item.subType.name === NPC_TYPES.specialist.name
 );
 const worldBosses = items.filter(
-  (item) => item.npcType.name === NPC_TYPES.worldBoss.name
+  (item) => item.subType.name === NPC_TYPES.worldBoss.name
 );
 const miniBosses = items.filter(
-  (item) => item.npcType.name === NPC_TYPES.miniBoss.name
+  (item) => item.subType.name === NPC_TYPES.miniBoss.name
 );
 
 export const CATEGORIES = [

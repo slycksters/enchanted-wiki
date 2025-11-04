@@ -28,7 +28,7 @@ export const getBackgroundGradient = (color, to = 'Down') => {
       break;
   }
 
-  if (color === 'var(--enchanted-rarity-v2)') {
+  if (['var(--enchanted-rarity-v2)', 'var(--enchanted-rarity-secret)'].includes(color)) {
     baseOpacity = 100;
     midOpacity = 50;
   }

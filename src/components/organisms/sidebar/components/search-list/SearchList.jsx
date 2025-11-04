@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
 import clsx from 'clsx';
+import { getBackgroundGradient } from '@helpers';
 import styles from './SearchList.module.css';
 import { SubList } from './sub-list';
 
@@ -11,6 +12,7 @@ export const SearchList = ({
   onClickSubItem,
 }) => {
   const subItemHeight = 35.5;
+  const [hoveredId, setHoveredId] = useState(null);
   const [selectedItem, setSelectedItem] = useState(list[0]);
   const [selectedSubItem, setSelectedSubItem] = useState(
     list?.[0]?.list?.[0] || null
@@ -42,13 +44,16 @@ export const SearchList = ({
   };
 
   return (
-    <div className={styles.list}>
+    <div
+      className={clsx(!isMultiList ? styles.list : styles.parentList, 'mx-3')}
+    >
       {list?.length === 0 ? (
         <div className={styles.verbiage}>No Data Found</div>
       ) : (
         list.map((item) => {
           const { name, id, list: subList, type } = item;
           const isSelected = selectedItem.name === name;
+          const isHovered = hoveredId === name;
           const haveSubList = subList?.length > 0;
 
           const parentItemClasses = clsx(
@@ -67,21 +72,28 @@ export const SearchList = ({
 
           return (
             <div
-              className={'px-3'}
               key={`sidebar-item-${type?.name}-${name}-${id}`}
+              hidden={isMultiList && !haveSubList}
             >
               <div
                 className={parentItemClasses}
                 onClick={handleOnClick}
+                onMouseEnter={!isMultiList ? () => setHoveredId(name) : null}
+                onMouseLeave={!isMultiList ? () => setHoveredId(null) : null}
                 style={{
                   borderColor: !isMultiList ? item.rarity?.color : null,
+                  background:
+                    !isMultiList && (isSelected || isHovered)
+                      ? getBackgroundGradient(
+                          'var(--enchanted-text-primary)',
+                          'Right'
+                        )
+                      : null,
                 }}
               >
-                <span hidden={isMultiList && !haveSubList} title={name}>
-                  {name}
-                </span>
+                <span title={name}>{name}</span>
 
-                {haveSubList && (
+                {isMultiList && (
                   <span>
                     <FaPlus className={styles.plusIcon} />
                   </span>

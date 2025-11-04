@@ -4,13 +4,13 @@ import { DATA } from '@mappers';
 
 const items = sortByRarity(DATA[TYPES.item.name], 'asc');
 const accessories = items.filter(
-  (item) => item.itemType.name === ITEM_TYPES.accessories.name
+  (item) => item.subType.name === ITEM_TYPES.accessories.name
 );
 const artifacts = items.filter(
-  (item) => item.itemType.name === ITEM_TYPES.artifacts.name
+  (item) => item.subType.name === ITEM_TYPES.artifacts.name
 );
 const materials = items.filter(
-  (item) => item.itemType.name === ITEM_TYPES.materials.name
+  (item) => item.subType.name === ITEM_TYPES.materials.name
 );
 
 export const CATEGORIES = [

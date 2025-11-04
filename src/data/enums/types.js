@@ -43,4 +43,8 @@ export const TYPES = {
     id: 11,
     name: 'Title',
   },
+  worldFeature: {
+    id: 12,
+    name: 'World Feature',
+  },
 };

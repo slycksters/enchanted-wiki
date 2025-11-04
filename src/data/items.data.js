@@ -10,7 +10,6 @@ export const ITEMS = {
     description:
       'A mystical artifact humming with the essence of creation. It allows the wielder to reshape their very being, granting them a new lineage and a fresh start in the world.',
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: 'Race Reroll',
     rarity: RARITIES.legendary,
     sources: [
@@ -20,6 +19,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   passiveMagicReroll: {
@@ -28,10 +28,10 @@ export const ITEMS = {
     description:
       "A swirling vortex of raw magical energy contained within a fragile orb. Shattering it will unravel the user's innate magical pathways, allowing them to discover a new, hidden power from within.",
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: 'Passive Magic Reroll',
     rarity: RARITIES.mythical,
     sources: ['epicChest', 'legendaryChest', 'mythicalChest', 'exoticChest'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   facePlaster: {
@@ -40,13 +40,13 @@ export const ITEMS = {
     description:
       "A crudely applied plaster, stripped from the Bandit Leader of Crescent Isle. It's a testament to his brawling past, offering surprising resilience to a warrior tough enough to wear their scars with pride.",
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: 'Face Plaster',
     rarity: RARITIES.rare,
     sources: ['banditLeader'],
     stats: {
       defense: 40,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   nerdGlasses: {
@@ -55,7 +55,6 @@ export const ITEMS = {
     description:
       "An odd trophy from the reclusive titan of Frostveil Hollow. Despite his brutish nature, these glasses seem to hold a sliver of his forgotten intellect, sharpening the wearer's combat focus to a razor's edge.",
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: 'Nerd Glasses',
     rarity: RARITIES.rare,
     sources: ['zeus'],
@@ -63,6 +62,7 @@ export const ITEMS = {
       blade: 125,
       meelee: 250,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   headband: {
@@ -71,7 +71,6 @@ export const ITEMS = {
     description:
       'A sweat-stained headband worn by the Mirage Warden to keep the desert sun from his eyes. It is imbued with his cunning, helping the wearer see through deceptions and maintain focus in the heat of battle.',
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: 'Headband',
     rarity: RARITIES.rare,
     sources: ['mirageWarden'],
@@ -79,6 +78,7 @@ export const ITEMS = {
       blade: 120,
       meelee: 95,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   yunoCloak: {
@@ -87,7 +87,6 @@ export const ITEMS = {
     description:
       'The prestigious cloak of a prodigy chosen by the four-leaf clover grimoire. It is imbued with the immense wind magic of its original owner, flowing with the favor of mana itself.',
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Yuno's Cloak`,
     rarity: RARITIES.epic,
     sources: ['yunoBoss', 'yunoV2Boss'],
@@ -95,6 +94,7 @@ export const ITEMS = {
       magic: 750,
       meelee: 250,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   grayNecklace: {
@@ -103,7 +103,6 @@ export const ITEMS = {
     description:
       "A cross-shaped necklace once worn by a powerful Ice-Make Mage. It carries a cold aura, channeling its owner's resolve to protect their friends at any cost.",
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Gray's Necklace`,
     rarity: RARITIES.epic,
     sources: ['grayBoss'],
@@ -111,6 +110,7 @@ export const ITEMS = {
       blade: 550,
       meelee: 450,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   erzaEarrings: {
@@ -119,13 +119,13 @@ export const ITEMS = {
     description:
       'The elegant earrings worn by Titania, the Queen of the Fairies. They are a symbol of her unyielding strength and mastery of Requip magic, resonating with the heart of a true swordswoman.',
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Erza's Earrings`,
     rarity: RARITIES.epic,
     sources: ['erzaBoss'],
     stats: {
       blade: 750,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   yamiCloak: {
@@ -134,7 +134,6 @@ export const ITEMS = {
     description:
       "The tattered, signature cloak of the Black Bulls' captain. It's infused with powerful Dark Magic, a testament to its owner's ability to surpass his limits and cut through any dimension.",
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Yami's Cloak`,
     rarity: RARITIES.legendary,
     sources: ['yamiBoss'],
@@ -142,6 +141,7 @@ export const ITEMS = {
       blade: 950,
       defense: 150,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   rudoChains: {
@@ -150,7 +150,6 @@ export const ITEMS = {
     description:
       'Heavy, rugged chains forged from salvaged junk in the abyss. They belonged to a man who could give value to the valueless, imbued with the raw, untamed power to shackle and crush his foes.',
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Rudo's Chains`,
     rarity: RARITIES.legendary,
     sources: ['rudoBoss'],
@@ -158,6 +157,7 @@ export const ITEMS = {
       defense: 1250,
       meelee: 3500,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   natsuScarf: {
@@ -166,13 +166,13 @@ export const ITEMS = {
     description:
       'A white, scale-patterned scarf woven from the scales of the Fire Dragon King, Igneel. It is a precious gift that protects its wearer and carries the unwavering spirit of a Dragon Slayer.',
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Natsu's Scarf`,
     rarity: RARITIES.legendary,
     sources: ['natsuBoss'],
     stats: {
       magic: 1400,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   laxusHeadphones: {
@@ -181,7 +181,6 @@ export const ITEMS = {
     description:
       'A pair of magic-infused Sound Pods, a favorite of the Lightning Dragon Slayer. They crackle with latent electrical energy, helping the wearer focus their thoughts into devastating bolts of thunder.',
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Laxus's Headphones`,
     rarity: RARITIES.legendary,
     sources: ['laxusDreyarBoss'],
@@ -189,6 +188,7 @@ export const ITEMS = {
       defense: 2500,
       magic: 3000,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   inumakiScarf: {
@@ -197,13 +197,13 @@ export const ITEMS = {
     description:
       "The high-collared scarf used by a sorcerer of the Inumaki clan to conceal his Cursed Speech seal. It's enchanted to muffle stray words, focusing the user's power into a single, potent command.",
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Inumaki's Scarf`,
     rarity: RARITIES.legendary,
     sources: ['inumakiBoss'],
     stats: {
       magic: 3700,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   yoriichiEarrings: {
@@ -212,7 +212,6 @@ export const ITEMS = {
     description:
       'A pair of Hanafuda earrings passed down from the legendary first user of Breathing Styles. They carry the legacy of the Sun Breathing technique, a symbol of immense power and a gentle but resolute heart.',
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Yoriichi's Earrings`,
     rarity: RARITIES.mythical,
     sources: ['yoriichiBoss'],
@@ -220,6 +219,7 @@ export const ITEMS = {
       blade: 4500,
       defense: 1500,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   ceroStar: {
@@ -228,7 +228,6 @@ export const ITEMS = {
     description:
       "A crystallized artifact born from the Hōgyoku's power, once embedded in the chest of a transcendent being. It radiates an overwhelming spiritual pressure, granting its wielder the power to shatter fate.",
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Cero's Star`,
     rarity: RARITIES.mythical,
     sources: ['sousukeAizenBoss'],
@@ -236,6 +235,7 @@ export const ITEMS = {
       blade: 3000,
       defense: 1200,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   rareChest: {
@@ -245,10 +245,10 @@ export const ITEMS = {
       'A heavy ingot of refined iron, cool to the touch. While merchants will pay a fair price for the raw metal, its true value lies in reinforcing your mining tools to break through harder rock.',
     drops: ['raceReroll', 'bossToken', 'wood', 'iron', 'vase', 'gold'],
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Rare Chest`,
     rarity: RARITIES.rare,
     sources: ['node', 'specialNode'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   legendaryChest: {
@@ -268,7 +268,6 @@ export const ITEMS = {
       'diamond',
     ],
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Legendary Chest`,
     rarity: RARITIES.legendary,
     sources: [
@@ -281,6 +280,7 @@ export const ITEMS = {
       'node',
       'specialNode',
     ],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   wood: {
@@ -289,7 +289,6 @@ export const ITEMS = {
     description:
       'A simple plank of wood, ready to be used in basic crafting recipes or sold to a merchant.',
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Wood`,
     rarity: RARITIES.uncommon,
     sources: [
@@ -301,6 +300,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   iron: {
@@ -309,7 +309,6 @@ export const ITEMS = {
     description:
       'A heavy ingot of refined iron, cool to the touch. While merchants will pay a fair price for the raw metal, its true value lies in reinforcing your mining tools to break through harder rock.',
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Iron`,
     rarity: RARITIES.uncommon,
     sources: [
@@ -321,6 +320,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   vase: {
@@ -329,7 +329,6 @@ export const ITEMS = {
     description:
       'An exquisitely crafted porcelain vase, adorned with faded patterns from a forgotten era. Too fragile for adventure, but a collector would pay a handsome price for it.',
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Vase`,
     rarity: RARITIES.rare,
     sources: [
@@ -341,6 +340,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   gold: {
@@ -349,7 +349,6 @@ export const ITEMS = {
     description:
       'A lustrous nugget of pure gold. The temptation to sell such a treasure for a small fortune is strong, but using it to craft a masterwork pickaxe could unlock riches far greater.',
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Gold`,
     rarity: RARITIES.rare,
     sources: [
@@ -361,6 +360,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   trash: {
@@ -368,10 +368,10 @@ export const ITEMS = {
     attachment: itemImages.trash,
     description: `A tightly bound bag of discarded objects that pulses with a strange, latent power. To the untrained eye it's worthless, but to one who understands, it contains the 'soul' of things once cherished—the very material needed for Gatchiakuta Specs.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Trash`,
     rarity: RARITIES.epic,
     sources: ['rudoBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   swordGuard: {
@@ -380,10 +380,10 @@ export const ITEMS = {
     description:
       'The battle-scarred guard of a legendary black sword, still humming with the echo of countless high-speed clashes. It carries the indomitable will of a swordsman who stood against impossible odds, and is the catalyst for forging the Kirito Spec.',
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Sword Guard`,
     rarity: RARITIES.epic,
     sources: ['kiritoBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   icicle: {
@@ -392,10 +392,10 @@ export const ITEMS = {
     description:
       'A shard of eternally frozen, magical ice that radiates a bitter cold. It will never melt by normal means, as it contains the very essence of creation magic. Gray can use this core to shape the formidable Frosted Spear.',
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Icicle`,
     rarity: RARITIES.epic,
     sources: ['grayBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   hollowMask: {
@@ -404,10 +404,10 @@ export const ITEMS = {
     description:
       'A chilling, bone-white fragment of a mask that seems to stare into your soul. It pulses with a desperate, hungry power—the tangible echo of an inner demon. A necessary offering to unlock the Bleach Specs.',
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Hollow Mask`,
     rarity: RARITIES.epic,
     sources: ['ichigoBoss', 'aizenBoss', 'ichigoV2Boss', 'sousukeAizenBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   hollowSoul: {
@@ -415,10 +415,10 @@ export const ITEMS = {
     attachment: itemImages.hollowSoul,
     description: `A swirling vortex of condensed spiritual energy, the very essence of a Hollow's tormented existence. It is cold, empty, and seethes with a raw, predatory instinct. This unstable power is a catalyst for unlocking the Bleach Specs.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Hollow Soul`,
     rarity: RARITIES.epic,
     sources: ['ichigoBoss', 'ichigoV2Boss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   goldBar: {
@@ -426,7 +426,6 @@ export const ITEMS = {
     attachment: itemImages.goldBar,
     description: `A bar of pure, refined gold, impressively heavy in the hand. Its immense value could fund an entire expedition, but its true potential is unlocked when used to forge the ultimate mining equipment.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Gold Bar`,
     rarity: RARITIES.epic,
     sources: [
@@ -438,6 +437,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   epicChest: {
@@ -455,10 +455,10 @@ export const ITEMS = {
       'diamond',
     ],
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Epic Chest`,
     rarity: RARITIES.epic,
     sources: ['grayBoss', 'node', 'specialNode'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   diamond: {
@@ -466,7 +466,6 @@ export const ITEMS = {
     attachment: itemImages.diamond,
     description: `A flawless, multi-faceted gemstone that glitters with captured starlight. Its nigh-unbreakable structure is perfect for pinnacle mining upgrades and crafting Epic Equipments, though its sheer beauty alone commands a king's ransom.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Diamond`,
     rarity: RARITIES.epic,
     sources: [
@@ -477,6 +476,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   driedShard: {
@@ -484,10 +484,10 @@ export const ITEMS = {
     attachment: itemImages.driedShard,
     description: `A crystallized fragment of immense magical energy, left behind by a legendary warrior. It feels warm and brittle, yet hums with a power that can be forged into formidable weapons or exchanged for a considerable sum.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Dried Shard`,
     rarity: RARITIES.epic,
     sources: ['erzaBoss', 'natsuBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   cloverShard: {
@@ -495,10 +495,10 @@ export const ITEMS = {
     attachment: itemImages.cloverShard,
     description: `A shimmering fragment pulsing with the immense mana of the Clover Kingdom. It is a tangible piece of a Magic Knight's will, sought by craftsmen who can shape its power into elite weapons. Its rarity also makes it highly valuable.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Clover Shard`,
     rarity: RARITIES.epic,
     sources: ['yunoBoss', 'yamiBoss', 'yunoV2Boss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   bossToken: {
@@ -506,7 +506,6 @@ export const ITEMS = {
     attachment: itemImages.bossToken,
     description: `A heavy, embossed medallion that resonates with a challenge to the world's mightiest foes. Presenting this token at a place of power acts as a formal summons, drawing the attention of legendary enemies who cannot refuse the call to battle.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Boss Token`,
     rarity: RARITIES.epic,
     sources: [
@@ -516,6 +515,7 @@ export const ITEMS = {
       'mythicalChest',
       'exoticChest',
     ],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   aizenEyePatch: {
@@ -523,10 +523,10 @@ export const ITEMS = {
     attachment: itemImages.aizenEyePatch,
     description: `The very eyepatch used to seal the immense spiritual pressure of Sōsuke Aizen. It struggles to contain the residual power within, which can be harnessed to unlock the formidable Aizen Spec. A chilling testament to power constrained.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Aizen Eye Patch`,
     rarity: RARITIES.epic,
     sources: ['aizenBoss', 'sousukeAizenBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   windOrb: {
@@ -534,10 +534,10 @@ export const ITEMS = {
     attachment: itemImages.windOrb,
     description: `A swirling sphere of pure, condensed wind magic, crackling with untamed power. It holds the essence of a Spirit-chosen mage at the peak of his strength and is the only catalyst capable of creating the Yuno V2 Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Wind Orb`,
     rarity: RARITIES.legendary,
     sources: ['yunoV2Boss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   windGem: {
@@ -545,10 +545,10 @@ export const ITEMS = {
     attachment: itemImages.windGem,
     description: `A beautifully cut gemstone with a miniature tempest swirling within its core. It resonates with the favor of the wind and is sought by those who wish to craft the Yuno Spec. Its natural beauty also makes it quite valuable.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Wind Gem`,
     rarity: RARITIES.legendary,
     sources: ['yunoBoss', 'yunoV2Boss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   hollowOrb: {
@@ -556,10 +556,10 @@ export const ITEMS = {
     attachment: itemImages.hollowOrb,
     description: `An orb of volatile spiritual energy, so dense it feels like a miniature black sun. It thrums with the raw, untamed power of Hueco Mundo and is the final catalyst needed to unleash the overwhelming potential of the Ichigo V2 Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Hollow Orb`,
     rarity: RARITIES.legendary,
     sources: ['ichigoV2Boss', 'sousukeAizenBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   goldCoin: {
@@ -567,10 +567,10 @@ export const ITEMS = {
     attachment: itemImages.goldCoin,
     description: `An ancient gold coin stamped with the insignia of a forgotten kingdom, found only within the treacherous depths of the Lost Cave. This unique currency is highly sought after by special vendors who will trade rare Spec materials for it.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Gold Coin`,
     rarity: RARITIES.legendary,
     sources: ['lostCave'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   flamingSoul: {
@@ -578,10 +578,10 @@ export const ITEMS = {
     attachment: itemImages.flamingSoul,
     description: `The crystallized essence of a Fairy Tail mage's soul, blazing with the combined fire of a Dragon Slayer and the unwavering will of an armored queen. Its power can forge both the legendary Empress Sword and the devastating Dragon Slayer Gauntlet.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Flaming Soul`,
     rarity: RARITIES.legendary,
     sources: ['erzaBoss', 'natsuBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   darkSoul: {
@@ -589,10 +589,10 @@ export const ITEMS = {
     attachment: itemImages.darkSoul,
     description: `A fragment of a soul steeped in the abyssal Dark Magic of the Clover Kingdom's strongest Magic Knight Captain. It radiates an intimidating pressure and is the core material for forging the Hellforge Gauntlets and mastering the Yami Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Dark Soul`,
     rarity: RARITIES.legendary,
     sources: ['yamiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   dragonShard: {
@@ -600,10 +600,10 @@ export const ITEMS = {
     attachment: itemImages.dragonShard,
     description: `A scale that has flaked off a true Fire Dragon, still radiating a searing heat. It contains the very essence of Dragon Slayer magic and is the final component needed to construct the mighty Dragon Slayer Gauntlet.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Dragon Shard`,
     rarity: RARITIES.legendary,
     sources: ['natsuBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   cursedOrb: {
@@ -611,10 +611,10 @@ export const ITEMS = {
     attachment: itemImages.cursedOrb,
     description: `A malevolent orb seething with condensed Cursed Energy, born from the negative emotions of humanity. Only a true Jujutsu Sorcerer can handle its immense power to unlock the secrets of the Jujutsu Kaisen Specs (Vaulted).`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Cursed Orb`,
     rarity: RARITIES.legendary,
     sources: ['inumakiBoss', 'tojiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   slayerSoul: {
@@ -622,10 +622,10 @@ export const ITEMS = {
     attachment: itemImages.slayerSoul,
     description: `The very embodiment of a swordsman's soul, so pure and powerful it feels like touching the sun. It is the legacy of the first Breathing Style user, and the only way to awaken the legendary Yoriichi Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Slayer Soul`,
     rarity: RARITIES.mythical,
     sources: ['yoriichiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   sparringSword: {
@@ -633,10 +633,10 @@ export const ITEMS = {
     attachment: itemImages.sparringSword,
     description: `A simple wooden training sword, worn smooth by centuries of relentless practice. It contains the echoes of every form, every breath, and every battle of the greatest swordsmen in history, making it the key to mastering all Demon Slayer Specs.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Sparring Sword`,
     rarity: RARITIES.mythical,
     sources: ['yoriichiBoss', 'kokushiboBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   missingKey: {
@@ -644,10 +644,10 @@ export const ITEMS = {
     attachment: itemImages.missingKey,
     description: `Long ago, the keys to the Lost Cave's deepest chambers were scattered across the realm to prevent the escape of the mythical beasts imprisoned within. These keys are now hoarded by fearsome guardians in the Coral Abyss, Harvest Grove, and Zenith Skylands. Find just one of these missing keys to bypass the ancient seal and challenge the powerful creatures that lie in wait.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Missing Key`,
     rarity: RARITIES.mythical,
     sources: ['natsuDragneelBoss', 'laxusDreyarBoss', 'stingEucliffeBoss'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   mythicalChest: {
@@ -655,10 +655,10 @@ export const ITEMS = {
     attachment: itemImages.mythicalChest,
     description: `Forged from a fallen star and bound by unbreakable, glowing runes, this chest is a vessel for relics from the age of myths. It is said that opening it can bestow the power of forgotten gods upon the worthy—a prize far more valuable than mere gold.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Mythical Chest`,
     rarity: RARITIES.mythical,
     sources: ['natsuDragneelBoss', 'laxusDreyarBoss', 'stingEucliffeBoss'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   dior: {
@@ -666,10 +666,10 @@ export const ITEMS = {
     attachment: itemImages.dior,
     description: `A bottle of enchanted perfume that emanates a dangerously alluring scent. It contains the very essence of Amo Empool's Fragrance Manipulation, a power capable of twisting reality itself. Harnessing this essence is the only way to master the Amo Empool Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Dior`,
     rarity: RARITIES.mythical,
     sources: ['amoEmpoolBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   demonSoul: {
@@ -677,10 +677,10 @@ export const ITEMS = {
     attachment: itemImages.demonSoul,
     description: `The crystallized soul of the Upper Rank One demon, Kokushibo. It seethes with centuries of regret and the chilling perfection of Moon Breathing. To absorb it is to walk the razor's edge between humanity and monstrosity—the final step to unlocking the Kokushibo Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Demon Soul`,
     rarity: RARITIES.mythical,
     sources: ['kokushiboBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   candyBar: {
@@ -688,10 +688,10 @@ export const ITEMS = {
     attachment: itemImages.candyBar,
     description: `It may look like a simple candy bar, but to Rudo, it's a taste of a life he fought to protect. This small comfort holds a profound significance, granting him the focus and will to push his Jinki to its absolute limit and unlock the Rudo Surebrec Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Candy`,
     rarity: RARITIES.mythical,
     sources: ['rudoBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   coughMedicine: {
@@ -699,10 +699,10 @@ export const ITEMS = {
     attachment: itemImages.coughMedicine,
     description: `A specially formulated throat syrup, far more potent than any common remedy. It's designed to soothe a throat strained by the constant use of the Cursed Speech technique, allowing the user to wield their devastating power without self-destructing. The key to mastering the Inumaki Spec (Vaulted).`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Cough Medicine`,
     rarity: RARITIES.mythical,
     sources: ['inumakiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   slayerSword: {
@@ -710,10 +710,10 @@ export const ITEMS = {
     attachment: itemImages.slayerSword,
     description: `The crimson Nichirin blade wielded by the legendary Yoriichi Tsugikuni, the first and most powerful Demon Slayer. Its edge is flawless, having slain countless demons, and it still resonates with the pure, searing heat of Sun Breathing. This sacred blade is the key to awakening the peerless Yoriichi Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Slayer Sword`,
     rarity: RARITIES.exotic,
     sources: ['yoriichiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   gauntletPiece: {
@@ -721,10 +721,10 @@ export const ITEMS = {
     attachment: itemImages.gauntletPiece,
     description: `One half of Rudo's powerful Jinki, humming with contained life-force. On its own, its power is incomplete, but when combined with its missing half, it forms a symbiotic weapon of immense destructive potential, unlocking the Rudo Surebrec Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Gauntlet Piece`,
     rarity: RARITIES.exotic,
     sources: ['rudoBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   elucidator: {
@@ -732,10 +732,10 @@ export const ITEMS = {
     attachment: itemImages.elucidator,
     description: `A pitch-black, demonic sword dropped from a high-level monster. Wielded by the Black Swordsman, it forms one half of a legendary dual-blade set. Re-unite it with the Dark Repulser to unleash the ultimate skill and unlock the Kirito Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Elucidator`,
     rarity: RARITIES.exotic,
     sources: ['kiritoBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   exoticChest: {
@@ -754,7 +754,6 @@ export const ITEMS = {
       'diamond',
     ],
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Exotic Chest`,
     rarity: RARITIES.exotic,
     sources: [
@@ -766,6 +765,7 @@ export const ITEMS = {
       'sousukeAizenBoss',
       'yunoV2Boss',
     ],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   darkRepulser: {
@@ -773,10 +773,10 @@ export const ITEMS = {
     attachment: itemImages.darkRepulser,
     description: `An elegant, crystalline blade forged by a master artisan from a dragon's hoard. It serves as the swift, aquamarine counterpart to the Elucidator. Only by wielding both can one truly master the art of dual blades and unlock the Kirito Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Dark Repulser`,
     rarity: RARITIES.exotic,
     sources: ['kiritoBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   demonSword: {
@@ -784,10 +784,10 @@ export const ITEMS = {
     attachment: itemImages.demonSword,
     description: `A grotesque blade forged from the very flesh and bone of the Upper Rank One demon. It writhes as if alive, its numerous eyes scanning for prey. The sword itself carries the chilling techniques of Moon Breathing and is the key to embracing the demonic power of the Kokushibo Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Demon Sword`,
     rarity: RARITIES.exotic,
     sources: ['kokushiboBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   bootPiece: {
@@ -795,10 +795,10 @@ export const ITEMS = {
     attachment: itemImages.bootPiece,
     description: `One half of a set of enchanted footwear, infused with the essence of Fragrance Manipulation. Alone, it is a curious artifact, but when paired with its other half, it grants the wearer unparalleled speed and illusionary power, unlocking the Amo Empool Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Boot Piece`,
     rarity: RARITIES.exotic,
     sources: ['amoEmpoolBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   garganta: {
@@ -806,10 +806,10 @@ export const ITEMS = {
     attachment: itemImages.garganta,
     description: `A swirling tear in the fabric of reality, stabilized into a portable artifact. It allows the user to rip open a chaotic, black void that serves as a direct pathway into Hueco Mundo, the desolate world of the Hollows. A dangerous but essential route for traversing the spirit realms.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Garganta`,
     rarity: RARITIES.secret,
     sources: ['ichigoV2Boss', 'sosoukeAizenBoss'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   soulGate: {
@@ -817,10 +817,10 @@ export const ITEMS = {
     attachment: itemImages.soulGate,
     description: `A masterpiece of spatial manipulation. Where a Garganta violently tears a hole in reality, the Soul Gate elegantly parts it, creating a stable, shimmering gateway. This advanced portal offers instantaneous and precise travel to any known island in the physical world. It is a testament to perfect control, a far more refined method of transportation.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Soul Gate`,
     rarity: RARITIES.exclusive,
     sources: ['aizenBoss'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   stainScarf: {
@@ -828,7 +828,6 @@ export const ITEMS = {
     attachment: itemImages.stainScarf,
     description: `The tattered, blood-red scarf of the infamous Hero Killer, Stain. It's imbued with his terrifying conviction and grants a significant boost in power to anyone who dares wear it. Can be purchased for 550 Robux (Limited).`,
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Stain's Scarf (Vaulted)`,
     rarity: RARITIES.mythical,
     sources: ['developerProduct'],
@@ -837,6 +836,7 @@ export const ITEMS = {
       defense: 3000,
       meelee: 4500,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   mlgGlasses: {
@@ -844,7 +844,6 @@ export const ITEMS = {
     attachment: itemImages.mlgGlasses,
     description: `Pixelated shades that radiate pure, unfiltered 'pro gamer' energy. Wearing these not only makes you look cooler but grants a mysterious and surprisingly potent boost to your power. Can be purchased for 299 Robux (Limited).`,
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `MLG Glasses`,
     rarity: RARITIES.exotic,
     sources: ['developerProduct'],
@@ -853,6 +852,7 @@ export const ITEMS = {
       magic: 5000,
       meelee: 4750,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   invertedSpear: {
@@ -860,10 +860,10 @@ export const ITEMS = {
     attachment: itemImages.invertedSpear,
     description: `A Special Grade Cursed Tool with a fearsome reputation. Its unique property allows it to forcibly nullify any Cursed Technique or energy it touches, making it the ultimate weapon against sorcerers. A lost relic required to unlock the Toji Spec (Vaulted).`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Inverted Spear (Vaulted)`,
     rarity: RARITIES.exotic,
     sources: ['tojiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   speechMegaphone: {
@@ -871,10 +871,10 @@ export const ITEMS = {
     attachment: itemImages.speechMegaphone,
     description: `A Cursed Tool designed to amplify the user's voice and Cursed Energy to terrifying levels. It focuses the power of the Cursed Speech technique, allowing for commands of immense scale and potency. The key to mastering the Inumaki Spec (Vaulted).`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Speech Megaphone (Vaulted)`,
     rarity: RARITIES.exotic,
     sources: ['inumakiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   megaphone: {
@@ -882,10 +882,10 @@ export const ITEMS = {
     attachment: itemImages.megaphone,
     description: `A powerful communication device enchanted to carry your voice across servers and dimensions. When you have something to say, make sure everyone in the entire game hears it.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Megaphone`,
     rarity: RARITIES.exclusive,
     sources: ['developerProduct'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   heartAPhone: {
@@ -893,10 +893,10 @@ export const ITEMS = {
     attachment: itemImages.heartAPhone,
     description: `A megaphone imbued with warmth and friendship. It broadcasts your message across all servers in a delightful, heart-filled theme, perfect for shoutouts and sharing positive vibes.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Heart A Phone`,
     rarity: RARITIES.exclusive,
     sources: ['developerProduct'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   instantTransmission: {
@@ -904,10 +904,10 @@ export const ITEMS = {
     attachment: itemImages.instantTransmission,
     description: `Instantly teleport to any player, anywhere. This ability transcends all conventional limits, allowing you to cross the barriers between servers in the blink of an eye.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.artifacts,
     name: `Instant Transmission`,
     rarity: RARITIES.exclusive,
     sources: ['developerProduct'],
+    subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
   bloodEssence: {
@@ -915,10 +915,10 @@ export const ITEMS = {
     attachment: itemImages.bloodEssence,
     description: `The crystallized essence of Toji Fushiguro's unique bloodline. It contains no Cursed Energy, only the blueprint for a body honed to the pinnacle of physical perfection. This is the catalyst needed to forsake sorcery and unlock the devastating power of the Toji Spec (Vaulted).`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Blood Essence`,
     rarity: RARITIES.mythical,
     sources: ['tojiBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   raidToken: {
@@ -926,10 +926,10 @@ export const ITEMS = {
     attachment: itemImages.raidToken,
     description: `A hard-earned token awarded for successfully clearing the Lost Cave dungeon. Use it to purchase powerful, exclusive rewards from dungeon shop.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Raid Token`,
     rarity: RARITIES.v2,
     sources: ['lostCave'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   engravedSickle: {
@@ -937,10 +937,10 @@ export const ITEMS = {
     attachment: itemImages.engravedSickle,
     description: `One of a matched pair of sickles wielded by Death itself. The cold, dark steel hums with a profound chill, a whisper of the inevitable end. This material is essential for crafting the Death Spec, allowing one to channel the grim wolf's relentless power.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Engraved Sickle`,
     rarity: RARITIES.exotic,
     sources: ['deathBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
   deathCowl: {
@@ -948,7 +948,6 @@ export const ITEMS = {
     attachment: itemImages.deathCowl,
     description: `The simple, dark cowl worn by the grim wolf himself. It is woven from shadow and cold silence, seeming to absorb all light and sound around it. Those who wear it can almost hear the faint, chilling whistle on the wind, a constant reminder of the hunt.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.accessories,
     name: `Death's Cowl`,
     rarity: RARITIES.exotic,
     sources: ['deathBoss'],
@@ -956,6 +955,7 @@ export const ITEMS = {
       blade: 5500,
       defense: 2500,
     },
+    subType: ITEM_TYPES.accessories,
     type: TYPES.item,
   },
   halloweenCandy: {
@@ -963,10 +963,10 @@ export const ITEMS = {
     attachment: itemImages.halloweenCandy,
     description: `Trick or treat? This candy offers both. A moment of sweetness followed by an eternity of dread. The chilling sensation it imparts is a key component for forging the Death Spec.`,
     isGatcha: false,
-    itemType: ITEM_TYPES.materials,
     name: `Halloween Candy`,
     rarity: RARITIES.legendary,
     sources: ['deathBoss'],
+    subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
 };

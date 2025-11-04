@@ -12,6 +12,9 @@ export const Sidebar = ({
   setShowSidebar,
   showSidebar,
 }) => {
+  const hasRarity = list?.some(
+    (item) => item.rarity || item.list?.some((subItem) => subItem.rarity)
+  );
   const isMultiList = list?.some((item) => item.list);
   const [filteredData, setFilteredData] = useState(list);
 
@@ -42,7 +45,7 @@ export const Sidebar = ({
         })}
       >
         <Searchbar onSearch={handleOnSearch} />
-        <RarityList hidden={filteredData.length === 0} />
+        {hasRarity && <RarityList hidden={filteredData.length === 0} />}
         <SearchList
           isMultiList={isMultiList}
           list={filteredData}

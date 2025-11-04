@@ -32,7 +32,6 @@ export const Navbar = () => {
               }
               key={link.id}
               style={({ isActive }) => ({
-                width: !isMobileOrTablet ? '100px' : null,
                 background: isActive
                   ? getBackgroundGradient(
                       `var(--enchanted-rarity-exotic)`,

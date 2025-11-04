@@ -12,6 +12,7 @@ import {
   titleArray,
   traitArray,
   weaponArray,
+  worldFeatureArray,
 } from './linkers';
 
 export const DATA = {
@@ -26,4 +27,5 @@ export const DATA = {
   [TYPES.title.name]: extractValues(titleArray),
   [TYPES.trait.name]: extractValues(traitArray),
   [TYPES.weapon.name]: extractValues(weaponArray),
+  [TYPES.worldFeature.name]: extractValues(worldFeatureArray),
 };
