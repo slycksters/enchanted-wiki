@@ -15,7 +15,7 @@ export const PASSIVE_MAGICS = {
     ],
     attachment: passiveMagicImages.frozen,
     description:
-      'Applay a freeze effect with your attacks, slowing enemies and chilling their movements with icy precision.',
+      'Apply a freeze effect with your attacks, slowing enemies and chilling their movements with icy precision.',
     isGatcha: true,
     name: 'Frozen',
     rarity: RARITIES.epic,

@@ -4,7 +4,7 @@ import { CATEGORIES } from './constants';
 
 export const NpcsPage = () => {
   return (
-    <Layout categories={CATEGORIES} defaultInfo={NPCS.shamSpec}>
+    <Layout categories={CATEGORIES} defaultInfo={NPCS.adamSpec}>
       <Info />
     </Layout>
   );

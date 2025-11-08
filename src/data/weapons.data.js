@@ -1,5 +1,5 @@
 import { assets } from '@assets';
-import { RARITIES, TYPES } from './enums';
+import { DAMAGE_TYPES, RARITIES, TYPES } from './enums';
 
 const weaponImages = assets.images.weapons;
 const weaponVideos = assets.videos.weapons;
@@ -20,6 +20,7 @@ export const WEAPONS = {
     name: 'Knuckles',
     rarity: RARITIES.uncommon,
     stats: {
+      damageType: DAMAGE_TYPES.meelee.name,
       baseDMG: 4.5,
       perStat: 0.05,
     },
@@ -56,6 +57,7 @@ export const WEAPONS = {
     name: 'Winged Sword',
     rarity: RARITIES.rare,
     stats: {
+      damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 6.5,
       perStat: 0.075,
     },
@@ -90,6 +92,7 @@ export const WEAPONS = {
     name: 'Titanium Gauntlets',
     rarity: RARITIES.rare,
     stats: {
+      damageType: DAMAGE_TYPES.meelee.name,
       baseDMG: 6,
       perStat: 0.065,
     },
@@ -126,6 +129,7 @@ export const WEAPONS = {
     name: 'Katana',
     rarity: RARITIES.rare,
     stats: {
+      damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 7,
       perStat: 0.082,
     },
@@ -160,6 +164,7 @@ export const WEAPONS = {
       'A battle-forged blade, heavy with the promise of victory. Wielded by valiant knights, its crushing weight and relentless edge are designed to break both shields and spirits.',
     name: 'Medieval Sword',
     stats: {
+      damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 7.25,
       perStat: 0.1,
     },
@@ -195,6 +200,7 @@ export const WEAPONS = {
     name: 'Claws',
     rarity: RARITIES.rare,
     stats: {
+      damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 7,
       perStat: 0.095,
     },
@@ -237,6 +243,7 @@ export const WEAPONS = {
     rarity: RARITIES.legendary,
     sources: ['graySpec'],
     stats: {
+      damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 8.25,
       perStat: 0.1075,
     },
@@ -276,6 +283,7 @@ export const WEAPONS = {
     rarity: RARITIES.legendary,
     sources: ['erzaSpec'],
     stats: {
+      damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 8,
       perStat: 0.106,
     },
@@ -316,6 +324,7 @@ export const WEAPONS = {
     rarity: RARITIES.legendary,
     sources: ['natsuSpec'],
     stats: {
+      damageType: DAMAGE_TYPES.meelee.name,
       baseDMG: 8.5,
       perStat: 0.115,
     },
@@ -348,6 +357,7 @@ export const WEAPONS = {
     name: 'Hellforge Gauntlets',
     rarity: RARITIES.mythical,
     stats: {
+      damageType: DAMAGE_TYPES.meelee.name,
       baseDMG: 9.5,
       perStat: 0.135,
     },
@@ -387,6 +397,7 @@ export const WEAPONS = {
     name: 'Dark Sword',
     rarity: RARITIES.mythical,
     stats: {
+      damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 10,
       perStat: 0.14,
     },

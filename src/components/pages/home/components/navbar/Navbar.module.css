@@ -3,8 +3,8 @@
   align-items: flex-end;
   display: flex;  
   gap: clamp(1px, 2vw, 20px);
-  height: 10vh;
   justify-content: center;
+  margin-top: 25px;
   position: relative;
   width: 100%;
 }
@@ -17,7 +17,6 @@
   cursor: pointer;
   display: flex;
   gap: 10px;
-  margin-bottom: -30px;
   padding: 10px clamp(5px, 1vw, 40px);
   position: relative;
   text-decoration: none;

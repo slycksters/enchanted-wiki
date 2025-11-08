@@ -22,7 +22,7 @@ export const Table = ({ list }) => {
                 <Image alt={item.name} src={item.attachment} />
               </td>
               <td>{item.name}</td>
-              <td>{item.type.name}</td>
+              <td>{item.subType ? item.subType.name : item.type.name}</td>
             </tr>
           );
         })}

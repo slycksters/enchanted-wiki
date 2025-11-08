@@ -1,13 +1,15 @@
 .brand {
   align-items: center;
+  color: var(--enchanted-text-secondary);
   display: flex;
   flex-direction: column;
-  height: 60vh;
   justify-content: center;
+  margin-top: 25px;
+  text-align: center;
 }
 
 .imageWrapper {
-  height: clamp(100px, 15vw, 600px);
+  height: 100px;
 }
 
 .imageWrapper img {
@@ -16,18 +18,4 @@
     drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
   height: 100%;
   width: auto;
-}
-
-/* Developer name text scales with viewport */
-.developerName,
-.description {
-  color: var(--enchanted-text-secondary);
-  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.5rem);
-  text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .brand {
-    height: 50vh;
-  }
 }

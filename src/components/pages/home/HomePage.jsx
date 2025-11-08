@@ -1,5 +1,17 @@
 import { useEffect } from 'react';
-import { Avatar, Brand, Navbar, Timer } from './components';
+import {
+  AbilitiesDescription,
+  Avatar,
+  Brand,
+  EquipsDescription,
+  Footer,
+  Introduction,
+  IslandsDescription,
+  ItemsDescription,
+  Navbar,
+  Timer,
+  WorldFeaturesDescription,
+} from './components';
 import styles from './Home.module.css';
 
 export const HomePage = () => {
@@ -9,16 +21,17 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className={styles.homePageContainer}>
-      {/* Navigation Links */}
-      <Navbar />
-      {/* Brand Logo and Developer Name */}
-      <Brand />
-      {/* Avatar Display */}
-      <Avatar />
-      {/* Timer Wrapper */}
-      <div className={styles.rightPanel}>
-        {/* <Timer /> */}
+    <div className={`${styles.homePageContainer}`}>
+      <div className={'container'}>
+        <Navbar />
+        <Brand />
+        <Introduction />
+        <AbilitiesDescription />
+        <EquipsDescription />
+        <ItemsDescription />
+        <IslandsDescription />
+        <WorldFeaturesDescription />
+        <Footer />
       </div>
     </div>
   );

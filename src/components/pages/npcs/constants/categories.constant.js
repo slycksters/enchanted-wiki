@@ -1,4 +1,5 @@
 import { NPC_TYPES, TYPES } from '@data';
+import { sortArray } from '@helpers';
 import { DATA } from '@mappers';
 
 const items = DATA[TYPES.npc.name];
@@ -16,16 +17,16 @@ export const CATEGORIES = [
   {
     id: 1,
     name: 'Specialists',
-    list: specialists,
+    list: sortArray(specialists, 'name', 'asc'),
   },
   {
     id: 2,
     name: 'World Bosses',
-    list: worldBosses,
+    list: sortArray(worldBosses, 'name', 'asc'),
   },
   {
     id: 3,
     name: 'Mini Bosses',
-    list: miniBosses,
+    list: sortArray(miniBosses, 'name', 'asc'),
   },
 ];

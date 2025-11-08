@@ -287,6 +287,32 @@ export const MAGICS = {
   fireDragonSlayer: {
     id: 10,
     attachment: magicImages.fireDragonSlayer,
+    abilities: [
+      {
+        id: 1,
+        attachment: magicVideos.fireDragonSlayerZ,
+        description: `Smashes the ground, creating a fiery explosion that burns nearby enemies.`,
+        name: `Ember Fang [Z]`,
+      },
+      {
+        id: 2,
+        attachment: magicVideos.fireDragonSlayerX,
+        description: `Breathes a stream of fire forward, scorching all enemies in its path.`,
+        name: `Dragon's Breath [X]`,
+      },
+      {
+        id: 3,
+        attachment: magicVideos.fireDragonSlayerC,
+        description: `Conjures a spiraling flame that engulfs surrounding enemies.`,
+        name: 'Hellflare Spiral [C]',
+      },
+      {
+        id: 4,
+        attachment: magicVideos.fireDragonSlayerV,
+        description: `Unleashes a blazing fire field, damaging all enemies within its radius.`,
+        name: 'Infernal Rage [V]',
+      },
+    ],
     description:
       `Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield.<p>Complete Natsu Dragneel's quest to unlock Fire Dragon Slayer V2</p>`,
     isGatcha: true,
@@ -368,7 +394,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.shadowDragonSlayerV2,
     description:
-      `Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend. <p>Defeat Sting Eucliffe 10 times as a Shadow Dragon Slayer to unlock.</p>`,
+      `Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend. <p>Defeat Sting Eucliffe [World Boss] 10 times then speak to Sting Eucliffe [Specialist] as a Shadow Dragon Slayer to unlock.</p>`,
     name: 'Shadow Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['stingEucliffeSpec'],
@@ -410,7 +436,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.fireDragonSlayerV2,
     description:
-      `Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor. <p>Defeat Natsu Dragneel 15 times as a Fire Dragon Slayer to unlock.</p>`,
+      `Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor. <p>Defeat Natsu Dragneel [World Boss] 15 times then speark to Natsu Dragneel [Specialist] as a Fire Dragon Slayer to unlock.</p>`,
     name: 'Fire Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['natsuDragneelSpec'],
@@ -458,7 +484,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.lightningDragonSlayerV2,
     description:
-      `Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.<p>Defeat Laxus Dreyar 10 times as a Lightning Dragon Slayer to unlock.</p>`,
+      `Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.<p>Defeat Laxus Dreyar [World Boss] 10 times then speak to Laxus Dreyar [Specialist] as a Lightning Dragon Slayer to unlock.</p>`,
     name: 'Lightning Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['laxusDreyarSpec'],

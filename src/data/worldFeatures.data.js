@@ -153,4 +153,26 @@ export const WORLD_FEATURES = {
     name: 'Obelisk',
     type: TYPES.worldFeature,
   },
+  dungeon: {
+    id: 5,
+    attachment: worldFeatureImages.dungeon,
+    description:
+      '<p>Challenge these battlegrounds to gather upgrade materials and find powerful accessories.</p><p>Available Dungeons:</p><ul><li>Jujutsu Kaisen Dungeon (Vaulted)</li><li>Gatchiakuta Dungeon</li><li>Demon Slayer Dungeon</li></ul>',
+    gallery: [
+      {
+        id: 1,
+        attachment: islandImages.lostCave4,
+        description: 'Opens every xx:20, xx:40, xx:00',
+        name: `Left Dugeon`,
+      },
+      {
+        id: 2,
+        attachment: islandImages.lostCave5,
+        description: 'Opens every xx:10, xx:30, xx:50',
+        name: `Right Dugeon`,
+      },
+    ],
+    name: 'Dungeon',
+    type: TYPES.worldFeature,
+  },
 };
