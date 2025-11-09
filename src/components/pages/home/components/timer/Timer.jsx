@@ -4,25 +4,27 @@ import { extractValues } from '@helpers';
 import { EVENT_TIMERS } from '../../constants/eventTimers.constant';
 
 export const Timer = () => {
-  return (
-    <section className={styles.timerSection}>
-      <p>Boss Timers:</p>
-      {extractValues(EVENT_TIMERS.bosses).map((boss) => {
-        return (
-          <div className={'mt-5'}>
-            <ReactCountdown label={boss.name} subLabel={boss.location} />
-          </div>
-        )
-      })}
+  const allTimers = [
+    ...extractValues(EVENT_TIMERS.bosses),
+    ...extractValues(EVENT_TIMERS.dungeons),
+  ];
 
-      <p>Dungeon Timers:</p>
-      {extractValues(EVENT_TIMERS.dungeons).map((dungeon) => {
-        return (
-          <div className={'mt-5'}>
-            <ReactCountdown label={dungeon.name} subLabel={dungeon.location} />
-          </div>
-        )
-      })}
+  return (
+    <section className={styles.timer}>
+      <h3>World Boss & Dungeon Timers</h3>
+      <p>Click the time box to enable the alarm sound.</p>
+
+      <div className={styles.timerWrapper}>
+        {allTimers.map((timer) => (
+          <ReactCountdown
+            key={`timer-${timer.id}-${timer.name}`}
+            intervals={timer.intervals}
+            label={timer.name}
+            subLabel={timer.location}
+            width={'150px'}
+          />
+        ))}
+      </div>
     </section>
   );
 };

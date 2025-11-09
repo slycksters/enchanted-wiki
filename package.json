@@ -1,6 +1,6 @@
 {
   "name": "enchanted-wiki",
-  "homepage": "https://slycksters.github.io/enchanted-wiki",
+  "homepage": "https://www.slyckster.dev",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
     "deploy": "gh-pages -d dist",
     "generate-assets": "node scripts/generate-assets.js" 
   },

@@ -36,22 +36,13 @@
 }
 
 .navItem:hover {
-  color: var(--enchanted-rarity-exotic);
+  color: var(--enchanted-color-blue);
 }
 
 .activeNavItem {
-  border-bottom: 2px solid var(--enchanted-rarity-exotic);
-  color: var(--enchanted-rarity-exotic);
+  border-bottom: 2px solid var(--enchanted-color-blue);
+  color: var(--enchanted-color-blue);
   padding-top: 17px;
-}
-
-.logoWrapper .navItem {
-  border-right: none !important;
-}
-
-.logoWrapper {
-  padding-left: 15px;
-  /* width: clamp(184px, 25vw, 271px); */
 }
 
 @media (max-width: 1024px) {

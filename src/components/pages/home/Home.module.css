@@ -6,11 +6,7 @@
 .description {
   border-top: 1px solid var(--enchanted-border-color);
   color: var(--enchanted-text-secondary);
-  padding: 20px 0px;
-}
-
-.description:first-child {
-  margin-top: 20px;
+  padding: 50px 0px;
 }
 
 .description h1,
@@ -30,13 +26,13 @@
 }
 
 .description ul li::marker {
-  color: var(--enchanted-text-primary);
+  color: var(--enchanted-color-blue);
 }
 
 .note {
   display: block;
   margin: 8px 0 4px 0;
   font-style: italic;
-  color: var(--enchanted-text-secondary);
+  color: var(--enchanted-text-tertiary);
   font-size: 0.85rem;
 }

@@ -26,7 +26,7 @@ export const RarityList = ({ hidden }) => {
             key={`rarity-list-item-${rarity.name}-${rarity.id}`}
             className={styles.rarityItem}
           >
-            <span style={{ color: rarity.color }}>{rarity.name}</span>
+            <span>{rarity.name}</span>
             <div
               className={styles.line}
               style={{ backgroundColor: rarity.color }}

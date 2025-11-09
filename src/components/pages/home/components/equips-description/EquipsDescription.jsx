@@ -8,7 +8,7 @@ export const EquipsDescription = () => {
 
         <p>
           Equips enhance your combat capabilities by providing powerful tools
-          and special character abilities. Equips focus on the two main combat
+          and special character abilities. Equips focus on two of the three main combat
           styles and allow you to customize your fighting strategy.
         </p>
       </div>

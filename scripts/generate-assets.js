@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 // --- CONFIGURATION ---
-const SOURCE_DIRECTORIES = ['images', 'videos', 'logos'];
-const ASSET_EXTENSIONS_REGEX = /\.(png|jpg|jpeg|gif|svg|mp4|webm)$/;
+const SOURCE_DIRECTORIES = ['audio', 'images', 'logos', 'videos'];
+const ASSET_EXTENSIONS_REGEX = /\.(png|jpg|jpeg|gif|svg|mp4|webm|mp3)$/;
 // --- END CONFIGURATION ---
 
 const BASE_ASSETS_DIR = path.join(process.cwd(), 'src/assets');

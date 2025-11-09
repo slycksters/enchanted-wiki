@@ -1,7 +1,19 @@
-.timerSection {
-  align-items: center;
+.timer {
+  border-top: 1px solid var(--enchanted-border-color);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.timer p {
+  color: var(--enchanted-text-tertiary);
+}
+
+.timerWrapper {
   display: flex;
-  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  padding: 0 10px;
+  justify-self: center;
+  margin-top: 40px;
+  width: 75%;
 }

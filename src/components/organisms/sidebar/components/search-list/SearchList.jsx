@@ -85,7 +85,7 @@ export const SearchList = ({
                   background:
                     !isMultiList && (isSelected || isHovered)
                       ? getBackgroundGradient(
-                          'var(--enchanted-text-primary)',
+                          'var(--enchanted-color-blue)',
                           'Right'
                         )
                       : null,

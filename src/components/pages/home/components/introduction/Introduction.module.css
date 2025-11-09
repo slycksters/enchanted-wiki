@@ -1,6 +1,7 @@
 .introduction {
   color: var(--enchanted-text-secondary);
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .introduction span {

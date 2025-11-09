@@ -34,7 +34,7 @@ export const Navbar = () => {
               style={({ isActive }) => ({
                 background: isActive
                   ? getBackgroundGradient(
-                      `var(--enchanted-rarity-exotic)`,
+                      `var(--enchanted-color-blue)`,
                       'Up'
                     )
                   : null,

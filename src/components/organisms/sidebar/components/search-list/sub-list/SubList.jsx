@@ -12,7 +12,7 @@ export const SubList = ({ list, onClickSubItem, selectedSubItem }) => {
         const uniqueId = `${subItem.id}-${subItem.name}`;
         const isSelected = uniqueId === `${selectedSubItem.id}-${selectedSubItem.name}`;
         const isHovered = hoveredId === uniqueId;
-        const rarityColor = subItem.rarity?.color ?? 'var(--enchanted-text-primary)';
+        const rarityColor = subItem.rarity?.color ?? 'var(--enchanted-color-blue)';
 
         return (
           <div

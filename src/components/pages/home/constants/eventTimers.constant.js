@@ -1,48 +1,48 @@
+import { NPCS } from '@data';
+
 export const EVENT_TIMERS = {
   bosses: {
     erza: {
-      every: 10,
-      countDown: 10,
-      name: 'Erza',
+      intervals: [10, 20, 30, 40, 50, 60],
       location: 'Sunblaze Isle',
+      name: NPCS.erzaBoss.name,
     },
     gray: {
-      every: 15,
-      countDown: 15,
-      name: 'Gray',
+      intervals: [10, 20, 30, 40, 50, 60],
       location: 'Frostveil Hollow',
+      name: NPCS.grayBoss.name,
     },
     natsuDragneel: {
-      every: 15,
-      countDown: 15,
-      name: 'Natsu Dragneel',
+      intervals: [15, 30, 45, 60],
       location: 'Coral Abyss',
+      name: NPCS.natsuDragneelBoss.name,
     },
     natsu: {
-      every: 15,
-      countDown: 15,
-      name: 'Natsu',
+      intervals: [15, 30, 45, 60],
       location: 'Verdant Mire',
+      name: NPCS.natsuBoss.name,
     },
     shatterGrove: {
-      every: 10,
-      countDown: 10,
-      name: 'Random',
+      intervals: [10, 20, 30, 40, 50, 60],
       location: 'Shatter Grove',
+      name: 'Random',
+    },
+    death: {
+      intervals: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
+      location: `Hallow's Eve`,
+      name: NPCS.deathBoss.name,
     },
   },
   dungeons: {
-    leftPortal: {
-      every: 20,
-      countDown: 20,
-      name: 'Left Portal',
+    leftDungeon: {
+      intervals: [20, 40, 60],
       location: 'Lost Cave',
+      name: 'Left Dungeon',
     },
-    rightPortal: {
-      every: 10,
-      countDown: 10,
-      name: 'Right Portal',
+    rightDungeon: {
+      intervals: [10, 30, 50],
       location: 'Lost Cave',
+      name: 'Right Dungeon',
     }
   }
 }

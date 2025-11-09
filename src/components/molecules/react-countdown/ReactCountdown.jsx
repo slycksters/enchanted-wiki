@@ -1,0 +1,108 @@
+import { useRef, useState, useCallback, useEffect } from 'react';
+import clsx from 'clsx';
+import Countdown from 'react-countdown';
+import { assets } from '@assets';
+import styles from './ReactCountdown.module.css';
+import { calculateNextTarget } from './helpers';
+import { useSoundEffect } from './hooks';
+
+const soundEffects = assets.audio.soundEffects;
+
+// Global flag to prevent multiple sounds
+const globalSoundLock = { current: false };
+
+// --- Custom time render
+const timeRenderer = ({ minutes, seconds }, hasSpawned) => (
+  <div className={styles.timerBoxes}>
+    {hasSpawned ? (
+      <div className={styles.spawnedText}>Spawned</div>
+    ) : (
+      <>
+        <div className={styles.timeBox}>
+          {minutes.toString().padStart(2, '0')}
+        </div>
+        <span className={styles.colon}>:</span>
+        <div className={styles.timeBox}>
+          {seconds.toString().padStart(2, '0')}
+        </div>
+      </>
+    )}
+  </div>
+);
+
+// --- Component
+export const ReactCountdown = ({
+  label,
+  subLabel,
+  intervals = [15, 30, 45, 60],
+  width,
+}) => {
+  const audioRef = useRef(null);
+  const [clickPulse, setClickPulse] = useState(false);
+  const [hasSpawned, setHasSpawned] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [key, setKey] = useState(0);
+  const [targetDate, setTargetDate] = useState(() =>
+    calculateNextTarget(intervals)
+  );
+
+  const [playSoundEffect, stopSoundEffect] = useSoundEffect(
+    audioRef,
+    globalSoundLock
+  );
+
+  // Reset spawned state after 15 seconds
+  useEffect(() => {
+    if (!hasSpawned) return;
+    const spawnTimer = setTimeout(() => setHasSpawned(false), 15000);
+    return () => clearTimeout(spawnTimer);
+  }, [hasSpawned]);
+
+  // Reset click pulse class after animation ends
+  useEffect(() => {
+    if (!clickPulse) return;
+    const timer = setTimeout(() => setClickPulse(false), 500); // match animation duration
+    return () => clearTimeout(timer);
+  }, [clickPulse]);
+
+  const handleComplete = useCallback(() => {
+    const nextTarget = calculateNextTarget(intervals);
+    setTargetDate(nextTarget);
+    setKey((prev) => prev + 1);
+    setHasSpawned(true);
+    if (isActive) playSoundEffect();
+  }, [intervals, isActive, playSoundEffect]);
+
+  const handleOnClickCountdown = () => {
+    setClickPulse(true);
+    if (isActive) {
+      setIsActive(false);
+      stopSoundEffect();
+    } else {
+      setIsActive(true);
+    }
+  };
+
+  return (
+    <div
+      className={clsx(
+        styles.reactCountdown,
+        isActive && styles.activeReactCountdown,
+        hasSpawned && styles.pulseAnimation,
+        clickPulse && styles.clickPulse
+      )}
+      onClick={handleOnClickCountdown}
+      style={{ width }}
+    >
+      <div className={styles.label}>{label ?? 'Countdown'}</div>
+      <div className={styles.subLabel}>{subLabel}</div>
+      <Countdown
+        key={key}
+        date={targetDate}
+        onComplete={handleComplete}
+        renderer={(params) => timeRenderer(params, hasSpawned)}
+      />
+      <audio ref={audioRef} hidden src={soundEffects.spawn2()} preload={'auto'} />
+    </div>
+  );
+};

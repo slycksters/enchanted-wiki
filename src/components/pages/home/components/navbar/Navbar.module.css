@@ -24,7 +24,7 @@
 }
 
 .linkListItem::before {
-  border-bottom: 2px solid var(--enchanted-rarity-exotic);
+  border-bottom: 2px solid var(--enchanted-color-blue);
   content: '';  
   inset: 0;
   position: absolute;

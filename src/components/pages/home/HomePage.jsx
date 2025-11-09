@@ -26,6 +26,7 @@ export const HomePage = () => {
         <Navbar />
         <Brand />
         <Introduction />
+        <Timer />
         <AbilitiesDescription />
         <EquipsDescription />
         <ItemsDescription />

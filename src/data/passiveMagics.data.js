@@ -65,7 +65,7 @@ export const PASSIVE_MAGICS = {
     ],
     attachment: passiveMagicImages.roarOfTheAbyss,
     description:
-      `Apply the wrath of the abyss when you're attacking, amplifying your power with each strike as dark energy surges to multiply your damage beyond mortal limits.`,
+      `Apply the wrath of the abyss when you're attacking, amplifying your power with each strike as dark energy surges to multiply your damage by 15%.`,
     isGatcha: true,
     name: 'Roar of The Abyss',
     rarity: RARITIES.mythical,

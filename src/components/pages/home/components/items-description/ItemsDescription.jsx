@@ -16,7 +16,7 @@ export const ItemsDescription = () => {
       <div className={'row g-3'}>
         <section className={'col col-12 col-md-4'}>
           <div className={styles.categoryItem}>
-            <h4>Accessory</h4>
+            <h4>Accessories</h4>
 
             <p>
               Items that provide bonus stats, helping to improve your

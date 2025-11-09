@@ -33,7 +33,7 @@ body {
 
 .line-graph-background {
   --bg-color: transparent;
-  --line-color: #222222;
+  --line-color: rgba(74, 74, 82, 0.4);
   --line-spacing: 7px;
   --line-thickness: 1.4px;
 

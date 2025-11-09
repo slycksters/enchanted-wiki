@@ -1,0 +1,101 @@
+.reactCountdown {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--enchanted-bg-accent);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+}
+
+.label {
+  color: var(--enchanted-text-primary);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.subLabel {
+  color: var(--enchanted-text-secondary);
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+/* Container for the timer */
+.timerBoxes {
+  align-items: center;
+  display: flex;
+  height: 35px;
+  gap: 6px;
+  justify-content: center;
+}
+
+.timerBoxes > p {
+  color: var(--enchanted-text-primary) !important;
+}
+
+/* Each number box */
+.timeBox {
+  background: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
+  border-radius: 6px;
+  padding: 6px;
+  color: var(--enchanted-text-secondary);
+  font-size: 14px;
+  min-width: 40px;
+  text-align: center;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* The colon separator */
+.colon {
+  color: var(--enchanted-bg-accent);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* Active States */
+.activeReactCountdown {
+  background-color: var(--enchanted-color-blue);
+  border: 1px solid var(--enchanted-color-blue);
+}
+
+.activeReactCountdown .timeBox {
+  background-color: var(--enchanted-color-blue);
+  border-color: var(--enchanted-text-primary);
+  box-shadow: none;
+  color: var(--enchanted-text-primary);
+}
+
+.activeReactCountdown .colon,
+.activeReactCountdown .subLabel {
+  color: var(--enchanted-text-primary);
+}
+
+/* Hovered States */
+.reactCountdown:hover {
+  border: 1px solid var(--enchanted-color-blue);
+}
+
+/* === Time box pulse animation === */
+@keyframes pulseRadiate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 209, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 132, 209, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 209, 0);
+  }
+}
+
+/* When active, apply both animations */
+.pulseAnimation {
+  animation: pulseRadiate 1s ease-out infinite;
+  transition: transform 0.2s ease-in-out;
+}
+
+.clickPulse {
+  animation: pulseRadiate 0.5s ease;
+}
