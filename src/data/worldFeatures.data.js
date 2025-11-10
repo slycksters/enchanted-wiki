@@ -74,31 +74,63 @@ export const WORLD_FEATURES = {
     name: 'Spawn Crystal',
     type: TYPES.worldFeature,
   },
-  miningArea: {
+  node: {
     id: 2,
-    attachment: worldFeatureImages.specialNode,
-    description:
-      'A Mining Area is where you can farm artifacts used for gathering materials, crafting Specs, and upgrading your mining tools.',
+    attachment: worldFeatureImages.node,
+    description: 'A regular stone node for mining resources.',
+    drops: [
+      'wood',
+      'iron',
+      'vase',
+      'rareChest',
+      'gold',
+      'goldBar',
+      'epicChest',
+      'diamond',
+      'legendaryChest',
+      'mythicalChest',
+      'exoticChest',
+    ],
     gallery: [
       {
         id: 1,
         attachment: worldFeatureImages.miningArea1,
-        description: 'A regular stone node for mining resources.',
-        name: 'Node',
-      },
-      {
-        id: 2,
-        attachment: worldFeatureImages.miningArea2,
-        description:
-          'A special node that grants one extra reward compared to normal nodes. Accessible only to VIP or Verified players.',
-        name: 'Special Node',
+        name: 'Located at Crescent Isle',
       },
     ],
-    name: 'Mining Area',
+    name: 'Node',
+    type: TYPES.worldFeature,
+  },
+  specialNode: {
+    id: 3,
+    attachment: worldFeatureImages.specialNode,
+    description:
+      'A special node that grants one extra reward compared to normal nodes. Accessible only to VIP or Verified players.',
+    drops: [
+      'wood',
+      'iron',
+      'vase',
+      'rareChest',
+      'gold',
+      'goldBar',
+      'epicChest',
+      'diamond',
+      'legendaryChest',
+      'mythicalChest',
+      'exoticChest',
+    ],
+    gallery: [
+      {
+        id: 1,
+        attachment: worldFeatureImages.miningArea2,
+        name: 'Located at Crescent Isle',
+      },
+    ],
+    name: 'Special Node',
     type: TYPES.worldFeature,
   },
   shrine: {
-    id: 3,
+    id: 4,
     attachment: worldFeatureImages.shrine,
     description:
       'Activating all Shrines will summon Laxus Dreyar, a key mechanic required to complete the Lightning Dragon Slayer V2 quest.',
@@ -138,7 +170,7 @@ export const WORLD_FEATURES = {
     type: TYPES.worldFeature,
   },
   obelisk: {
-    id: 4,
+    id: 5,
     attachment: worldFeatureImages.obelisk,
     description:
       'Activate the Obelisk and complete its trial. After finishing, Sting Eucliffe will appear shortly — a key mechanic needed to complete the Shadow Dragon Slayer V2 quest.',
@@ -154,7 +186,7 @@ export const WORLD_FEATURES = {
     type: TYPES.worldFeature,
   },
   dungeon: {
-    id: 5,
+    id: 6,
     attachment: worldFeatureImages.dungeon,
     description:
       '<p>Challenge these battlegrounds to gather upgrade materials and find powerful accessories. Requires Missing Key to enter.</p><i>Available Dungeons:</i><ul><li>Jujutsu Kaisen Dungeon (Vaulted)</li><li>Gatchiakuta Dungeon</li><li>Demon Slayer Dungeon</li></ul>',

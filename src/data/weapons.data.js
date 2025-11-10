@@ -16,7 +16,7 @@ export const WEAPONS = {
       },
     ],
     attachment: weaponImages.knuckles,
-    description: `A fundamental combat tool. These knuckles offer no special abilities, translating your pure, untamed strength directly into every blow.`,
+    description: `A starter combat tool. These knuckles offer no special abilities, translating your pure, untamed strength directly into every blow.`,
     name: 'Knuckles',
     rarity: RARITIES.uncommon,
     stats: {
@@ -130,6 +130,7 @@ export const WEAPONS = {
       'A masterfully forged blade, demanding discipline and precision from its wielder. Its legendary edge delivers lethal, lightning-fast cuts.',
     name: 'Katana',
     rarity: RARITIES.rare,
+    sources: ['rufus'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 7,
@@ -165,6 +166,7 @@ export const WEAPONS = {
     description:
       'A battle-forged blade, heavy with the promise of victory. Wielded by valiant knights, its crushing weight and relentless edge are designed to break both shields and spirits.',
     name: 'Medieval Sword',
+    sources: ['meto'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 7.25,
@@ -201,6 +203,7 @@ export const WEAPONS = {
     description: `A pair of vicious claws crackling with shadow energy. They feel less like a weapon and more like a predator's natural extension, hungry to rend flesh and bone.`,
     name: 'Claws',
     rarity: RARITIES.rare,
+    sources: ['ola'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 7,
@@ -358,6 +361,7 @@ export const WEAPONS = {
     description: `Not a weapon forged in Hell, but a fragment of the infernal forge itself, bound in soul-etched iron. These gauntlets don't just wield fire; they are a constant, self-sustaining cataclysm, forever hungry to melt reality back into primordial flame.`,
     name: 'Hellforge Gauntlets',
     rarity: RARITIES.mythical,
+    sources: ['hezzy'],
     stats: {
       damageType: DAMAGE_TYPES.meelee.name,
       baseDMG: 9.5,
@@ -398,6 +402,7 @@ export const WEAPONS = {
       'This is not a blade forged of metal, but a shard of the primordial void given form—a sliver of the absolute nothingness that predates existence itself. Its edge does not cut; it unmakes, silently erasing matter, energy, and even light from reality.',
     name: 'Dark Sword',
     rarity: RARITIES.mythical,
+    sources: ['jerome'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 10,

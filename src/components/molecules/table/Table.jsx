@@ -37,7 +37,7 @@ export const Table = ({ list }) => {
                     {item.requirements.map((r) => {
                       const quantityRange = Array.isArray(r.quantity);
                       return (
-                        <li>
+                        <li key={`table-item-requirements-${r.name}`}>
                           {quantityRange
                             ? r.quantity
                                 .map((q) => formatNumberWithCommas(q))
