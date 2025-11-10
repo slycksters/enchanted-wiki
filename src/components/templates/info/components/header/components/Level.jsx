@@ -1,3 +1,4 @@
+import { formatNumberWithCommas } from '@helpers';
 import styles from '../Header.module.css';
 
 export const Level = ({ info }) => {
@@ -5,7 +6,7 @@ export const Level = ({ info }) => {
     info.level && (
       <div className={styles.infoRow}>
         <span className={styles.label}>Level:</span>
-        <span className={styles.value}>{info.level}</span>
+        <span className={styles.value}>{formatNumberWithCommas(info.level)}</span>
       </div>
     )
   );

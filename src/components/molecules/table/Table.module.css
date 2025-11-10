@@ -4,6 +4,7 @@
   table-layout: fixed;
   text-align: center;
   width: 100%;
+  min-width: 750px;
 }
 
 .tableHeader > th {
@@ -14,6 +15,7 @@
 
 .tableRow > td:first-child {
   height: 100px;
+  max-width: 100px;
   min-height: 100px;
   min-width: 100px;
   width: 100px;

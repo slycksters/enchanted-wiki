@@ -56,6 +56,7 @@ export const WEAPONS = {
       'An elegant and rare blade, as swift as the wind and brimming with explosive energy.',
     name: 'Winged Sword',
     rarity: RARITIES.rare,
+    sources: ['luca'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
       baseDMG: 6.5,
@@ -91,6 +92,7 @@ export const WEAPONS = {
       'Forged from a rare and incredibly sturdy alloy. These gauntlets sacrifice speed for crushing, brute-force impact.',
     name: 'Titanium Gauntlets',
     rarity: RARITIES.rare,
+    sources: ['jeremy'],
     stats: {
       damageType: DAMAGE_TYPES.meelee.name,
       baseDMG: 6,
@@ -196,7 +198,7 @@ export const WEAPONS = {
       },
     ],
     attachment: weaponImages.claws,
-    description: `'A pair of vicious claws crackling with shadow energy. They feel less like a weapon and more like a predator's natural extension, hungry to rend flesh and bone.`,
+    description: `A pair of vicious claws crackling with shadow energy. They feel less like a weapon and more like a predator's natural extension, hungry to rend flesh and bone.`,
     name: 'Claws',
     rarity: RARITIES.rare,
     stats: {

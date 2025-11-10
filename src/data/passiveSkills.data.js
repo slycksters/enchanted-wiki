@@ -37,4 +37,13 @@ export const PASSIVE_SKILLS = {
     sources: ['reaperSpec'],
     type: TYPES.passiveSkill,
   },
+  maxQuest: {
+    id: 3,
+    attachment: passiveSkillImages.maxQuest,
+    description: 'Harness the wisdom of a master adventurer to maximize your gains. Every completed quest yields a multiplied bounty, turning routine tasks into a fortune.',
+    name: 'Max Quest',
+    rarity: RARITIES.exotic,
+    sources: ['markus'],
+    type: TYPES.passiveSkill,
+  },
 };

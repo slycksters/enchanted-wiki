@@ -15,7 +15,7 @@ export const Rarity = ({ info }) => {
             color: getContrastingTextColor(info.rarity.color),
           }}
         >
-          {info.rarity.name} {info.isGatcha ? `(${info.rarity.rate})` : ''}
+          {info.rarity.name} {info.isGatcha ? `(${info.rarity.rate}%)` : ''}
         </span>
       </div>
     )

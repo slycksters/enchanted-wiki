@@ -921,12 +921,12 @@ export const ITEMS = {
     subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
-  raidToken: {
+  dungeonToken: {
     id: 68,
     attachment: itemImages.raidToken,
     description: `A hard-earned token awarded for successfully clearing the Lost Cave dungeon. Use it to purchase powerful, exclusive rewards from dungeon shop.`,
     isGatcha: false,
-    name: `Raid Token`,
+    name: `Dungeon Token`,
     rarity: RARITIES.v2,
     sources: ['lostCave'],
     subType: ITEM_TYPES.materials,

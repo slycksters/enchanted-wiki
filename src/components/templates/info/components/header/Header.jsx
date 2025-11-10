@@ -1,5 +1,5 @@
 import { Image } from '@components';
-import { Level, Rarity, Stats, Type } from './components';
+import { Level, Location, Rarity, Stats, Type } from './components';
 import styles from './Header.module.css';
 
 export const Header = ({ info }) => {
@@ -11,6 +11,7 @@ export const Header = ({ info }) => {
           <Rarity info={info} />
           <Type info={info} />
           <Level info={info} />
+          <Location locations={info.locations} />
           <Stats info={info} />
         </div>
       </section>

@@ -21,7 +21,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Wind',
     rarity: RARITIES.common,
-    sources: ['monkeyDevelopsSpec', 'steveSpec'],
+    sources: ['monkeyDevelopsSpec'],
     type: TYPES.magic,
   },
   fire: {
@@ -46,7 +46,7 @@ export const MAGICS = {
     isGatcha: true,
     name: 'Fire',
     rarity: RARITIES.uncommon,
-    sources: ['monkeyDevelopsSpec', 'steveSpec'],
+    sources: ['monkeyDevelopsSpec'],
     type: TYPES.magic,
   },
   poison: {

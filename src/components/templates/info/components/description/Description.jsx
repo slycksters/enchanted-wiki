@@ -4,7 +4,12 @@ export const Description = ({ info }) => {
   return (
     <section
       className={styles.description}
-      style={{ paddingBottom: !info.drops?.length && !info.sources?.length ? '30px' : null }}
+      style={{
+        paddingBottom:
+          !info.drops?.length && !info.sources?.length && !info.ware?.length
+            ? '30px'
+            : null,
+      }}
     >
       <div className={'row'}>
         <div className={'col col-12 col-md-12 col-lg-9'}>

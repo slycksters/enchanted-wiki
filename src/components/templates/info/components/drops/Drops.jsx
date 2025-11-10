@@ -1,12 +1,14 @@
-import styles from './Drops.module.css';
 import { Table } from '@components';
+import styles from './Drops.module.css';
 
 export const Drops = ({ info }) => {
   if (!info.drops?.length) return null;
 
   return (
-    <section className={`${styles.drops} col col-12 col-md-6 col-lg-6`}>
-      <h4>Drops:</h4>
+    <section className={styles.drops}>
+      <h4 style={{ marginTop: info.sources?.length > 0 ? 0 : null }}>
+        Drops:
+      </h4>
       <div>
         <Table list={info.drops} />
       </div>

@@ -7,9 +7,9 @@ export const NPC_TYPES = {
     id: 2,
     name: 'Mini Boss',
   },
-  mobs: {
+  mob: {
     id: 3,
-    name: 'Mobs',
+    name: 'Mob',
   },
   questGiver: {
     id: 4,
