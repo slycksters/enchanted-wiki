@@ -77,6 +77,4 @@ npcMap.forEach((item) => {
     .filter(Boolean);
 });
 
-console.log(npcMap);
-
 export const npcArray = Array.from(npcMap.values());

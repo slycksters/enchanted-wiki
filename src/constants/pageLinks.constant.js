@@ -6,57 +6,43 @@ import {
   GiSpikedShoulderArmor,
   GiSwapBag,
 } from 'react-icons/gi';
-import {
-  AbilitiesPage,
-  IslandsPage,
-  ItemsPage,
-  NpcsPage,
-  SpecsPage,
-  WorldFeaturesPage,
-} from '@components/pages';
-import { BASE_PATH } from './basePath.constant';
+import { defaultRoutes } from './defaultRoutes.constant';
 
 export const PAGE_LINKS = [
   {
     id: 1,
-    element: AbilitiesPage,
     icon: GiBookCover,
     name: 'Abilities',
-    path: `abilities`,
+    path: defaultRoutes.abilities,
   },
   {
     id: 2,
-    element: SpecsPage,
     icon: GiSpikedShoulderArmor,
     name: 'Equips',
-    path: `equips`,
+    path: defaultRoutes.equips,
   },
   {
     id: 3,
-    element: ItemsPage,
     icon: GiSwapBag,
     name: 'Items',
-    path: `items`,
+    path: defaultRoutes.items,
   },
   {
     id: 4,
-    element: IslandsPage,
     icon: GiIsland,
     name: 'Islands',
-    path: `islands`,
+    path: defaultRoutes.islands,
   },
   {
     id: 5,
-    element: NpcsPage,
     icon: GiPerson,
     name: 'NPCs',
-    path: `npcs`,
+    path: defaultRoutes.npcs,
   },
   {
     id: 6,
-    element: WorldFeaturesPage,
     icon: GiObelisk,
     name: 'World Features',
-    path: `world-features`,
+    path: defaultRoutes.worldFeatures,
   },
 ];

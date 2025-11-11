@@ -1,11 +1,16 @@
-import { Info, Layout } from '@components';
-import { NPCS } from '@data';
-import { CATEGORIES } from './constants';
+import { useParams } from 'react-router-dom';
+import { Info } from '@components';
+import { DATA } from '@mappers';
+import { TYPES } from '@data';
 
 export const NpcsPage = () => {
-  return (
-    <Layout categories={CATEGORIES} defaultInfo={NPCS.adamSpec}>
-      <Info />
-    </Layout>
+  const { slug } = useParams();
+
+  const allNpcs = DATA[TYPES.npc.name];
+
+  const selectedInfo = allNpcs.find(
+    (item) => item.slug === slug
   );
-};
+
+  return <Info info={selectedInfo} />;
+};  

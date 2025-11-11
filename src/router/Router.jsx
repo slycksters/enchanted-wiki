@@ -1,6 +1,16 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { HomePage, MainComponent, NotFoundPage } from '@components';
-import { BASE_PATH, PAGE_LINKS } from '@constants';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
+import {
+  AbilitiesPage,
+  EquipsPage,
+  HomePage,
+  IslandsPage,
+  ItemsPage,
+  MainComponent,
+  NotFoundPage,
+  NpcsPage,
+  WorldFeaturesPage,
+} from '@components';
+import { BASE_PATH, defaultRoutes } from '@constants';
 
 const router = createBrowserRouter([
   {
@@ -11,21 +21,53 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
-      ...PAGE_LINKS.map((link) => {
-        const Component = link.element;
-        return {
-          path: link.path,
-          element: <Component />,
-        };
-      }),
+      {
+        path: 'abilities',
+        children: [
+          { index: true, element: <Navigate to={defaultRoutes.abilities} replace /> },
+          { path: ':category/:slug', element: <AbilitiesPage /> },
+        ],
+      },
+      {
+        path: 'equips',
+        children: [
+          { index: true, element: <Navigate to={defaultRoutes.equips} replace /> },
+          { path: ':category/:slug', element: <EquipsPage /> },
+        ],
+      },
+      {
+        path: 'items',
+        children: [
+          { index: true, element: <Navigate to={defaultRoutes.items} replace /> },
+          { path: ':category/:slug', element: <ItemsPage /> },
+        ],
+      },
+      {
+        path: 'islands',
+        children: [
+          { index: true, element: <Navigate to={defaultRoutes.islands} replace /> },
+          { path: ':category/:slug', element: <IslandsPage /> },
+        ],
+      },
+      {
+        path: 'npcs',
+        children: [
+          { index: true, element: <Navigate to={defaultRoutes.npcs} replace /> },
+          { path: ':category/:slug', element: <NpcsPage /> },
+        ],
+      },
+      {
+        path: 'world-features',
+        children: [
+          { index: true, element: <Navigate to={defaultRoutes.worldFeatures} replace /> },
+          { path: ':slug', element: <WorldFeaturesPage /> },
+        ],
+      },
     ],
   },
   {
     path: '*',
     element: <NotFoundPage />,
-  },
-  {
-    basename: BASE_PATH, // Also set basename for correct navigation and links
   },
 ]);
 

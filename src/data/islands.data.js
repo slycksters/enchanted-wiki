@@ -359,12 +359,12 @@ export const ISLANDS = {
     id: 12,
     attachment: islandImages.shatterGrove,
     description:
-      'An endgame island dedicated to combat, Shatter Grove is where players hunt powerful, randomly spawning World Bosses to gather rare materials used for crafting unique and powerful Specs.',
+      'An endgame island dedicated to combat, Shattergrove is where players hunt powerful, randomly spawning World Bosses to gather rare materials used for crafting unique and powerful Specs.',
     gallery: [
       {
         id: 1,
         attachment: islandImages.shatterGrove1,
-        description: 'Starting point of Shatter Grove.',
+        description: 'Starting point of Shattergrove.',
         name: 'Spawn Crystal',
       },
       {
@@ -375,7 +375,7 @@ export const ISLANDS = {
         name: 'Arena',
       },
     ],
-    name: 'Shatter Grove',
+    name: 'Shattergrove',
     type: TYPES.island,
   },
   kurotsukiIsle: {
@@ -404,7 +404,7 @@ export const ISLANDS = {
   huecoMundo: {
     id: 14,
     attachment: islandImages.huecoMundo,
-    description: `A desolate desert of eternal night, Hueco Mundo is the current endgame zone, accessible only by using a rare Garganta dropped from the World Bosses Fullbring Ichigo and Sousuke Aizen (found in Shatter Grove or the Trial Grounds). Here, players grind to the max level cap and complete Fullbring Ichigo's trial to upgrade their Ichigo V1 Spec to Ichigo V2, awakening fullbring powers.`,
+    description: `A desolate desert of eternal night, Hueco Mundo is the current endgame zone, accessible only by using a rare Garganta dropped from the World Bosses Fullbring Ichigo and Sousuke Aizen (found in Shattergrove or the Trial Grounds). Here, players grind to the max level cap and complete Fullbring Ichigo's trial to upgrade their Ichigo V1 Spec to Ichigo V2, awakening fullbring powers.`,
     gallery: [
       {
         id: 1,

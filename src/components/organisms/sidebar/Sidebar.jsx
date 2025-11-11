@@ -1,43 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
-import { Searchbar, SearchList } from './components';
-import styles from './Sidebar.module.css';
+import { RarityList, Searchbar, SearchList } from './components';
 import { filterItems } from './helpers';
-import { RarityList } from './components/rarity-list/RarityList';
+import styles from './Sidebar.module.css';
 
-export const Sidebar = ({
-  list,
-  onClickItem,
-  onClickSubItem,
-  setShowSidebar,
-  showSidebar,
-}) => {
+export const Sidebar = ({ list, basePath, setShowSidebar, showSidebar }) => {
   const hasRarity = list?.some(
     (item) => item.rarity || item.list?.some((subItem) => subItem.rarity)
   );
-  const isMultiList = list?.some((item) => item.list);
   const [filteredData, setFilteredData] = useState(list);
+
+  // Reset filter when the list (page) changes
+  useEffect(() => {
+    setFilteredData(list);
+  }, [list]);
 
   const handleOnSearch = (e) => {
     const searchTerm = e.target.value.toLowerCase();
-
-    const newList = list
-      .map((item) => filterItems(item, searchTerm))
-      .filter(Boolean);
-
+    const newList = list.map((item) => filterItems(item, searchTerm)).filter(Boolean);
     setFilteredData(newList);
   };
 
   return (
     <>
-      {/* Background overlay (only visible when sidebar is open) */}
       {showSidebar && (
-        <div
-          className={styles.overlay}
-          onClick={() => setShowSidebar(false)}
-        ></div>
+        <div className={styles.overlay} onClick={() => setShowSidebar(false)}></div>
       )}
-
       <div
         className={clsx(styles.sidebar, {
           [styles.sidebarOpen]: showSidebar,
@@ -47,10 +35,8 @@ export const Sidebar = ({
         <Searchbar onSearch={handleOnSearch} />
         {hasRarity && <RarityList hidden={filteredData.length === 0} />}
         <SearchList
-          isMultiList={isMultiList}
+          basePath={basePath}
           list={filteredData}
-          onClickItem={onClickItem}
-          onClickSubItem={onClickSubItem}
         />
       </div>
     </>

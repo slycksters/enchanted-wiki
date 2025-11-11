@@ -1,11 +1,17 @@
-import { Info, Layout } from '@components';
-import { WORLD_FEATURES } from '@data';
-import { CATEGORIES } from './constants';
+import { useParams } from 'react-router-dom';
+import { Info } from '@components';
+import { DATA } from '@mappers';
+import { TYPES } from '@data';
 
 export const WorldFeaturesPage = () => {
-  return (
-    <Layout categories={CATEGORIES} defaultInfo={WORLD_FEATURES.spawnCrystal}>
-      <Info />
-    </Layout>
+  // This page has a simpler route: /world-features/:name
+  const { slug } = useParams(); 
+
+  const allWorldFeatures = DATA[TYPES.worldFeature.name];
+
+  const selectedInfo = allWorldFeatures.find(
+    (item) => item.slug === slug
   );
+
+  return <Info info={selectedInfo} />;z
 };

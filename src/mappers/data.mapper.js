@@ -1,5 +1,5 @@
 import { TYPES } from '@data';
-import { extractValues } from '@helpers';
+import { addUniqueSlugs, extractValues } from '@helpers';
 import {
   islandArray,
   itemArray,
@@ -16,16 +16,17 @@ import {
 } from './linkers';
 
 export const DATA = {
-  [TYPES.island.name]: extractValues(islandArray),
-  [TYPES.item.name]: extractValues(itemArray),
-  [TYPES.magic.name]: extractValues(magicArray),
-  [TYPES.npc.name]: extractValues(npcArray),
-  [TYPES.passiveMagic.name]: extractValues(passiveMagicArray),
-  [TYPES.passiveSkill.name]: extractValues(passiveSkillArray),
-  [TYPES.race.name]: extractValues(raceSkillArray),
-  [TYPES.spec.name]: extractValues(specArray),
-  [TYPES.title.name]: extractValues(titleArray),
-  [TYPES.trait.name]: extractValues(traitArray),
-  [TYPES.weapon.name]: extractValues(weaponArray),
-  [TYPES.worldFeature.name]: extractValues(worldFeatureArray),
+  // Apply the slug generation to every data array
+  [TYPES.island.name]: addUniqueSlugs(extractValues(islandArray)),
+  [TYPES.item.name]: addUniqueSlugs(extractValues(itemArray)),
+  [TYPES.magic.name]: addUniqueSlugs(extractValues(magicArray)),
+  [TYPES.npc.name]: addUniqueSlugs(extractValues(npcArray)),
+  [TYPES.passiveMagic.name]: addUniqueSlugs(extractValues(passiveMagicArray)),
+  [TYPES.passiveSkill.name]: addUniqueSlugs(extractValues(passiveSkillArray)),
+  [TYPES.race.name]: addUniqueSlugs(extractValues(raceSkillArray)),
+  [TYPES.spec.name]: addUniqueSlugs(extractValues(specArray)),
+  [TYPES.title.name]: addUniqueSlugs(extractValues(titleArray)),
+  [TYPES.trait.name]: addUniqueSlugs(extractValues(traitArray)),
+  [TYPES.weapon.name]: addUniqueSlugs(extractValues(weaponArray)),
+  [TYPES.worldFeature.name]: addUniqueSlugs(extractValues(worldFeatureArray)),
 };

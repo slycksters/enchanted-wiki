@@ -19,15 +19,17 @@
 
 /* ─── List Items ─────────────────────────────────────────────────── */
 .item {
+  display: block; /* <-- ADD THIS LINE */
+  text-decoration: none; /* <-- ADD THIS LINE */
   border-left: 3px solid var(--enchanted-border-color);
   cursor: pointer;
   overflow: hidden;
   padding: 5px 0;
   text-overflow: ellipsis;
   text-indent: 20px;
-  transition:
+  /* transition:
     padding-left 0.1s ease-in-out,
-    border-width 0.1s ease-in-out;
+    border-width 0.1s ease-in-out; */
   white-space: nowrap;
 }
 
@@ -59,12 +61,12 @@
 /* Rotate arrow or icon for active parent */
 .parentItem > span:last-child {
   transform: rotate(0deg);
-  transition: transform ease-out 0.3s;
+  /* transition: transform ease-out 0.3s; */
 }
 
 .activeParentItem > span:last-child {
   transform: rotate(315deg);
-  transition: transform ease-in 0.3s;
+  /* transition: transform ease-in 0.3s; */
 }
 
 /* ─── Verbiage Text ──────────────────────────────────────────────── */
@@ -76,5 +78,5 @@
 /* ─── Sub List ───────────────────────────────────────────────────── */
 .subList {
   overflow: hidden;
-  transition: max-height ease-out 0.3s;
+  transition: max-height 0.3s ease-in-out;
 }

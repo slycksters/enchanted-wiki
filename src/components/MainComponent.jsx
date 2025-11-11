@@ -1,27 +1,68 @@
+import { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import { Navbar } from '@components';
+import { Controller, InfoPanel, Navbar, Sidebar } from '@components';
 import { BASE_PATH } from '@constants';
 import { useWindowWidth } from '@hooks';
+import * as PageCategories from './pages/pageCategories'; // We will create this file
+import styles from './MainComponent.module.css'; // New CSS file
 
 export const MainComponent = () => {
   const location = useLocation();
   const windowWidth = useWindowWidth();
+  const isMobileOrTablet = windowWidth <= 1024;
 
-  const showNavigation =
-    location.pathname !== BASE_PATH && location.pathname !== `${BASE_PATH}/`;
-  const showLineGraphBackground =
-    location.pathname !== BASE_PATH && location.pathname !== `${BASE_PATH}/`;
-  const height =
-    windowWidth <= 1024 ? 'calc(100vh - 110px)' : 'calc(100vh - 76px)';
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const isHomePage = location.pathname === BASE_PATH;
+  const showNavigation = !isHomePage;
+
+  const getSidebarProps = () => {
+    const pageKey = location.pathname.split('/')[1];
+    switch (pageKey) {
+      case 'abilities':
+        return { list: PageCategories.ABILITIES_CATEGORIES, basePath: '/abilities' };
+      case 'equips':
+        return { list: PageCategories.EQUIPS_CATEGORIES, basePath: '/equips' };
+      case 'items':
+        return { list: PageCategories.ITEMS_CATEGORIES, basePath: '/items' };
+      case 'islands':
+        return { list: PageCategories.ISLANDS_CATEGORIES, basePath: '/islands' };
+      case 'npcs':
+        return { list: PageCategories.NPCS_CATEGORIES, basePath: '/npcs' };
+      case 'world-features':
+        return { list: PageCategories.WORLD_FEATURES_CATEGORIES, basePath: '/world-features' };
+      default:
+        return { list: [], basePath: '' };
+    }
+  };
+
+  const sidebarProps = getSidebarProps();
+  const height = isMobileOrTablet ? 'calc(100vh - 110px)' : 'calc(100vh - 76px)';
 
   return (
     <div>
       {showNavigation && <Navbar />}
       <div
-        className={showLineGraphBackground ? 'line-graph-background' : ''}
+        className={!isHomePage ? 'line-graph-background' : ''}
         style={{ height: showNavigation ? height : '' }}
       >
-        <Outlet />
+        {isHomePage ? (
+          <Outlet />
+        ) : (
+          <div className={styles.pageLayoutWrapper}>
+            <Controller onClickHamburger={() => setShowSidebar(true)} />
+            <Sidebar
+              list={sidebarProps.list}
+              basePath={sidebarProps.basePath}
+              setShowSidebar={setShowSidebar}
+              showSidebar={showSidebar}
+            />
+            <main className={styles.pageContent}>
+              <Outlet />
+            </main>
+            <InfoPanel />
+          </div>
+        )}
       </div>
     </div>
   );

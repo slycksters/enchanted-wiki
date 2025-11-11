@@ -3,7 +3,6 @@ import styles from './Table.module.css';
 import { formatNumberWithCommas, pluralize } from '@helpers';
 
 export const Table = ({ list }) => {
-  if (list.ware) console.log(list.ware);
   return (
     <div className={'overflow-x-auto'}>
       <table className={styles.table}>

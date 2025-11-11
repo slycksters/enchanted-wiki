@@ -24,7 +24,7 @@ export const EVENT_TIMERS = {
     },
     shatterGrove: {
       intervals: [10, 20, 30, 40, 50, 60],
-      location: 'Shatter Grove',
+      location: 'Shattergrove',
       name: 'Random',
     },
     death: {

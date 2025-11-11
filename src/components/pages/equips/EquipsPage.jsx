@@ -1,13 +1,19 @@
+import { useParams } from 'react-router-dom';
+import { Info } from '@components';
+import { DATA } from '@mappers';
+import { TYPES } from '@data';
 
+export const EquipsPage = () => { // Consider renaming this file to EquipsPage.jsx if the component is SpecsPage
+  const { slug } = useParams();
 
-import { WEAPONS } from '@data';
-import { Info, Layout } from '@components';
-import { CATEGORIES } from './constants';
+  const allEquips = [
+    ...DATA[TYPES.weapon.name],
+    ...DATA[TYPES.spec.name],
+  ];
 
-export const SpecsPage = () => {
-  return (
-    <Layout categories={CATEGORIES} defaultInfo={WEAPONS.knuckles}>
-      <Info />
-    </Layout>
+  const selectedInfo = allEquips.find(
+    (item) => item.slug === slug
   );
+
+  return <Info info={selectedInfo} />;
 };

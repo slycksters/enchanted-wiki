@@ -1,11 +1,16 @@
-import { Info, Layout } from '@components';
-import { ISLANDS } from '@data';
-import { CATEGORIES } from './constants';
+import { useParams } from 'react-router-dom';
+import { Info } from '@components';
+import { DATA } from '@mappers';
+import { TYPES } from '@data';
 
 export const IslandsPage = () => {
-  return (
-    <Layout categories={CATEGORIES} defaultInfo={ISLANDS.crescentIsle}>
-      <Info />
-    </Layout>
+  const { slug } = useParams();
+
+  const allIslands = DATA[TYPES.island.name];
+
+  const selectedInfo = allIslands.find(
+    (item) => item.slug === slug
   );
+
+  return <Info info={selectedInfo} />;
 };

@@ -4,9 +4,12 @@
 
 .item {
   border-left: 3px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-secondary); 
+  display: block;
   font-size: 13px;
   overflow: hidden;
   padding: 8px 20px;
+  text-decoration: none;
   text-overflow: ellipsis;
   transition: padding-left 0.1s ease-in-out, border-width 0.1s ease-in-out;
   white-space: nowrap;
@@ -14,7 +17,7 @@
 
 .activeItem, .item:hover {
   border-color: var(--enchanted-color-blue);
-  padding-left: 30px;
   color: var(--enchanted-text-primary);
   cursor: pointer;
+  padding-left: 30px;
 }

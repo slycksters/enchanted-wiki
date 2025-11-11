@@ -1,35 +1,30 @@
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
+import { getBackgroundGradient, formatNameToUrl } from '@helpers';
 import styles from './SubList.module.css';
-import { getBackgroundGradient } from '@helpers';
 
-export const SubList = ({ list, onClickSubItem, selectedSubItem }) => {
-  const [hoveredId, setHoveredId] = useState(null);
-
+export const SubList = ({ list, basePath, parentCategoryName }) => {
   return (
     <div className={styles.list}>
       {list.map((subItem) => {
-        const uniqueId = `${subItem.id}-${subItem.name}`;
-        const isSelected = uniqueId === `${selectedSubItem.id}-${selectedSubItem.name}`;
-        const isHovered = hoveredId === uniqueId;
         const rarityColor = subItem.rarity?.color ?? 'var(--enchanted-color-blue)';
+        const toPath = `${basePath}/${formatNameToUrl(parentCategoryName)}/${subItem.slug}`;
 
         return (
-          <div
-            key={`sidebar-sub-item-${subItem.type.name}-${subItem.name}-${subItem.id}}`}
-            className={clsx(styles.item, { [styles.activeItem]: isSelected })}
-            onClick={() => onClickSubItem(subItem)}
-            onMouseEnter={() => setHoveredId(uniqueId)}
-            onMouseLeave={() => setHoveredId(null)}
-            style={{
+          <NavLink
+            key={`sidebar-sub-item-${subItem.id}`}
+            to={toPath}
+            className={({ isActive }) =>
+              clsx(styles.item, { [styles.activeItem]: isActive })
+            }
+            style={({ isActive }) => ({
               borderColor: subItem.rarity?.color,
-              background: isSelected || isHovered
-                ? getBackgroundGradient(rarityColor, 'Right')
-                : null,
-            }}
+              background: isActive ? getBackgroundGradient(rarityColor, 'Right') : null,
+            })}
+            title={subItem.name}
           >
-            <span title={subItem.name}>{subItem.name}</span>
-          </div>
+            <span>{subItem.name}</span>
+          </NavLink>
         );
       })}
     </div>
