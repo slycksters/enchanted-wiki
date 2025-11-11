@@ -41,7 +41,7 @@ export const useSoundEffect = (audioRef, globalSoundLock) => {
     // Only play the sound if the global lock is not engaged
     if (!globalSoundLock.current) {
       globalSoundLock.current = true;
-      audio.volume = 0.3;
+      audio.volume = 0.4;
       audio.currentTime = 0;
       audio.play().catch((error) => {
         // Handle potential play errors (e.g., user hasn't interacted with the page)

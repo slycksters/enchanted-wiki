@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { FaPlus } from 'react-icons/fa6';
 import clsx from 'clsx';
 import { getBackgroundGradient, formatNameToUrl } from '@helpers';
+import { getItemPath } from '@router/getItemPath.helper';
 import { SubList } from './sub-list';
 import styles from './SearchList.module.css';
 
@@ -72,12 +73,11 @@ export const SearchList = ({ list, basePath }) => {
               </div>
             );
           } else {
-            const { id, name, rarity, slug } = item;
-            const toPath = `${basePath}/${slug}`; 
+            const { id, name, rarity } = item;
             return (
               <NavLink
                 key={`sidebar-item-${id}`}
-                to={toPath}
+                to={getItemPath(item)}
                 className={({ isActive }) => clsx(styles.item, { [styles.activeItem]: isActive })}
                 style={({ isActive }) => ({
                   borderColor: rarity?.color,

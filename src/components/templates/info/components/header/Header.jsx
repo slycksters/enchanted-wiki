@@ -6,7 +6,11 @@ export const Header = ({ info }) => {
   return (
     <div className={styles.header}>
       <section>
-        <p className={styles.title}>{info.name}</p>
+        <p className={styles.title}>
+          {' '}
+          <span>{info.name} </span>
+          {info.isVaulted && <i> (Vaulted)</i>}
+        </p>
         <div className={styles.infoWrapper}>
           <Rarity info={info} />
           <Type info={info} />

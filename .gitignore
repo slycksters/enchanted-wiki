@@ -45,3 +45,6 @@ src/assets/asset-manifest.d.ts
 .DS_Store
 ._*
 Thumbs.db
+
+# Extension generated files
+export.md

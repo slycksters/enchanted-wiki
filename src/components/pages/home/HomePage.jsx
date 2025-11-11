@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import {
   AbilitiesDescription,
-  Avatar,
   Brand,
   EquipsDescription,
   Footer,

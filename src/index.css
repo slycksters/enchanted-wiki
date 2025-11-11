@@ -4,6 +4,7 @@ body {
   background-color: var(--enchanted-bg-primary);
   color: var(--enchanted-text-primary);
   font-family: "Poppins", sans-serif;
+  letter-spacing: 0.02em;
   margin: 0;
   overflow: hidden;
 }
@@ -49,4 +50,10 @@ body {
       var(--line-color) calc(var(--line-spacing) - var(--line-thickness)),
       var(--line-color) var(--line-spacing)
     );
+}
+
+/* Bootstrap css override */
+.modal-content {
+  background-color: transparent;
+  border: none;
 }

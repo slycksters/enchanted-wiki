@@ -189,7 +189,7 @@ export const WORLD_FEATURES = {
     id: 6,
     attachment: worldFeatureImages.dungeon,
     description:
-      '<p>Challenge these battlegrounds to gather upgrade materials and find powerful accessories. Requires Missing Key to enter.</p><i>Available Dungeons:</i><ul><li>Jujutsu Kaisen Dungeon (Vaulted)</li><li>Gatchiakuta Dungeon</li><li>Demon Slayer Dungeon</li></ul>',
+      '<p>Challenge these battlegrounds to gather upgrade materials and find powerful accessories. Requires Missing Key to enter.</p><i>Available Dungeons:</i><ul><li>Jujutsu Kaisen Dungeon</li><li>Gatchiakuta Dungeon</li><li>Demon Slayer Dungeon</li></ul>',
     gallery: [
       {
         id: 1,

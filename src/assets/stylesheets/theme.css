@@ -4,7 +4,7 @@
   --enchanted-bg-primary: #010B13;
   --enchanted-bg-secondary: #10141E;
   --enchanted-bg-accent: #1C2029;
-  --enchanted-text-primary: #FFFFFF;
+  --enchanted-text-primary: oklch(0.928 0.006 264.531);
   --enchanted-text-secondary: #A6AAB2;
   --enchanted-text-tertiary: #8C9098;
 

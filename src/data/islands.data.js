@@ -12,7 +12,7 @@ export const ISLANDS = {
       {
         id: 1,
         attachment: islandImages.crescentIsle1,
-        description: `Every new Enchanter's journey begins on these peaceful shores.`,
+        description: `Every new player's journey begins on these peaceful shores.`,
         name: 'Spawn Crystal',
       },
       {
@@ -95,7 +95,7 @@ export const ISLANDS = {
       {
         id: 5,
         attachment: islandImages.sunblazeIsle5,
-        description: `Prove your growing power by challenging Erza, the isle's formidable World Boss and start your journey to becoming the strongest Enchanter.`,
+        description: `Prove your growing power by challenging Erza, the isle's formidable World Boss and start your journey to becoming the strongest.`,
         name: 'Erza [World Boss]',
       },
     ],

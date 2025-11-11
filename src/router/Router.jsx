@@ -10,7 +10,17 @@ import {
   NpcsPage,
   WorldFeaturesPage,
 } from '@components';
-import { BASE_PATH, defaultRoutes } from '@constants';
+import { BASE_PATH } from '@constants';
+
+// --- Hard coded: get the first item from each categories
+const defaultRoutes = {
+  abilities: '/abilities/magics/wind',
+  equips: '/equips/weapons/knuckles',
+  items: '/items/accessories/face-plaster',
+  islands: '/islands/major-locations/crescent-isle',
+  npcs: '/npcs/specialists/adam',
+  worldFeatures: '/world-features/spawn-crystal',
+};
 
 const router = createBrowserRouter([
   {

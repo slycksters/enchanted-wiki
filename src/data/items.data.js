@@ -609,7 +609,7 @@ export const ITEMS = {
   cursedOrb: {
     id: 42,
     attachment: itemImages.cursedOrb,
-    description: `A malevolent orb seething with condensed Cursed Energy, born from the negative emotions of humanity. Only a true Jujutsu Sorcerer can handle its immense power to unlock the secrets of the Jujutsu Kaisen Specs (Vaulted).`,
+    description: `A malevolent orb seething with condensed Cursed Energy, born from the negative emotions of humanity. Only a true Jujutsu Sorcerer can handle its immense power to unlock the secrets of the Jujutsu Kaisen Specs.`,
     isGatcha: false,
     name: `Cursed Orb`,
     rarity: RARITIES.legendary,
@@ -697,7 +697,7 @@ export const ITEMS = {
   coughMedicine: {
     id: 50,
     attachment: itemImages.coughMedicine,
-    description: `A specially formulated throat syrup, far more potent than any common remedy. It's designed to soothe a throat strained by the constant use of the Cursed Speech technique, allowing the user to wield their devastating power without self-destructing. The key to mastering the Inumaki Spec (Vaulted).`,
+    description: `A specially formulated throat syrup, far more potent than any common remedy. It's designed to soothe a throat strained by the constant use of the Cursed Speech technique, allowing the user to wield their devastating power without self-destructing. The key to mastering the Inumaki Spec.`,
     isGatcha: false,
     name: `Cough Medicine`,
     rarity: RARITIES.mythical,
@@ -828,7 +828,8 @@ export const ITEMS = {
     attachment: itemImages.stainScarf,
     description: `The tattered, blood-red scarf of the infamous Hero Killer, Stain. It's imbued with his terrifying conviction and grants a significant boost in power to anyone who dares wear it. Can be purchased for 550 Robux (Limited).`,
     isGatcha: false,
-    name: `Stain's Scarf (Vaulted)`,
+    isVaulted: true,
+    name: `Stain's Scarf`,
     rarity: RARITIES.mythical,
     sources: ['developerProduct'],
     stats: {
@@ -858,9 +859,10 @@ export const ITEMS = {
   invertedSpear: {
     id: 62,
     attachment: itemImages.invertedSpear,
-    description: `A Special Grade Cursed Tool with a fearsome reputation. Its unique property allows it to forcibly nullify any Cursed Technique or energy it touches, making it the ultimate weapon against sorcerers. A lost relic required to unlock the Toji Spec (Vaulted).`,
+    description: `A Special Grade Cursed Tool with a fearsome reputation. Its unique property allows it to forcibly nullify any Cursed Technique or energy it touches, making it the ultimate weapon against sorcerers. A lost relic required to unlock the Toji Spec.`,
     isGatcha: false,
-    name: `Inverted Spear (Vaulted)`,
+    isVaulted: true,
+    name: `Inverted Spear`,
     rarity: RARITIES.exotic,
     sources: ['tojiBoss'],
     subType: ITEM_TYPES.materials,
@@ -869,9 +871,10 @@ export const ITEMS = {
   speechMegaphone: {
     id: 63,
     attachment: itemImages.speechMegaphone,
-    description: `A Cursed Tool designed to amplify the user's voice and Cursed Energy to terrifying levels. It focuses the power of the Cursed Speech technique, allowing for commands of immense scale and potency. The key to mastering the Inumaki Spec (Vaulted).`,
+    description: `A Cursed Tool designed to amplify the user's voice and Cursed Energy to terrifying levels. It focuses the power of the Cursed Speech technique, allowing for commands of immense scale and potency. The key to mastering the Inumaki Spec.`,
     isGatcha: false,
-    name: `Speech Megaphone (Vaulted)`,
+    isVaulted: true,
+    name: `Speech Megaphone`,
     rarity: RARITIES.exotic,
     sources: ['inumakiBoss'],
     subType: ITEM_TYPES.materials,
@@ -913,7 +916,7 @@ export const ITEMS = {
   bloodEssence: {
     id: 67,
     attachment: itemImages.bloodEssence,
-    description: `The crystallized essence of Toji Fushiguro's unique bloodline. It contains no Cursed Energy, only the blueprint for a body honed to the pinnacle of physical perfection. This is the catalyst needed to forsake sorcery and unlock the devastating power of the Toji Spec (Vaulted).`,
+    description: `The crystallized essence of Toji Fushiguro's unique bloodline. It contains no Cursed Energy, only the blueprint for a body honed to the pinnacle of physical perfection. This is the catalyst needed to forsake sorcery and unlock the devastating power of the Toji Spec.`,
     isGatcha: false,
     name: `Blood Essence`,
     rarity: RARITIES.mythical,

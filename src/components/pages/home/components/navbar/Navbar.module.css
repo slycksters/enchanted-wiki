@@ -1,18 +1,60 @@
-/* Wrapper */
-.linkList {
-  align-items: flex-end;
-  display: flex;  
-  gap: clamp(1px, 2vw, 20px);
+/* --- Global Body Scroll Lock --- */
+/* This is a global class, but defined here for component co-location */
+:global(.body-no-scroll) {
+  overflow: hidden;
+}
+
+/* --- Main Navbar Container --- */
+.navbarContainer {
+  display: flex;
   justify-content: center;
+  align-items: flex-end;
+  background-color: var(--enchanted-bg-primary);
+  gap: clamp(1px, 2vw, 20px);
   margin-top: 25px;
   position: relative;
   width: 100%;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Border hover interaction */
+/* --- Centered Desktop Links --- */
+.desktopLinkList {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(1px, 2vw, 20px);
+}
+
+/* --- Search Icon --- */
+.search {
+  align-items: center;
+  display: flex;
+  height: 77px;
+  justify-content: center;
+}
+
+.search button {
+  background-color: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
+  border-radius: 50%;
+  color: var(--enchanted-text-primary);
+  padding: 8px;
+  transition: all 0.2s ease-out;
+}
+
+.search button:hover {
+  background-color: var(--enchanted-text-primary);
+  border-color: var(--enchanted-text-primary);
+  color: var(--enchanted-bg-secondary);
+  transition: all 0.2s ease-out;
+}
+
+/* --- Individual Desktop Link Item --- */
 .linkListItem {
   align-items: center;
-  border-bottom: none;
   color: var(--enchanted-text-primary);
   cursor: pointer;
   display: flex;
@@ -24,10 +66,10 @@
 }
 
 .linkListItem::before {
-  border-bottom: 2px solid var(--enchanted-color-blue);
-  content: '';  
-  inset: 0;
+  content: '';
   position: absolute;
+  inset: 0;
+  border-bottom: 2px solid var(--enchanted-color-blue);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -37,7 +79,6 @@
   transform: scaleX(1);
 }
 
-/* Link icon and text */
 .linkListItemIcon {
   font-size: clamp(12px, 5vw, 30px);
 }
@@ -47,10 +88,97 @@
   font-size: clamp(9px, 2vw, 16px);
 }
 
-/* Media Queries */
-@media (max-width: 900px) {
-  /* Hide link icons */
+/* --- Mobile-Only Elements (Hidden on Desktop) --- */
+.hamburgerButton,
+.mobileMenu {
+  display: none;
+}
+
+/* =============================================== */
+/* --- MEDIA QUERY FOR MOBILE & TABLET SCREENS --- */
+/* =============================================== */
+@media (max-width: 1000px) {
+  .navbarContainer {
+    /* Pushes hamburger and search to the edges */
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    height: 77px; /* Give it a fixed height */
+    margin-top: 0;
+    padding: 0 15px;
+  }
+
   .linkListItemIcon {
+    margin-right: 12px;
+  }
+
+  /* Hide the desktop links and their icons */
+  .desktopLinkList {
     display: none;
+  }
+
+  /* Show the hamburger button */
+  .hamburgerButton {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--enchanted-text-primary);
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .search {
+    height: auto; /* Reset height */
+  }
+  
+  /* --- Styling for the Mobile Menu Overlay --- */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--enchanted-bg-primary);
+    z-index: 1001;
+    
+    /* Animation: slide in from the left */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobileMenu.menuOpen {
+    transform: translateX(0);
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: none;
+    border: none;
+    color: var(--enchanted-text-primary);
+    cursor: pointer;
+  }
+
+  .mobileNavLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .mobileLinkItem {
+    color: var(--enchanted-text-secondary);
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    transition: color 0.2s ease;
+  }
+
+  .mobileLinkItem:hover {
+    color: var(--enchanted-text-primary);
   }
 }

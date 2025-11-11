@@ -45,6 +45,28 @@
   padding-top: 17px;
 }
 
+.search {
+  align-items: center;
+  display: flex;
+}
+
+.search button {
+  background-color: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
+  border-radius: 8px;
+  color: var(--enchanted-text-primary);
+  font-size: 12px;
+  padding: 4px 8px;
+  transition: all 0.2s ease-out;
+}
+
+.search button:hover {
+  background-color: var(--enchanted-text-primary);
+  border-color: var(--enchanted-text-primary);
+  color: var(--enchanted-bg-secondary);
+  transition: all 0.2s ease-out;
+}
+
 @media (max-width: 1024px) {
   .navigationContainer {
     border-bottom-style: dashed;

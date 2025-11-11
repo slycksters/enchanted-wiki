@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import { getBackgroundGradient, formatNameToUrl } from '@helpers';
+import { getBackgroundGradient } from '@helpers';
+import { getItemPath } from '@router/getItemPath.helper';
 import styles from './SubList.module.css';
 
 export const SubList = ({ list, basePath, parentCategoryName }) => {
@@ -8,12 +9,11 @@ export const SubList = ({ list, basePath, parentCategoryName }) => {
     <div className={styles.list}>
       {list.map((subItem) => {
         const rarityColor = subItem.rarity?.color ?? 'var(--enchanted-color-blue)';
-        const toPath = `${basePath}/${formatNameToUrl(parentCategoryName)}/${subItem.slug}`;
 
         return (
           <NavLink
             key={`sidebar-sub-item-${subItem.id}`}
-            to={toPath}
+            to={getItemPath(subItem)}
             className={({ isActive }) =>
               clsx(styles.item, { [styles.activeItem]: isActive })
             }

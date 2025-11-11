@@ -41,7 +41,6 @@ export const ReactCountdown = ({
   const [clickPulse, setClickPulse] = useState(false);
   const [hasSpawned, setHasSpawned] = useState(false);
   const [isActive, setIsActive] = useState(false);
-  const [key, setKey] = useState(0);
   const [targetDate, setTargetDate] = useState(() =>
     calculateNextTarget(intervals)
   );
@@ -68,7 +67,6 @@ export const ReactCountdown = ({
   const handleComplete = useCallback(() => {
     const nextTarget = calculateNextTarget(intervals);
     setTargetDate(nextTarget);
-    setKey((prev) => prev + 1);
     setHasSpawned(true);
     if (isActive) playSoundEffect();
   }, [intervals, isActive, playSoundEffect]);
@@ -82,6 +80,12 @@ export const ReactCountdown = ({
       setIsActive(true);
     }
   };
+
+  // Memoize the renderer function to prevent re-creating it on every render
+  const renderer = useCallback(
+    (params) => timeRenderer(params, hasSpawned),
+    [hasSpawned]
+  );
 
   return (
     <div
@@ -97,10 +101,9 @@ export const ReactCountdown = ({
       <div className={styles.label}>{label ?? 'Countdown'}</div>
       <div className={styles.subLabel}>{subLabel}</div>
       <Countdown
-        key={key}
         date={targetDate}
         onComplete={handleComplete}
-        renderer={(params) => timeRenderer(params, hasSpawned)}
+        renderer={renderer}
       />
       <audio ref={audioRef} hidden src={soundEffects.spawn2()} preload={'auto'} />
     </div>

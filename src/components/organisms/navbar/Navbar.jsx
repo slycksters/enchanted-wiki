@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { IoMdSearch } from 'react-icons/io';
 import clsx from 'clsx';
 import { assets } from '@assets';
-import { Image } from '@components';
+import { Image, SearchModal } from '@components';
 import { BASE_PATH, PAGE_LINKS } from '@constants';
 import { getBackgroundGradient } from '@helpers';
 import { useWindowWidth } from '@hooks';
@@ -10,6 +12,7 @@ import styles from './Navbar.module.css';
 export const Navbar = () => {
   const windowWidth = useWindowWidth();
   const isMobileOrTablet = windowWidth <= 1024;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className={styles.navigationContainer}>
@@ -22,6 +25,16 @@ export const Navbar = () => {
 
       {/* Page Links */}
       <div className={styles.navList}>
+        <div className={styles.search}>
+          <button
+            aria-label={'Search'}
+            onClick={() => setIsModalOpen(!isModalOpen)}
+            type={'button'}
+          >
+            <IoMdSearch size={16} />
+            Search
+          </button>
+        </div>
         {PAGE_LINKS.map((link) => {
           const Icon = link.icon;
 
@@ -46,6 +59,8 @@ export const Navbar = () => {
           );
         })}
       </div>
+
+      {isModalOpen && <SearchModal onHide={() => setIsModalOpen(false)} show={isModalOpen} />}
     </div>
   );
 };
