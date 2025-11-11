@@ -663,8 +663,8 @@ export const SPECS = {
     sources: ['inumakiSpec'],
     stats: {
       damageType: DAMAGE_TYPES.magic.name,
-      baseDMG: '?',
-      perStat: '?',
+      baseDMG: 11.25,
+      perStat: 0.1434,
     },
     type: TYPES.spec,
   },
@@ -717,8 +717,8 @@ export const SPECS = {
     sources: ['tojiSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
-      baseDMG: '?',
-      perStat: '?',
+      baseDMG: 14,
+      perStat: 0.1704,
     },
     type: TYPES.spec,
   },
@@ -777,8 +777,8 @@ export const SPECS = {
     sources: ['deathSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
-      baseDMG: '19',
-      perStat: '0.217',
+      baseDMG: 19,
+      perStat: 0.217,
     },
     type: TYPES.spec,
   },
