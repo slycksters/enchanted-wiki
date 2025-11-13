@@ -6,9 +6,9 @@ export const Drops = ({ info }) => {
 
   return (
     <section className={styles.drops}>
-      <h4 style={{ marginTop: info.sources?.length > 0 ? 0 : null }}>
-        Drops:
-      </h4>
+      <h3>
+        <i>Drops</i>
+      </h3>
       <div>
         <Table list={info.drops} />
       </div>

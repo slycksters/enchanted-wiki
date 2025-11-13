@@ -2,6 +2,7 @@ import { assets } from '@assets';
 import { NPC_TYPES, TYPES } from './enums';
 
 const npcImages = assets.images.npcs;
+const otherImages = assets.images.others;
 const passiveSkillImages = assets.images.passiveSkills;
 
 export const NPCS = {
@@ -986,6 +987,13 @@ export const NPCS = {
     attachment: npcImages.mia,
     description:
       'Obsessed with the mathematics of fate, Mia has charted the probability of acquiring every known power. See her to know the odds before you test your destiny.',
+    gallery: [
+      {
+        id: 1,
+        attachment: otherImages.miaRerollRates,
+        name: `Mia's Reroll Rates`,
+      },
+    ],
     locations: ['crescentIsle'],
     name: 'Mia',
     subType: NPC_TYPES.specialist,
@@ -1959,7 +1967,7 @@ export const NPCS = {
   hezzy: {
     id: 142,
     attachment: npcImages.hezzy,
-    description: `An abyssal smith who channels the geothermal vents at the sea floor, believing them to be echoes of creation's first fire. "Wield the power of creation's wrath," he offers, knowing full well the cataclysmic potential of the Hellforge Gauntlets he creates.`,
+    description: `Hezzy is an abyssal smith who draws power from the seafloor's molten vents, forging weapons in the heat of creation itself. His Hellforge Gauntlets bear the wrath of the deep, crafted with destructive force only the bold dare to wield.`,
     locations: ['harvestGrove'],
     name: 'Hezzy',
     subType: NPC_TYPES.specialist,
@@ -2660,7 +2668,7 @@ export const NPCS = {
   meto: {
     id: 211,
     attachment: npcImages.meto,
-    description: `A master armorer and the last surviving smith of a shattered kingdom, whose ruins now make up the grove. He keeps the memory of his homeland alive in the heart of his forge. Each sword he creates is a testament to lost valor, offered only to those he deems worthy to carry its vengeful legacy.`,
+    description: `Meto is the last armorer of a fallen kingdom, shaping each blade as a remembrance of its lost glory. His craftsmanship carries the weight of a shattered homeland, offered only to those worthy of its legacy.`,
     locations: ['shatterGrove'],
     name: 'Meto',
     subType: NPC_TYPES.specialist,
@@ -2677,7 +2685,7 @@ export const NPCS = {
   rufus: {
     id: 212,
     attachment: npcImages.rufus,
-    description: `A silent master who believes the path to true strength is paved with unwavering discipline. He forges his katanas not just with fire, but with focus—tempering them in moonlit silence until their edge becomes a whisper of death.`,
+    description: `Rufus forges his katanas in disciplined silence, tempering each blade with unwavering focus. His work embodies restraint and lethal precision, creating weapons that strike like a whisper in the dark.`,
     locations: ['trialGrounds'],
     name: 'Rufus',
     subType: NPC_TYPES.specialist,
@@ -2696,7 +2704,7 @@ export const NPCS = {
     attachment: npcImages.jerome,
     description: `Jerome is no mere smith; he is a binder of shadows, a merchant of the void. He does not forge his weapons in fire, but coaxes them from the abyss—binding shards of primordial nothingness into the form of a blade.`,
     locations: ['trialGrounds'],
-    name: 'Rufus',
+    name: 'Jerome',
     subType: NPC_TYPES.specialist,
     type: TYPES.npc,
     ware: [
@@ -2713,7 +2721,7 @@ export const NPCS = {
   graySpec: {
     id: 214,
     attachment: npcImages.gray,
-    description: '',
+    description: 'Gray Fullbuster sculpts weapons from living frost, shaping ice with instinctive mastery. His creations carry the chill of deep winter—sleek, lethal constructs forged from cold resolve and unyielding spirit.',
     locations: ['frostveilHollow'],
     name: 'Gray Fullbuster',
     subType: NPC_TYPES.specialist,
@@ -2727,6 +2735,113 @@ export const NPCS = {
           { key: 'icicle', quantity: 15 },
         ]
       }
+    ]
+  },
+  laurel: {
+    id: 215,
+    attachment: npcImages.laurel,
+    description: `Laurel is the quiet soul of the Lost Cave, a merchant who trades in relics shaped by curses and legends. Her dim-lit stall feels alive with ancient whispers, offering treasures drawn from the dungeon’s deepest secrets.`,
+    locations: ['lostCave'],
+    name: 'Laurel',
+    subType: NPC_TYPES.specialist,
+    type: TYPES.npc,
+    ware: [
+      {
+        key: 'goldCoin',
+        requirements: [
+          { name: 'Demon Slayer/Jujutsu Kaisen/Gachiakuta Token', quantity: 1 },
+        ]
+      },
+      {
+        key: 'slayerSword',
+        requirements: [
+          { name: 'Demon Slayer Token', quantity: 100 },
+        ]
+      },
+      {
+        key: 'demonSword',
+        requirements: [
+          { name: 'Demon Slayer Token', quantity: 100 },
+        ]
+      },
+      {
+        key: 'slayerSoul',
+        requirements: [
+          { name: 'Demon Slayer Token', quantity: 2 },
+        ]
+      },
+      {
+        key: 'demonSoul',
+        requirements: [
+          { name: 'Demon Slayer Token', quantity: 2 },
+        ]
+      },
+      {
+        key: 'sparringSword',
+        requirements: [
+          { name: 'Demon Slayer Token', quantity: 7 },
+        ]
+      },
+      {
+        key: 'invertedSpear',
+        requirements: [
+          { name: 'Jujutsu Kaisen Token', quantity: 140 },
+        ]
+      },
+      {
+        key: 'speechMegaphone',
+        requirements: [
+          { name: 'Jujutsu Kaisen Token', quantity: 85 },
+        ]
+      },
+      {
+        key: 'bloodEssence',
+        requirements: [
+          { name: 'Jujutsu Kaisen Token', quantity: 7 },
+        ]
+      },
+      {
+        key: 'coughMedicine',
+        requirements: [
+          { name: 'Jujutsu Kaisen Token', quantity: 5 },
+        ]
+      },
+      {
+        key: 'cursedOrb',
+        requirements: [
+          { name: 'Jujutsu Kaisen Token', quantity: 2 },
+        ]
+      },
+      {
+        key: 'gauntletPiece',
+        requirements: [
+          { name: 'Gachiakuta Token', quantity: 90 },
+        ]
+      },
+      {
+        key: 'bootPiece',
+        requirements: [
+          { name: 'Gachiakuta Token', quantity: 55 },
+        ]
+      },
+      {
+        key: 'candyBar',
+        requirements: [
+          { name: 'Gachiakuta Token', quantity: 5 },
+        ]
+      },
+      {
+        key: 'dior',
+        requirements: [
+          { name: 'Gachiakuta Token', quantity: 7 },
+        ]
+      },
+      {
+        key: 'trash',
+        requirements: [
+          { name: 'Gachiakuta Token', quantity: 2 },
+        ]
+      },
     ]
   },
 };

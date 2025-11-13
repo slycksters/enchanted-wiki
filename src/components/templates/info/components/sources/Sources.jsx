@@ -6,7 +6,7 @@ export const Source = ({ info }) => {
 
   return (
     <section className={styles.source}>
-      <h4>Sources:</h4>
+      <h3><i>Sources</i></h3>
       <div>
         <Table list={info.sources} />
       </div>

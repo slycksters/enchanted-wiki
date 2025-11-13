@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import { assets } from '@assets';
 import { Image, SearchModal } from '@components';
 import { BASE_PATH, PAGE_LINKS } from '@constants';
-import { getBackgroundGradient } from '@helpers';
 import { useWindowWidth } from '@hooks';
 import styles from './Navbar.module.css';
 

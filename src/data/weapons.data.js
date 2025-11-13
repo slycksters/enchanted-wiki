@@ -59,7 +59,7 @@ export const WEAPONS = {
     sources: ['luca'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
-      baseDMG: 6.5,
+      baseDMG: 6.75,
       perStat: 0.075,
     },
     type: TYPES.weapon,
@@ -202,7 +202,7 @@ export const WEAPONS = {
     attachment: weaponImages.claws,
     description: `A pair of vicious claws crackling with shadow energy. They feel less like a weapon and more like a predator's natural extension, hungry to rend flesh and bone.`,
     name: 'Claws',
-    rarity: RARITIES.rare,
+    rarity: RARITIES.epic,
     sources: ['ola'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -272,7 +272,7 @@ export const WEAPONS = {
       {
         id: 3,
         attachment: weaponVideos.empressSwordX,
-        description: `Plunge the blade into the ground, unleashing its core in a cataclysmic, 360-degree eruption of solar fire.`,
+        description: `Lunge forward and thrust your blade with searing force, unleashing a concentrated surge of blazing fire that scorches everything in its path.`,
         name: `Inferno Pierce [X]`,
       },
       {

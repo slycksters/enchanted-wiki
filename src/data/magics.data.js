@@ -234,7 +234,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.shadowDragonSlayer,
     description:
-      `Channel the dark essence of dragons, wielding shadow powers to strike fear into enemies and dominate the battlefield with legendary skill. <p>Complete Sting Eucliffe's quest to unlock Shadow Dragon Slayer V2</p>`,
+      `<p>Channel the dark essence of dragons, wielding shadow powers to strike fear into enemies and dominate the battlefield with legendary skill.</p> <p>Complete Sting Eucliffe's quest to unlock Shadow Dragon Slayer V2.</p>`,
     isGatcha: true,
     name: 'Shadow Dragon Slayer',
     rarity: RARITIES.legendary,
@@ -277,7 +277,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.lightningDragonSlayer,
     description:
-      `Harness the electrifying power of dragons, unleashing lightning to strike with mythical speed and overwhelming force. <p>Complete Laxus Dreyar's quest to unlock Lightning Dragon Slayer V2</p>`,
+      `<p>Harness the electrifying power of dragons, unleashing lightning to strike with mythical speed and overwhelming force.</p> <p>Complete Laxus Dreyar's quest to unlock Lightning Dragon Slayer V2.</p>`,
     isGatcha: true,
     name: 'Lightning Dragon Slayer',
     rarity: RARITIES.mythical,
@@ -314,7 +314,7 @@ export const MAGICS = {
       },
     ],
     description:
-      `Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield.<p>Complete Natsu Dragneel's quest to unlock Fire Dragon Slayer V2</p>`,
+      `<p>Command the blazing fury of dragons, unleashing fire with mythical intensity to incinerate foes and dominate the battlefield.</p> <p>Complete Natsu Dragneel's quest to unlock Fire Dragon Slayer V2.</p>`,
     isGatcha: true,
     name: 'Fire Dragon Slayer',
     rarity: RARITIES.mythical,

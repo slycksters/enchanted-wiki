@@ -569,7 +569,7 @@ export const ITEMS = {
     isGatcha: false,
     name: `Gold Coin`,
     rarity: RARITIES.legendary,
-    sources: ['lostCave'],
+    sources: ['laurel'],
     subType: ITEM_TYPES.materials,
     type: TYPES.item,
   },
@@ -815,7 +815,7 @@ export const ITEMS = {
   soulGate: {
     id: 59,
     attachment: itemImages.soulGate,
-    description: `A masterpiece of spatial manipulation. Where a Garganta violently tears a hole in reality, the Soul Gate elegantly parts it, creating a stable, shimmering gateway. This advanced portal offers instantaneous and precise travel to any known island in the physical world. It is a testament to perfect control, a far more refined method of transportation.`,
+    description: `A masterpiece of spatial manipulation. Where a Garganta violently tears a hole in reality, the Soul Gate elegantly parts it, creating a stable, shimmering gateway. This advanced portal offers instantaneous and precise travel to any known island in the physical world. It is a testament to perfect control, a far more refined method of transportation. Can be purchased for 399 Robux or obtain from World Boss.`,
     isGatcha: false,
     name: `Soul Gate`,
     rarity: RARITIES.exclusive,
@@ -883,7 +883,7 @@ export const ITEMS = {
   megaphone: {
     id: 64,
     attachment: itemImages.megaphone,
-    description: `A powerful communication device enchanted to carry your voice across servers and dimensions. When you have something to say, make sure everyone in the entire game hears it.`,
+    description: `A powerful communication device enchanted to carry your voice across servers and dimensions. When you have something to say, make sure everyone in the entire game hears it. Can be purchased for 129 Robux.`,
     isGatcha: false,
     name: `Megaphone`,
     rarity: RARITIES.exclusive,
@@ -894,7 +894,7 @@ export const ITEMS = {
   heartAPhone: {
     id: 65,
     attachment: itemImages.heartAPhone,
-    description: `A megaphone imbued with warmth and friendship. It broadcasts your message across all servers in a delightful, heart-filled theme, perfect for shoutouts and sharing positive vibes.`,
+    description: `A megaphone imbued with warmth and friendship. It broadcasts your message across all servers in a delightful, heart-filled theme, perfect for shoutouts and sharing positive vibes. Can be purchased for 129 Robux.`,
     isGatcha: false,
     name: `Heart A Phone`,
     rarity: RARITIES.exclusive,
@@ -905,7 +905,7 @@ export const ITEMS = {
   instantTransmission: {
     id: 66,
     attachment: itemImages.instantTransmission,
-    description: `Instantly teleport to any player, anywhere. This ability transcends all conventional limits, allowing you to cross the barriers between servers in the blink of an eye.`,
+    description: `Instantly teleport to any player, anywhere. This ability transcends all conventional limits, allowing you to cross the barriers between servers in the blink of an eye. Can be purchased for 249 Robux.`,
     isGatcha: false,
     name: `Instant Transmission`,
     rarity: RARITIES.exclusive,
@@ -930,7 +930,7 @@ export const ITEMS = {
     description: `A hard-earned token awarded for successfully clearing the Lost Cave dungeon. Use it to purchase powerful, exclusive rewards from dungeon shop.`,
     isGatcha: false,
     name: `Dungeon Token`,
-    rarity: RARITIES.v2,
+    rarity: RARITIES.exclusive,
     sources: ['lostCave'],
     subType: ITEM_TYPES.materials,
     type: TYPES.item,

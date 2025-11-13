@@ -1,16 +1,8 @@
 .header {
   display: flex;
+  font-weight: 300;
   justify-content: space-between;
   padding-bottom: 30px;
-}
-
-.title {
-  font-size: clamp(30px, 5vw, 50px);
-  margin-bottom: 16px;
-}
-
-.title i {
-  font-size: 16px !important;
 }
 
 .infoWrapper {
@@ -26,17 +18,13 @@
 }
 
 .value {
-  border-radius: 4px;
   color: var(--enchanted-text-secondary);
-  text-align: center;
 }
 
 .rarity {
   align-items: center;
   border-radius: 4px;
-  display: flex;
   font-size: clamp(8px, 5vw, 12px);
-  justify-content: center;
   padding: 8px;
   text-align: center;
 }

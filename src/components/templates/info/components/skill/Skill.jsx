@@ -6,7 +6,7 @@ export const Skill = ({ info }) => {
 
   return (
     <section className={styles.abilities}>
-      <h4>Ability Preview:</h4>
+      <h3><i>Ability Preview</i></h3>
       <div className={'row row-cols-1 row-cols-md-2'}>
         {info.abilities.map((ability) => {
           return (

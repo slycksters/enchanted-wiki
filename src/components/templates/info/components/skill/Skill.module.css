@@ -1,6 +1,8 @@
 .abilities {
   border-top: 1px dashed var(--enchanted-border-color);
   padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 300;
 }
 
 .abilityItem p:nth-child(2),
@@ -8,15 +10,11 @@
   color: var(--enchanted-text-secondary);
 }
 
-.abilityItem p:nth-child(1) {
-  margin-top: 30px;
+.abilityItem {
+  margin-bottom: 30px;
 }
 
 .abilityItem img {
   filter: var(--enchanted-drop-shadow);
   width: 100%;
-}
-
-.abilityItem > p > span {
-  color: var(--enchanted-text-primary);
 }

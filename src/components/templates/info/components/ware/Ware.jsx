@@ -6,7 +6,7 @@ export const Ware = ({ info }) => {
 
   return (
     <section className={styles.ware}>
-      <h4>Ware:</h4>
+      <h3><i>Ware</i></h3>
       <div>
         <Table list={info.ware} />
       </div>

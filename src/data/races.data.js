@@ -83,7 +83,7 @@ export const RACES = {
     sources: ['raceReroll'],
     stats: {
       DMG: '1.4x Multiplier',
-      sprintSpeed: '1.4x Multiplier',
+      HP: '1.4x Multiplier',
     },
     type: TYPES.race,
   },

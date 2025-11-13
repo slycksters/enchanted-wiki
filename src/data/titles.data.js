@@ -30,7 +30,7 @@ export const TITLES = {
   master: {
     id: 3,
     attachment: titleImages.master,
-    description: 'Awarded to those who have slain their first world boss and reached level 1100 — proof of mastery and strength.',
+    description: 'Awarded to those who have slain their first world boss and reached level 1,100 — proof of mastery and strength.',
     name: 'Master',
     stats: {
       EXP: '1.8x Multiplier',
