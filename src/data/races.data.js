@@ -169,7 +169,7 @@ export const RACES = {
     sources: ['raceReroll'],
     stats: {
       DMG: '3x Multiplier',
-      EXP: '3x Multiplier',
+      EXP: '2x Multiplier',
     },
     type: TYPES.race,
   },

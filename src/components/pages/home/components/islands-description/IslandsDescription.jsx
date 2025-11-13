@@ -51,7 +51,7 @@ export const IslandsDescription = () => {
               className={styles.imageShowcase}
               src={assets.videos.specs.aizenV}
             />
-            <p>Discover rare Specs and Weapons from formidable NPCs</p>
+            <p>Discover rare Specs and Weapons from formidable NPCs.</p>
           </div>
         </div>
       </div>

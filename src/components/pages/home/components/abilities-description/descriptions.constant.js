@@ -33,7 +33,7 @@ export const DESCRIPTIONS = [
   },
   {
     id: 6,
-    description: `Earned through in-game achievements, Titles grant bonus EXP and Crystal multipliers, marking your accomplishments as you advance through the world of Enchanted`,
+    description: `Earned through in-game achievements, Titles grant bonus EXP and Crystal multipliers, marking your accomplishments as you advance through the world of Enchanted.`,
     image: assets.logos.enchantedSmallLogo(),
     name: 'Title',
   },

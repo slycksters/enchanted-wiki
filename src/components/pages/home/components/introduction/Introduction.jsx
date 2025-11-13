@@ -3,6 +3,14 @@ import { GAME_NAME } from '@constants';
 import styles from './Introduction.module.css';
 
 export const Introduction = () => {
+  const ENCHANTED_ROBLOX_ID = 104841814414402;
+
+  const openEnchantedInRoblox = () => {
+    const robloxUrl = `roblox://placeId=${ENCHANTED_ROBLOX_ID}`;
+
+    window.location.href = robloxUrl;
+  };
+
   return (
     <div className={styles.introduction}>
       <p>
@@ -15,19 +23,20 @@ export const Introduction = () => {
         bashing bandits, mastering incredible magic, and exploring a world
         packed with action.
       </p>
+      <div>
+        <button className={styles.playButton} onClick={openEnchantedInRoblox}>
+          Play
+        </button>
 
-      {/* <p>
-        The fighting is fast, fun, and all about timing. Unleash devastating
-        magics from afar or get up close and personal with melee attacks. Train
-        hard, grow stronger, and become legendary.
-      </p> */}
-
-      <NavLink
-        target={'_blank'}
-        to={'https://www.roblox.com/games/104841814414402'}
-      >
-        <button className={styles.playButton}>Play</button>
-      </NavLink>
+        <NavLink
+          target={'_blank'}
+          to={`https://www.roblox.com/games/${ENCHANTED_ROBLOX_ID}`}
+        >
+          <button className={styles.viewButton}>
+            View
+          </button>
+        </NavLink>
+      </div>
     </div>
   );
 };

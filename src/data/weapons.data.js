@@ -20,7 +20,7 @@ export const WEAPONS = {
     name: 'Knuckles',
     rarity: RARITIES.uncommon,
     stats: {
-      damageType: DAMAGE_TYPES.meelee.name,
+      damageType: DAMAGE_TYPES.melee.name,
       baseDMG: 4.5,
       perStat: 0.05,
     },
@@ -94,7 +94,7 @@ export const WEAPONS = {
     rarity: RARITIES.rare,
     sources: ['jeremy'],
     stats: {
-      damageType: DAMAGE_TYPES.meelee.name,
+      damageType: DAMAGE_TYPES.melee.name,
       baseDMG: 6,
       perStat: 0.065,
     },
@@ -329,7 +329,7 @@ export const WEAPONS = {
     rarity: RARITIES.legendary,
     sources: ['natsuSpec'],
     stats: {
-      damageType: DAMAGE_TYPES.meelee.name,
+      damageType: DAMAGE_TYPES.melee.name,
       baseDMG: 8.5,
       perStat: 0.115,
     },
@@ -363,7 +363,7 @@ export const WEAPONS = {
     rarity: RARITIES.mythical,
     sources: ['hezzy'],
     stats: {
-      damageType: DAMAGE_TYPES.meelee.name,
+      damageType: DAMAGE_TYPES.melee.name,
       baseDMG: 9.5,
       perStat: 0.135,
     },

@@ -60,7 +60,7 @@ export const ITEMS = {
     sources: ['zeus'],
     stats: {
       blade: 125,
-      meelee: 250,
+      melee: 250,
     },
     subType: ITEM_TYPES.accessories,
     type: TYPES.item,
@@ -76,7 +76,7 @@ export const ITEMS = {
     sources: ['mirageWarden'],
     stats: {
       blade: 120,
-      meelee: 95,
+      melee: 95,
     },
     subType: ITEM_TYPES.accessories,
     type: TYPES.item,
@@ -92,7 +92,7 @@ export const ITEMS = {
     sources: ['yunoBoss', 'yunoV2Boss'],
     stats: {
       magic: 750,
-      meelee: 250,
+      melee: 250,
     },
     subType: ITEM_TYPES.accessories,
     type: TYPES.item,
@@ -108,7 +108,7 @@ export const ITEMS = {
     sources: ['grayBoss'],
     stats: {
       blade: 550,
-      meelee: 450,
+      melee: 450,
     },
     subType: ITEM_TYPES.accessories,
     type: TYPES.item,
@@ -155,7 +155,7 @@ export const ITEMS = {
     sources: ['rudoBoss'],
     stats: {
       defense: 1250,
-      meelee: 3500,
+      melee: 3500,
     },
     subType: ITEM_TYPES.accessories,
     type: TYPES.item,
@@ -835,7 +835,7 @@ export const ITEMS = {
     stats: {
       blade: 5000,
       defense: 3000,
-      meelee: 4500,
+      melee: 4500,
     },
     subType: ITEM_TYPES.accessories,
     type: TYPES.item,
@@ -851,7 +851,7 @@ export const ITEMS = {
     stats: {
       defense: 3750,
       magic: 5000,
-      meelee: 4750,
+      melee: 4750,
     },
     subType: ITEM_TYPES.accessories,
     type: TYPES.item,

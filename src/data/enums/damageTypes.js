@@ -7,8 +7,8 @@ export const DAMAGE_TYPES = {
     id: 2,
     name: 'Magic',
   },
-  meelee: {
+  melee: {
     id: 3,
-    name: 'Meelee',
+    name: 'Melee',
   },
 };

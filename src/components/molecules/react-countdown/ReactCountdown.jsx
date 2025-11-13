@@ -13,18 +13,12 @@ const globalSoundLock = { current: false };
 
 // --- Custom time render
 const timeRenderer = ({ minutes, seconds }, hasSpawned) => (
-  <div className={styles.timerBoxes}>
+  <div style={{ fontSize: '14px' }}>
     {hasSpawned ? (
-      <div className={styles.spawnedText}>Spawned</div>
+      <span>Spawned</span>
     ) : (
       <>
-        <div className={styles.timeBox}>
-          {minutes.toString().padStart(2, '0')}
-        </div>
-        <span className={styles.colon}>:</span>
-        <div className={styles.timeBox}>
-          {seconds.toString().padStart(2, '0')}
-        </div>
+      <span>{minutes.toString().padStart(2, '0')} : {seconds.toString().padStart(2, '0')}</span>
       </>
     )}
   </div>

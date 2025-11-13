@@ -8,6 +8,7 @@ export const Brand = () => {
     <section className={styles.brand}>
       <div className={styles.imageWrapper}>
         <Image alt={'enchanted-logo'} src={assets.logos.enchantedLogo} />
+        {/* <Image alt={'enchanted-logo'} src={assets.logos.enchantedLogoColored} /> */}
         {/* <GradientImage altText={'enchanted-logo'} imageUrl={assets.logos.enchantedLogo} /> */}
       </div>
     </section>

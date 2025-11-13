@@ -218,7 +218,7 @@ export const SPECS = {
     requirements: [],
     sources: ['rudoSpec'],
     stats: {
-      damageType: DAMAGE_TYPES.meelee.name,
+      damageType: DAMAGE_TYPES.melee.name,
       baseDMG: 12.5,
       perStat: 0.1504,
     },
@@ -331,7 +331,7 @@ export const SPECS = {
     requirements: [],
     sources: ['amoEmpoolSpec'],
     stats: {
-      damageType: DAMAGE_TYPES.meelee.name,
+      damageType: DAMAGE_TYPES.melee.name,
       baseDMG: 11.25,
       perStat: 0.1434,
     },

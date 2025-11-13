@@ -28,7 +28,7 @@ export const WorldFeaturesDescription = () => {
                 className={styles.imageShowcase}
                 src={assets.images.islands.crescentIsle1}
               />
-              <p>Save your way point</p>
+              <p>Save your way point.</p>
             </div>
             <div
               className={
@@ -40,7 +40,7 @@ export const WorldFeaturesDescription = () => {
                 className={styles.imageShowcase}
                 src={assets.images.worldFeatures.miningArea2}
               />
-              <p>Gather valuable resources from mining areas</p>
+              <p>Gather valuable resources from mining areas.</p>
             </div>
             <div
               className={
@@ -50,9 +50,9 @@ export const WorldFeaturesDescription = () => {
               <Image
                 alt={'shrine'}
                 className={styles.imageShowcase}
-                src={assets.images.worldFeatures.shrine1}
+                src={assets.images.worldFeatures.shrine2}
               />
-              <p>Activate all Shrines to summon Laxus Dreyar</p>
+              <p>Activate all Shrines to summon Laxus Dreyar.</p>
             </div>
             <div
               className={
@@ -64,7 +64,7 @@ export const WorldFeaturesDescription = () => {
                 className={styles.imageShowcase}
                 src={assets.images.worldFeatures.obelisk1}
               />
-              <p>Complete the Trial to face Sting Eucliffe</p>
+              <p>Complete the Trial to face Sting Eucliffe.</p>
             </div>
             <div
               className={
@@ -76,7 +76,7 @@ export const WorldFeaturesDescription = () => {
                 className={styles.imageShowcase}
                 src={assets.images.islands.lostCave5}
               />
-              <p>Raid dungeons to collect rare materials</p>
+              <p>Raid dungeons to collect rare materials.</p>
             </div>
           </div>
         </div>

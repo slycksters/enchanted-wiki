@@ -11,18 +11,19 @@ export const Timer = () => {
 
   return (
     <section className={styles.timer}>
-      <h3>World Boss & Dungeon Timers</h3>
+      <h2>World Boss & Dungeon Timers</h2>
       <p>Click the time box to enable the alarm sound.</p>
 
       <div className={styles.timerWrapper}>
-        {allTimers.map((timer) => (
-          <ReactCountdown
-            key={`timer-${timer.id}-${timer.name}`}
-            intervals={timer.intervals}
-            label={timer.name}
-            subLabel={timer.location}
-            width={'150px'}
-          />
+        {allTimers.map((timer, index) => (
+          <div key={`timer-${timer.id}-${timer.name}`} style={{ boxShadow: 'var(--enchanted-box-shadow)' }}>
+            <ReactCountdown
+              intervals={timer.intervals}
+              label={timer.name}
+              subLabel={timer.location}
+              width={'150px'}
+            />
+          </div>
         ))}
       </div>
     </section>

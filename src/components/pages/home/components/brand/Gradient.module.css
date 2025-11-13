@@ -1,6 +1,6 @@
 .gradientImageContainer {
   /* Define the size of your element */
-  width: 1000px;
+  width: 800px;
   height: clamp(108px, 20vw, 240px);
 
   /* 1. THE GRADIENT FILL */
@@ -19,11 +19,26 @@
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-
-  /* 3. THE STROKE */
-  filter: 
-    drop-shadow(3px 0 0 #111111)
-    drop-shadow(-3px 0 0 #111111)
-    drop-shadow(0 3px 0 #111111)
-    drop-shadow(0 -3px 0 #111111);
 }
+
+/* --- This can be used to change color of image in background property --- */
+/* .gradientImageContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: gray;
+  
+  -webkit-mask-image: inherit;
+  mask-image: inherit;
+  -webkit-mask-size: inherit;
+  mask-size: inherit;
+  -webkit-mask-repeat: inherit;
+  mask-repeat: inherit;
+  -webkit-mask-position: inherit;
+  mask-position: inherit;
+
+  filter: blur(6px);
+  opacity: 0.5;
+  transform: translate(4px, 4px);
+  z-index: -1;
+} */

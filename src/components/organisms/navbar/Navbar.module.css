@@ -1,7 +1,7 @@
 /* Navigation css */
 .navigationContainer {
   align-items: center;
-  background-color: var(--enchanted-color-transparent);
+  background-color: var(--enchanted-bg-primary);
   border-bottom: 1px solid var(--enchanted-border-color);
   display: flex;
   justify-content: space-between;

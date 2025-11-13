@@ -1,4 +1,5 @@
 .description {
+  background-color: var(--enchanted-bg-primary);
   border-top: 1px solid var(--enchanted-border-color);
   font-weight: 200;
   padding: 100px 0;

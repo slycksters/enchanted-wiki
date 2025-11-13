@@ -1,0 +1,242 @@
+/* Container sits behind content */
+.egb-root {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* behind everything */
+  pointer-events: none;
+  overflow: hidden;
+  background: #071018; /* solid fallback */
+}
+
+/* ---------- Base animated gradient (Pulsing Energy Field) ---------- */
+.egb-gradient {
+  position: absolute;
+  inset: 0;
+  /* background: 
+    radial-gradient(
+      circle at 40% 35%,
+      rgba(170,135,80,0.08),
+      transparent 25%
+    ),
+    radial-gradient(circle at 70% 65%, rgba(40,80,100,0.06), transparent 20%),
+    linear-gradient(270deg, rgba(8,14,20,1), rgba(2,6,8,1)); */
+  background: radial-gradient(
+    circle at center,
+    rgba(8, 14, 20, 1),
+    rgba(2, 6, 8, 1)
+  );
+  filter: saturate(1.05) contrast(1.02);
+  /* animation: egb-pulse 14s ease-in-out infinite; */
+  /* transform-origin: center; */
+  /* will-change: transform, opacity; */
+}
+
+@keyframes egb-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.98;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---------- Energy Grid (subtle neon/circuit) ---------- */
+.egb-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  transform: rotate(-12deg) translateZ(0);
+  animation: egb-grid-move 18s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(170, 135, 80, 0.02));
+}
+
+@keyframes egb-grid-move {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  50% {
+    background-position: -60px -40px, 80px 40px;
+  }
+  100% {
+    background-position: 0 0, 0 0;
+  }
+}
+
+/* ---------- Parallax Layers (3 layers for depth) ---------- */
+.egb-parallax-layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+  mix-blend-mode: screen;
+  opacity: 0.35;
+  transition: transform 0.12s linear;
+}
+
+/* back layer - faint vignette/mist */
+.egb-parallax-layer--back {
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 230, 170, 0.04),
+      transparent 12%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(120, 220, 220, 0.02),
+      transparent 14%
+    );
+  opacity: 0.28;
+}
+
+/* mid layer - subtle shapes */
+.egb-parallax-layer--mid {
+  background: linear-gradient(
+      45deg,
+      rgba(170, 135, 80, 0.02) 0%,
+      transparent 25%
+    ),
+    linear-gradient(120deg, rgba(20, 60, 80, 0.03), transparent 35%);
+  opacity: 0.22;
+}
+
+/* front layer - slightly stronger gradient streaks */
+.egb-parallax-layer--front {
+  background: radial-gradient(
+      circle at 60% 35%,
+      rgba(255, 220, 150, 0.03),
+      transparent 15%
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  opacity: 0.18;
+}
+
+/* ---------- Canvas for particles ---------- */
+.egb-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* ---------- Scanlines + occasional flicker ---------- */
+.egb-scanlines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.01) 0px,
+    rgba(255, 255, 255, 0.01) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  opacity: 0.06;
+  pointer-events: none;
+  animation: egb-flicker 5s linear infinite;
+  z-index: 3;
+  mix-blend-mode: overlay;
+}
+
+@keyframes egb-flicker {
+  0% {
+    opacity: 0.055;
+  }
+  3% {
+    opacity: 0.09;
+  }
+  6% {
+    opacity: 0.03;
+  }
+  100% {
+    opacity: 0.06;
+  }
+}
+
+/* ---------- Logo sweep helper (apply to your logo wrapper) ----------
+   Usage: wrap your logo with <div class="egb-logo-sweep"><img... /></div>
+   The sweep will run every 6s. */
+.egb-logo-sweep {
+  position: relative;
+  overflow: hidden;
+  display: inline-block; /* allow wrapping around logo image/text */
+}
+
+.egb-logo-sweep::after {
+  content: '';
+  position: absolute;
+  left: -60%;
+  top: -10%;
+  width: 60%;
+  height: 120%;
+  transform: skewX(-18deg);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 220, 150, 0.2) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  animation: egb-logo-sweep 6s ease-in-out infinite;
+  opacity: 0.95;
+}
+
+@keyframes egb-logo-sweep {
+  0% {
+    left: -60%;
+    opacity: 0;
+    transform: translateX(0) skewX(-18deg) scale(0.98);
+  }
+  25% {
+    opacity: 0.6;
+  }
+  45% {
+    left: 110%;
+    opacity: 1;
+    transform: translateX(6%) skewX(-18deg) scale(1.02);
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+/* ---------- Accessibility small-screen fallback ---------- */
+@media (max-width: 640px) {
+  .egb-grid {
+    opacity: 0.06;
+  }
+  .egb-parallax-layer {
+    opacity: 0.14;
+  }
+  .egb-scanlines {
+    opacity: 0.03;
+  }
+}
+
+/* ---------- Quick theming variables you can adjust ----------
+   palette is complementary to your gold + dark navy */
+:root {
+  --egb-deep: #061017;
+  --egb-mid: #0d1520;
+  --egb-gold: #bfa368;
+  --egb-gold-soft: rgba(191, 163, 104, 0.15);
+  --egb-teal: #78dcdc;
+}

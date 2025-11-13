@@ -1,6 +1,13 @@
 .footer {
+  inset: 0;
+   background: radial-gradient(
+    circle at center,
+    rgba(8, 14, 20, 1),
+    rgba(2, 6, 8, 1)
+  );
+  filter: saturate(1.05) contrast(1.02);
   border-top: 1px solid var(--enchanted-border-color);
   color: var(--enchanted-text-tertiary);
-  padding: 32px;
+  padding: 25px;
   text-align: center;
 }

@@ -8,7 +8,7 @@
 }
 
 .imageWrapper {
-  height: clamp(108px, 20vw, 240px);
+  height: clamp(108px, 20vw, 262px);
   margin-top: clamp(32px, 5vw, 108px);
 }
 

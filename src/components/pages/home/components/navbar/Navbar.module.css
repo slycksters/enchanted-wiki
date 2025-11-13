@@ -8,8 +8,6 @@
 .navbarContainer {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  background-color: var(--enchanted-bg-primary);
   gap: clamp(1px, 2vw, 20px);
   margin-top: 25px;
   position: relative;
@@ -23,8 +21,6 @@
 /* --- Centered Desktop Links --- */
 .desktopLinkList {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
   gap: clamp(1px, 2vw, 20px);
 }
 
@@ -46,9 +42,9 @@
 }
 
 .search button:hover {
-  background-color: var(--enchanted-text-primary);
-  border-color: var(--enchanted-text-primary);
-  color: var(--enchanted-bg-secondary);
+  background-color: var(--enchanted-color-white);
+  border-color: var(--enchanted-color-white);
+  color: var(--enchanted-color-eerie-black);
   transition: all 0.2s ease-out;
 }
 
@@ -69,7 +65,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  border-bottom: 2px solid var(--enchanted-color-blue);
+  border-bottom: 2px solid var(--enchanted-color-sky-blue);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -124,10 +120,6 @@
     color: var(--enchanted-text-primary);
     padding: 8px;
     cursor: pointer;
-  }
-
-  .search {
-    height: auto; /* Reset height */
   }
   
   /* --- Styling for the Mobile Menu Overlay --- */
