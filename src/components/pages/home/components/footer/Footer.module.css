@@ -1,6 +1,6 @@
 .footer {
   border-top: 1px solid var(--enchanted-border-color);
   color: var(--enchanted-text-tertiary);
-  padding: 20px;
+  padding: 32px;
   text-align: center;
 }

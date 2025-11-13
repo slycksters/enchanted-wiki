@@ -1,26 +1,33 @@
+import { NavLink } from 'react-router-dom';
+import { GAME_NAME } from '@constants';
 import styles from './Introduction.module.css';
 
 export const Introduction = () => {
   return (
     <div className={styles.introduction}>
       <p>
-        <span>Enchanted</span> or now known as <span>Enchanted Piece</span> is a
-        bandit-beater game set in a world of magic and adventure, inspired by
-        Fairy Tail, GPO, Project Slayers, and other anime-style titles.
+        Welcome to <span>{GAME_NAME}</span>!
       </p>
 
       <p>
-        Players can explore different areas, fight enemies, and master various
-        magic abilities as they progress through the game. The combat focuses on
-        action and timing, offering a mix of melee and magic-based fighting
-        styles.
+        Dive into a world of magic and mayhem inspired by your favorite anime
+        like Fairy Tail and Grand Piece Online. Your adventure is all about
+        bashing bandits, mastering incredible magic, and exploring a world
+        packed with action.
       </p>
 
-      <p>
-        It's a Fairy Tail-inspired experience built around fast-paced battles,
-        character growth, and an open world filled with opportunities to train
-        and improve your skills.
-      </p>
+      {/* <p>
+        The fighting is fast, fun, and all about timing. Unleash devastating
+        magics from afar or get up close and personal with melee attacks. Train
+        hard, grow stronger, and become legendary.
+      </p> */}
+
+      <NavLink
+        target={'_blank'}
+        to={'https://www.roblox.com/games/104841814414402'}
+      >
+        <button className={styles.playButton}>Play</button>
+      </NavLink>
     </div>
   );
 };

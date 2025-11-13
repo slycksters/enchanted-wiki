@@ -4,18 +4,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 25px;
   text-align: center;
 }
 
 .imageWrapper {
-  height: 100px;
+  height: clamp(108px, 20vw, 240px);
+  margin-top: clamp(32px, 5vw, 108px);
 }
 
 .imageWrapper img {
-  display: block;
-  filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
+  filter: var(--enchanted-drop-shadow);
   height: 100%;
   width: auto;
 }

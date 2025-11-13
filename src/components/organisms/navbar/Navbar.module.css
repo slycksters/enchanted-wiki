@@ -1,78 +1,76 @@
 /* Navigation css */
 .navigationContainer {
-  background-color: var(--enchanted-bg-primary);
+  align-items: center;
+  background-color: var(--enchanted-color-transparent);
   border-bottom: 1px solid var(--enchanted-border-color);
   display: flex;
   justify-content: space-between;
+  padding: 25px;
   width: 100vw;
 }
 
 .navigationContainer img {
-  height: 75px;
-  padding: 15px;
+  flex: 0 0;
+  height: 32px;
+  margin-right: 16px;
   width: auto;
-  margin: auto;
 }
 
 .navigationContainer img:hover {
-  filter: drop-shadow(0 0px 5px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
+  filter: brightness(0) saturate(100%) invert(72%) sepia(9%) saturate(1585%)
+    hue-rotate(2deg) brightness(94%) contrast(92%);
 }
 
 .navList {
-  display: flex;
+  gap: 16px;
 }
 
 .navItem {
-  align-items: center;
   background-color: var(--enchanted-overlay-transparent);
+  border: 1px solid var(--enchanted-overlay-transparent);
+  border-radius: 8px;
   color: var(--enchanted-text-primary);
-  display: flex;
   font-size: 14px;
-  justify-content: center;
-  padding: 15px;
-  position: relative;
+  padding: 8px 16px;
   text-decoration: none;
+  transition: all 0.2s ease-out;
 }
 
-.navItem:hover {
-  color: var(--enchanted-color-blue);
+.navItem span {
+  margin-left: 8px;
+  margin-top: 8px;
 }
 
+.navItem + .navItem {
+  margin-left: 16px;
+}
+
+.navItem:hover,
 .activeNavItem {
-  border-bottom: 2px solid var(--enchanted-color-blue);
-  color: var(--enchanted-color-blue);
-  padding-top: 17px;
+  background-color: var(--enchanted-bg-secondary);
+  border-color: var(--enchanted-border-color);
+  color: var(--enchanted-rarity-exotic);
+  transition: all 0.2s ease-out;
 }
 
-.search {
-  align-items: center;
-  display: flex;
-  margin-right: 12px;
-}
-
-.search button {
+.searchButton {
   background-color: var(--enchanted-bg-secondary);
   border: 1px solid var(--enchanted-border-color);
   border-radius: 8px;
-  color: var(--enchanted-text-primary);
-  font-size: 12px;
-  padding: 4px 8px;
+  color: var(--enchanted-color-color-white);
+  margin-left: 20px;
+  margin-right: 25px;
+  padding: 5px 16px;
   transition: all 0.2s ease-out;
 }
 
-.search button:hover {
-  background-color: var(--enchanted-text-primary);
-  border-color: var(--enchanted-text-primary);
-  color: var(--enchanted-bg-secondary);
-  transition: all 0.2s ease-out;
+.searchButton:hover {
+  background-color: var(--enchanted-color-white);
+  border-color: var(--enchanted-color-white);
+  color: var(--enchanted-bg-primary);
 }
 
 @media (max-width: 1024px) {
-  .navigationContainer {
-    border-bottom-style: dashed;
-  }
-
   .navigationContainer img {
     display: none;
   }

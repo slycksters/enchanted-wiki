@@ -1,0 +1,30 @@
+.description {
+  border-top: 1px solid var(--enchanted-border-color);
+  font-weight: 200;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.description p {
+  max-width: 75ch;
+  text-align: center;
+}
+
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.categoryItem h1 i {
+  color: var(--enchanted-color-silver);
+  text-shadow: var(--enchanted-text-shadow);
+}
+
+.imageShowcase {
+  filter: var(--enchanted-drop-shadow);
+  width: 75%;
+}

@@ -26,10 +26,11 @@
   --enchanted-rarity-exclusive: #FFBE3D;
 
   /* Global stylings*/
+  --enchanted-box-shadow-color: rgba(0,0,0, 0.5);
   --enchanted-box-shadow: 0px 0px 5px var(--enchanted-box-shadow-color);
-  --enchanted-box-shadow-color: rgba(0,0,0, 0.3);
   --enchanted-drop-shadow: drop-shadow(5px 10px 6px rgba(0, 0, 0, 0.5));
   --enchanted-drop-shadow-exotic: drop-shadow(0px 0px 3px rgba(94, 233, 181, 0.5));
+  --enchanted-text-shadow: 5px 10px 6px rgba(0, 0, 0, 0.5);
   --enchanted-background-gradient-primary: linear-gradient(
     135deg,
     var(--enchanted-bg-accent),
@@ -42,4 +43,31 @@
     var(--enchanted-bg-secondary),
     var(--enchanted-bg-accent)
   );
+
+  /* Solid colors */
+  --enchanted-color-white: #FFFFFF;
+  --enchanted-color-white-smoke: #F0F0F0;
+  --enchanted-color-light-gray: #CED0D4;
+  --enchanted-color-silver-light-gray: #CCCCCC;
+  --enchanted-color-silver: #BCBCBC;
+  --enchanted-color-sky-blue: #59C1DE;
+  --enchanted-color-khaki: #C8AA6E;
+  --enchanted-color-gray: #2B2A29;
+  --enchanted-color-jet: #292929;
+  --enchanted-color-navy-blue: #161F32;
+  --enchanted-color-eerie-black: #1F1F1F;
+  --enchanted-color-indigo: #180D43;
+  --enchanted-color-oxford-blue: #0A1428;
+  --enchanted-color-rich-black: #141212;
+  --enchanted-color-eerie-black: #111111;
+  --enchanted-color-onyx: #050505;
+
+  /* Transparent colors */
+  --enchanted-color-transparent: transparent;
+  --enchanted-color-gray-transparent: #80808033;
+  --enchanted-color-black-transparent: #00000073;
+  --enchanted-color-khaki-transparent: #C8AA6E1A;
+  --enchanted-color-sky-blue-transparent: #59C1DE1A;
+  --enchanted-color-silver-transparent: #BCBCBC1A;
+
 }

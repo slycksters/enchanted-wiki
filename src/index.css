@@ -1,10 +1,13 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 body {
+  /* background: linear-gradient(
+      180deg,
+      var(--enchanted-color-eerie-black),
+      var(--enchanted-color-onyx)
+    ); */
   background-color: var(--enchanted-bg-primary);
   color: var(--enchanted-text-primary);
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.02em;
   margin: 0;
   overflow: hidden;
 }

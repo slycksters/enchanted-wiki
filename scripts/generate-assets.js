@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // --- CONFIGURATION ---
-const SOURCE_DIRECTORIES = ['audio', 'images', 'logos', 'videos'];
+const SOURCE_DIRECTORIES = ['audio', 'images', 'introductions', 'logos', 'videos'];
 const ASSET_EXTENSIONS_REGEX = /\.(png|jpg|jpeg|gif|svg|mp4|webm|mp3)$/;
 // --- END CONFIGURATION ---
 

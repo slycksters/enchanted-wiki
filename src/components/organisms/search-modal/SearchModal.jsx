@@ -18,8 +18,8 @@ export const SearchModal = ({ show, onHide }) => {
 
     var filteredList = SEARCH_LIST.filter((item) =>
       item.name.toLowerCase().includes(key.toLowerCase())
-      || item.subType?.name.toLowerCase().includes(key.toLowerCase())
-      || item.type?.name.toLowerCase().includes(key.toLowerCase())
+      || item.subType?.name.toLowerCase() === key.toLowerCase()
+      || item.type?.name.toLowerCase() === key.toLowerCase()
     );
     setData(filteredList);
   };

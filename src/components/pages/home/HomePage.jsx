@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   AbilitiesDescription,
   Brand,
@@ -7,22 +7,54 @@ import {
   Introduction,
   IslandsDescription,
   ItemsDescription,
-  Navbar,
   Timer,
+  Navbar,
   WorldFeaturesDescription,
 } from './components';
 import styles from './Home.module.css';
+// import { Navbar } from '@components/organisms';
 
 export const HomePage = () => {
-  // Scroll to top on component mount
+  const [scrolled, setScrolled] = useState(false);
+  const scrollRef = useRef(null);
+
+  // Scroll to top on mount
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const el = scrollRef.current;
+    if (el) el.scrollTop = 0;
+    else window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current || window;
+
+    const handleScroll = () => {
+      const isScrolled = el === window ? window.scrollY > 0 : el.scrollTop > 0;
+      setScrolled(isScrolled);
+    };
+
+    // Set initial state
+    handleScroll();
+
+    el.addEventListener('scroll', handleScroll, { passive: true });
+    return () => el.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={`${styles.homePageContainer}`}>
-      <div className={'container'}>
-        <Navbar />
+    <div className={styles.homePageContainer}>
+      <div className={styles.scrollable} ref={scrollRef}>
+        <div
+          className={styles.stickyNavbar}
+          style={{
+            backgroundColor: scrolled
+              ? 'var(--enchanted-color-eerie-black)'
+              : 'transparent',
+            transition: 'background-color 0.3s ease',
+          }}
+        >
+          <Navbar />
+        </div>
+
         <Brand />
         <Introduction />
         <Timer />

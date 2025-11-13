@@ -19,22 +19,20 @@ export const Navbar = () => {
       {/* Logo */}
       <div className={styles.logoWrapper}>
         <NavLink to={BASE_PATH}>
-          <Image src={isMobileOrTablet ? assets.logos.enchantedSmallLogo : assets.logos.enchantedLogo} />
+          <Image src={assets.logos.reignStudioLogo} />
         </NavLink>
       </div>
 
       {/* Page Links */}
       <div className={styles.navList}>
-        <div className={styles.search}>
-          <button
-            aria-label={'Search'}
-            onClick={() => setIsModalOpen(!isModalOpen)}
-            type={'button'}
-          >
-            <IoMdSearch size={16} />
-            Search
-          </button>
-        </div>
+        <button
+          aria-label={'Search'}
+          className={styles.searchButton}
+          onClick={() => setIsModalOpen(!isModalOpen)}
+          type={'button'}
+        >
+          <IoMdSearch size={22} />
+        </button>
         {PAGE_LINKS.map((link) => {
           const Icon = link.icon;
 
@@ -44,23 +42,24 @@ export const Navbar = () => {
                 clsx(styles.navItem, { [styles.activeNavItem]: isActive })
               }
               key={link.id}
-              style={({ isActive }) => ({
-                background: isActive
-                  ? getBackgroundGradient(
-                      `var(--enchanted-color-blue)`,
-                      'Up'
-                    )
-                  : null,
-              })}
               to={link.path}
             >
-              {isMobileOrTablet ? <Icon size={22} /> : link.name}
+              {isMobileOrTablet ? (
+                <Icon size={22} style={{ marginTop: '-3px' }} />
+              ) : (
+                <>
+                  <Icon size={22} style={{ marginTop: '-3px' }} />
+                  <span>{link.name}</span>
+                </>
+              )}
             </NavLink>
           );
         })}
       </div>
 
-      {isModalOpen && <SearchModal onHide={() => setIsModalOpen(false)} show={isModalOpen} />}
+      {isModalOpen && (
+        <SearchModal onHide={() => setIsModalOpen(false)} show={isModalOpen} />
+      )}
     </div>
   );
 };

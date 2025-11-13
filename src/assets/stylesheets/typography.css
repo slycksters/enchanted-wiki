@@ -10,6 +10,12 @@ html {
   line-height: 1.5; /* default line height */
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Roboto Flex", sans-serif; */
+  /* font-family: Spiegel, sans-serif; */
+}
+
 /* ------------------------------
    Headings
 ------------------------------ */

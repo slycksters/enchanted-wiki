@@ -1,38 +1,22 @@
 .homePageContainer {
   height: 100vh;
-  overflow: auto;
 }
 
-.description {
-  border-top: 1px solid var(--enchanted-border-color);
-  color: var(--enchanted-text-secondary);
-  padding: 50px 0px;
-}
-
-.description h1,
-.description h2,
-.description h3,
-.description h4,
-.description h5,
-.description h6,
-.description span {
-  color: var(--enchanted-text-primary);
-}
-
-.categoryItem {
-  background-color: var(--enchanted-bg-secondary);
+.scrollable {
   height: 100%;
-  padding: 16px 16px 0 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.description ul li::marker {
-  color: var(--enchanted-color-blue);
+.stickyNavbar {
+  margin-top: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 500;
 }
 
-.note {
-  display: block;
-  margin: 8px 0 4px 0;
-  font-style: italic;
-  color: var(--enchanted-text-tertiary);
-  font-size: 0.85rem;
+@media (max-width: 1024px) {
+  .stickyNavbar {
+    margin-top: 0px;
+  }
 }

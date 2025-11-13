@@ -1,86 +1,82 @@
-import styles from '../../Home.module.css';
+import { useState } from 'react';
+import {
+  GiFireRay,
+  GiCardPick,
+  GiDevilMask,
+  GiLaurelsTrophy,
+  GiMagicSwirl,
+} from 'react-icons/gi';
+import { FaHatWizard, FaShieldAlt } from 'react-icons/fa';
+import { Image } from '@components';
+  import styles from './AbilitiesDescription.module.css';
+import { DESCRIPTIONS } from './descriptions.constant';
+
+const BUTTONS = [
+  { id: 1, icon: GiFireRay, name: 'Magic' },
+  { id: 2, icon: GiDevilMask, name: 'Race' },
+  { id: 3, icon: GiCardPick, name: 'Trait' },
+  { id: 4, icon: GiMagicSwirl, name: 'Passive Magic' },
+  { id: 5, icon: FaShieldAlt, name: 'Passive Skill' },
+  { id: 6, icon: GiLaurelsTrophy, name: 'Title' },
+];
 
 export const AbilitiesDescription = () => {
+  const [selected, setSelected] = useState(DESCRIPTIONS[0]);
+
   return (
     <main className={styles.description}>
-      <div className={styles.category}>
-        <h3>Abilities</h3>
-
-        <p>
-          Abilities define your character's strengths, combat style, and
-          progression. Each ability type contributes differently to how you
-          fight and develop in the game.
-        </p>
-      </div>
-
-      <div className={'row g-3'}>
-        <section className={'col col-12 col-md-6'}>
-          <div className={styles.categoryItem}>
-            <h4>Magic</h4>
-
+      <div className="container">
+        <div className="row row-gap-5 align-items-center">
+          <div className={`col col-12 col-lg-6 ${styles.categoryItem}`}>
+            <h1>
+              <i>ABILITIES</i>
+            </h1>
             <p>
-              One of the three main combat styles. Magic focuses on offensive
-              spells that allow you to engage enemies using various magical
-              techniques.
+              Abilities define your character's strengths, combat style, and
+              progression. Each ability type contributes differently to how you
+              fight and develop in the game.
             </p>
+
+            <div className={styles.buttonGroup}>
+              {BUTTONS.map((button) => {
+                const Icon = button.icon;
+                const isSelected = selected.id === button.id;
+                return (
+                  <div key={button.id} className={styles.buttonWrapper}>
+                    <button
+                      className={styles.button}
+                      onClick={() =>
+                        setSelected(DESCRIPTIONS.find((d) => d.id === button.id))
+                      }
+                      style={{ color: isSelected ? 'var(--enchanted-color-khaki)' : null }}
+                    >
+                      <Icon />
+                    </button>
+                    <div className={styles.buttonText}>{button.name.toUpperCase()}</div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </section>
 
-        <section className={'col col-12 col-md-6'}>
-          <div className={styles.categoryItem}>
-            <h4>Race</h4>
-
-            <p>
-              Represents your character's origin. Each race provides stat perks
-              that influence your overall performance in combat and progression.
-            </p>
+          <div className="col col-12 col-lg-6">
+            <div className={styles.categoryItem}>
+              <div className={styles.categoryImage}>
+                <Image
+                  alt={'ability-description-image'}
+                  src={selected.image}
+                  style={{ height: selected.id === 6 ? '50%' : undefined }}
+                />
+              </div>
+              <div className={styles.categoryDescription}>
+                <h3>
+                  <i>{selected.name.toUpperCase()}</i>
+                </h3>
+                <p>{selected.description}</p>
+              </div>
+            </div>
           </div>
-        </section>
-
-        <section className={'col col-12 col-md-6'}>
-          <div className={styles.categoryItem}>
-            <h4>Trait</h4>
-
-            <p>
-              A source of additional stat bonuses that further enhance your
-              character's overall power.
-            </p>
-          </div>
-        </section>
-
-        <section className={'col col-12 col-md-6'}>
-          <div className={styles.categoryItem}>
-            <h4>Passive Magic</h4>
-
-            <p>
-              A combat-oriented passive skill that adds effects to your attacks,
-              such as increased damage or special elemental properties.
-            </p>
-          </div>
-        </section>
-
-        <section className={'col col-12 col-md-6'}>
-          <div className={styles.categoryItem}>
-            <h4>Title</h4>
-
-            <p>
-              Earned through in-game achievements, Titles grant bonus EXP and
-              Crystal multipliers, marking your accomplishments as you advance
-              through the world of <span>Enchanted</span>.
-            </p>
-          </div>
-        </section>
-
-        <section className={'col col-12 col-md-6'}>
-          <div className={styles.categoryItem}>
-            <h4>Passive Skill</h4>
-
-            <p>
-              A utility-based ability that strengthens your magic or grants
-              mobility options, improving how you move and fight.
-            </p>
-          </div>
-        </section>
+        </div>
       </div>
     </main>
   );

@@ -1,9 +1,29 @@
 .introduction {
-  color: var(--enchanted-text-secondary);
-  margin-top: 50px;
-  margin-bottom: 50px;
+  color: var(--enchanted-color-white-smoke);
+  font-weight: 200;
+  margin: 60px auto;
+  padding-bottom: clamp(32px, 5vw, 124px);
+  max-width: 65ch;
+  text-align: center;
 }
 
-.introduction span {
-  color: var(--enchanted-text-primary);
+.introduction p:first-child span {
+  font-weight: bold;
+}
+
+.playButton {
+  background-color: var(--enchanted-color-khaki);
+  border: 1px solid var(--enchanted-color-khaki);
+  border-radius: 2px;
+  color: var(--enchanted-color-eerie-black);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 32px;
+  padding: 16px 32px;
+  transition: all 0.2s ease-out;
+}
+
+.playButton:hover {
+  background-color: var(--enchanted-color-white);
+  border: 1px solid var(--enchanted-color-white);
 }
