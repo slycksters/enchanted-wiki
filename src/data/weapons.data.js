@@ -16,7 +16,7 @@ export const WEAPONS = {
       },
     ],
     attachment: weaponImages.knuckles,
-    description: `A starter combat tool. These knuckles offer no special abilities, translating your pure, untamed strength directly into every blow.`,
+    description: `Simple but honest, these knuckles channel nothing but your own raw force. Each strike is a direct expression of unrefined power, turning pure will into blunt impact.`,
     name: 'Knuckles',
     rarity: RARITIES.uncommon,
     stats: {
@@ -53,7 +53,7 @@ export const WEAPONS = {
     ],
     attachment: weaponImages.wingedSword,
     description:
-      'An elegant and rare blade, as swift as the wind and brimming with explosive energy.',
+      'A rare blade light enough to dance yet fierce enough to detonate with sudden bursts of power. Every swing carries the breath of the wind, striking with explosive elegance.',
     name: 'Winged Sword',
     rarity: RARITIES.rare,
     sources: ['luca'],
@@ -77,19 +77,21 @@ export const WEAPONS = {
       {
         id: 2,
         attachment: weaponVideos.titaniumGauntletsZ,
-        description: 'Slam your fists into the ground, creating a shockwave that damages nearby enemies.',
+        description:
+          'Slam your fists into the ground, creating a shockwave that damages nearby enemies.',
         name: 'Iron Fist Slam [Z]',
       },
       {
         id: 3,
         attachment: weaponVideos.titaniumGauntletsZ,
-        description: 'Unleash a devastating uppercut capable of launching enemies into the air.',
+        description:
+          'Unleash a devastating uppercut capable of launching enemies into the air.',
         name: 'Iron Upper Cut [X]',
       },
     ],
     attachment: weaponImages.titaniumGauntlets,
     description:
-      'Forged from a rare and incredibly sturdy alloy. These gauntlets sacrifice speed for crushing, brute-force impact.',
+      'Built from an unyielding alloy, these gauntlets trade speed for devastating weight. Each blow lands like falling iron, crushing anything that dares to stand before you.',
     name: 'Titanium Gauntlets',
     rarity: RARITIES.rare,
     sources: ['jeremy'],
@@ -127,7 +129,7 @@ export const WEAPONS = {
     ],
     attachment: weaponImages.katana,
     description:
-      'A masterfully forged blade, demanding discipline and precision from its wielder. Its legendary edge delivers lethal, lightning-fast cuts.',
+      'A blade of discipline and precision, demanding clarity from its wielder. Its legendary sharpness delivers cuts so swift they feel like passing whispers of death.',
     name: 'Katana',
     rarity: RARITIES.rare,
     sources: ['rufus'],
@@ -164,7 +166,7 @@ export const WEAPONS = {
     ],
     attachment: weaponImages.medievalSword,
     description:
-      'A battle-forged blade, heavy with the promise of victory. Wielded by valiant knights, its crushing weight and relentless edge are designed to break both shields and spirits.',
+      'A heavy warblade forged for knights who fought until their armor cracked and their spirits blazed. Its weight carries the promise of decisive victory, breaking shields and resolve alike.',
     name: 'Medieval Sword',
     sources: ['meto'],
     stats: {
@@ -200,7 +202,7 @@ export const WEAPONS = {
       },
     ],
     attachment: weaponImages.claws,
-    description: `A pair of vicious claws crackling with shadow energy. They feel less like a weapon and more like a predator's natural extension, hungry to rend flesh and bone.`,
+    description: `Born of shadow and ferality, these claws behave less like crafted weapons and more like extensions of a hungry beast. Their strikes carve through air and flesh with predatory intent.`,
     name: 'Claws',
     rarity: RARITIES.epic,
     sources: ['ola'],
@@ -243,7 +245,7 @@ export const WEAPONS = {
     ],
     attachment: weaponImages.frostedSpear,
     description:
-      'Forged from the heart of a timeless glacier, this legendary spear radiates an aura of absolute zero. Legends say it was first shaped by a powerful ice mage, and its touch is cold enough to freeze not just the body, but the very soul.',
+      'Shaped from a timeless glacier, this spear radiates an unforgiving chill. Its frozen core pierces not only flesh but the warmth of the soul itself, leaving only crystalline silence behind.',
     name: 'Frosted Spear',
     rarity: RARITIES.legendary,
     sources: ['graySpec'],
@@ -283,7 +285,7 @@ export const WEAPONS = {
       },
     ],
     attachment: weaponImages.empressSword,
-    description: `A blade of sovereign authority, said to be forged in the heart of a dying star. Its edge doesn't just cut; it issues a fiery decree, commanding flames to consume all who stand against its wielder.`,
+    description: `Forged in a star's dying breath, this regal blade burns with divine authority. Its flames obey no laws but the wielder's will, branding every strike as a mandate of annihilation.`,
     name: 'Empress Sword',
     rarity: RARITIES.legendary,
     sources: ['erzaSpec'],
@@ -324,7 +326,7 @@ export const WEAPONS = {
       },
     ],
     attachment: weaponImages.dragonSlayerGauntlets,
-    description: `Crafted from the obsidian scales of a vanquished Fire Dragon and imbued with its roaring soul. These legendary gauntlets don't just wield fire; they unleash the untamed, concussive fury of a dragon's wrath with every earth-shattering blow.`,
+    description: `Forged from the obsidian scales of a fallen Fire Dragon, these gauntlets pulse with volcanic fury. Each punch erupts with draconic wrath, turning the battlefield into blazing ruin.`,
     name: 'Dragon Slayer Gauntlets',
     rarity: RARITIES.legendary,
     sources: ['natsuSpec'],
@@ -358,7 +360,7 @@ export const WEAPONS = {
       },
     ],
     attachment: weaponImages.hellforgeGauntlets,
-    description: `Not a weapon forged in Hell, but a fragment of the infernal forge itself, bound in soul-etched iron. These gauntlets don't just wield fire; they are a constant, self-sustaining cataclysm, forever hungry to melt reality back into primordial flame.`,
+    description: `A fragment of the infernal crucible itself, bound in cursed iron and living flame. They do not simply attack—they consume, melting reality into raw, primal fire with every strike.`,
     name: 'Hellforge Gauntlets',
     rarity: RARITIES.mythical,
     sources: ['hezzy'],
@@ -399,7 +401,7 @@ export const WEAPONS = {
     ],
     attachment: weaponImages.darkSword,
     description:
-      'This is not a blade forged of metal, but a shard of the primordial void given form—a sliver of the absolute nothingness that predates existence itself. Its edge does not cut; it unmakes, silently erasing matter, energy, and even light from reality.',
+      'A weapon not of metal but of the void, carved from the silent nothingness before creation. Its edge does not slice— it erases, unraveling reality with every whisper of motion.',
     name: 'Dark Sword',
     rarity: RARITIES.mythical,
     sources: ['jerome'],

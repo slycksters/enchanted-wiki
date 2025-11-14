@@ -1,13 +1,22 @@
-import { NPCS, TRAITS } from '@data';
+import { TRAITS, NPCS } from '@data';
+import { generateUniqueKey } from '@helpers';
 
-// --- Main Data ---
-const traitMap = new Map(Object.entries(TRAITS));
-// --- Related Data ---
-const npcMap = new Map(Object.entries(NPCS));
+export const linkTraits = (allData) => {
+  const { traits, npcs } = allData;
 
-// --- Link to related data ---
-traitMap.forEach((item) => {
-  item.sources = item.sources.map((key) => npcMap.get(key)).filter(Boolean);
-});
+  const npcMap = new Map(npcs.map(n => [generateUniqueKey(n), n]).filter(e => e[0]));
+  const stringKeyToUniqueKeyMap = new Map(
+    Object.entries(NPCS).map(([key, obj]) => [key, generateUniqueKey(obj)])
+  );
+  
+  return traits.map(baseItem => {
+    const originalItem = Object.values(TRAITS).find(i => i.id === baseItem.id);
+    if (!originalItem?.sources) return baseItem;
 
-export const traitArray = Array.from(traitMap.values());
+    const sources = originalItem.sources
+      .map(key => npcMap.get(stringKeyToUniqueKeyMap.get(key)))
+      .filter(Boolean);
+      
+    return { ...baseItem, sources };
+  });
+};

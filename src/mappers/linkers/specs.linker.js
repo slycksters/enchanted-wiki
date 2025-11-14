@@ -1,13 +1,22 @@
-import { NPCS, SPECS } from '@data';
+import { SPECS, NPCS } from '@data';
+import { generateUniqueKey } from '@helpers';
 
-// --- Main Data ---
-const specMap = new Map(Object.entries(SPECS));
-// --- Related Data ---
-const npcMap = new Map(Object.entries(NPCS));
+export const linkSpecs = (allData) => {
+  const { specs, npcs } = allData;
 
-// --- Link to related data ---
-specMap.forEach((item) => {
-  item.sources = item.sources.map((key) => npcMap.get(key)).filter(Boolean);
-});
+  const npcMap = new Map(npcs.map(n => [generateUniqueKey(n), n]).filter(e => e[0]));
+  const stringKeyToUniqueKeyMap = new Map(
+    Object.entries(NPCS).map(([key, obj]) => [key, generateUniqueKey(obj)])
+  );
+  
+  return specs.map(baseItem => {
+    const originalItem = Object.values(SPECS).find(i => i.id === baseItem.id);
+    if (!originalItem?.sources) return baseItem;
 
-export const specArray = Array.from(specMap.values());
+    const sources = originalItem.sources
+      .map(key => npcMap.get(stringKeyToUniqueKeyMap.get(key)))
+      .filter(Boolean);
+      
+    return { ...baseItem, sources };
+  });
+};

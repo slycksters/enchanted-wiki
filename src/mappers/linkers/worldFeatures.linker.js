@@ -1,13 +1,22 @@
 import { WORLD_FEATURES, ITEMS } from '@data';
+import { generateUniqueKey } from '@helpers';
 
-// --- Main Data ---
-const worldFeatureMap = new Map(Object.entries(WORLD_FEATURES));
-// --- Related Data ---
-const itemMap = new Map(Object.entries(ITEMS));
+export const linkWorldFeatures = (allData) => {
+  const { worldFeatures, items } = allData;
 
-// --- Link to related data ---
-worldFeatureMap.forEach((item) => {
-  item.drops = item.drops?.map((key) => itemMap.get(key)).filter(Boolean);
-});
+  const itemMap = new Map(items.map(i => [generateUniqueKey(i), i]).filter(e => e[0]));
+  const stringKeyToUniqueKeyMap = new Map(
+    Object.entries(ITEMS).map(([key, obj]) => [key, generateUniqueKey(obj)])
+  );
 
-export const worldFeatureArray = Array.from(worldFeatureMap.values());
+  return worldFeatures.map(baseItem => {
+    const originalItem = Object.values(WORLD_FEATURES).find(i => i.id === baseItem.id);
+    if (!originalItem?.drops) return baseItem;
+
+    const drops = originalItem.drops
+      .map(key => itemMap.get(stringKeyToUniqueKeyMap.get(key)))
+      .filter(Boolean);
+      
+    return { ...baseItem, drops };
+  });
+};

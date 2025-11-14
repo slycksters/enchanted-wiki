@@ -1,7 +1,4 @@
-import { TITLES } from '@data';
-
-// --- Main Data ---
-const titleMap = new Map(Object.entries(TITLES));
-// --- Related Data ---
-
-export const titleArray = Array.from(titleMap.values());
+// Titles have no data to link, so we just return the slug-ified array directly.
+export const linkTitles = (allData) => {
+  return allData.titles;
+};

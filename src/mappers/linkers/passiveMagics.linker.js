@@ -1,13 +1,22 @@
-import { ITEMS, PASSIVE_MAGICS } from '@data';
+import { PASSIVE_MAGICS, ITEMS } from '@data';
+import { generateUniqueKey } from '@helpers';
 
-// --- Main Data ---
-const passiveMagicMap = new Map(Object.entries(PASSIVE_MAGICS));
-// --- Related Data
-const itemMap = new Map(Object.entries(ITEMS));
+export const linkPassiveMagics = (allData) => {
+  const { passiveMagics, items } = allData;
 
-// --- Link to related data ---
-passiveMagicMap.forEach((item) => {
-  item.sources = item.sources.map((key) => itemMap.get(key)).filter(Boolean);
-});
+  const itemMap = new Map(items.map(i => [generateUniqueKey(i), i]).filter(e => e[0]));
+  const stringKeyToUniqueKeyMap = new Map(
+    Object.entries(ITEMS).map(([key, obj]) => [key, generateUniqueKey(obj)])
+  );
 
-export const passiveMagicArray = Array.from(passiveMagicMap.values());
+  return passiveMagics.map(baseItem => {
+    const originalItem = Object.values(PASSIVE_MAGICS).find(i => i.id === baseItem.id);
+    if (!originalItem?.sources) return baseItem;
+
+    const sources = originalItem.sources
+      .map(key => itemMap.get(stringKeyToUniqueKeyMap.get(key)))
+      .filter(Boolean);
+      
+    return { ...baseItem, sources };
+  });
+};

@@ -1,13 +1,22 @@
-import { ITEMS, RACES } from '@data';
+import { RACES, ITEMS } from '@data';
+import { generateUniqueKey } from '@helpers';
 
-// --- Main Data ---
-const raceSkillMap = new Map(Object.entries(RACES));
-// --- Related Data
-const itemMap = new Map(Object.entries(ITEMS));
+export const linkRaces = (allData) => {
+  const { races, items } = allData;
 
-// --- Link to related data ---
-raceSkillMap.forEach((item) => {
-  item.sources = item.sources.map((key) => itemMap.get(key)).filter(Boolean);
-});
+  const itemMap = new Map(items.map(i => [generateUniqueKey(i), i]).filter(e => e[0]));
+  const stringKeyToUniqueKeyMap = new Map(
+    Object.entries(ITEMS).map(([key, obj]) => [key, generateUniqueKey(obj)])
+  );
 
-export const raceSkillArray = Array.from(raceSkillMap.values());
+  return races.map(baseItem => {
+    const originalItem = Object.values(RACES).find(i => i.id === baseItem.id);
+    if (!originalItem?.sources) return baseItem;
+
+    const sources = originalItem.sources
+      .map(key => itemMap.get(stringKeyToUniqueKeyMap.get(key)))
+      .filter(Boolean);
+      
+    return { ...baseItem, sources };
+  });
+};

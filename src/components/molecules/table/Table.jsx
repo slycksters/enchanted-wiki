@@ -29,7 +29,7 @@ export const Table = ({ list }) => {
                 <td>
                   <Image alt={item.name} src={item.attachment} />
                 </td>
-                <td>{item.name}</td>
+                <td><NavLink className={styles.navLink} to={getItemPath(item)}>{item.name}</NavLink></td>
                 <td>{item.subType ? item.subType.name : item.type.name}</td>
                 {item.chance && <td>{item.chance}%</td>}
                 {item.requirements?.length > 0 && (

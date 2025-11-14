@@ -4,7 +4,7 @@ import { getBackgroundGradient } from '@helpers';
 import { getItemPath } from '@router/getItemPath.helper';
 import styles from './SubList.module.css';
 
-export const SubList = ({ list, basePath, parentCategoryName }) => {
+export const SubList = ({ list }) => {
   return (
     <div className={styles.list}>
       {list.map((subItem) => {

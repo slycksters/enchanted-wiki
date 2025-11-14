@@ -12,6 +12,7 @@
   margin-left: 40px;
   margin-right: 40px;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 1024px) {

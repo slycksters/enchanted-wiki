@@ -95,6 +95,7 @@ export const ReactCountdown = ({
       <div className={styles.label}>{label ?? 'Countdown'}</div>
       <div className={styles.subLabel}>{subLabel}</div>
       <Countdown
+        key={targetDate}      
         date={targetDate}
         onComplete={handleComplete}
         renderer={renderer}

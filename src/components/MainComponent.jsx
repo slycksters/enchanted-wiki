@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Controller, InfoPanel, Navbar, Sidebar } from '@components';
 import { BASE_PATH } from '@constants';
@@ -9,6 +9,7 @@ import styles from './MainComponent.module.css'; // New CSS file
 export const MainComponent = () => {
   const location = useLocation();
   const windowWidth = useWindowWidth();
+  const pageContentRef = useRef(null);
   const isMobileOrTablet = windowWidth <= 1024;
 
   const [showSidebar, setShowSidebar] = useState(false);
@@ -39,6 +40,10 @@ export const MainComponent = () => {
   const sidebarProps = getSidebarProps();
   const height = isMobileOrTablet ? 'calc(100vh - 110px)' : 'calc(100vh - 76px)';
 
+  useEffect(() => {
+    pageContentRef.current?.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div>
       {showNavigation && <Navbar />}
@@ -57,7 +62,7 @@ export const MainComponent = () => {
               setShowSidebar={setShowSidebar}
               showSidebar={showSidebar}
             />
-            <main className={styles.pageContent}>
+            <main className={styles.pageContent} ref={pageContentRef}>
               <Outlet />
             </main>
             <InfoPanel />

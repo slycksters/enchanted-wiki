@@ -48,6 +48,20 @@
   object-fit: contain;
 }
 
+.navLink {
+  color: var(--enchanted-color-white);
+  text-decoration: underline;
+}
+
+.navLink:hover {
+  background-color: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
+  border-radius: 8px;
+  color: var(--enchanted-color-khaki);
+  padding: 3px 5px;
+  text-decoration-color: var(--enchanted-color-transparent);
+}
+
 @media (max-width: 1024px) {
   .imageWrapper {
     height: 150px;

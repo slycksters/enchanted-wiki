@@ -394,7 +394,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.shadowDragonSlayerV2,
     description:
-      `Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend. <p>Defeat Sting Eucliffe [World Boss] 10 times then speak to Sting Eucliffe [Specialist] as a Shadow Dragon Slayer to unlock.</p>`,
+      `<p>Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend.</p> <p>Defeat Sting Eucliffe [World Boss] 10 times then speak to Sting Eucliffe [Specialist] as a Shadow Dragon Slayer to unlock.</p>`,
     name: 'Shadow Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['stingEucliffeSpec'],
@@ -436,7 +436,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.fireDragonSlayerV2,
     description:
-      `Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor. <p>Defeat Natsu Dragneel [World Boss] 15 times then speark to Natsu Dragneel [Specialist] as a Fire Dragon Slayer to unlock.</p>`,
+      `<p>Unleash the cataclysmic fury of dragons, incinerating all in your path with fire of unparalleled intensity. Fire Dragon Slayer V2 strikes terror into every foe, eclipsing the power of its predecessor.</p> <p>Defeat Natsu Dragneel [World Boss] 15 times then speark to Natsu Dragneel [Specialist] as a Fire Dragon Slayer to unlock.</p>`,
     name: 'Fire Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['natsuDragneelSpec'],
@@ -484,7 +484,7 @@ export const MAGICS = {
     ],
     attachment: magicImages.lightningDragonSlayerV2,
     description:
-      `Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.<p>Defeat Laxus Dreyar [World Boss] 10 times then speak to Laxus Dreyar [Specialist] as a Lightning Dragon Slayer to unlock.</p>`,
+      `<p>Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.</p> <p>Defeat Laxus Dreyar [World Boss] 10 times then speak to Laxus Dreyar [Specialist] as a Lightning Dragon Slayer to unlock.</p>`,
     name: 'Lightning Dragon Slayer V2',
     rarity: RARITIES.v2,
     sources: ['laxusDreyarSpec'],

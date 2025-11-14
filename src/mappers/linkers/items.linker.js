@@ -1,18 +1,43 @@
 import { ITEMS, NPCS, WORLD_FEATURES } from '@data';
+import { generateUniqueKey } from '@helpers';
 
-// --- Main Data ---
-const itemMap = new Map(Object.entries(ITEMS));
-// --- Related Data ---
-const npcMap = new Map(Object.entries(NPCS));
-const worldFeatureMap = new Map(Object.entries(WORLD_FEATURES));
+export const linkItems = (allData) => {
+  const { items, npcs, worldFeatures } = allData;
+  
+  // Create a single unified map with all possible sources/drops, using the unique key
+  const unifiedMap = new Map();
+  [...items, ...npcs, ...worldFeatures].forEach(item => {
+    const uniqueKey = generateUniqueKey(item);
+    if (uniqueKey) unifiedMap.set(uniqueKey, item);
+  });
 
-// --- Combine All Related Data ---
-const unifiedMap = new Map([...itemMap, ...npcMap, ...worldFeatureMap]);
+  // Create a translation map from the original string key to the new unique key
+  const stringKeyToUniqueKeyMap = new Map();
+  const rawDataSource = { ...ITEMS, ...NPCS, ...WORLD_FEATURES };
+  Object.entries(rawDataSource).forEach(([stringKey, rawObject]) => {
+    stringKeyToUniqueKeyMap.set(stringKey, generateUniqueKey(rawObject));
+  });
 
-// --- Link to related data ---
-itemMap.forEach((item) => {
-  item.sources = item.sources?.map((key) => unifiedMap.get(key)).filter(Boolean);
-  item.drops = item.drops?.map((key) => unifiedMap.get(key)).filter(Boolean);
-});
+  return items.map(baseItem => {
+    const originalItem = Object.values(ITEMS).find(i => i.id === baseItem.id);
+    if (!originalItem) return null;
 
-export const itemArray = Array.from(itemMap.values());
+    const linkedItem = { ...baseItem };
+
+    // Link sources if they exist
+    if (originalItem.sources) {
+      linkedItem.sources = originalItem.sources
+        .map(stringKey => unifiedMap.get(stringKeyToUniqueKeyMap.get(stringKey)))
+        .filter(Boolean);
+    }
+    
+    // Link drops if they exist
+    if (originalItem.drops) {
+      linkedItem.drops = originalItem.drops
+        .map(stringKey => unifiedMap.get(stringKeyToUniqueKeyMap.get(stringKey)))
+        .filter(Boolean);
+    }
+    
+    return linkedItem;
+  }).filter(Boolean);
+};

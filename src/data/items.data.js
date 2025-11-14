@@ -2,6 +2,7 @@ import { assets } from '@assets';
 import { ITEM_TYPES, RARITIES, TYPES } from './enums';
 
 const itemImages = assets.images.items;
+const itemVideos = assets.videos.items;
 
 export const ITEMS = {
   raceReroll: {
@@ -642,7 +643,7 @@ export const ITEMS = {
   missingKey: {
     id: 45,
     attachment: itemImages.missingKey,
-    description: `Long ago, the keys to the Lost Cave's deepest chambers were scattered across the realm to prevent the escape of the mythical beasts imprisoned within. These keys are now hoarded by fearsome guardians in the Coral Abyss, Harvest Grove, and Zenith Skylands. Find just one of these missing keys to bypass the ancient seal and challenge the powerful creatures that lie in wait.`,
+    description: `<p>Long ago, the keys to the Lost Cave's deepest chambers were scattered across the realm to prevent the escape of the mythical beasts imprisoned within.</p> <p>These keys are now hoarded by fearsome guardians in the Coral Abyss, Harvest Grove, and Zenith Skylands. Find just one of these missing keys to bypass the ancient seal and challenge the powerful creatures that lie in wait.</p>`,
     isGatcha: false,
     name: `Missing Key`,
     rarity: RARITIES.mythical,
@@ -657,7 +658,7 @@ export const ITEMS = {
     isGatcha: false,
     name: `Mythical Chest`,
     rarity: RARITIES.mythical,
-    sources: ['natsuDragneelBoss', 'laxusDreyarBoss', 'stingEucliffeBoss'],
+    sources: ['natsuDragneelBoss', 'laxusDreyarBoss', 'stingEucliffeBoss', 'aizenBoss', 'deathBoss'],
     subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },
@@ -804,6 +805,11 @@ export const ITEMS = {
   garganta: {
     id: 58,
     attachment: itemImages.garganta,
+    abilities: [
+      { id: 1,
+        attachment: itemVideos.garganta,
+      },
+    ],
     description: `A swirling tear in the fabric of reality, stabilized into a portable artifact. It allows the user to rip open a chaotic, black void that serves as a direct pathway into Hueco Mundo, the desolate world of the Hollows. A dangerous but essential route for traversing the spirit realms.`,
     isGatcha: false,
     name: `Garganta`,
@@ -815,7 +821,12 @@ export const ITEMS = {
   soulGate: {
     id: 59,
     attachment: itemImages.soulGate,
-    description: `A masterpiece of spatial manipulation. Where a Garganta violently tears a hole in reality, the Soul Gate elegantly parts it, creating a stable, shimmering gateway. This advanced portal offers instantaneous and precise travel to any known island in the physical world. It is a testament to perfect control, a far more refined method of transportation. Can be purchased for 399 Robux or obtain from World Boss.`,
+    abilities: [
+      { id: 1,
+        attachment: itemVideos.soulGate,
+      },
+    ],
+    description: `<p>A masterpiece of spatial manipulation. Where a Garganta violently tears a hole in reality, the Soul Gate elegantly parts it, creating a stable, shimmering gateway.</p> <p>This advanced portal offers instantaneous and precise travel to any known island in the physical world. It is a testament to perfect control, a far more refined method of transportation. Can be purchased for 399 Robux or obtain from World Boss.</p>`,
     isGatcha: false,
     name: `Soul Gate`,
     rarity: RARITIES.exclusive,
