@@ -65,7 +65,7 @@ export const MainComponent = () => {
             <main className={styles.pageContent} ref={pageContentRef}>
               <Outlet />
             </main>
-            <InfoPanel />
+            {/* <InfoPanel /> */}
           </div>
         )}
       </div>

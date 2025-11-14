@@ -1,6 +1,6 @@
 import { useRef, useState, useCallback, useEffect } from 'react';
+import Countdown, { zeroPad } from 'react-countdown';
 import clsx from 'clsx';
-import Countdown from 'react-countdown';
 import { assets } from '@assets';
 import styles from './ReactCountdown.module.css';
 import { calculateNextTarget } from './helpers';
@@ -18,7 +18,7 @@ const timeRenderer = ({ minutes, seconds }, hasSpawned) => (
       <span>Spawned</span>
     ) : (
       <>
-      <span>{minutes.toString().padStart(2, '0')} : {seconds.toString().padStart(2, '0')}</span>
+      <span>{zeroPad(minutes)} : {zeroPad(seconds)}</span>
       </>
     )}
   </div>

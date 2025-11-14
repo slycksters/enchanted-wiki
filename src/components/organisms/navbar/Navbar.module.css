@@ -71,11 +71,23 @@
 }
 
 @media (max-width: 1024px) {
+  .navigationContainer {
+    padding: 25px 10px;
+  }
+
   .navigationContainer img {
     display: none;
   }
 
   .navItem {
     padding: 15px 10px;
+  }
+
+  .navItem + .navItem {
+    margin-left: 0;
+  }
+
+  .searchButton {
+    display: none;
   }
 }

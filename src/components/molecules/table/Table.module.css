@@ -45,7 +45,7 @@
   background-color: var(--enchanted-bg-secondary);
   border: 1px solid var(--enchanted-border-color);
   border-radius: 8px;
-  color: var(--enchanted-color-khaki);
+  color: var(--enchanted-rarity-exotic);
   padding: 3px 5px;
   text-decoration-color: var(--enchanted-color-transparent);
 }
