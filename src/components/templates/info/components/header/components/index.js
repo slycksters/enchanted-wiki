@@ -1,3 +1,4 @@
+export * from './Inhabitants';
 export * from './Level';
 export * from './Location';
 export * from './Rarity';
