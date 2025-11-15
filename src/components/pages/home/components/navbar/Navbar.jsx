@@ -87,15 +87,14 @@ export const Navbar = () => {
           {PAGE_LINKS.map((link) => {
             const Icon = link.icon;
             return (
-              <div className={styles.mobileLinkItem} key={`mobile-${link.path}`}>
-                <Link
+              <Link
+              className={styles.mobileLinkItem} key={`mobile-${link.path}`}
                   onClick={closeMenu}
                   to={link.path}
                 >
                   <Icon className={styles.linkListItemIcon} size={16} />
                   {link.name}
-                </Link>
-              </div>
+            </Link>
             );
           })}
         </nav>

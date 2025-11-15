@@ -164,7 +164,8 @@
   .mobileLinkItem {
     background-color: var(--enchanted-color-white-smoke);
     border-radius: 8px;
-    cursor: pointer;
+    color: var(--enchanted-color-jet);
+    display: block;
     text-decoration: none;
     font-size: 12px;
     padding: 13px;
@@ -175,16 +176,8 @@
     margin-top: 16px;
   }
 
-  .mobileLinkItem a {
-    color: var(--enchanted-color-jet);
-    transition: all 0.2 ease-in-out;
-  }
-
   .mobileLinkItem:hover {
     background-color: var(--enchanted-color-jet);
-  }
-
-  .mobileLinkItem:hover a {
     color: var(--enchanted-color-white-smoke);
   }
 }

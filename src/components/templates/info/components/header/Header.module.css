@@ -36,15 +36,15 @@
   display: flex;
   filter: var(--enchanted-drop-shadow);
   flex-shrink: 0;
-  height: 200px;
+  height: clamp(90px, 15vw, 200px);
   justify-content: center;
-  width: 200px;
+  width: clamp(90px, 15vw, 200px);
 }
 
 .imageWrapper > img {
   filter: var(--enchanted-drop-shadow);
-  height: 50%;
-  width: 50%;
+  height: clamp(70%, 15vw, 50%);
+  width: clamp(70%, 15vw, 50%);
   object-fit: contain;
 }
 
@@ -57,15 +57,8 @@
   color: var(--enchanted-rarity-exotic);
 }
 
-@media (max-width: 1024px) {
-  .imageWrapper {
-    height: 125px;
-    width: 125px;
-  }
-
-  .imageWrapper > img {
-    max-height: 80%;
-    max-width: 80%;
-    object-fit: contain;
+@media (max-width: 1024px) {  
+  .header {
+    gap: 15px;
   }
 }
