@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+// import { Helmet } from 'react-helmet-next';
 import {
   AbilitiesDescription,
   Brand,
@@ -13,6 +14,7 @@ import {
 } from './components';
 import styles from './Home.module.css';
 import AnimatedBackground from './components/animated-background/AnimatedBackground';
+import { assets } from '@assets';
 // import { Navbar } from '@components/organisms';
 
 export const HomePage = () => {
@@ -41,9 +43,28 @@ export const HomePage = () => {
     return () => el.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const cleanDescription = 'Enchanted Wiki: your all-in-one database for maps, races, items, enemies, quests, and deep lore of the realms.';
+  
+  // IMPORTANT: Open Graph images need an absolute URL
+  const ogImage = assets.logos.enchantedSmallLogo();
+  const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
+
   return (
     <div className={styles.homePageContainer}>
       <div className={styles.scrollable} ref={scrollRef}>
+        {/* --- React 19 Native Meta Tags --- */}
+        <title>{`Enchanted Wiki`}</title>
+        <meta name="description" content={cleanDescription} />
+        <meta name="keywords" content={`Enchanted, Wiki, Roblox, Enchanted Wiki`} />
+        
+        {/* --- Open Graph Tags --- */}
+        <meta property="og:title" content={`Enchanted Wiki`} />
+        <meta property="og:description" content={cleanDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="Enchanted Wiki" />
+
         {/* <AnimatedBackground /> */}
 
         <div

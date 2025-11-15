@@ -13,7 +13,7 @@
 }
 
 .cardContainer:hover {
-  box-shadow: 0 0 15px var(--enchanted-color-khaki-transparent);
+  border-color: var(--enchanted-rarity-exotic);
   transform: scale(1.05);
 }
 
