@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-next';
 import {
   Description,
   Drops,
@@ -9,12 +11,41 @@ import {
 } from './components';
 import { Inhabitants } from './components/inhabitants';
 import styles from './Info.module.css';
+import { assets } from '@assets';
 
 export const Info = ({ info }) => {
   if (!info) return null;
 
+  // Fast, guaranteed update for the title
+  useEffect(() => {
+    document.title = info.name;
+  }, [info.name]);
+
+  // Fallbacks for meta tags
+  const metaDescription = info.description || `${info.name} details on Enchanted Wiki`;
+  const ogImage = info.attachment() || assets.logos.enchantedSmallLogo();
+  const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
+
   return (
     <div className={styles.info}>
+      {/* Dynamic Helmet with key to ensure updates on info change */}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{info.name}</title>
+
+        {/* SEO Meta */}
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={`Enchanted, Wiki, Roblox, ${info.name}`} />
+
+        {/* Open Graph / Social Sharing */}
+        <meta property="og:title" content={info.name} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={ogImage} />
+      </Helmet>
+
+      {/* Page content */}
       <Header info={info} />
       <Description info={info} />
       <Sources info={info} />
