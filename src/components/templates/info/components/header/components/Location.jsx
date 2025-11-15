@@ -8,7 +8,7 @@ export const Location = ({ locations }) => {
 
   return (
     <div className={styles.infoRow}>
-      <span className={styles.label}>Location:</span>
+      <span className={styles.label}>{locations.length > 1 ? 'Locations' : 'Location'}:</span>
       <span className={styles.value}>
         {locations.map((location, index) => (
           // Use a React.Fragment to provide a key for each item in the loop

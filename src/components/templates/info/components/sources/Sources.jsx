@@ -7,7 +7,7 @@ export const Sources = ({ info }) => {
   return (
     <section className={styles.source}>
       <h3>
-        <i>Sources</i>
+        <i>{info.sources.length > 1 ? 'Sources' : 'Source'}</i>
       </h3>
       <div className={'d-flex flex-wrap gap-2'}>
         {info.sources.map((source) => {

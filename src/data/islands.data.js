@@ -1,4 +1,5 @@
 import { assets } from '@assets';
+import { GAME_NAME } from '@constants';
 import { TYPES } from './enums';
 
 const islandImages = assets.images.islands;
@@ -7,7 +8,7 @@ export const ISLANDS = {
   crescentIsle: {
     id: 1,
     attachment: islandImages.crescentIsle,
-    description: `<p>Crescent Isle is the starting zone for all new players in Enchanted.</p> <p>It is a small, self-contained island designed to introduce players to the game's core mechanics, including combat, weapon, magic, mining nodes and interacting with NPCs.</p>`,
+    description: `<p>Crescent Isle is the starting zone for all new players in ${GAME_NAME}.</p> <p>It is a small, self-contained island designed to introduce players to the game's core mechanics, including combat, weapon, magic, mining nodes and interacting with NPCs.</p>`,
     gallery: [
       {
         id: 1,
@@ -83,7 +84,7 @@ export const ISLANDS = {
   sunblazeIsle: {
     id: 2,
     attachment: islandImages.sunblazeIsle,
-    description: `<p>Sunblaze Isle is the second major island in Enchanted, presenting a significant step up in difficulty from the starting zone.</p> <p>This vast, sun-scorched desert is where players are introduced to crucial mid-game systems, including unlocking their Trait, discovering their Race, and learning how to multiply rewards with the Max Quests feature.</p>`,
+    description: `<p>Sunblaze Isle is the second major island in ${GAME_NAME}, presenting a significant step up in difficulty from the starting zone.</p> <p>This vast, sun-scorched desert is where players are introduced to crucial mid-game systems, including unlocking their Trait, discovering their Race, and learning how to multiply rewards with the Max Quests feature.</p>`,
     gallery: [
       {
         id: 1,
@@ -351,7 +352,7 @@ export const ISLANDS = {
   nimbusReach: {
     id: 7,
     attachment: islandImages.nimbusReach,
-    description: `<p>Nimbus Reach is a small and peaceful sanctuary island with no enemies, quests, or challenges. It serves as a calm resting point for players progressing through the world of Enchanted.</p> <p>Its sole purpose is to house the transporter that sends players to the next major zone — the Zenith Skylands.</p>`,
+    description: `<p>Nimbus Reach is a small and peaceful sanctuary island with no enemies, quests, or challenges. It serves as a calm resting point for players progressing through the world of ${GAME_NAME}.</p> <p>Its sole purpose is to house the transporter that sends players to the next major zone — the Zenith Skylands.</p>`,
     gallery: [
       {
         id: 1,
@@ -438,7 +439,7 @@ export const ISLANDS = {
   lostCave: {
     id: 10,
     attachment: islandImages.lostCave,
-    description: `<p>The Lost Cave, found within Runic Rock, is the central hub for all dungeon activity in Enchanted. It houses essential NPCs such as the Dungeon Shop and Reaper, who provides Soul Stacks for players seeking maximum damage output.</p> <p>Inside this cavern, players access time-based dungeon gates using Missing Keys, collect powerful materials, and challenge endgame bosses to fuel their character progression.</p>`,
+    description: `<p>The Lost Cave, found within Runic Rock, is the central hub for all dungeon activity in ${GAME_NAME}. It houses essential NPCs such as the Dungeon Shop and Reaper, who provides Soul Stacks for players seeking maximum damage output.</p> <p>Inside this cavern, players access time-based dungeon gates using Missing Keys, collect powerful materials, and challenge endgame bosses to fuel their character progression.</p>`,
     gallery: [
       {
         id: 1,

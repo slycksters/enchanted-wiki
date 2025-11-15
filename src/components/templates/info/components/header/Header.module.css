@@ -43,8 +43,8 @@
 
 .imageWrapper > img {
   filter: var(--enchanted-drop-shadow);
-  height: clamp(70%, 15vw, 50%);
-  width: clamp(70%, 15vw, 50%);
+  height: clamp(60%, 15vw, 50%);
+  width: clamp(60%, 15vw, 50%);
   object-fit: contain;
 }
 

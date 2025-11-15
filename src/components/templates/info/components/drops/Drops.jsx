@@ -7,7 +7,7 @@ export const Drops = ({ info }) => {
   return (
     <section className={styles.drops}>
       <h3>
-        <i>Drops</i>
+        <i>{info.drops.length > 1 ? 'Drops' : 'Drop'}</i>
       </h3>
       <div className={'d-flex flex-wrap gap-2'}>
         {info.drops.map((drop) => {

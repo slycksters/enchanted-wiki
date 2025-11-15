@@ -7,7 +7,7 @@ export const Inhabitants = ({ info }) => {
   return (
     <section className={styles.inhabitants}>
       <h3>
-        <i>Inhabitants</i>
+        <i>{info.inhabitants.length > 1 ? 'Inhabitants' : 'Inhabitant'}</i>
       </h3>
       <div className={'d-flex flex-wrap gap-2'}>
         {info.inhabitants.filter(o => !o.isVaulted).map((inhabitant) => {
