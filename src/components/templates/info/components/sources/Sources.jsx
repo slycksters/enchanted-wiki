@@ -1,14 +1,23 @@
-import { Table } from '@components';
+import { Card } from '@components';
 import styles from './Sources.module.css';
 
-export const Source = ({ info }) => {
+export const Sources = ({ info }) => {
   if (!info.sources?.length) return null;
 
   return (
     <section className={styles.source}>
-      <h3><i>Sources</i></h3>
-      <div>
-        <Table list={info.sources} />
+      <h3>
+        <i>Sources</i>
+      </h3>
+      <div className={'d-flex flex-wrap gap-2'}>
+        {info.sources.map((source) => {
+          return (
+            <Card
+              data={source}
+              key={`source-item-${source.id}-${source.name}`}
+            />
+          );
+        })}
       </div>
     </section>
   );

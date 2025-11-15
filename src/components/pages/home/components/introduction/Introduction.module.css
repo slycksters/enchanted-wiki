@@ -30,9 +30,9 @@
 
 .playButton:hover,
 .viewButton:hover {
-  background-color: var(--enchanted-color-eerie-black);
-  border: 1px solid var(--enchanted-color-eerie-black);
-  color: var(--enchanted-color-white);
+  background-color: var(--enchanted-color-white);
+  border: 1px solid var(--enchanted-color-white);
+  color: var(--enchanted-color-eerie-black);
 }
 
 .viewButton {

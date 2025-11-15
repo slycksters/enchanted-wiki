@@ -7,7 +7,7 @@ export const Inhabitants = ({ inhabitants }) => {
     <div className={styles.infoRow}>
       <span className={styles.label}>Inhabitants Count:</span>
       <span className={styles.value}>
-        {inhabitants.length}
+        {inhabitants.filter(o => !o.isVaulted).length}
       </span>
     </div>
   );

@@ -124,16 +124,14 @@
   
   /* --- Styling for the Mobile Menu Overlay --- */
   .mobileMenu {
+    background-color: var(--enchanted-color-white);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: var(--enchanted-bg-primary);
     z-index: 1001;
     
     /* Animation: slide in from the left */
@@ -146,31 +144,47 @@
   }
 
   .closeButton {
-    position: absolute;
-    top: 25px;
-    left: 25px;
     background: none;
     border: none;
-    color: var(--enchanted-text-primary);
+    color: var(--enchanted-color-jet);
     cursor: pointer;
+    padding-left: 20px;
+    padding-top: 25px;
+    text-align: start;
+  }
+
+  .scrollable {
+    overflow-y: auto;
   }
 
   .mobileNavLinks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    padding: 16px;
   }
 
   .mobileLinkItem {
-    color: var(--enchanted-text-secondary);
+    background-color: var(--enchanted-color-white-smoke);
+    border-radius: 8px;
+    cursor: pointer;
     text-decoration: none;
-    font-size: 24px;
-    padding: 10px 20px;
-    transition: color 0.2s ease;
+    font-size: 12px;
+    padding: 13px;
+    transition: all 0.2 ease-in-out;
+  }
+
+  .mobileLinkItem + .mobileLinkItem {
+    margin-top: 16px;
+  }
+
+  .mobileLinkItem a {
+    color: var(--enchanted-color-jet);
+    transition: all 0.2 ease-in-out;
   }
 
   .mobileLinkItem:hover {
-    color: var(--enchanted-text-primary);
+    background-color: var(--enchanted-color-jet);
+  }
+
+  .mobileLinkItem:hover a {
+    color: var(--enchanted-color-white-smoke);
   }
 }

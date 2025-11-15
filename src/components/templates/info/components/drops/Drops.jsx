@@ -1,4 +1,4 @@
-import { Table } from '@components';
+import { Card } from '@components';
 import styles from './Drops.module.css';
 
 export const Drops = ({ info }) => {
@@ -9,8 +9,15 @@ export const Drops = ({ info }) => {
       <h3>
         <i>Drops</i>
       </h3>
-      <div>
-        <Table list={info.drops} />
+      <div className={'d-flex flex-wrap gap-2'}>
+        {info.drops.map((drop) => {
+          return (
+            <Card
+              data={drop}
+              key={`drop-item-${drop.id}-${drop.name}`}
+            />
+          );
+        })}
       </div>
     </section>
   );

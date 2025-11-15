@@ -14,7 +14,7 @@ export const Controller = ({ onClickHamburger }) => {
   return (
     <div className={styles.controllerWrapper}>
       <Link to={BASE_PATH}>
-        <Image alt={'enchanted-small-logo'} src={assets.logos.enchantedSmallLogo} />
+        <Image alt={'reign-studio-logo'} className={styles.logo} src={assets.logos.reignStudioLogo} />
       </Link>
 
       <div className={'d-flex'}>

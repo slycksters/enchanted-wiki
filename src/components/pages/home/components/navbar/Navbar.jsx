@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { IoMdSearch } from 'react-icons/io';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { ImCross } from "react-icons/im";
 import { SearchModal } from '@components';
 import { PAGE_LINKS } from '@constants';
 import styles from './Navbar.module.css';
@@ -79,24 +80,26 @@ export const Navbar = () => {
           onClick={closeMenu}
           type={'button'}
         >
-          <FaTimes size={30} />
+          <ImCross size={18} />
         </button>
-        <nav className={styles.mobileNavLinks}>
+        <div className={styles.scrollable}>
+          <nav className={styles.mobileNavLinks}>
           {PAGE_LINKS.map((link) => {
             const Icon = link.icon;
             return (
-              <Link
-                className={styles.mobileLinkItem}
-                key={`mobile-${link.path}`}
-                onClick={closeMenu}
-                to={link.path}
-              >
-                <Icon className={styles.linkListItemIcon} />
-                {link.name}
-              </Link>
+              <div className={styles.mobileLinkItem} key={`mobile-${link.path}`}>
+                <Link
+                  onClick={closeMenu}
+                  to={link.path}
+                >
+                  <Icon className={styles.linkListItemIcon} size={16} />
+                  {link.name}
+                </Link>
+              </div>
             );
           })}
         </nav>
+        </div>
       </div>
 
       {isModalOpen && <SearchModal onHide={() => setIsModalOpen(false)} show={isModalOpen} />}

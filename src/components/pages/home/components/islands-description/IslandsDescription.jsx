@@ -1,6 +1,29 @@
+import clsx from 'clsx';
 import { assets } from '@assets';
 import { Image } from '@components';
 import styles from './IslandsDescription.module.css';
+
+const SHOW_CASES = [
+  {
+    id: 1,
+    alt: 'explore islands',
+    attachment: assets.introductions.islandsDescriptionGif2,
+    description: 'Explore mysterious islands and uncover their hidden secrets.',
+    solo: true,
+  },
+  {
+    id: 2,
+    alt: 'face powerful bosses',
+    attachment: assets.introductions.islandsDescriptionGif1,
+    description: 'Face powerful World Bosses and prove your strength.',
+  },
+  {
+    id: 3,
+    alt: 'discover rare specs',
+    attachment: assets.videos.specs.aizenV,
+    description: 'Discover rare Specs and Weapons from formidable NPCs.',
+  },
+];
 
 export const IslandsDescription = () => {
   return (
@@ -16,42 +39,26 @@ export const IslandsDescription = () => {
           players as they progress to higher-level islands.
         </p>
 
-        <div className={'row row-gap-3'}>
-          <div
-            className={
-              'col-12 col-lg-6 offset-lg-3 d-flex flex-column align-items-center gap-3'
-            }
-          >
-            <Image
-              alt={'explore-islands'}
-              className={styles.imageShowcase}
-              src={assets.introductions.islandsDescriptionGif2}
-            />
-            <p>Explore mysterious islands and uncover their hidden secrets.</p>
-          </div>
-          <div
-            className={
-              'col-12 col-lg-6 d-flex flex-column align-items-center gap-3'
-            }
-          >
-            <Image
-              alt={'face-powerful-bosses'}
-              className={styles.imageShowcase}
-              src={assets.introductions.islandsDescriptionGif1}
-            />
-            <p>Face powerful World Bosses and prove your strength.</p>
-          </div>
-          <div
-            className={
-              'col-12 col-lg-6 d-flex flex-column align-items-center gap-3'
-            }
-          >
-            <Image
-              alt={'discover-rare-specs'}
-              className={styles.imageShowcase}
-              src={assets.videos.specs.aizenV}
-            />
-            <p>Discover rare Specs and Weapons from formidable NPCs.</p>
+        <div className={'container'}>
+          <div className={'row row-gap-3'}>
+            {SHOW_CASES.map((item) => {
+              return (
+                <div
+                  className={clsx(
+                    'col-12 col-lg-6 d-flex flex-column align-items-center gap-3',
+                    item.solo ? 'offset-lg-3' : null
+                  )}
+                  key={`world-feature-show-case-${item.id}-${item.description}`}
+                >
+                  <Image
+                    alt={item.alt}
+                    className={styles.imageShowcase}
+                    src={item.attachment}
+                  />
+                  <p>{item.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

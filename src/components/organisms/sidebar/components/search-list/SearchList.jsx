@@ -7,7 +7,7 @@ import { getItemPath } from '@router/getItemPath.helper';
 import { SubList } from './sub-list';
 import styles from './SearchList.module.css';
 
-export const SearchList = ({ list, basePath }) => {
+export const SearchList = ({ basePath, list, onHideSidebar }) => {
   const location = useLocation(); // <-- Get the current location object
   const subItemHeight = 35.5;
 
@@ -65,8 +65,9 @@ export const SearchList = ({ list, basePath }) => {
                   style={{ maxHeight: isOpen ? subList.length * subItemHeight : 0 }}
                 >
                   <SubList
-                    list={subList}
                     basePath={basePath}
+                    list={subList}
+                    onHideSidebar={onHideSidebar}
                     parentCategoryName={name}
                   />
                 </div>
@@ -76,13 +77,14 @@ export const SearchList = ({ list, basePath }) => {
             const { id, name, rarity } = item;
             return (
               <NavLink
-                key={`sidebar-item-${id}`}
-                to={getItemPath(item)}
                 className={({ isActive }) => clsx(styles.item, { [styles.activeItem]: isActive })}
+                key={`sidebar-item-${id}`}
+                onClick={onHideSidebar}
                 style={({ isActive }) => ({
                   borderColor: rarity?.color,
                   background: isActive ? getBackgroundGradient('var(--enchanted-color-blue)', 'Right') : null,
                 })}
+                to={getItemPath(item)}
               >
                 <span title={name}>{name}</span>
               </NavLink>

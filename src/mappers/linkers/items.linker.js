@@ -1,19 +1,19 @@
-import { ITEMS, NPCS, WORLD_FEATURES } from '@data';
+import { ISLANDS, ITEMS, NPCS, WORLD_FEATURES } from '@data';
 import { generateUniqueKey } from '@helpers';
 
 export const linkItems = (allData) => {
-  const { items, npcs, worldFeatures } = allData;
+  const { islands, items, npcs, worldFeatures } = allData;
   
   // Create a single unified map with all possible sources/drops, using the unique key
   const unifiedMap = new Map();
-  [...items, ...npcs, ...worldFeatures].forEach(item => {
+  [...islands, ...items, ...npcs, ...worldFeatures].forEach(item => {
     const uniqueKey = generateUniqueKey(item);
     if (uniqueKey) unifiedMap.set(uniqueKey, item);
   });
 
   // Create a translation map from the original string key to the new unique key
   const stringKeyToUniqueKeyMap = new Map();
-  const rawDataSource = { ...ITEMS, ...NPCS, ...WORLD_FEATURES };
+  const rawDataSource = { ...ISLANDS, ...ITEMS, ...NPCS, ...WORLD_FEATURES };
   Object.entries(rawDataSource).forEach(([stringKey, rawObject]) => {
     stringKeyToUniqueKeyMap.set(stringKey, generateUniqueKey(rawObject));
   });

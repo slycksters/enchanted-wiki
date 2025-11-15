@@ -1,26 +1,50 @@
+import { formatNumberWithCommas, pluralize } from '@helpers';
+import { Image } from '../image';
 import styles from './Card.module.css';
+import { NavLink } from 'react-router-dom';
+import { getItemPath } from '@router/getItemPath.helper';
 
-export const Card = ({ containerSettings, content, iconSettings }) => {
-  const { height, width } = containerSettings ?? {};
-  const { alt, color, icon: Icon, label, size } = iconSettings ?? {};
-
+export const Card = ({ data, style }) => {
   return (
-    <div className={styles.cardContainer} style={{ height, width }}>
-      {content ? (
-        content
-      ) : (
-        <div className={styles.cardIconContainer} style={{ color }}>
-          {Icon && (
-            <Icon
-              className={styles.cardIcon}
-              color={color ?? 'var(--enchanted-color-white'}
-              size={size ?? '50'}
-              title={alt}
-            />
-          )}
-          <p className={styles.cardIconLabel}>{label}</p>
+    <NavLink to={getItemPath(data)}>
+      <div className={styles.cardContainer} style={{ ...style }}>
+        <div className={styles.imageWrapper}>
+          <Image src={data.attachment} />
         </div>
-      )}
-    </div>
+
+        <div className={styles.detailSection}>
+          <div className={styles.infoRow}>
+            <div>Name:</div>
+            <div>{data.name}</div>
+          </div>
+          <div className={styles.infoRow}>
+            <div>Type:</div>
+            <div>{data.subType?.name ?? data.type.name}</div>
+          </div>
+          <div className={styles.infoRow} hidden={!data.chance}>
+            <div>Chance:</div>
+            <div>{data.chance}%</div>
+          </div>
+          <div className={styles.requirementRow} hidden={!data.requirements}>
+            <div>Requirements:</div>
+            <ul className={styles.requirementList}>
+              {data.requirements?.map((r) => {
+              const quantityRange = Array.isArray(r.quantity);
+              return (
+                <li key={`card-item-requirements-${r.name}`}>
+                  {quantityRange
+                    ? r.quantity.map((q) => formatNumberWithCommas(q)).join('-')
+                    : r.quantity && formatNumberWithCommas(r.quantity)}{' '}
+                  {r.name !== 'Yen' && r.quantity
+                    ? pluralize(r.name, r.quantity)
+                    : r.name}
+                </li>
+              );
+            })}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </NavLink>
   );
 };

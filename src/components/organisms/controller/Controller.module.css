@@ -8,15 +8,16 @@
   padding: 10px;
 }
 
-.controllerWrapper a img {
-  cursor: pointer;
-  height: 35px;
+.logo {
+  flex: 0 0;
+  height: 32px;
+  margin-right: 16px;
   width: auto;
 }
 
-.controllerWrapper a img:hover {
-  filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 0 1px var(--enchanted-rarity-exotic));
+.logo:hover {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(9%) saturate(1585%)
+    hue-rotate(2deg) brightness(94%) contrast(92%);
 }
 
 .hamburgerIcon {

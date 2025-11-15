@@ -4,9 +4,10 @@ import {
   Gallery,
   Header,
   Skill,
-  Source,
+  Sources,
   Ware,
 } from './components';
+import { Inhabitants } from './components/inhabitants';
 import styles from './Info.module.css';
 
 export const Info = ({ info }) => {
@@ -16,9 +17,10 @@ export const Info = ({ info }) => {
     <div className={styles.info}>
       <Header info={info} />
       <Description info={info} />
-      <Source info={info} />
+      <Sources info={info} />
       <Drops info={info} />
       <Ware info={info} />
+      <Inhabitants info={info} />
       <Gallery info={info} />
       <Skill info={info} />
     </div>

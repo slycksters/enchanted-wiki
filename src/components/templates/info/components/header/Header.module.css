@@ -1,7 +1,7 @@
 .header {
   display: flex;
   font-weight: 300;
-  justify-content: space-between;
+  gap: 40px;
   padding-bottom: 30px;
 }
 
@@ -43,8 +43,8 @@
 
 .imageWrapper > img {
   filter: var(--enchanted-drop-shadow);
-  max-height: 65%;
-  max-width: 65%;
+  height: 50%;
+  width: 50%;
   object-fit: contain;
 }
 
@@ -54,12 +54,7 @@
 }
 
 .navLink:hover {
-  background-color: var(--enchanted-bg-secondary);
-  border: 1px solid var(--enchanted-border-color);
-  border-radius: 8px;
   color: var(--enchanted-rarity-exotic);
-  padding: 3px 5px;
-  text-decoration-color: var(--enchanted-color-transparent);
 }
 
 @media (max-width: 1024px) {
@@ -71,5 +66,6 @@
   .imageWrapper > img {
     max-height: 80%;
     max-width: 80%;
+    object-fit: contain;
   }
 }

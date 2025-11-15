@@ -1,8 +1,10 @@
 .timer {
   background-color: var(--enchanted-bg-primary);
   border-top: 1px solid var(--enchanted-border-color);
-  padding: 100px 0 112px 0;
+  overflow: hidden;
+  padding: 82px 0 90px 0;
   text-align: center;
+  transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
 }
 
 .timer p {
@@ -21,4 +23,37 @@
   justify-self: center;
   margin-top: 40px;
   width: 75%;
+}
+
+.toggleTimerButton {
+  background-color: var(--enchanted-bg-primary);
+  border: none;
+  border-top: 1px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-primary);
+  display: none;
+  font-size: 12px;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .showTimer {
+    max-height: 2000px;
+  }
+
+  .timer {
+    padding: 48px 0;
+  }
+
+  .toggleTimerButton {
+    display: block;
+  }
+}
+
+.hideTimer {
+  border-top: none;
+  max-height: 0;
+  padding: 0;
 }

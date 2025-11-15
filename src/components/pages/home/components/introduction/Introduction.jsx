@@ -6,9 +6,25 @@ export const Introduction = () => {
   const ENCHANTED_ROBLOX_ID = 104841814414402;
 
   const openEnchantedInRoblox = () => {
-    const robloxUrl = `roblox://placeId=${ENCHANTED_ROBLOX_ID}`;
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    window.location.href = robloxUrl;
+    if (/android/i.test(userAgent)) {
+      // Android device
+      const intentUrl = `intent://placeId=${ENCHANTED_ROBLOX_ID}#Intent;scheme=roblox;package=com.roblox.client;end`;
+      window.location.href = intentUrl;
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      // iOS device
+      const appUrl = `roblox://placeId=${ENCHANTED_ROBLOX_ID}`;
+      const fallbackUrl = `https://www.roblox.com/games/${ENCHANTED_ROBLOX_ID}`;
+
+      window.location.href = appUrl;
+      setTimeout(() => {
+        window.location.href = fallbackUrl;
+      }, 1500);
+    } else {
+      // Desktop fallback
+      window.location.href = `roblox://placeId=${ENCHANTED_ROBLOX_ID}`;
+    }
   };
 
   return (
@@ -32,9 +48,7 @@ export const Introduction = () => {
           target={'_blank'}
           to={`https://www.roblox.com/games/${ENCHANTED_ROBLOX_ID}`}
         >
-          <button className={styles.viewButton}>
-            View
-          </button>
+          <button className={styles.viewButton}>View</button>
         </NavLink>
       </div>
     </div>

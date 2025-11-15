@@ -1,25 +1,75 @@
 .cardContainer {
-  align-items: center;
   background-color: var(--enchanted-bg-secondary);
   border: 1px solid var(--enchanted-border-color);
-  border-left: none;
+  box-shadow: 0 0 15px var(--enchanted-box-shadow-color);
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  gap: 8px;
   min-height: 50px;
-  width: 100%;
-  transition: box-shadow 0.3s ease;
-}
-
-.cardContainer:first-child {
-  border-left: 1px solid var(--enchanted-border-color);
+  padding: 16px;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+  width: 250px;
 }
 
 .cardContainer:hover {
-  box-shadow: inset 0 0 100px 100px var(--enchanted-bg-primary);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 15px var(--enchanted-color-khaki-transparent);
+  transform: scale(1.05);
 }
 
-.cardIconContainer {
+.imageWrapper {
+  flex: 0 0 75px;
+  height: 75px;
+  width: 75px;
+}
+
+.imageWrapper img {
+  filter: var(--enchanted-drop-shadow);
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.label {
+  font-size: 10px;
   text-align: center;
+  width: 100%;
+}
+
+.detailSection {
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+.detailSection {
+  width: 100%;
+}
+
+.infoRow {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.infoRow div:first-child {
+  color: var(--enchanted-text-primary);
+  flex: 0 0 auto;
+}
+
+.infoRow div:last-child {
+  color: var(--enchanted-text-secondary);
+  width: 100%;
+}
+
+.requirementRow {
+  margin-top: 2px;
+}
+
+.requirementRow div {
+  color: var(--enchanted-text-primary);
+}
+
+.requirementList {
+  color: var(--enchanted-text-secondary);
+  padding-left: 15px;
 }

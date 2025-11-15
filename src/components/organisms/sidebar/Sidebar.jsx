@@ -37,6 +37,7 @@ export const Sidebar = ({ list, basePath, setShowSidebar, showSidebar }) => {
         <SearchList
           basePath={basePath}
           list={filteredData}
+          onHideSidebar={() => setShowSidebar(false)}
         />
       </div>
     </>

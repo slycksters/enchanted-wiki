@@ -34,7 +34,7 @@ export const NPCS = {
     ware: [
       {
         key: 'soulStack',
-        requirements: [{ name: 'Yen', quantity: [50, 150000] }],
+        requirements: [{ name: '50,000 Yen initially, rising to 150,000 Yen' }],
       },
     ],
   },
@@ -556,7 +556,6 @@ export const NPCS = {
       { key: 'coughMedicine', chance: 25 },
       { key: 'inumakiScarf', chance: 3 },
     ],
-    isVaulted: true,
     locations: ['shatterGrove', 'trialGrounds'],
     name: 'Inumaki',
     subType: NPC_TYPES.worldBoss,
@@ -873,7 +872,6 @@ export const NPCS = {
     attachment: npcImages.toji,
     description: `Unlocks the Toji spec, imbuing you with the ruthless precision and unmatched agility of the feared Sorcerer Killer.`,
     locations: ['runicRock'],
-    isVaulted: true,
     name: 'Toji',
     subType: NPC_TYPES.specialist,
     type: TYPES.npc,
@@ -897,7 +895,6 @@ export const NPCS = {
     description:
       'Unlocks the Inumaki spec, granting you the power of Cursed Speech.',
     locations: ['lostCave'],
-    isVaulted: true,
     name: 'Inumaki',
     subType: NPC_TYPES.specialist,
     type: TYPES.npc,
@@ -910,7 +907,7 @@ export const NPCS = {
           { key: 'cursedOrb', quantity: 75 },
           { key: 'coughMedicine', quantity: 7 },
           { key: 'speechMegaphone', quantity: 1 },
-          { key: 'goldCoins', quantity: 15 },
+          { key: 'goldCoin', quantity: 15 },
         ],
       },
     ],
@@ -2843,5 +2840,73 @@ export const NPCS = {
         ]
       },
     ]
+  },
+  eoka: {
+    id: 216,
+    attachment: npcImages.eoka,
+    description: `Eoka grants the power of identity, bestowing titles upon those who have proven their merit. Each title carries the weight of achievement, a symbol of honor earned through dedication and skill, woven into the fabric of one's legacy.`,
+    locations: ['frostveilHollow'],
+    name: 'Eoka',
+    subType: NPC_TYPES.specialist,
+    type: TYPES.npc,
+    ware: [
+      {
+        key: 'beginner',
+        requirements: [
+          { name: 'Complete 7 side quests' },
+        ],
+      },
+      {
+        key: 'novice',
+        requirements: [
+          { name: 'Complete 10 side quests' },
+        ],
+      },
+      {
+        key: 'master',
+        requirements: [
+          { name: 'Reach level 1,100' },
+          { name: 'Defeat 1 World Boss'},
+        ],
+      },
+      {
+        key: 'windLord',
+        requirements: [
+          { name: 'Defeat Yuno [World Boss] 25 times' },
+        ],
+      },
+      {
+        key: 'betrayer',
+        requirements: [
+          { name: 'Defeat Aizen [World Boss] 25 times' },
+        ],
+      },
+      {
+        key: 'dragonSlayer',
+        requirements: [
+          { name: 'Defeat Natsu [World Boss] 50 times' },
+        ],
+      },
+      {
+        key: 'bloodHound',
+        requirements: [
+          { name: 'Defeat Toji [World Boss] 50 times' },
+          { name: 'Reach 100 stacks of Soul Devourer' },
+        ],
+      },
+      {
+        key: 'sunAndMoon',
+        requirements: [
+          { name: 'Defeat Yoriichi [World Boss] 12 times' },
+          { name: 'Defeat Kokushibo [World Boss] 12 times' }
+        ],
+      },
+      {
+        key: 'fullMoon',
+        requirements: [
+          { name: 'Defeat Death [World Boss] 20 times' },
+        ],
+      },
+    ],
   },
 };
