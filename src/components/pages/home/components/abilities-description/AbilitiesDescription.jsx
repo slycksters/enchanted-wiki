@@ -6,9 +6,10 @@ import {
   GiLaurelsTrophy,
   GiMagicSwirl,
 } from 'react-icons/gi';
-import { FaHatWizard, FaShieldAlt } from 'react-icons/fa';
+import { FaShieldAlt } from 'react-icons/fa';
+import clsx from 'clsx';
 import { Image } from '@components';
-  import styles from './AbilitiesDescription.module.css';
+import styles from './AbilitiesDescription.module.css';
 import { DESCRIPTIONS } from './descriptions.constant';
 
 const BUTTONS = [
@@ -37,22 +38,33 @@ export const AbilitiesDescription = () => {
               fight and develop in the game.
             </p>
 
-            <div className={styles.buttonGroup}>
+            <div className={`row w-100`}>
               {BUTTONS.map((button) => {
                 const Icon = button.icon;
                 const isSelected = selected.id === button.id;
                 return (
-                  <div key={button.id} className={styles.buttonWrapper}>
+                  <div
+                    key={button.id}
+                    className={clsx(styles.buttonWrapper, 'col col-4 col-lg-2')}
+                  >
                     <button
                       className={styles.button}
                       onClick={() =>
-                        setSelected(DESCRIPTIONS.find((d) => d.id === button.id))
+                        setSelected(
+                          DESCRIPTIONS.find((d) => d.id === button.id)
+                        )
                       }
-                      style={{ color: isSelected ? 'var(--enchanted-color-khaki)' : null }}
+                      style={{
+                        color: isSelected
+                          ? 'var(--enchanted-color-khaki)'
+                          : null,
+                      }}
                     >
                       <Icon />
                     </button>
-                    <div className={styles.buttonText}>{button.name.toUpperCase()}</div>
+                    <div className={styles.buttonText}>
+                      {button.name.toUpperCase()}
+                    </div>
                   </div>
                 );
               })}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { GiRing, GiOpenTreasureChest, GiMetalBar } from 'react-icons/gi';
+import clsx from 'clsx';
 import { Image } from '@components';
 import { DESCRIPTIONS } from './descriptions.constant';
 import styles from './ItemsDescription.module.css';
@@ -27,12 +28,16 @@ export const ItemsDescription = () => {
               are three main categories, each serving a unique purpose.
             </p>
 
-            <div className={styles.buttonGroup}>
+            <div className={'row w-100'}>
               {BUTTONS.map((button) => {
                 const Icon = button.icon;
                 const isSelected = selected.id === button.id;
+
                 return (
-                  <div key={button.id} className={styles.buttonWrapper}>
+                  <div
+                    key={button.id}
+                    className={clsx(styles.buttonWrapper, 'col col-4')}
+                  >
                     <button
                       className={styles.button}
                       onClick={() =>

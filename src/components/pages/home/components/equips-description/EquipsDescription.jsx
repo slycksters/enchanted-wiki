@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { GiAxeSword, GiAngelWings } from 'react-icons/gi';
+import clsx from 'clsx';
 import { Image } from '@components';
 import { DESCRIPTIONS } from './descriptions.constant';
 import styles from './EquipsDescription.module.css';
@@ -29,12 +30,21 @@ export const EquipsDescription = () => {
               strategy.
             </p>
 
-            <div className={styles.buttonGroup}>
-              {BUTTONS.map((button) => {
+            <div className={'row w-100'}>
+              {BUTTONS.map((button, index) => {
                 const Icon = button.icon;
                 const isSelected = selected.id === button.id;
+                const enableOffset = index === 0;
+
                 return (
-                  <div key={button.id} className={styles.buttonWrapper}>
+                  <div
+                    key={button.id}
+                    className={clsx(
+                      styles.buttonWrapper,
+                      'col col-6 col-lg-3',
+                      enableOffset ? 'offset-lg-3' : ''
+                    )}
+                  >
                     <button
                       className={styles.button}
                       onClick={() =>
