@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Info } from '@components';
 import { DATA } from '@mappers';
 import { TYPES } from '@data';
+import { IslandsOverview } from './components';
 
 export const IslandsPage = () => {
   const { slug } = useParams();
@@ -12,5 +13,5 @@ export const IslandsPage = () => {
     (item) => item.slug === slug
   );
 
-  return <Info info={selectedInfo} />;
+  return <Info info={selectedInfo} pageOverview={IslandsOverview} />;
 };

@@ -34,6 +34,7 @@ export const PASSIVE_SKILLS = {
       'Master the art of soul accumulation — each soul you gather amplifies your DMG multiplier by 0.01. Default max stacks: 25. Seek out the Reaper to transcend your current limit. Activates only with Soul Devourer.',
     name: 'Soul Stack',
     rarity: RARITIES.exotic,
+    related: ['soulDevourer'],
     sources: ['reaperSpec'],
     type: TYPES.passiveSkill,
   },

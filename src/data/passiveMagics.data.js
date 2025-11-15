@@ -120,6 +120,7 @@ export const PASSIVE_MAGICS = {
     isGatcha: true,
     name: 'Soul Devourer',
     rarity: RARITIES.exotic,
+    related: ['soulStack'],
     sources: ['passiveMagicReroll'],
     type: TYPES.passiveMagic,
   },

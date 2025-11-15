@@ -12,14 +12,13 @@ import {
 } from '@components';
 import { BASE_PATH } from '@constants';
 
-// --- Hard coded: get the first item from each categories
 const defaultRoutes = {
-  abilities: '/abilities/magics/wind',
-  equips: '/equips/weapons/knuckles',
-  items: '/items/accessories/face-plaster',
-  islands: '/islands/major-locations/crescent-isle',
-  npcs: '/npcs/specialists/adam',
-  worldFeatures: '/world-features/spawn-crystal',
+  abilities: '/abilities',
+  equips: '/equips',
+  items: '/items',
+  islands: '/islands',
+  npcs: '/npcs',
+  worldFeatures: '/world-features',
 };
 
 const router = createBrowserRouter([
@@ -33,6 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'abilities',
+        element: <AbilitiesPage />,
         children: [
           { index: true, element: <Navigate to={defaultRoutes.abilities} replace /> },
           { path: ':category/:slug', element: <AbilitiesPage /> },
@@ -40,6 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'equips',
+        element: <EquipsPage />,
         children: [
           { index: true, element: <Navigate to={defaultRoutes.equips} replace /> },
           { path: ':category/:slug', element: <EquipsPage /> },
@@ -47,6 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'items',
+        element: <ItemsPage />,
         children: [
           { index: true, element: <Navigate to={defaultRoutes.items} replace /> },
           { path: ':category/:slug', element: <ItemsPage /> },
@@ -54,6 +56,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'islands',
+        element: <IslandsPage />,
         children: [
           { index: true, element: <Navigate to={defaultRoutes.islands} replace /> },
           { path: ':category/:slug', element: <IslandsPage /> },
@@ -61,6 +64,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'npcs',
+        element: <NpcsPage />,
         children: [
           { index: true, element: <Navigate to={defaultRoutes.npcs} replace /> },
           { path: ':category/:slug', element: <NpcsPage /> },
@@ -68,6 +72,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'world-features',
+        element: <WorldFeaturesPage />,
         children: [
           { index: true, element: <Navigate to={defaultRoutes.worldFeatures} replace /> },
           { path: ':slug', element: <WorldFeaturesPage /> },

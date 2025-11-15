@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Info } from '@components';
 import { DATA } from '@mappers';
 import { TYPES } from '@data';
+import { AbilitiesOverview } from './components';
 
 export const AbilitiesPage = () => {
   const { slug } = useParams();
@@ -20,5 +21,5 @@ export const AbilitiesPage = () => {
     (item) => item.slug === slug
   );
 
-  return <Info info={selectedInfo} />;
+  return <Info info={selectedInfo} pageOverview={AbilitiesOverview} />;
 };

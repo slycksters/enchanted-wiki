@@ -167,6 +167,7 @@ export const WORLD_FEATURES = {
       },
     ],
     name: 'Shrine',
+    related: ['lightningDragonSlayerV2'],
     type: TYPES.worldFeature,
   },
   obelisk: {
@@ -183,6 +184,7 @@ export const WORLD_FEATURES = {
       },
     ],
     name: 'Obelisk',
+    related: ['shadowDragonSlayerV2'],
     type: TYPES.worldFeature,
   },
   dungeon: {

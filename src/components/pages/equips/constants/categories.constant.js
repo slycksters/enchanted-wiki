@@ -8,12 +8,12 @@ const specs = sortByRarity(DATA[TYPES.spec.name], 'asc');
 export const CATEGORIES = [
   {
     id: 1,
-    name: 'Weapons',
-    list: weapons,
+    name: 'Specs',
+    list: specs,
   },
   {
     id: 2,
-    name: 'Specs',
-    list: specs,
+    name: 'Weapons',
+    list: weapons,
   },
 ];

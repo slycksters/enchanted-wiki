@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Info } from '@components';
 import { DATA } from '@mappers';
 import { TYPES } from '@data';
+import { NpcsOverview } from './components';
 
 export const NpcsPage = () => {
   const { slug } = useParams();
@@ -12,5 +13,5 @@ export const NpcsPage = () => {
     (item) => item.slug === slug
   );
 
-  return <Info info={selectedInfo} />;
+  return <Info info={selectedInfo} pageOverview={NpcsOverview} />;
 };  

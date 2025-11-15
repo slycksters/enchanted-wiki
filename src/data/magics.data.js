@@ -397,7 +397,9 @@ export const MAGICS = {
       `<p>Master the amplified dark essence of dragons, wielding shadow powers with greater intensity to instill fear and dominate the battlefield like a true legend.</p> <p>Defeat Sting Eucliffe [World Boss] 10 times then speak to Sting Eucliffe [Specialist] as a Shadow Dragon Slayer to unlock.</p>`,
     name: 'Shadow Dragon Slayer V2',
     rarity: RARITIES.v2,
+    related: ['obelisk'],
     sources: ['stingEucliffeSpec'],
+    trivia: ['Unlike other bosses that spawn automatically on a set timer, Sting Eucliffe only spawns after completing the Obelisk Trial.'],
     type: TYPES.magic,
   },
   fireDragonSlayerV2: {
@@ -487,7 +489,9 @@ export const MAGICS = {
       `<p>Command the unstoppable storm of dragons, unleashing lightning with cataclysmic speed and devastating force. Lightning Dragon Slayer V2 strikes with terrifying precision, leaving devastation in its wake.</p> <p>Defeat Laxus Dreyar [World Boss] 10 times then speak to Laxus Dreyar [Specialist] as a Lightning Dragon Slayer to unlock.</p>`,
     name: 'Lightning Dragon Slayer V2',
     rarity: RARITIES.v2,
+    related: ['shrine'],
     sources: ['laxusDreyarSpec'],
+    trivia: ['Unlike other bosses that spawn automatically on a set timer, Laxus Dreyar only spawns after activating all the shrines.'],
     type: TYPES.magic,
   },
 };

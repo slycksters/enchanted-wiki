@@ -30,6 +30,7 @@ export const linkNpcs = (allData) => {
     ...items,
     ...magics,
     ...passiveSkills,
+    ...npcs,
     ...specs,
     ...titles,
     ...traits,
@@ -51,6 +52,7 @@ export const linkNpcs = (allData) => {
     ...ITEMS,
     ...MAGICS,
     ...PASSIVE_SKILLS,
+    ...NPCS,
     ...SPECS,
     ...TITLES,
     ...TRAITS,
@@ -87,6 +89,16 @@ export const linkNpcs = (allData) => {
             const object = unifiedMap.get(uniqueKey);
             // Return a *new* object with the chance property added
             return object ? { ...object, chance: drop.chance } : null;
+          })
+          .filter(Boolean);
+      }
+
+      // Link Related
+      if (originalNpc.related) {
+        linkedNpc.related = originalNpc.related
+          .map((key) => {
+            const uniqueKey = stringKeyToUniqueKeyMap.get(key);
+            return unifiedMap.get(uniqueKey);
           })
           .filter(Boolean);
       }

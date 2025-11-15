@@ -64,6 +64,7 @@ h6 {
 ------------------------------ */
 p {
   font-size: 1rem; /* 16px */
+  font-weight: 200;
   line-height: 1.6; /* 25.6px spacing for readability */
   margin-bottom: 1rem;
 }
@@ -97,6 +98,7 @@ small,
    Links
 ------------------------------ */
 a {
+  font-weight: 300;
   text-decoration: none;
 }
 
@@ -107,4 +109,11 @@ a {
   font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.5;
   margin-bottom: 1rem;
+}
+
+/* ------------------------------
+   Lists
+------------------------------ */
+li {
+  font-weight: 200;
 }

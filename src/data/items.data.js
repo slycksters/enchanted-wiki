@@ -815,7 +815,7 @@ export const ITEMS = {
     isGatcha: false,
     name: `Garganta`,
     rarity: RARITIES.secret,
-    sources: ['ichigoV2Boss', 'sosoukeAizenBoss'],
+    sources: ['ichigoV2Boss', 'sousukeAizenBoss'],
     subType: ITEM_TYPES.artifacts,
     type: TYPES.item,
   },

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Info } from '@components';
 import { DATA } from '@mappers';
 import { TYPES } from '@data';
+import { EquipsOverview } from './components';
 
 export const EquipsPage = () => { // Consider renaming this file to EquipsPage.jsx if the component is SpecsPage
   const { slug } = useParams();
@@ -15,5 +16,5 @@ export const EquipsPage = () => { // Consider renaming this file to EquipsPage.j
     (item) => item.slug === slug
   );
 
-  return <Info info={selectedInfo} />;
+  return <Info info={selectedInfo} pageOverview={EquipsOverview} />;
 };
