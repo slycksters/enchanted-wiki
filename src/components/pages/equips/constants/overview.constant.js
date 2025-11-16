@@ -1,3 +1,5 @@
+import { CATEGORIES } from './categories.constant';
+
 export const EQUIPS_OVERVIEW = {
   title: "Equips Overview",
   intro: [
@@ -12,6 +14,7 @@ export const EQUIPS_SECTIONS = [
     description: [
       "Spec is the strongest combat style. Each Spec has unique abilities, strengths, and weaknesses, shaping your overall strategy."
     ],
+    list: CATEGORIES[0].list,
     notes: [
       "Each Spec scales with different types of damage - Blade, Magic and Meele.",
       "Choosing the right Spec affects your offensive and defensive capabilities."
@@ -23,6 +26,7 @@ export const EQUIPS_SECTIONS = [
     description: [
       "Weapons are the primary tools and will be your first combat style. They vary in damage type and range, influencing your combat style and effectiveness."
     ],
+    list: CATEGORIES[1].list,
     notes: [
       "Each Weapon scales with different types of damage - Blade, Magic and Meele.",
     ]

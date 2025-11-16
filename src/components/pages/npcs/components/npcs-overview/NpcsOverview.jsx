@@ -7,8 +7,7 @@ import {
 export const NpcsOverview = () => {
   return (
     <Overview
-      title={NPCS_OVERVIEW.title}
-      intro={NPCS_OVERVIEW.intro}
+      header={NPCS_OVERVIEW}
       sections={NPCS_SECTIONS}
     />
   );

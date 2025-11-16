@@ -31,6 +31,7 @@ export const Sidebar = ({ list, basePath, setShowSidebar, showSidebar }) => {
           [styles.sidebarOpen]: showSidebar,
           [styles.sidebarClosed]: !showSidebar,
         })}
+        id={'sidebar'}
       >
         <Searchbar onSearch={handleOnSearch} />
         {hasRarity && <RarityList hidden={filteredData.length === 0} />}

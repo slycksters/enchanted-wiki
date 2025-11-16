@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { getBackgroundGradient } from '@helpers';
 import { getItemPath } from '@router/getItemPath.helper';
 import styles from './SubList.module.css';
+import { useScrollToElement } from '@hooks';
 
 export const SubList = ({ list, onHideSidebar }) => {
   return (
@@ -27,7 +28,17 @@ export const SubList = ({ list, onHideSidebar }) => {
             title={subItem.name}
             to={getItemPath(subItem)}
           >
-            <span>{subItem.name}</span>
+            {({ isActive }) => {
+              // Now we can use the hook inside the render prop function where `isActive` is available.
+              const elementRef = useScrollToElement(
+                'sidebar',
+                isActive,
+                [location.pathname], // Re-run the effect when the URL changes.
+                { delay: 350 } // Delay to wait for the accordion animation. Adjust as needed.
+              );
+
+              return <span ref={elementRef}>{subItem.name}</span>;
+            }}
           </NavLink>
         );
       })}

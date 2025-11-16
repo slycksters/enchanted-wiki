@@ -1114,6 +1114,33 @@ export const NPCS = {
     description: `Luke sees opportunity where others see only monster guts and scrap. This shrewd merchant pays top Yen for raw materials, turning the island's dangers into his own personal goldmine.`,
     locations: ['crescentIsle'],
     name: 'Luke',
+    related: [
+      { key: 'exoticChest', price: 6250 },
+      { key: 'mythicalChest', price: 3750 },
+      { key: 'passiveMagicReroll', price: 350 },
+      { key: 'raceReroll', price: 150 },
+      { key: 'windGem', price: 200 },
+      { key: 'darkSoul', price: 140 },
+      { key: 'dragonShard', price: 110 },
+      { key: 'flamingSoul', price: 175 },
+      { key: 'legendaryChest', price: 2500 },
+      { key: 'icicle', price: 60 },
+      { key: 'driedShard', price: 60 },
+      { key: 'aizenEyePatch', price: 75 },
+      { key: 'cloverShard', price: 60 },
+      { key: 'diamond', price: 75 },
+      { key: 'bossToken', price: 85 },
+      { key: 'hollowSoul', price: 225 },
+      { key: 'hollowMask', price: 75 },
+      { key: 'epicChest', price: 1250 },
+      { key: 'swordGuard', price: 125 },
+      { key: 'goldBar', price: 62.5 },
+      { key: 'rareChest', price: 500 },
+      { key: 'vase', price: 30 },
+      { key: 'gold', price: 32.5 },
+      { key: 'wood', price: 3.5 },
+      { key: 'iron', price: 20 },
+    ],
     subType: NPC_TYPES.specialist,
     type: TYPES.npc,
   },
@@ -2876,7 +2903,8 @@ export const NPCS = {
   graySpec: {
     id: 214,
     attachment: npcImages.gray,
-    description: 'Gray Fullbuster sculpts weapons from living frost, shaping ice with instinctive mastery. His creations carry the chill of deep winter—sleek, lethal constructs forged from cold resolve and unyielding spirit.',
+    description:
+      'Gray Fullbuster sculpts weapons from living frost, shaping ice with instinctive mastery. His creations carry the chill of deep winter—sleek, lethal constructs forged from cold resolve and unyielding spirit.',
     locations: ['frostveilHollow'],
     name: 'Gray Fullbuster',
     subType: NPC_TYPES.specialist,
@@ -2888,9 +2916,9 @@ export const NPCS = {
           { name: 'Yen', quantity: 135000 },
           { name: 'Crystal', quantity: 1000 },
           { key: 'icicle', quantity: 15 },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
   laurel: {
     id: 215,
@@ -2905,99 +2933,69 @@ export const NPCS = {
         key: 'goldCoin',
         requirements: [
           { name: 'Demon Slayer/Jujutsu Kaisen/Gachiakuta Token', quantity: 1 },
-        ]
+        ],
       },
       {
         key: 'slayerSword',
-        requirements: [
-          { name: 'Demon Slayer Token', quantity: 100 },
-        ]
+        requirements: [{ name: 'Demon Slayer Token', quantity: 100 }],
       },
       {
         key: 'demonSword',
-        requirements: [
-          { name: 'Demon Slayer Token', quantity: 100 },
-        ]
+        requirements: [{ name: 'Demon Slayer Token', quantity: 100 }],
       },
       {
         key: 'slayerSoul',
-        requirements: [
-          { name: 'Demon Slayer Token', quantity: 2 },
-        ]
+        requirements: [{ name: 'Demon Slayer Token', quantity: 2 }],
       },
       {
         key: 'demonSoul',
-        requirements: [
-          { name: 'Demon Slayer Token', quantity: 2 },
-        ]
+        requirements: [{ name: 'Demon Slayer Token', quantity: 2 }],
       },
       {
         key: 'sparringSword',
-        requirements: [
-          { name: 'Demon Slayer Token', quantity: 7 },
-        ]
+        requirements: [{ name: 'Demon Slayer Token', quantity: 7 }],
       },
       {
         key: 'invertedSpear',
-        requirements: [
-          { name: 'Jujutsu Kaisen Token', quantity: 140 },
-        ]
+        requirements: [{ name: 'Jujutsu Kaisen Token', quantity: 140 }],
       },
       {
         key: 'speechMegaphone',
-        requirements: [
-          { name: 'Jujutsu Kaisen Token', quantity: 85 },
-        ]
+        requirements: [{ name: 'Jujutsu Kaisen Token', quantity: 85 }],
       },
       {
         key: 'bloodEssence',
-        requirements: [
-          { name: 'Jujutsu Kaisen Token', quantity: 7 },
-        ]
+        requirements: [{ name: 'Jujutsu Kaisen Token', quantity: 7 }],
       },
       {
         key: 'coughMedicine',
-        requirements: [
-          { name: 'Jujutsu Kaisen Token', quantity: 5 },
-        ]
+        requirements: [{ name: 'Jujutsu Kaisen Token', quantity: 5 }],
       },
       {
         key: 'cursedOrb',
-        requirements: [
-          { name: 'Jujutsu Kaisen Token', quantity: 2 },
-        ]
+        requirements: [{ name: 'Jujutsu Kaisen Token', quantity: 2 }],
       },
       {
         key: 'gauntletPiece',
-        requirements: [
-          { name: 'Gachiakuta Token', quantity: 90 },
-        ]
+        requirements: [{ name: 'Gachiakuta Token', quantity: 90 }],
       },
       {
         key: 'bootPiece',
-        requirements: [
-          { name: 'Gachiakuta Token', quantity: 55 },
-        ]
+        requirements: [{ name: 'Gachiakuta Token', quantity: 55 }],
       },
       {
         key: 'candyBar',
-        requirements: [
-          { name: 'Gachiakuta Token', quantity: 5 },
-        ]
+        requirements: [{ name: 'Gachiakuta Token', quantity: 5 }],
       },
       {
         key: 'dior',
-        requirements: [
-          { name: 'Gachiakuta Token', quantity: 7 },
-        ]
+        requirements: [{ name: 'Gachiakuta Token', quantity: 7 }],
       },
       {
         key: 'trash',
-        requirements: [
-          { name: 'Gachiakuta Token', quantity: 2 },
-        ]
+        requirements: [{ name: 'Gachiakuta Token', quantity: 2 }],
       },
-    ]
+    ],
   },
   eoka: {
     id: 216,
@@ -3010,40 +3008,30 @@ export const NPCS = {
     ware: [
       {
         key: 'beginner',
-        requirements: [
-          { name: 'Complete 7 side quests' },
-        ],
+        requirements: [{ name: 'Complete 7 side quests' }],
       },
       {
         key: 'novice',
-        requirements: [
-          { name: 'Complete 10 side quests' },
-        ],
+        requirements: [{ name: 'Complete 10 side quests' }],
       },
       {
         key: 'master',
         requirements: [
           { name: 'Reach level 1,100' },
-          { name: 'Defeat 1 World Boss'},
+          { name: 'Defeat 1 World Boss' },
         ],
       },
       {
         key: 'windLord',
-        requirements: [
-          { name: 'Defeat Yuno [World Boss] 25 times' },
-        ],
+        requirements: [{ name: 'Defeat Yuno [World Boss] 25 times' }],
       },
       {
         key: 'betrayer',
-        requirements: [
-          { name: 'Defeat Aizen [World Boss] 25 times' },
-        ],
+        requirements: [{ name: 'Defeat Aizen [World Boss] 25 times' }],
       },
       {
         key: 'dragonSlayer',
-        requirements: [
-          { name: 'Defeat Natsu [World Boss] 50 times' },
-        ],
+        requirements: [{ name: 'Defeat Natsu [World Boss] 50 times' }],
       },
       {
         key: 'bloodHound',
@@ -3056,14 +3044,12 @@ export const NPCS = {
         key: 'sunAndMoon',
         requirements: [
           { name: 'Defeat Yoriichi [World Boss] 12 times' },
-          { name: 'Defeat Kokushibo [World Boss] 12 times' }
+          { name: 'Defeat Kokushibo [World Boss] 12 times' },
         ],
       },
       {
         key: 'fullMoon',
-        requirements: [
-          { name: 'Defeat Death [World Boss] 20 times' },
-        ],
+        requirements: [{ name: 'Defeat Death [World Boss] 20 times' }],
       },
     ],
   },

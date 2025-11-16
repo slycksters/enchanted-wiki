@@ -1,24 +1,41 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { assets } from '@assets';
 import { GAME_NAME, WEBSITE_NAME } from '@constants';
 
+const formatPathToTitle = (path) => {
+  if (!path || path === '/') return '';
+  return path
+    .substring(1)
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
 export const MetaData = ({ info }) => {
-  const title = info ? `${info.name} | ${WEBSITE_NAME}` : WEBSITE_NAME;
+  const location = useLocation();
+
+  const pageSpecificTitle = info ? info.name : formatPathToTitle(location.pathname);
+  const title = pageSpecificTitle
+    ? `${pageSpecificTitle} | ${WEBSITE_NAME}`
+    : WEBSITE_NAME;
+  
   const metaDescription = info
     ? info.description || `${info.name} details on ${WEBSITE_NAME}`
     : WEBSITE_NAME;
-  const keywords = `Enchanted, Piece, Enchanted Piece, Wiki, Roblox, Enchanted Roblox, ${GAME_NAME}, ${WEBSITE_NAME} ${info ? `, ${info.name}` : ''}`;
+    
+  const keywords = `Enchanted, Piece, Enchanted Piece, Wiki, Roblox, Enchanted Roblox, ${GAME_NAME}, ${WEBSITE_NAME}${pageSpecificTitle ? `, ${pageSpecificTitle}` : ''}`;
+  
   const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const ogImage = info ? info.attachment() : assets.logos.enchantedSmallLogo();
+  const ogImage = info?.attachment || assets.logos.enchantedSmallLogo;
 
-  // Fast, guaranteed update for the title
   useEffect(() => {
     document.title = title;
-  }, [info?.name]);
+  }, [title]);
 
   return (
     <>
-      {/* --- React 19 Native Meta Tags --- */}
+      {/* --- Standard Meta Tags --- */}
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
@@ -29,7 +46,7 @@ export const MetaData = ({ info }) => {
       <meta property="og:type" content="website" />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content={title} />
+      <meta property="og:site_name" content={WEBSITE_NAME} />
     </>
   );
 };

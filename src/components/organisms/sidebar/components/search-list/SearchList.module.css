@@ -61,12 +61,12 @@
 /* Rotate arrow or icon for active parent */
 .parentItem > span:last-child {
   transform: rotate(0deg);
-  /* transition: transform ease-out 0.3s; */
+  transition: transform ease-out 0.3s;
 }
 
 .activeParentItem > span:last-child {
   transform: rotate(315deg);
-  /* transition: transform ease-in 0.3s; */
+  transition: transform ease-in 0.3s;
 }
 
 /* ─── Verbiage Text ──────────────────────────────────────────────── */

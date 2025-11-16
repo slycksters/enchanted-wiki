@@ -122,6 +122,7 @@ export const PASSIVE_MAGICS = {
     rarity: RARITIES.exotic,
     related: ['soulStack'],
     sources: ['passiveMagicReroll'],
+    trivia: ['Once your Soul Stack is full, you can switch to another Passive Magic from your Inventory Storage Slot without losing your stacks.'],
     type: TYPES.passiveMagic,
   },
 };

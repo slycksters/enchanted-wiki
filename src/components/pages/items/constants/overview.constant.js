@@ -1,3 +1,5 @@
+import { CATEGORIES } from './categories.constant';
+
 export const ITEMS_OVERVIEW = {
   title: "Items Overview",
   intro: [
@@ -12,6 +14,7 @@ export const ITEMS_SECTIONS = [
     description: [
       "Accessories enhance your character by granting bonus stats. Each accessory specializes in a particular combat type — Blade, Melee, or Magic — so choosing the right one can significantly boost your effectiveness in battle."
     ],
+    list: CATEGORIES[0].list,
     notes: [
       "Pick accessories that match your combat style to maximize your damage potential."
     ]
@@ -22,6 +25,7 @@ export const ITEMS_SECTIONS = [
     description: [
       "Artifacts are special items that grant access to new islands, secret content, or valuable materials. They’re your gateway to exploration and hidden treasures."
     ],
+    list: CATEGORIES[1].list,
     notes: [
       "Some Artifacts can be used for communication."
     ]
@@ -29,6 +33,7 @@ export const ITEMS_SECTIONS = [
 
   {
     title: "Materials",
+    list: CATEGORIES[2].list,
     description: [
       "Materials are the building blocks for crafting stronger Specs and other items. They can also be sold for profit, making them valuable for progression."
     ],

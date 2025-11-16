@@ -9,7 +9,6 @@ export const Header = ({ info }) => {
         <Image alt={info.name} src={info.attachment} />
       </section>
       <section>
-        {/* <p className={styles.title}> */}{' '}
         <h1>
           <i>
             {info.name}
@@ -26,9 +25,6 @@ export const Header = ({ info }) => {
           <Stats info={info} />
         </div>
       </section>
-      {/* <section className={styles.imageWrapper}>
-        <Image alt={info.name} src={info.attachment} />
-      </section> */}
     </div>
   );
 };

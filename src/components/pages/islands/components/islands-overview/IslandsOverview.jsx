@@ -7,8 +7,7 @@ import {
 export const IslandsOverview = () => {
   return (
     <Overview
-      title={ISLANDS_OVERVIEW.title}
-      intro={ISLANDS_OVERVIEW.intro}
+      header={ISLANDS_OVERVIEW}
       sections={ISLANDS_SECTIONS}
     />
   );

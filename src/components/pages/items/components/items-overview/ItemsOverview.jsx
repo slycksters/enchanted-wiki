@@ -7,8 +7,7 @@ import {
 export const ItemsOverview = () => {
   return (
     <Overview
-      title={ITEMS_OVERVIEW.title}
-      intro={ITEMS_OVERVIEW.intro}
+      header={ITEMS_OVERVIEW}
       sections={ITEMS_SECTIONS}
     />
   );

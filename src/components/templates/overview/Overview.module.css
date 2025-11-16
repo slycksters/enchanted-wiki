@@ -32,3 +32,55 @@
 .section h3 {
   color: var(--enchanted-color-khaki);
 }
+
+/* Style for the clickable accordion header on mobile */
+.accordionHeader {
+  background-color: var(--enchanted-bg-secondary);
+  border: 1px solid var(--enchanted-border-color);
+  cursor: pointer;
+  user-select: none; /* Prevents text selection on double-click */
+  font-weight: 600;
+  display: inline-block; /* Allows it to behave like a block but only take up needed width */
+  padding: 16px;
+  width: 250px;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordionHeader:hover {
+  background-color: var(--enchanted-color-jet);
+}
+
+/* 
+  Container for the content that will be hidden/shown.
+  We use a modern `grid` technique for smooth animation without needing to know the content's height.
+*/
+.accordionContent {
+  display: grid;
+  grid-template-rows: 0fr; /* Start with content area having zero height */
+  transition: grid-template-rows 0.3s ease-in-out;
+  overflow: hidden; /* Crucial to hide the content as it collapses */
+}
+
+/* When the accordion has the 'open' class, expand the grid row to fit the content */
+.accordionContent.open {
+  grid-template-rows: 1fr;
+  overflow: visible;
+}
+
+/* 
+  The direct child of the grid container needs min-height: 0 to allow it to shrink properly.
+  This targets the `.d-flex` wrapper we have inside the accordion.
+*/
+.accordionContent > div {
+  min-height: 0;
+}
+
+.marginTop {
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.noMarginTop {
+  margin-top: 0;
+  transition: all 0.3s ease-in-out;
+}

@@ -1,4 +1,4 @@
-import { formatNumberWithCommas, pluralize } from '@helpers';
+import { formatDisplayName, formatNumberWithCommas, pluralize } from '@helpers';
 import { Image } from '../image';
 import styles from './Card.module.css';
 import { NavLink } from 'react-router-dom';
@@ -25,22 +25,35 @@ export const Card = ({ data, style }) => {
             <div>Chance:</div>
             <div>{data.chance}%</div>
           </div>
+          <div className={styles.infoRow} hidden={!data.price}>
+            <div>Price:</div>
+            <div>{formatNumberWithCommas(data.price)} Yen</div>
+          </div>
+          {data.stats &&
+            Object.entries(data.stats).map((stat) => (
+              <div className={styles.infoRow} key={stat}>
+                <div>{formatDisplayName(stat[0])}:</div>
+                <div>{formatNumberWithCommas(stat[1])}</div>
+              </div>
+            ))}
           <div className={styles.requirementRow} hidden={!data.requirements}>
             <div>Requirements:</div>
             <ul className={styles.requirementList}>
               {data.requirements?.map((r) => {
-              const quantityRange = Array.isArray(r.quantity);
-              return (
-                <li key={`card-item-requirements-${r.name}`}>
-                  {quantityRange
-                    ? r.quantity.map((q) => formatNumberWithCommas(q)).join('-')
-                    : r.quantity && formatNumberWithCommas(r.quantity)}{' '}
-                  {r.name !== 'Yen' && r.quantity
-                    ? pluralize(r.name, r.quantity)
-                    : r.name}
-                </li>
-              );
-            })}
+                const quantityRange = Array.isArray(r.quantity);
+                return (
+                  <li key={`card-item-requirements-${r.name}`}>
+                    {quantityRange
+                      ? r.quantity
+                          .map((q) => formatNumberWithCommas(q))
+                          .join('-')
+                      : r.quantity && formatNumberWithCommas(r.quantity)}{' '}
+                    {r.name !== 'Yen' && r.quantity
+                      ? pluralize(r.name, r.quantity)
+                      : r.name}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
