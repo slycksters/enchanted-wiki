@@ -22,7 +22,7 @@ export const NPCS_SECTIONS = [
     description: [
       "Quest Givers provide quests that help you level up and unlock access to new islands. They are your main source of progression and story advancement."
     ],
-    list: CATEGORIES[0].list,
+    list: CATEGORIES[1].list,
   },
 
   {
@@ -30,7 +30,7 @@ export const NPCS_SECTIONS = [
     description: [
       "Mobs are the weakest type of hostile NPCs. They often serve as targets for certain quests and provide basic combat experience."
     ],
-    list: CATEGORIES[0].list,
+    list: CATEGORIES[2].list,
     notes: [
       "Perfect for training and completing beginner quests."
     ]
@@ -41,7 +41,7 @@ export const NPCS_SECTIONS = [
     description: [
       "Mini Bosses are stronger than regular Mobs and often serve as quest targets. They present a tougher challenge and a chance for better rewards."
     ],
-    list: CATEGORIES[0].list,
+    list: CATEGORIES[3].list,
     notes: [
       "Some Mini Bosses drop accessories suitable for starting players."
     ]
@@ -52,7 +52,7 @@ export const NPCS_SECTIONS = [
     description: [
       "World Bosses are the most powerful NPCs on each island. Defeating them yields strong accessories, artifacts, and materials to help you progress further."
     ],
-    list: CATEGORIES[0].list,
+    list: CATEGORIES[4].list,
     notes: [
       "Some World Bosses hide in dungeons, and others can be spawned in Trial Grounds."
     ]

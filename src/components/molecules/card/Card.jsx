@@ -1,5 +1,5 @@
 import { formatDisplayName, formatNumberWithCommas, pluralize } from '@helpers';
-import { Image } from '../image';
+import { Image } from '../../atoms/image';
 import styles from './Card.module.css';
 import { NavLink } from 'react-router-dom';
 import { getItemPath } from '@router/getItemPath.helper';
@@ -21,14 +21,24 @@ export const Card = ({ data, style }) => {
             <div>Type:</div>
             <div>{data.subType?.name ?? data.type.name}</div>
           </div>
-          <div className={styles.infoRow} hidden={!data.chance}>
-            <div>Chance:</div>
-            <div>{data.chance}%</div>
-          </div>
-          <div className={styles.infoRow} hidden={!data.price}>
-            <div>Price:</div>
-            <div>{formatNumberWithCommas(data.price)} Yen</div>
-          </div>
+          {data.level && (
+            <div className={styles.infoRow}>
+              <div>Level:</div>
+              <div>{formatNumberWithCommas(data.level)}</div>
+            </div>
+          )}
+          {data.chance && (
+            <div className={styles.infoRow}>
+              <div>Chance:</div>
+              <div>{data.chance}%</div>
+            </div>
+          )}
+          {data.price && (
+            <div className={styles.infoRow}>
+              <div>Price:</div>
+              <div>{formatNumberWithCommas(data.price)} Yen</div>
+            </div>
+          )}
           {data.stats &&
             Object.entries(data.stats).map((stat) => (
               <div className={styles.infoRow} key={stat}>
@@ -36,6 +46,12 @@ export const Card = ({ data, style }) => {
                 <div>{formatNumberWithCommas(stat[1])}</div>
               </div>
             ))}
+          {data.inhabitants && (
+            <div className={styles.infoRow}>
+              <div>Inhabitants Count:</div>
+              <div>{data.inhabitants.filter(o => !o.isVaulted).length}</div>
+            </div>
+          )}
           <div className={styles.requirementRow} hidden={!data.requirements}>
             <div>Requirements:</div>
             <ul className={styles.requirementList}>

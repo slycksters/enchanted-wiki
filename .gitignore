@@ -26,9 +26,10 @@ lerna-debug.log*
 .env.*.local
 *.local
 
-# Generated asset manifest
+# Generated files
 src/assets/asset-manifest.js
 src/assets/asset-manifest.d.ts
+public/sitemap.xml
 
 # Editor directories and files
 .vscode/*

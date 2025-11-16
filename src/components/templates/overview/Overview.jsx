@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import clsx from 'clsx';
-import { useWindowWidth } from '@hooks';
-import { Card } from '@components/atoms';
-import styles from './Overview.module.css';
+import { Card } from '@components';
 import { MetaData } from '@components/MetaData';
+import { useWindowWidth } from '@hooks';
+import styles from './Overview.module.css';
 
 export const Overview = ({ header, sections }) => {
   // 1. Get screen width and determine if we're on a mobile/tablet view
@@ -40,7 +40,7 @@ export const Overview = ({ header, sections }) => {
             {header.list && (
               <div className={'col col-12'}>
                 <label>List of {header.title.replace(' Overview', '')}:</label>
-                <div className={'d-flex flex-wrap gap-3 mt-3'}>
+                <div className={'d-flex flex-wrap gap-2 mt-3'}>
                   {header.list.map((item) => (
                     <Card key={item.id} data={item} style={{ height: '100%' }} />
                   ))}
@@ -89,7 +89,7 @@ export const Overview = ({ header, sections }) => {
                         })}
                       >
                         {/* Wrapper div is important for the grid animation to work correctly */}
-                        <div className={clsx('d-flex flex-wrap gap-3',isOpen ? styles.marginTop : styles.noMarginTop)}>
+                        <div className={clsx('d-flex flex-wrap gap-2',isOpen ? styles.marginTop : styles.noMarginTop)}>
                           {section.list.map((item) => (
                             <Card key={item.id} data={item} style={{ height: '100%' }} />
                           ))}
@@ -100,7 +100,7 @@ export const Overview = ({ header, sections }) => {
                     // 5. Desktop View: Render the static, always-visible list
                     <>
                       <label>List of {section.title}:</label>
-                      <div className={'d-flex flex-wrap gap-3 mt-3'}>
+                      <div className={'d-flex flex-wrap gap-2 mt-3'}>
                         {section.list.map((item) => (
                           <Card key={item.id} data={item} style={{ height: '100%' }} />
                         ))}

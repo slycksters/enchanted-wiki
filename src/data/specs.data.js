@@ -57,7 +57,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Ichigo',
     rarity: RARITIES.epic,
-    requirements: [],
     sources: ['ichigoSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -109,7 +108,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Yami',
     rarity: RARITIES.epic,
-    requirements: [],
     sources: ['yamiSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -161,7 +159,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Yuno',
     rarity: RARITIES.epic,
-    requirements: [],
     sources: ['yunoSpec'],
     stats: {
       damageType: DAMAGE_TYPES.magic.name,
@@ -214,7 +211,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Rudo Surebrec',
     rarity: RARITIES.legendary,
-    requirements: [],
     sources: ['rudoSpec'],
     stats: {
       damageType: DAMAGE_TYPES.melee.name,
@@ -267,7 +263,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Kirito',
     rarity: RARITIES.legendary,
-    requirements: [],
     sources: ['kiritoSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -327,7 +322,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Amo Empool',
     rarity: RARITIES.legendary,
-    requirements: [],
     sources: ['amoEmpoolSpec'],
     stats: {
       damageType: DAMAGE_TYPES.melee.name,
@@ -380,7 +374,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Aizen',
     rarity: RARITIES.legendary,
-    requirements: [],
     sources: ['aizenSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -438,7 +431,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Yuno V2',
     rarity: RARITIES.mythical,
-    requirements: [],
     sources: ['yunoV2Spec'],
     stats: {
       damageType: DAMAGE_TYPES.magic.name,
@@ -491,7 +483,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Yoriichi',
     rarity: RARITIES.mythical,
-    requirements: [],
     sources: ['yoriichiSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -544,7 +535,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Kokushibo',
     rarity: RARITIES.mythical,
-    requirements: [],
     sources: ['kokushiboSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -604,7 +594,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Ichigo V2',
     rarity: RARITIES.exotic,
-    requirements: [],
     sources: ['ichigoV2Spec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -658,7 +647,6 @@ export const SPECS = {
     isVaulted: true,
     name: 'Inumaki',
     rarity: RARITIES.legendary,
-    requirements: [],
     sources: ['inumakiSpec'],
     stats: {
       damageType: DAMAGE_TYPES.magic.name,
@@ -712,7 +700,6 @@ export const SPECS = {
     isVaulted: true,
     name: 'Toji',
     rarity: RARITIES.mythical,
-    requirements: [],
     sources: ['tojiSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
@@ -772,7 +759,6 @@ export const SPECS = {
     isGatcha: false,
     name: 'Death',
     rarity: RARITIES.exotic,
-    requirements: [],
     sources: ['deathSpec'],
     stats: {
       damageType: DAMAGE_TYPES.blade.name,
