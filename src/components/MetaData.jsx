@@ -26,7 +26,6 @@ export const MetaData = ({ info }) => {
   
   const pageUrl = info ? `${window.location.origin}${getItemPath(info)}` : `${window.location.origin}${location.pathname}`;
   const ogImage = info?.attachment() || `${window.location.origin}/enchanted-small-logo.png`;
-  console.log(pageUrl)
 
   const defaultKeywords = 'Enchanted, Enchanted Roblox, Enchanted Piece, Enchanted Piece Roblox, Enchanted Wiki, Enchanted Piece Wiki, Enchanted Wiki Roblox, Enchanted Piece Wiki Roblox, Enchanted Roblox Wiki, Enchanted Piece Roblox Wiki, Roblox Enchanted, Roblox Enchanted Piece';
   const keywords = pageSpecificTitle
