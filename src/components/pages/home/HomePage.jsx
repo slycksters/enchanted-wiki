@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-// import { Helmet } from 'react-helmet-next';
 import {
   AbilitiesDescription,
   Brand,
