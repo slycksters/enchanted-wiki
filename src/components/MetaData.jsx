@@ -22,7 +22,7 @@ export const MetaData = ({ info }) => {
   
   const metaDescription = info
     ? info.description || `${info.name} details on ${WEBSITE_NAME}`
-    : WEBSITE_NAME;
+    : 'Enchanted Wiki: your all-in-one database for maps, races, items, enemies, quests, and deep lore of the realms.';
   
   const pageUrl = info ? `${window.location.origin}${getItemPath(info)}` : `${window.location.origin}${location.pathname}`;
   const ogImage = info?.attachment() || `${window.location.origin}/enchanted-small-logo.png`;
