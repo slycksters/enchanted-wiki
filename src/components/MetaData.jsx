@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { GAME_NAME, WEBSITE_NAME } from '@constants';
-import { getItemPath } from 'router/getItemPath.helper';
+import { getItemPath } from '@router/getItemPath.helper';
 
 const formatPathToTitle = (path) => {
   if (!path || path === '/') return '';
@@ -24,8 +24,9 @@ export const MetaData = ({ info }) => {
     ? info.description || `${info.name} details on ${WEBSITE_NAME}`
     : WEBSITE_NAME;
   
-  const pageUrl = info ? `${window.location.origin}${getItemPath(info)}` : window.location.origin;
+  const pageUrl = info ? `${window.location.origin}${getItemPath(info)}` : `${window.location.origin}${location.pathname}`;
   const ogImage = info?.attachment() || `${window.location.origin}/enchanted-small-logo.png`;
+  console.log(pageUrl)
 
   const defaultKeywords = 'Enchanted, Enchanted Roblox, Enchanted Piece, Enchanted Piece Roblox, Enchanted Wiki, Enchanted Piece Wiki, Enchanted Wiki Roblox, Enchanted Piece Wiki Roblox, Enchanted Roblox Wiki, Enchanted Piece Roblox Wiki, Roblox Enchanted, Roblox Enchanted Piece';
   const keywords = pageSpecificTitle
@@ -40,9 +41,9 @@ export const MetaData = ({ info }) => {
     <>
       {/* --- Standard Meta Tags --- */}
       <title>{title}</title>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="title" content={siteName} />
+      <meta name="title" content={title} />
       <meta name="description" content={metaDescription} />
       <meta name="type" content="website" />
       <meta name="url" content={pageUrl} />
