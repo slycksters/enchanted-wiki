@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { assets } from '@assets';
 import { GAME_NAME, WEBSITE_NAME } from '@constants';
+import { getItemPath } from 'router/getItemPath.helper';
 
 const formatPathToTitle = (path) => {
   if (!path || path === '/') return '';
@@ -23,11 +23,14 @@ export const MetaData = ({ info }) => {
   const metaDescription = info
     ? info.description || `${info.name} details on ${WEBSITE_NAME}`
     : WEBSITE_NAME;
-    
-  const keywords = `Enchanted, Enchanted Roblox, Enchanted Piece, Enchanted Piece Roblox, Enchanted Wiki, Enchanted Piece Wiki, Enchanted Wiki Roblox, Enchanted Piece Wiki Roblox, Enchanted Roblox Wiki, Enchanted Piece Roblox Wiki, ${GAME_NAME}, ${WEBSITE_NAME}${pageSpecificTitle ? `, ${pageSpecificTitle}` : ''}`;
   
-  const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const ogImage = info?.attachment || `${window.location.origin}/assets/logos/enchanted-small-logo.png`;
+  const pageUrl = info ? `${window.location.origin}${getItemPath(info)}` : window.location.origin;
+  const ogImage = info?.attachment() || `${window.location.origin}/enchanted-small-logo.png`;
+
+  const defaultKeywords = 'Enchanted, Enchanted Roblox, Enchanted Piece, Enchanted Piece Roblox, Enchanted Wiki, Enchanted Piece Wiki, Enchanted Wiki Roblox, Enchanted Piece Wiki Roblox, Enchanted Roblox Wiki, Enchanted Piece Roblox Wiki, Roblox Enchanted, Roblox Enchanted Piece';
+  const keywords = pageSpecificTitle
+    ? `${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} Roblox ${pageSpecificTitle}, Roblox ${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} ${pageSpecificTitle} Roblox, Enchanted ${pageSpecificTitle}, Enchanted Roblox ${pageSpecificTitle}, Roblox Enchanted ${pageSpecificTitle}, Enchanted ${pageSpecificTitle} Roblox`
+    : defaultKeywords;
 
   useEffect(() => {
     document.title = title;
@@ -37,7 +40,13 @@ export const MetaData = ({ info }) => {
     <>
       {/* --- Standard Meta Tags --- */}
       <title>{title}</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="title" content={siteName} />
       <meta name="description" content={metaDescription} />
+      <meta name="type" content="website" />
+      <meta name="url" content={pageUrl} />
+      <meta name="image" content={ogImage} />
       <meta name="keywords" content={keywords} />
 
       {/* --- Open Graph Tags --- */}
