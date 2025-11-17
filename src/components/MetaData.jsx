@@ -24,10 +24,10 @@ export const MetaData = ({ info }) => {
     ? info.description || `${info.name} details on ${WEBSITE_NAME}`
     : WEBSITE_NAME;
     
-  const keywords = `Enchanted, Piece, Enchanted Piece, Wiki, Roblox, Enchanted Roblox, ${GAME_NAME}, ${WEBSITE_NAME}${pageSpecificTitle ? `, ${pageSpecificTitle}` : ''}`;
+  const keywords = `Enchanted, Enchanted Roblox, Enchanted Piece, Enchanted Piece Roblox, Enchanted Wiki, Enchanted Piece Wiki, Enchanted Wiki Roblox, Enchanted Piece Wiki Roblox, Enchanted Roblox Wiki, Enchanted Piece Roblox Wiki, ${GAME_NAME}, ${WEBSITE_NAME}${pageSpecificTitle ? `, ${pageSpecificTitle}` : ''}`;
   
   const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const ogImage = info?.attachment || assets.logos.enchantedSmallLogo;
+  const ogImage = info?.attachment || `${window.location.origin}/assets/logos/enchanted-small-logo.png`;
 
   useEffect(() => {
     document.title = title;
