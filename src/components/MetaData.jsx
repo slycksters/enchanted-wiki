@@ -29,7 +29,7 @@ export const MetaData = ({ info }) => {
 
   const defaultKeywords = 'Enchanted, Enchanted Roblox, Enchanted Piece, Enchanted Piece Roblox, Enchanted Wiki, Enchanted Piece Wiki, Enchanted Wiki Roblox, Enchanted Piece Wiki Roblox, Enchanted Roblox Wiki, Enchanted Piece Roblox Wiki, Roblox Enchanted, Roblox Enchanted Piece';
   const keywords = pageSpecificTitle
-    ? `${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} Roblox ${pageSpecificTitle}, Roblox ${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} ${pageSpecificTitle} Roblox, Enchanted ${pageSpecificTitle}, Enchanted Roblox ${pageSpecificTitle}, Roblox Enchanted ${pageSpecificTitle}, Enchanted ${pageSpecificTitle} Roblox`
+    ? `${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} Roblox ${pageSpecificTitle}, Roblox ${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} ${pageSpecificTitle} Roblox, Enchanted ${pageSpecificTitle}, Enchanted Roblox ${pageSpecificTitle}, Roblox Enchanted ${pageSpecificTitle}, Enchanted ${pageSpecificTitle} Roblox, ${WEBSITE_NAME} ${pageSpecificTitle}, Roblox ${WEBSITE_NAME} ${pageSpecificTitle} ${pageSpecificTitle} ${WEBSITE_NAME} Roblox, ${WEBSITE_NAME} Roblox ${pageSpecificTitle}, ${pageSpecificTitle} Roblox ${WEBSITE_NAME}, ${pageSpecificTitle} Roblox ${GAME_NAME}, ${pageSpecificTitle} ${GAME_NAME}, ${pageSpecificTitle} Enchanted, ${pageSpecificTitle} Roblox Enchanted`
     : defaultKeywords;
 
   useEffect(() => {
