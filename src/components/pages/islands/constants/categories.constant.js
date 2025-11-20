@@ -1,5 +1,5 @@
-import { TYPES } from '../../../../data/index.js';
-import { DATA } from '../../../../mappers/index.js';
+import { TYPES } from '@data';
+import { DATA } from '@mappers';
 
 const islands = DATA[TYPES.island.name];
 const majorLocations = islands.filter((item) => item.level);

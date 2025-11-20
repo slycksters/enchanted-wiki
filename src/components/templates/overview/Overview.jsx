@@ -6,6 +6,8 @@ import { useWindowWidth } from '@hooks';
 import styles from './Overview.module.css';
 
 export const Overview = ({ header, sections }) => {
+  const headerTitle = header.title.replace(' Overview', '');
+
   // 1. Get screen width and determine if we're on a mobile/tablet view
   const windowWidth = useWindowWidth();
   const isMobileOrTablet = windowWidth <= 1024;
@@ -24,7 +26,9 @@ export const Overview = ({ header, sections }) => {
 
   return (
     <div className={styles.overview}>
-      <MetaData />
+      <MetaData
+        info={{ name: headerTitle, description: header.introduction }}
+      />
 
       <section>
         <h1 className={styles.title}>
@@ -39,10 +43,14 @@ export const Overview = ({ header, sections }) => {
             </div>
             {header.list && (
               <div className={'col col-12'}>
-                <label>List of {header.title.replace(' Overview', '')}:</label>
+                <label>List of {headerTitle}:</label>
                 <div className={'d-flex flex-wrap gap-2 mt-3'}>
                   {header.list.map((item) => (
-                    <Card key={item.id} data={item} style={{ height: '100%' }} />
+                    <Card
+                      key={item.id}
+                      data={item}
+                      style={{ height: '100%' }}
+                    />
                   ))}
                 </div>
               </div>
@@ -64,10 +72,52 @@ export const Overview = ({ header, sections }) => {
             <div className={'row'}>
               <div className={'col col-12 col-lg-6'}>
                 {/* Descriptions, notes, etc. (no changes here) */}
-                {section.description?.map((p, i) => (<p key={`desc-${i}`}>{p}</p>))}
-                {section.notes && (<> <label>Note{section.notes.length > 1 ? 's' : ''}:</label> <ul> {section.notes.map((note, i) => (<li key={`note-${i}`}>{note}</li>))} </ul> </>)}
-                {section.label && (<> <label>{section.label}</label> <ul> {section.listItems.map((item, i) => (<li key={`listItem-${i}`}>{item}</li>))} </ul> </>)}
-                {section.labelGroups && (<> {section.labelGroups.map((group, i) => (<div key={`group-${i}`}> <label>{group.label}</label> <ul> {group.items.map((item, j) => (<li key={`groupItem-${j}`}>{item}</li>))} </ul> </div>))} </>)}
+                {section.description?.map((p, i) => (
+                  <p key={`desc-${i}`}>{p}</p>
+                ))}
+                {section.notes && (
+                  <>
+                    {' '}
+                    <label>
+                      Note{section.notes.length > 1 ? 's' : ''}:
+                    </label>{' '}
+                    <ul>
+                      {' '}
+                      {section.notes.map((note, i) => (
+                        <li key={`note-${i}`}>{note}</li>
+                      ))}{' '}
+                    </ul>{' '}
+                  </>
+                )}
+                {section.label && (
+                  <>
+                    {' '}
+                    <label>{section.label}</label>{' '}
+                    <ul>
+                      {' '}
+                      {section.listItems.map((item, i) => (
+                        <li key={`listItem-${i}`}>{item}</li>
+                      ))}{' '}
+                    </ul>{' '}
+                  </>
+                )}
+                {section.labelGroups && (
+                  <>
+                    {' '}
+                    {section.labelGroups.map((group, i) => (
+                      <div key={`group-${i}`}>
+                        {' '}
+                        <label>{group.label}</label>{' '}
+                        <ul>
+                          {' '}
+                          {group.items.map((item, j) => (
+                            <li key={`groupItem-${j}`}>{item}</li>
+                          ))}{' '}
+                        </ul>{' '}
+                      </div>
+                    ))}{' '}
+                  </>
+                )}
                 {section.footer && <p>{section.footer}</p>}
               </div>
 
@@ -89,9 +139,18 @@ export const Overview = ({ header, sections }) => {
                         })}
                       >
                         {/* Wrapper div is important for the grid animation to work correctly */}
-                        <div className={clsx('d-flex flex-wrap gap-2',isOpen ? styles.marginTop : styles.noMarginTop)}>
+                        <div
+                          className={clsx(
+                            'd-flex flex-wrap gap-2',
+                            isOpen ? styles.marginTop : styles.noMarginTop
+                          )}
+                        >
                           {section.list.map((item) => (
-                            <Card key={item.id} data={item} style={{ height: '100%' }} />
+                            <Card
+                              key={item.id}
+                              data={item}
+                              style={{ height: '100%' }}
+                            />
                           ))}
                         </div>
                       </div>
@@ -102,7 +161,11 @@ export const Overview = ({ header, sections }) => {
                       <label>List of {section.title}:</label>
                       <div className={'d-flex flex-wrap gap-2 mt-3'}>
                         {section.list.map((item) => (
-                          <Card key={item.id} data={item} style={{ height: '100%' }} />
+                          <Card
+                            key={item.id}
+                            data={item}
+                            style={{ height: '100%' }}
+                          />
                         ))}
                       </div>
                     </>
@@ -110,7 +173,6 @@ export const Overview = ({ header, sections }) => {
                 </div>
               )}
               {/* === ACCORDION LOGIC END === */}
-              
             </div>
           </section>
         );

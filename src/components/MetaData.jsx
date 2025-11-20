@@ -57,6 +57,7 @@ export const MetaData = ({ info }) => {
     // Fallback to the default logo (already an absolute URL)
     ogImage = `${homepage}/enchanted-small-logo.png`;
   }
+  console.log(ogImage)
   // --- END OF FIX ---
 
   const defaultKeywords = `Enchanted, Enchanted Roblox, Enchanted Piece, ${GAME_NAME}, Enchanted Wiki, ${WEBSITE_NAME}, Roblox Wiki, Game Wiki`;

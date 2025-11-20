@@ -1,5 +1,5 @@
-import { assets } from '../assets/index.js';
-import { DAMAGE_TYPES, RARITIES, TYPES } from './enums/index.js';
+import { assets } from '@assets';
+import { DAMAGE_TYPES, RARITIES, TYPES } from './enums';
 
 const specImages = assets.images.specs;
 const specSkillVideos = assets.videos.specs;

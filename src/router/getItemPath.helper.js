@@ -5,9 +5,9 @@ import {
   ISLANDS_CATEGORIES,
   ITEMS_CATEGORIES,
   NPCS_CATEGORIES,
-} from '../components/pages/pageCategories.js';
-import { TYPES } from '../data/index.js';
-import { formatNameToUrl } from '../helpers/index.js';
+} from '@components/pages/pageCategories.js';
+import { TYPES } from '@data';
+import { formatNameToUrl } from '@helpers';
 
 // Helper function to find which category an item belongs to
 const findCategoryName = (item, categories) => {

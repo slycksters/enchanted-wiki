@@ -1,6 +1,6 @@
-import { TYPES } from '../../../../data/index.js';
-import { sortByRarity } from '../../../../helpers/index.js';
-import { DATA } from '../../../../mappers/index.js';
+import { TYPES } from '@data';
+import { sortByRarity } from '@helpers';
+import { DATA } from '@mappers';
 
 const races = sortByRarity(DATA[TYPES.race.name], 'asc');
 const traits = sortByRarity(DATA[TYPES.trait.name], 'asc');

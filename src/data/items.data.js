@@ -1,5 +1,5 @@
-import { assets } from '../assets/index.js';
-import { ITEM_TYPES, RARITIES, TYPES } from './enums/index.js';
+import { assets } from '@assets';
+import { ITEM_TYPES, RARITIES, TYPES } from './enums';
 
 const itemImages = assets.images.items;
 const itemVideos = assets.videos.items;

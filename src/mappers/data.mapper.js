@@ -13,8 +13,8 @@ import {
   TRAITS,
   WEAPONS,
   WORLD_FEATURES,
-} from '../data/index.js';
-import { addUniqueSlugs, extractValues, generateUniqueKey } from '../helpers/index.js';
+} from '@data';
+import { addUniqueSlugs, extractValues, generateUniqueKey } from '@helpers';
 
 // --- Step 1: Centralize all raw data sources ---
 // This makes adding new data types much easier in the future.

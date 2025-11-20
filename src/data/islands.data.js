@@ -1,6 +1,6 @@
-import { assets } from '../assets/index.js';
-import { GAME_NAME } from '../constants/index.js';
-import { TYPES } from './enums/index.js';
+import { assets } from '@assets';
+import { GAME_NAME } from '@constants';
+import { TYPES } from './enums';
 
 const islandImages = assets['images']['islands'];
 
