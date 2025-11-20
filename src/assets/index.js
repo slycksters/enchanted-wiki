@@ -1,1 +1,1 @@
-export * from './asset-manifest';
+export * from './asset-manifest.js';
