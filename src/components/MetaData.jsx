@@ -51,10 +51,11 @@ export const MetaData = ({ info }) => {
   if (info && typeof info.attachment === 'function') {
     // Call the function to get the relative path (e.g., /assets/face-plaster.a1b2c3.png)
     const relativeImagePath = info.attachment();
+    // Prepend the homepage to make it an absolute URL
     ogImage = relativeImagePath;
   } else {
     // Fallback to the default logo (already an absolute URL)
-    ogImage = `${homepage}/enchanted-small-logo.png`;
+    ogImage = `/enchanted-small-logo.png`;
   }
   console.log(ogImage)
   // --- END OF FIX ---
