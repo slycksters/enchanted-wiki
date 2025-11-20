@@ -2,12 +2,10 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-next';
 import { useLocation } from 'react-router-dom';
 import { GAME_NAME, WEBSITE_NAME } from '@constants';
-import { getItemPath } from '@router/getItemPath.helper';
 import { stripHtml } from '@helpers';
 
 const formatPathToTitle = (path) => {
   if (!path || path === '/') return '';
-  // Handle nested paths correctly
   const lastPart = path.split('/').pop();
   return lastPart
     .replace(/-/g, ' ')
@@ -18,6 +16,8 @@ const formatPathToTitle = (path) => {
 
 export const MetaData = ({ info }) => {
   const location = useLocation();
+
+  const homepage = 'https://www.slyckster.dev';
 
   const pageSpecificTitle = info
     ? info.name
@@ -30,15 +30,34 @@ export const MetaData = ({ info }) => {
     ? info.description ||
       `Details for ${info.name} in ${GAME_NAME}. Discover stats, drops, locations, and more.`
     : `The ultimate wiki for ${GAME_NAME}. Your all-in-one database for maps, races, items, enemies, quests, and deep lore of the realms.`;
-  const metaDescription = stripHtml(rawDescription).substring(0, 160); // Limit to 160 chars
+  const fullStrippedDesc = stripHtml(rawDescription);
+  const maxLength = 160;
+  let metaDescription;
 
-  const pageUrl = info
-    ? `https://www.slyckster.dev${getItemPath(info)}`
-    : `https://www.slyckster.dev${location.pathname}`;
+  if (fullStrippedDesc.length > maxLength) {
+    // Truncate and add ellipsis
+    metaDescription = fullStrippedDesc.substring(0, maxLength - 3) + '...';
+  } else {
+    // Use the full description as it's within the limit
+    metaDescription = fullStrippedDesc;
+  }
 
-  // Use a high-quality default logo
-  const defaultImage = `https://www.slyckster.dev/enchanted-small-logo.png`;
-  const ogImage = info?.attachment ? info.attachment : defaultImage;
+  const pageUrl = `${homepage}${
+    location.pathname === '/' ? '' : location.pathname
+  }`;
+
+  // --- THIS IS THE FIX ---
+  let ogImage;
+  if (info && typeof info.attachment === 'function') {
+    // Call the function to get the relative path (e.g., /assets/face-plaster.a1b2c3.png)
+    const relativeImagePath = info.attachment();
+    // Prepend the homepage to make it an absolute URL
+    ogImage = `${homepage}${relativeImagePath}`;
+  } else {
+    // Fallback to the default logo (already an absolute URL)
+    ogImage = `${homepage}/enchanted-small-logo.png`;
+  }
+  // --- END OF FIX ---
 
   const defaultKeywords = `Enchanted, Enchanted Roblox, Enchanted Piece, ${GAME_NAME}, Enchanted Wiki, ${WEBSITE_NAME}, Roblox Wiki, Game Wiki`;
   const keywords = pageSpecificTitle
