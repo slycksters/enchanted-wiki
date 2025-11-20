@@ -4,7 +4,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] # (or master)
 
 permissions:
   contents: read
@@ -17,6 +17,13 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+
+      # --- ADD THIS DEBUGGING STEP ---
+      - name: List files in the repository
+        run: |
+          echo "--- Listing all files in the project root ---"
+          ls -laR
+      # --- END OF DEBUGGING STEP ---
 
       - name: Install, build, and test your site
         run: |
