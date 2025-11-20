@@ -27,7 +27,7 @@ export const Overview = ({ header, sections }) => {
   return (
     <div className={styles.overview}>
       <MetaData
-        info={{ name: headerTitle, description: header.intro }}
+        info={{ name: headerTitle, description: header.intro[0] }}
       />
 
       <section>
