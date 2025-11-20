@@ -27,7 +27,6 @@ lerna-debug.log*
 *.local
 
 # Generated files
-src/assets/asset-manifest.js
 src/assets/asset-manifest.d.ts
 public/sitemap.xml
 
