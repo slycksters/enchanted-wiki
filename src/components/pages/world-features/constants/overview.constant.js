@@ -1,4 +1,4 @@
-import { CATEGORIES } from './categories.constant';
+import { CATEGORIES } from './categories.constant.js';
 
 export const WORLD_FEATURES_OVERVIEW = {
   title: 'World Features Overview',

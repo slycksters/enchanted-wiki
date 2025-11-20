@@ -5,6 +5,15 @@ import { NavLink } from 'react-router-dom';
 import { getItemPath } from '@router/getItemPath.helper';
 
 export const Card = ({ data, style }) => {
+  if (!data || !data.name || !data.type) {
+    // During development, warn me about the bad data
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Invalid data passed to Card component:', data);
+    }
+    // During the build, just render nothing and move on instead of crashing
+    return null; 
+  }
+
   return (
     <NavLink to={getItemPath(data)}>
       <div className={styles.cardContainer} style={{ ...style }}>

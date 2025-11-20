@@ -30,6 +30,10 @@ export const HomePage = () => {
   useEffect(() => {
     const el = scrollRef.current || window;
 
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     const handleScroll = () => {
       const isScrolled = el === window ? window.scrollY > 20 : el.scrollTop > 20;
       setScrolled(isScrolled);

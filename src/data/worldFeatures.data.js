@@ -1,5 +1,5 @@
-import { assets } from '@assets';
-import { TYPES } from './enums';
+import { assets } from '../assets/index.js';
+import { TYPES } from './enums/index.js';
 
 const islandImages = assets.images.islands;
 const worldFeatureImages = assets.images.worldFeatures;

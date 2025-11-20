@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import { getBackgroundGradient } from '@helpers';
 import { getItemPath } from '@router/getItemPath.helper';
@@ -6,6 +6,8 @@ import styles from './SubList.module.css';
 import { useScrollToElement } from '@hooks';
 
 export const SubList = ({ list, onHideSidebar }) => {
+  const location = useLocation();
+
   return (
     <div className={styles.list}>
       {list.map((subItem) => {

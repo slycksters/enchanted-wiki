@@ -1,6 +1,7 @@
 // src/hooks/useScrollToActiveElement.hook.js
 
 import { useEffect, useRef } from 'react';
+const isBrowser = typeof document !== 'undefined';
 
 /**
  * A custom hook that scrolls an element into the center of a scrollable container
@@ -24,7 +25,7 @@ export const useScrollToElement = (
 
   useEffect(() => {
     // Only proceed if this specific element is active
-    if (!isActive) {
+    if (!isBrowser || !isActive) {
       return;
     }
 

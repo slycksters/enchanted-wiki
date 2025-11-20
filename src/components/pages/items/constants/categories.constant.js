@@ -1,6 +1,6 @@
-import { ITEM_TYPES, TYPES } from '@data';
-import { sortByRarity } from '@helpers';
-import { DATA } from '@mappers';
+import { ITEM_TYPES, TYPES } from '../../../../data/index.js';
+import { sortByRarity } from '../../../../helpers/index.js';
+import { DATA } from '../../../../mappers/index.js';
 
 const items = sortByRarity(DATA[TYPES.item.name], 'asc');
 const accessories = items.filter(

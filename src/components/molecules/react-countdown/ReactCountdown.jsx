@@ -100,7 +100,7 @@ export const ReactCountdown = ({
         onComplete={handleComplete}
         renderer={renderer}
       />
-      <audio ref={audioRef} hidden src={soundEffects.spawn2()} preload={'auto'} />
+      <audio ref={audioRef} hidden src={soundEffects.spawn2} preload={'auto'} />
     </div>
   );
 };

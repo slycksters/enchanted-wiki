@@ -1,13 +1,13 @@
 
-import { formatNameToUrl } from '@helpers';
 import {
   ABILITIES_CATEGORIES,
   EQUIPS_CATEGORIES,
   ISLANDS_CATEGORIES,
   ITEMS_CATEGORIES,
   NPCS_CATEGORIES,
-} from '../components/pages/pageCategories';
-import { TYPES } from '@data';
+} from '../components/pages/pageCategories.js';
+import { TYPES } from '../data/index.js';
+import { formatNameToUrl } from '../helpers/index.js';
 
 // Helper function to find which category an item belongs to
 const findCategoryName = (item, categories) => {

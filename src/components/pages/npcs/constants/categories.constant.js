@@ -1,6 +1,6 @@
-import { NPC_TYPES, TYPES } from '@data';
-import { sortArray } from '@helpers';
-import { DATA } from '@mappers';
+import { NPC_TYPES, TYPES } from '../../../../data/index.js';
+import { sortArray } from '../../../../helpers/index.js';
+import { DATA } from '../../../../mappers/index.js';
 
 const items = DATA[TYPES.npc.name];
 const miniBosses = items.filter(

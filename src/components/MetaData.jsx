@@ -3,12 +3,15 @@ import { Helmet } from 'react-helmet-next';
 import { useLocation } from 'react-router-dom';
 import { GAME_NAME, WEBSITE_NAME } from '@constants';
 import { getItemPath } from '@router/getItemPath.helper';
+import { stripHtml } from '@helpers';
 
 const formatPathToTitle = (path) => {
   if (!path || path === '/') return '';
-  return path
-    .substring(1)
-    .split('-')
+  // Handle nested paths correctly
+  const lastPart = path.split('/').pop();
+  return lastPart
+    .replace(/-/g, ' ')
+    .split(' ')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 };
@@ -23,20 +26,23 @@ export const MetaData = ({ info }) => {
     ? `${pageSpecificTitle} | ${WEBSITE_NAME}`
     : WEBSITE_NAME;
 
-  const metaDescription = info
-    ? info.description || `${info.name} details on ${WEBSITE_NAME}`
-    : 'Enchanted Wiki: your all-in-one database for maps, races, items, enemies, quests, and deep lore of the realms.';
+  const rawDescription = info
+    ? info.description ||
+      `Details for ${info.name} in ${GAME_NAME}. Discover stats, drops, locations, and more.`
+    : `The ultimate wiki for ${GAME_NAME}. Your all-in-one database for maps, races, items, enemies, quests, and deep lore of the realms.`;
+  const metaDescription = stripHtml(rawDescription).substring(0, 160); // Limit to 160 chars
 
   const pageUrl = info
-    ? `${window.location.origin}${getItemPath(info)}`
-    : `${window.location.origin}${location.pathname}`;
-  const ogImage =
-    info?.attachment() || `${window.location.origin}/enchanted-small-logo.png`;
+    ? `https://www.slyckster.dev${getItemPath(info)}`
+    : `https://www.slyckster.dev${location.pathname}`;
 
-  const defaultKeywords =
-    'Enchanted, Enchanted Roblox, Enchanted Piece, Enchanted Piece Roblox, Enchanted Wiki, Enchanted Piece Wiki, Enchanted Wiki Roblox, Enchanted Piece Wiki Roblox, Enchanted Roblox Wiki, Enchanted Piece Roblox Wiki, Roblox Enchanted, Roblox Enchanted Piece';
+  // Use a high-quality default logo
+  const defaultImage = `https://www.slyckster.dev/enchanted-small-logo.png`;
+  const ogImage = info?.attachment ? info.attachment : defaultImage;
+
+  const defaultKeywords = `Enchanted, Enchanted Roblox, Enchanted Piece, ${GAME_NAME}, Enchanted Wiki, ${WEBSITE_NAME}, Roblox Wiki, Game Wiki`;
   const keywords = pageSpecificTitle
-    ? `${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} Roblox ${pageSpecificTitle}, Roblox ${GAME_NAME} ${pageSpecificTitle}, ${GAME_NAME} ${pageSpecificTitle} Roblox, Enchanted ${pageSpecificTitle}, Enchanted Roblox ${pageSpecificTitle}, Roblox Enchanted ${pageSpecificTitle}, Enchanted ${pageSpecificTitle} Roblox, ${WEBSITE_NAME} ${pageSpecificTitle}, Roblox ${WEBSITE_NAME} ${pageSpecificTitle} ${pageSpecificTitle} ${WEBSITE_NAME} Roblox, ${WEBSITE_NAME} Roblox ${pageSpecificTitle}, ${pageSpecificTitle} Roblox ${WEBSITE_NAME}, ${pageSpecificTitle} Roblox ${GAME_NAME}, ${pageSpecificTitle} ${GAME_NAME}, ${pageSpecificTitle} Enchanted, ${pageSpecificTitle} Roblox Enchanted`
+    ? `${pageSpecificTitle}, ${GAME_NAME} ${pageSpecificTitle}, ${defaultKeywords}`
     : defaultKeywords;
 
   useEffect(() => {
@@ -44,27 +50,29 @@ export const MetaData = ({ info }) => {
   }, [title]);
 
   return (
-    <>
-      <Helmet>
-        {/* --- Standard Meta Tags --- */}
-        <title>{title}</title>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="title" content={title} />
-        <meta name="description" content={metaDescription} />
-        <meta name="type" content="website" />
-        <meta name="url" content={pageUrl} />
-        <meta name="image" content={ogImage} />
-        <meta name="keywords" content={keywords} />
+    <Helmet>
+      {/* --- Standard Meta Tags --- */}
+      <title>{title}</title>
+      <link rel="canonical" href={pageUrl} />
+      <meta name="description" content={metaDescription} />
+      <meta name="keywords" content={keywords} />
 
-        {/* --- Open Graph Tags --- */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:site_name" content={WEBSITE_NAME} />
-      </Helmet>
-    </>
+      {/* --- Open Graph Tags (for Facebook, Discord, etc.) --- */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content={title} />
+      <meta property="og:site_name" content={WEBSITE_NAME} />
+      <meta property="og:locale" content="en_US" />
+
+      {/* --- Twitter Card Tags --- */}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={title} />
+    </Helmet>
   );
 };

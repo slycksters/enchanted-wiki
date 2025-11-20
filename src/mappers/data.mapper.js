@@ -1,3 +1,4 @@
+import { universalLinker } from './universal.linker.js';
 import {
   TYPES,
   ISLANDS,
@@ -12,9 +13,8 @@ import {
   TRAITS,
   WEAPONS,
   WORLD_FEATURES,
-} from '@data';
-import { addUniqueSlugs, extractValues, generateUniqueKey } from '@helpers';
-import { universalLinker } from './universal.linker';
+} from '../data/index.js';
+import { addUniqueSlugs, extractValues, generateUniqueKey } from '../helpers/index.js';
 
 // --- Step 1: Centralize all raw data sources ---
 // This makes adding new data types much easier in the future.

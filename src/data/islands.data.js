@@ -1,8 +1,8 @@
-import { assets } from '@assets';
-import { GAME_NAME } from '@constants';
-import { TYPES } from './enums';
+import { assets } from '../assets/index.js';
+import { GAME_NAME } from '../constants/index.js';
+import { TYPES } from './enums/index.js';
 
-const islandImages = assets.images.islands;
+const islandImages = assets['images']['islands'];
 
 export const ISLANDS = {
   crescentIsle: {

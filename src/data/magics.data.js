@@ -1,5 +1,5 @@
-import { assets } from '@assets';
-import { RARITIES, TYPES } from './enums';
+import { assets } from '../assets/index.js';
+import { RARITIES, TYPES } from './enums/index.js';
 
 const magicImages = assets.images.magics;
 const magicVideos = assets.videos.magics;

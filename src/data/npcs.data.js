@@ -1,5 +1,5 @@
-import { assets } from '@assets';
-import { NPC_TYPES, TYPES } from './enums';
+import { assets } from '../assets/index.js';
+import { NPC_TYPES, TYPES } from './enums/index.js';
 
 const npcImages = assets.images.npcs;
 const otherImages = assets.images.others;
