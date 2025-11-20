@@ -47,7 +47,6 @@ export const MetaData = ({ info }) => {
   }`;
 
   const ogImage = info?.attachment || '/enchanted-small-logo.png';
-  console.log(ogImage)
 
   const defaultKeywords = `Enchanted, Enchanted Roblox, Enchanted Piece, ${GAME_NAME}, Enchanted Wiki, ${WEBSITE_NAME}, Roblox Wiki, Game Wiki`;
   const keywords = pageSpecificTitle
