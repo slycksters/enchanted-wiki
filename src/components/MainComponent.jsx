@@ -11,7 +11,7 @@ export const MainComponent = () => {
   const windowWidth = useWindowWidth();
   const pageContentRef = useRef(null);
   const isMobileOrTablet = windowWidth <= 1024;
-  const pagesWithNoSidebar = ['/stat-builder'];
+  const pagesWithNoSidebar = [`${BASE_PATH}/stat-builder`];
 
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -19,28 +19,28 @@ export const MainComponent = () => {
   const showNavigation = !isHomePage;
 
   const getSidebarProps = () => {
-    const pageKey = location.pathname.split('/')[1];
+    const pageKey = location.pathname.split('/')[2];
     switch (pageKey) {
       case 'abilities':
         return {
           list: PageCategories.ABILITIES_CATEGORIES,
-          basePath: '/abilities',
+          basePath: `${BASE_PATH}/abilities`,
         };
       case 'equips':
-        return { list: PageCategories.EQUIPS_CATEGORIES, basePath: '/equips' };
+        return { list: PageCategories.EQUIPS_CATEGORIES, basePath: `${BASE_PATH}/equips` };
       case 'items':
-        return { list: PageCategories.ITEMS_CATEGORIES, basePath: '/items' };
+        return { list: PageCategories.ITEMS_CATEGORIES, basePath: `${BASE_PATH}/items` };
       case 'islands':
         return {
           list: PageCategories.ISLANDS_CATEGORIES,
-          basePath: '/islands',
+          basePath: `${BASE_PATH}/islands`,
         };
       case 'npcs':
-        return { list: PageCategories.NPCS_CATEGORIES, basePath: '/npcs' };
+        return { list: PageCategories.NPCS_CATEGORIES, basePath: `${BASE_PATH}/npcs` };
       case 'world-features':
         return {
           list: PageCategories.WORLD_FEATURES_CATEGORIES,
-          basePath: '/world-features',
+          basePath: `${BASE_PATH}/world-features`,
         };
       default:
         return { list: [], basePath: '' };

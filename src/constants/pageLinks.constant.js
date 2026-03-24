@@ -7,48 +7,49 @@ import {
   GiSwapBag,
 } from 'react-icons/gi';
 import { RiBarChart2Fill } from "react-icons/ri";
+import { BASE_PATH } from './basePath.constant';
 
 export const PAGE_LINKS = [
   {
     id: 1,
     icon: GiBookCover,
     name: 'Abilities',
-    path: '/abilities',
+    path: `${BASE_PATH}/abilities`,
   },
   {
     id: 2,
     icon: GiSpikedShoulderArmor,
     name: 'Equips',
-    path: '/equips',
+    path: `${BASE_PATH}/equips`,
   },
   {
     id: 3,
     icon: GiSwapBag,
     name: 'Items',
-    path: '/items',
+    path: `${BASE_PATH}/items`,
   },
   {
     id: 4,
     icon: GiIsland,
     name: 'Islands',
-    path: '/islands',
+    path: `${BASE_PATH}/islands`,
   },
   {
     id: 5,
     icon: GiPerson,
     name: 'NPCs',
-    path: '/npcs',
+    path: `${BASE_PATH}/npcs`,
   },
   {
     id: 6,
     icon: GiObelisk,
     name: 'World Features',
-    path: '/world-features',
+    path: `${BASE_PATH}/world-features`,
   },
   {
     id: 7,
     icon: RiBarChart2Fill,
     name: 'Stat Builder',
-    path: '/stat-builder',
+    path: `${BASE_PATH}/stat-builder`,
   },
 ];

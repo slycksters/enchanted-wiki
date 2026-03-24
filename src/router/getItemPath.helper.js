@@ -6,6 +6,7 @@ import {
   ITEMS_CATEGORIES,
   NPCS_CATEGORIES,
 } from '@components/pages/pageCategories.js';
+import { BASE_PATH } from '@constants';
 import { TYPES } from '@data';
 import { formatNameToUrl } from '@helpers';
 
@@ -23,20 +24,20 @@ export const getItemPath = (item) => {
   switch (item.type.name) {
     case TYPES.item.name: {
       const categoryName = findCategoryName(item, ITEMS_CATEGORIES);
-      return `/items/${categoryName}/${item.slug}`;
+      return `${BASE_PATH}/items/${categoryName}/${item.slug}`;
     }
     case TYPES.npc.name: {
       const categoryName = findCategoryName(item, NPCS_CATEGORIES);
-      return `/npcs/${categoryName}/${item.slug}`;
+      return `${BASE_PATH}/npcs/${categoryName}/${item.slug}`;
     }
     case TYPES.island.name: {
       const categoryName = findCategoryName(item, ISLANDS_CATEGORIES);
-      return `/islands/${categoryName}/${item.slug}`;
+      return `${BASE_PATH}/islands/${categoryName}/${item.slug}`;
     }
     case TYPES.weapon.name:
     case TYPES.spec.name: {
       const categoryName = findCategoryName(item, EQUIPS_CATEGORIES);
-      return `/equips/${categoryName}/${item.slug}`;
+      return `${BASE_PATH}/equips/${categoryName}/${item.slug}`;
     }
     case TYPES.magic.name:
     case TYPES.race.name:
@@ -45,12 +46,12 @@ export const getItemPath = (item) => {
     case TYPES.passiveSkill.name:
     case TYPES.title.name: {
       const categoryName = findCategoryName(item, ABILITIES_CATEGORIES);
-      return `/abilities/${categoryName}/${item.slug}`;
+      return `${BASE_PATH}/abilities/${categoryName}/${item.slug}`;
     }
     case TYPES.worldFeature.name: {
-      return `/world-features/${item.slug}`;
+      return `${BASE_PATH}/world-features/${item.slug}`;
     }
     default:
-      return '/'; // Fallback for unknown types
+      return BASE_PATH; // Fallback for unknown types
   }
 };
