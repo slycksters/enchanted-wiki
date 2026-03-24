@@ -15,7 +15,7 @@ export const MainComponent = () => {
 
   const [showSidebar, setShowSidebar] = useState(false);
 
-  const isHomePage = location.pathname === BASE_PATH;
+  const isHomePage = location.pathname === BASE_PATH || location.pathname === `${BASE_PATH}/`;
   const showNavigation = !isHomePage;
 
   const getSidebarProps = () => {
