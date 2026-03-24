@@ -10,7 +10,7 @@ import styles from './Navbar.module.css';
 
 export const Navbar = () => {
   const windowWidth = useWindowWidth();
-  const isMobileOrTablet = windowWidth <= 1024;
+  const isMobileOrTablet = windowWidth <= 1224;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

@@ -25,7 +25,7 @@ const generateAssetManifest = (dir, basePath = []) => {
     } else {
       // Build a direct public URL
       const publicUrl = path
-        .join('/assets', ...basePath, item)
+        .join('assets', ...basePath, item)
         .replace(/\\/g, '/');
 
       // Just return raw URL string — no import needed

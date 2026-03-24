@@ -6,6 +6,7 @@ import {
   GiSpikedShoulderArmor,
   GiSwapBag,
 } from 'react-icons/gi';
+import { RiBarChart2Fill } from "react-icons/ri";
 
 export const PAGE_LINKS = [
   {
@@ -43,5 +44,11 @@ export const PAGE_LINKS = [
     icon: GiObelisk,
     name: 'World Features',
     path: '/world-features',
+  },
+  {
+    id: 7,
+    icon: RiBarChart2Fill,
+    name: 'Stat Builder',
+    path: '/stat-builder',
   },
 ];

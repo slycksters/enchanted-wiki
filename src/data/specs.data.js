@@ -714,37 +714,63 @@ export const SPECS = {
       {
         id: 1,
         attachment: specSkillVideos.deathM1,
-        name: 'Basic Attack [M1]',
         description:
           'Delivers swift, precise slashes with his cursed sickle, each strike releasing a chilling spectral aura that drains life from his foes.',
+        name: 'Basic Attack [M1]',
+        stats: {
+          baseDMG: 18.88,
+          damageType: DAMAGE_TYPES.blade,
+          hitCount: 1,
+        },
       },
       {
         id: 2,
         attachment: specSkillVideos.deathZ,
-        name: `Soul Sever [Z]`,
         description:
           'Leaps forward with a powerful downward slice, shattering the ground upon impact and sending a wave of spectral energy that damages enemies in front.',
+        name: `Soul Sever [Z]`,
+        stats: {
+          baseDMG: 27.36,
+          damageType: DAMAGE_TYPES.blade,
+          hitCount: 1,
+        },
       },
       {
         id: 3,
         attachment: specSkillVideos.deathX,
-        name: 'Death Bloom [X]',
         description:
           'Vanishes into shadows and reappears behind the target, spinning in a deadly arc that cuts through all nearby enemies in a whirl of death.',
+        name: 'Death Bloom [X]',
+        stats: {
+          baseDMG: 32.96,
+          damageType: DAMAGE_TYPES.blade,
+          hitCount: 1,
+        },
       },
       {
         id: 4,
         attachment: specSkillVideos.deathC,
-        name: `Moon Tear [C]`,
         description:
           'Channels the sorrow of the moon into a devastating swing, unleashing a spectral tornado that travels forward and tears through anything in its path.',
+        isContinuous: true,
+        name: `Moon Tear [C]`,
+        stats: {
+          baseDMG: 9.6,
+          damageType: DAMAGE_TYPES.blade,
+          hitCount: 11,
+        },
       },
       {
         id: 5,
         attachment: specSkillVideos.deathV,
-        name: 'Execution [V]',
         description:
           'Unleashes a flurry of merciless slashes, his movements becoming a blur as he dances through enemies in front, leaving nothing but silence in his wake.',
+        name: 'Execution [V]',
+        stats: {
+          baseDMG: 4.32,
+          damageType: DAMAGE_TYPES.blade,
+          hitCount: 13,
+        },
       },
       {
         id: 6,
@@ -752,6 +778,11 @@ export const SPECS = {
         name: 'Whistle of The Reaper [F]',
         description:
           'Moves with terrifying speed, appearing and disappearing between slashes as if blinking through space—cutting down all who stand too close.',
+        stats: {
+          baseDMG: 8.16,
+          damageType: DAMAGE_TYPES.blade,
+          hitCount: 18,
+        },
       },
     ],
     attachment: specImages.death,

@@ -1,0 +1,44 @@
+.statInputSection {
+  padding: 16px;
+  padding-bottom: 20px;
+}
+
+.statInputSection > label {
+  color: var(--enchanted-color-khaki);
+}
+
+.statInputGroup label {
+  font-size: 12px;
+}
+
+.statInputGroup input {
+  background-color: var(--enchanted-color-sky-blue-transparent);
+  border: 1px solid var(--enchanted-border-color);
+  color: var(--enchanted-text-primary);
+  font-size: 12px;
+  margin-top: 4px;
+  padding: 8px;
+  width: 100%;
+}
+
+.statInputGroup input:focus {
+  background-color: var(--enchanted-color-khaki-transparent);
+  border-color: var(--enchanted-color-khaki);
+  outline: none;
+}
+
+.statInputGroup input::placeholder {
+  color: var(--enchanted-text-secondary);
+}
+
+/* Remove arrow from number input */
+/* Chrome, Safari, Edge, Opera */
+.statInputGroup input::-webkit-outer-spin-button,
+.statInputGroup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.statInputGroup input[type=number] {
+  -moz-appearance: textfield;
+}

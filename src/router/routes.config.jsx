@@ -9,6 +9,7 @@ import {
   MainComponent,
   NotFoundPage,
   NpcsPage,
+  StatBuilderPage,
   WorldFeaturesPage,
 } from '@components';
 import { BASE_PATH } from '@constants';
@@ -20,6 +21,7 @@ const defaultRoutes = {
   islands: '/islands',
   npcs: '/npcs',
   worldFeatures: '/world-features',
+  statBuilder: '/stat-builder',
 };
 
 // This is the only thing in this file: a pure configuration array.
@@ -79,6 +81,10 @@ export const routesConfig = [
           { index: true, element: <Navigate to={defaultRoutes.worldFeatures} replace /> },
           { path: ':slug', element: <WorldFeaturesPage /> },
         ],
+      },
+      {
+        path: 'stat-builder',
+        element: <StatBuilderPage />,
       },
     ],
   },

@@ -11,6 +11,7 @@ export const MainComponent = () => {
   const windowWidth = useWindowWidth();
   const pageContentRef = useRef(null);
   const isMobileOrTablet = windowWidth <= 1024;
+  const pagesWithNoSidebar = ['/stat-builder'];
 
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -21,24 +22,35 @@ export const MainComponent = () => {
     const pageKey = location.pathname.split('/')[1];
     switch (pageKey) {
       case 'abilities':
-        return { list: PageCategories.ABILITIES_CATEGORIES, basePath: '/abilities' };
+        return {
+          list: PageCategories.ABILITIES_CATEGORIES,
+          basePath: '/abilities',
+        };
       case 'equips':
         return { list: PageCategories.EQUIPS_CATEGORIES, basePath: '/equips' };
       case 'items':
         return { list: PageCategories.ITEMS_CATEGORIES, basePath: '/items' };
       case 'islands':
-        return { list: PageCategories.ISLANDS_CATEGORIES, basePath: '/islands' };
+        return {
+          list: PageCategories.ISLANDS_CATEGORIES,
+          basePath: '/islands',
+        };
       case 'npcs':
         return { list: PageCategories.NPCS_CATEGORIES, basePath: '/npcs' };
       case 'world-features':
-        return { list: PageCategories.WORLD_FEATURES_CATEGORIES, basePath: '/world-features' };
+        return {
+          list: PageCategories.WORLD_FEATURES_CATEGORIES,
+          basePath: '/world-features',
+        };
       default:
         return { list: [], basePath: '' };
     }
   };
 
   const sidebarProps = getSidebarProps();
-  const height = isMobileOrTablet ? 'calc(100vh - 110px)' : 'calc(100vh - 76px)';
+  const height = isMobileOrTablet
+    ? 'calc(100vh - 110px)'
+    : 'calc(100vh - 76px)';
 
   useEffect(() => {
     pageContentRef.current?.scrollTo(0, 0);
@@ -55,13 +67,17 @@ export const MainComponent = () => {
           <Outlet />
         ) : (
           <div className={styles.pageLayoutWrapper}>
-            <Controller onClickHamburger={() => setShowSidebar(true)} />
-            <Sidebar
-              list={sidebarProps.list}
-              basePath={sidebarProps.basePath}
-              setShowSidebar={setShowSidebar}
-              showSidebar={showSidebar}
-            />
+            {!pagesWithNoSidebar.includes(location.pathname) && (
+              <>
+                <Controller onClickHamburger={() => setShowSidebar(true)} />
+                <Sidebar
+                  list={sidebarProps.list}
+                  basePath={sidebarProps.basePath}
+                  setShowSidebar={setShowSidebar}
+                  showSidebar={showSidebar}
+                />
+              </>
+            )}
             <main className={styles.pageContent} ref={pageContentRef}>
               <Outlet />
             </main>

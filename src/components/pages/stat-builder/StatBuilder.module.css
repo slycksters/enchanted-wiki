@@ -1,0 +1,12 @@
+.statBuilder {
+  padding: 50px;
+}
+
+.statBuilder > h1 {
+  color: var(--enchanted-color-silver);
+  text-align: center;
+}
+
+.statBuilder > div {
+  margin-top: 24px;
+}

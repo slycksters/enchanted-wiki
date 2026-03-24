@@ -1,4 +1,6 @@
 export * from './addUniqueSlugs.helper.js';
+export * from './calculateFinalDamage.helper.js';
+export * from './extractNumbers.helper.js';
 export * from './extractValues.helper.js';
 export * from './formatDisplayName.helper.js';
 export * from './formatNameToUrl.helper.js';
@@ -10,3 +12,4 @@ export * from './pluralize.helper.js';
 export * from './sortArray.helper.js';
 export * from './sortByRarity.helper.js';
 export * from './stripHtml.helper.js';
+export * from './toCamelCase.helper.js';

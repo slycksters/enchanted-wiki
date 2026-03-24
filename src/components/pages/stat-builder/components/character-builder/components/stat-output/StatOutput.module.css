@@ -1,0 +1,37 @@
+.statOutputSection {
+  border-top: 1px solid var(--enchanted-border-color);
+  padding: 16px;
+}
+
+.statOutputSection > label {
+  color: var(--enchanted-color-khaki);
+}
+
+.statOutputTable > table {
+  border: 1px solid var(--enchanted-border-color);
+  font-size: 12px;
+  margin-top: 16px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.statOutputTable > table > thead > tr > th {
+  color: var(--enchanted-text-secondary);
+  font-weight: bold;
+}
+
+.statOutputTable > table > thead > tr > th,
+.statOutputTable > table > tbody > tr > td {
+  border: 1px solid var(--enchanted-border-color);
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+.verbiage {
+  border: 1px solid var(--enchanted-border-color);
+  font-size: 12px;
+  margin-top: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+}

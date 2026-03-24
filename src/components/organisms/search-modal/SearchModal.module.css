@@ -74,6 +74,7 @@
   cursor: pointer;
   padding: 12px;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .searchItem:hover {

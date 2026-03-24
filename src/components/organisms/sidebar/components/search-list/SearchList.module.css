@@ -19,17 +19,15 @@
 
 /* ─── List Items ─────────────────────────────────────────────────── */
 .item {
-  display: block; /* <-- ADD THIS LINE */
-  text-decoration: none; /* <-- ADD THIS LINE */
+  display: block;
+  text-decoration: none;
   border-left: 3px solid var(--enchanted-border-color);
   cursor: pointer;
   overflow: hidden;
   padding: 5px 0;
   text-overflow: ellipsis;
   text-indent: 20px;
-  /* transition:
-    padding-left 0.1s ease-in-out,
-    border-width 0.1s ease-in-out; */
+  transition: padding-left 0.1s ease-in-out, border-width 0.1s ease-in-out;
   white-space: nowrap;
 }
 

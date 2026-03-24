@@ -9,7 +9,7 @@ import { PAGE_LINKS } from '../src/constants/pageLinks.constant.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const toAbsolute = (p) => path.resolve(__dirname, '..', p);
 
-const homepage = 'https://www.slyckster.dev';
+const homepage = 'https://slycksters.github.io/enchanted-wiki';
 
 async function generateSitemap() {
   const allPaths = new Set();
